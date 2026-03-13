@@ -1,0 +1,17 @@
+#pragma once
+#include <cstdint>
+#include "Bethesda/TESForm.hpp"
+#include "Bethesda/BGSPreloadable.hpp"
+#include "Bethesda/BSSimpleList.hpp"
+#include "Bethesda/BGSDebrisData.hpp"
+
+class BGSDebris : TESForm, BGSPreloadable
+{
+  public:
+    BGSDebris();
+    ~BGSDebris();
+
+    BSSimpleList<BGSDebrisData*> DataList;
+};
+
+static_assert(sizeof(BGSDebris) == 0x24, "BGSDebris has wrong size");

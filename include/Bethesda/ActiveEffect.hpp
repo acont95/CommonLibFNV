@@ -1,0 +1,38 @@
+#pragma once
+#include "Bethesda/BSSimpleList.hpp"
+#include "Bethesda/MagicCaster.hpp"
+#include "Bethesda/MagicItem.hpp"
+#include "Bethesda/MagicHitEffect.hpp"
+#include "Bethesda/EffectItem.hpp"
+#include "Bethesda/MagicTarget.hpp"
+#include "Bethesda/MagicSystem.hpp"
+#include "Bethesda/TESBoundObject.hpp"
+#include "Bethesda/BSSoundHandle.hpp"
+
+class ActiveEffect
+{
+  public:
+    ActiveEffect();
+    virtual ~ActiveEffect();
+
+    float fElapsedSeconds;
+    MagicItem* pSpell;
+    EffectItem* pEffect;
+    bool bActive;
+    bool bStarted;
+    bool bFinished;
+    bool bDone;
+    bool bWornEnchantment;
+    int iFlags;
+    float fMagnitude;
+    float fDuration;
+    MagicTarget* pTarget;
+    MagicCaster* pCaster;
+    MagicSystem::SpellType eSpellType;
+    BSSoundHandle PersistentSound;
+    TESBoundObject* pSource;
+    BSSimpleList<MagicHitEffect*>* pHitEffects;
+    MagicItem* pDisplacementSpell;
+};
+
+static_assert(sizeof(ActiveEffect) == 0x48, "ActiveEffect has wrong size");

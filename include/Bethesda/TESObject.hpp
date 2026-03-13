@@ -1,0 +1,15 @@
+#pragma once
+#include "Bethesda/TESForm.hpp"
+#include "Bethesda/TESObjectList.hpp"
+
+class TESObject : TESForm {
+  public:
+    TESObject();
+    ~TESObject();
+
+    TESObjectList *m_pParentList;
+    TESObject *nod_lpPrev;
+    TESObject *nod_lpNext;
+};
+
+static_assert(sizeof(TESObject) == 0x24, "TESObject has wrong size");
