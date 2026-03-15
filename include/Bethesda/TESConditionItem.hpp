@@ -1,0 +1,46 @@
+#pragma once
+#include <cstdint>
+#include "Bethesda/TESGlobal.hpp"
+#include "Bethesda/TESObjectREFR.hpp"
+
+class TESConditionItem
+{
+  public:
+    TESConditionItem();
+    ~TESConditionItem();
+
+    union GlobalData
+    {
+      TESGlobal* pGlobal;
+      float fValue;
+    };
+
+    enum CONDITIONITEMOBJECT : std::int32_t
+    {
+      CIO_SELF = 0x0,
+      CIO_TARGET = 0x1,
+      CIO_REF = 0x2,
+      CIO_COMBATTARGET = 0x3,
+      CIO_LINKEDREF = 0x4,
+      CIO_COUNT = 0x5,
+    };
+
+    struct FUNCTION_DATA
+    {
+      std::uint16_t iFunction;
+      void* pParam[2];
+    };
+
+    struct CONDITION_ITEM_DATA
+    {
+      char iFlags;
+      GlobalData uGlobalData;
+      FUNCTION_DATA FunctionData;
+      CONDITIONITEMOBJECT eObject;
+      TESObjectREFR* pRunOnRef;
+    };
+
+    CONDITION_ITEM_DATA Data;
+};
+
+static_assert(sizeof(TESConditionItem) == 0x1C, "TESConditionItem has wrong size");

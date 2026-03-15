@@ -1,7 +1,17 @@
 #pragma once
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESObjectCell.hpp"
+#include "Bethesda/TESLandTexture.hpp"
+#include "Bethesda/TESObjectCELL.hpp"
+#include "Bethesda/TESGrassAreaParam.hpp"
+#include "Bethesda/QueuedFile.hpp"
+#include "Bethesda/bhkRigidBody.hpp"
 #include "Gamebryo/NiPointer.hpp"
+#include "Gamebryo/NiColorA.hpp"
+#include "Gamebryo/NiPoint2.hpp"
+#include "Gamebryo/NiLines.hpp"
+#include "Havok/hkpMoppCode.hpp"
+
 
 class TESObjectLAND : TESForm, TESChildCell
 {
@@ -35,9 +45,9 @@ class TESObjectLAND : TESForm, TESChildCell
     };
 
     OBJ_LAND Data;
-    TESObjectCell* pParentCell;
+    TESObjectCELL* pParentCell;
     NiPointer<QueuedFile> spQueuedTextures;
     LoadedLandData *pLoadedData;
 };
 
-static_assert(sizeof(TESObjectLand) == 0x2C, "TESObjectLand has wrong size");
+static_assert(sizeof(TESObjectLAND) == 0x2C, "TESObjectLAND has wrong size");

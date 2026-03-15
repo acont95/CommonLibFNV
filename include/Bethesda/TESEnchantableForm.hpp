@@ -2,6 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/TESForm.hpp"
+#include "Bethesda/EnchantmentItem.hpp"
 
 class TESEnchantableForm : BaseFormComponent {
   public:

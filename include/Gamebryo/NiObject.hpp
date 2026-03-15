@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiRefObject.hpp"
 
-class NiObject : NiRefObject 
+class NiObject : public NiRefObject 
 {
   public:
     NiObject();

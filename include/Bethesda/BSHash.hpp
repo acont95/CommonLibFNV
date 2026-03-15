@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 
-class BSHash {
+class BSHash 
+{
   public:
     BSHash();
     ~BSHash();

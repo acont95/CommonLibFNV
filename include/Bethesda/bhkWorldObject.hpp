@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/bhkSerializable.hpp"
 
-class bhkWorldObject : bhkSerializable
+class bhkWorldObject : public bhkSerializable
 {
   public:
     bhkWorldObject();

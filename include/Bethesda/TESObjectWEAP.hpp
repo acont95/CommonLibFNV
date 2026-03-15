@@ -1,11 +1,53 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/ActorValue.hpp"
+#include "Bethesda/BGSProjectile.hpp"
+#include "Bethesda/TESHealthForm.hpp"
+#include "Bethesda/BGSAmmoForm.hpp"
+#include "Bethesda/BGSClipRoundsForm.hpp"
+#include "Bethesda/BGSRepairItemList.hpp"
+#include "Bethesda/BGSEquipType.hpp"
+#include "Bethesda/BGSBipedModelList.hpp"
+#include "Bethesda/BGSPickupPutdownSounds.hpp"
+#include "Bethesda/TESModel.hpp"
+#include "Bethesda/TESObjectSTAT.hpp"
+#include "Bethesda/TESObjectIMOD.hpp"
 
-class TESObjectWEAP {
+struct OBJ_WEAP_VATS_SPECIAL
+{
+  SpellItem *pVATSSpecialEffect;
+  float fVATSSpecialAP;
+  float fVATSSpecialMultiplier;
+  float fVATSSkillRequired;
+  bool bSilent;
+  bool bModRequired;
+  unsigned __int8 cFlags;
+};
+
+class TESObjectWEAP : 
+  TESBoundObject, 
+  TESFullName, 
+  TESModelTextureSwap, 
+  TESIcon, 
+  TESScriptableForm, 
+  TESEnchantableForm, 
+  TESValueForm, 
+  TESWeightForm, 
+  TESHealthForm, 
+  TESAttackDamageForm, 
+  BGSAmmoForm, 
+  BGSClipRoundsForm, 
+  BGSDestructibleObjectForm, 
+  BGSRepairItemList, 
+  BGSEquipType, 
+  BGSPreloadable, 
+  BGSMessageIcon, 
+  BGSBipedModelList, 
+  BGSPickupPutdownSounds 
+{
   public:
     TESObjectWEAP();
-    ~TESObjectWEAP();
+    virtual ~TESObjectWEAP();
 
     enum WEAPONHITBEHAVIOR : std::int32_t
     {
@@ -120,4 +162,49 @@ class TESObjectWEAP {
       std::uint8_t pad02[3];
       SpellItem *pEffect;
     };
+
+    OBJ_WEAP data;
+    OBJ_WEAP_CRITICAL criticalData;
+    TESModel ShellCasingModel;
+    TESModel ScopeModel;
+    TESModel WorldModel;
+    TESEffectShader *pScopeEffect;
+    TESSound *pAttackSound;
+    TESSound *pAttackSound2;
+    TESSound *pAttackSound2D;
+    TESSound *pAttackLoop;
+    TESSound *pAttackFailSound;
+    TESSound *pMeleeBlockSound;
+    TESSound *pIdleSound;
+    TESSound *pEquipSound;
+    TESSound *pUnEquipSound;
+    TESSound *pModSilencedSound;
+    TESSound *pModSilencedSound2;
+    TESSound *pModSilencedSound2D;
+    BGSImpactDataSet *pImpactDataSet;
+    TESObjectSTAT *p1stPersonObject;
+    TESObjectSTAT *p1stPersonMod1Object;
+    TESObjectSTAT *p1stPersonMod2Object;
+    TESObjectSTAT *p1stPersonMod3Object;
+    TESObjectSTAT *p1stPersonMod12Object;
+    TESObjectSTAT *p1stPersonMod23Object;
+    TESObjectSTAT *p1stPersonMod13Object;
+    TESObjectSTAT *p1stPersonMod123Object;
+    TESModelTextureSwap WorldModelMod1;
+    TESModelTextureSwap WorldModelMod2;
+    TESModelTextureSwap WorldModelMod3;
+    TESModelTextureSwap WorldModelMod12;
+    TESModelTextureSwap WorldModelMod13;
+    TESModelTextureSwap WorldModelMod23;
+    TESModelTextureSwap WorldModelMod123;
+    TESObjectIMOD *pModObjectOne;
+    TESObjectIMOD *pModObjectTwo;
+    TESObjectIMOD *pModObjectThree;
+    BSStringT<char> EmbeddedWeaponNode;
+    SOUND_LEVEL eSoundLevel;
+    BSStringT<char> VATSAttackName;
+    OBJ_WEAP_VATS_SPECIAL specialVATSData;
+    bool bIsLoopingReload;
 };
+
+static_assert(sizeof(TESObjectWEAP) == 0x388, "TESObjectWEAP has wrong size");

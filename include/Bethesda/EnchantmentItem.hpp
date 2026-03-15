@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/MagicSystem.hpp"
+#include "Bethesda/MagicItemForm.hpp"
 
 class EnchantmentItem : MagicItemForm 
 {
@@ -19,4 +20,4 @@ class EnchantmentItem : MagicItemForm
     EnchantmentItemData data;
 };  
 
-static_assert(sizeof(EnchantmentItem) == 0x10, "EnchantmentItem has wrong size");
+static_assert(sizeof(EnchantmentItem) == 0x44, "EnchantmentItem has wrong size");

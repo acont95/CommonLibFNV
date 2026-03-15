@@ -4,7 +4,7 @@
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/TESFile.hpp"
 
-class TESForm : BaseFormComponent {
+class TESForm : public BaseFormComponent {
   public:
     TESForm();
     ~TESForm();

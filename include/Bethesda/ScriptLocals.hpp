@@ -1,0 +1,35 @@
+#pragma once
+#include "Bethesda/TESForm.hpp"
+#include "Bethesda/Script.hpp"
+#include "Bethesda/BSSimpleList.hpp"
+#include "Bethesda/Script.hpp"
+#include "Types.hpp"
+
+struct SCRIPT_EFFECT_DATA
+{
+  bool m_bScriptEffectStart;
+  bool m_bScriptEffectFinish;
+  float m_fSecondsElapsed;
+};
+
+struct ACTION_OBJECT
+{
+  TESForm *pForm;
+  unsigned int iFlags;
+};
+
+
+class ScriptLocals
+{
+  public:
+    ScriptLocals();
+    ~ScriptLocals();
+
+    Script *m_pMasterScript;
+    char m_cFlags;
+    BSSimpleList<ACTION_OBJECT *> *m_pActionList;
+    BSSimpleList<SCRIPT_LOCAL *> *m_pLocalList;
+    SCRIPT_EFFECT_DATA *m_pScriptEffectData;
+};
+
+static_assert(sizeof(ScriptLocals) == 0x14, "ScriptLocals has wrong size");

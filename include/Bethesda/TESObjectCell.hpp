@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include "Types.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/BSSimpleList.hpp"
@@ -7,10 +8,14 @@
 #include "Bethesda/TESObjectLAND.hpp"
 #include "Bethesda/TESTexture.hpp"
 #include "Bethesda/TESObjectREFR.hpp"
+#include "Bethesda/TESWorldSpace.hpp"
+#include "Bethesda/NavMeshArray.hpp"
+#include "Bethesda/BSSpinLock.hpp"
+#include "Bethesda/BGSLightingTemplate.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiTMap.hpp"
 
-class TESObjectCELL : TESForm, TESFullName
+class TESObjectCELL : public TESForm, public TESFullName
 {
   public:
     TESObjectCELL();
@@ -21,21 +26,6 @@ class TESObjectCELL : TESForm, TESFullName
       int iCellX;
       int iCellY;
       char cLandHideFlags;
-    };
-
-    struct INTERIOR_DATA
-    {
-      unsigned int iAmbient;
-      unsigned int iDirectional;
-      unsigned int iFog;
-      float fFogNear;
-      float fFogFar;
-      unsigned int iDirectionalXY;
-      unsigned int iDirectionalZ;
-      float fDirectionalFade;
-      float fClipDist;
-      float fFogPower;
-      unsigned int iInteriorOffset;
     };
 
     struct LOADED_CELL_DATA
@@ -97,3 +87,5 @@ class TESObjectCELL : TESForm, TESFullName
     BGSLightingTemplate *pLightingTemplate;
     unsigned int iLightingTemplateInheritanceFlags;
 };
+
+static_assert(sizeof(TESObjectCELL) == 0xB0, "TESObjectCELL has wrong size");

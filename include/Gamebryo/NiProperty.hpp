@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiObjectNET.hpp"
 
-class NiProperty : NiObjectNET
+class NiProperty : public NiObjectNET
 {
   public:
     NiProperty();

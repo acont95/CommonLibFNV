@@ -8,7 +8,7 @@ class MagicLight
 {
   public:
     MagicLight();
-    virtual ~MagicLight();
+    ~MagicLight();
 
     struct REFR_LIGHT
     {

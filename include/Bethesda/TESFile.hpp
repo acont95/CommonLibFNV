@@ -6,6 +6,7 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BSFile.hpp"
 #include "Bethesda/TESObjectCell.hpp"
+#include "Gamebryo/NiTPointerMap.hpp"
 
 class TESFile {
   public:

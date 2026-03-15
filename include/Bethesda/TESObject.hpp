@@ -2,7 +2,7 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESObjectList.hpp"
 
-class TESObject : TESForm {
+class TESObject : public TESForm {
   public:
     TESObject();
     ~TESObject();

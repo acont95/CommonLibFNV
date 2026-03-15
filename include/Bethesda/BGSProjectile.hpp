@@ -17,3 +17,5 @@ class BGSProjectile  : TESBoundObject, TESFullName, TESModel, BGSPreloadable, BG
     TESModel MuzzleFlashModel;
     SOUND_LEVEL eSoundLevel;
 };
+
+static_assert(sizeof(BGSProjectile) == 0xD0);

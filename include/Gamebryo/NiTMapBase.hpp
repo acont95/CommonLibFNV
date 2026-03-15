@@ -21,4 +21,4 @@ class NiTMapBase : NiMemObject
     AntiBloatAllocator m_kAllocator;
 };
 
-static_assert(sizeof(NiTMapBase<void*, void*, void*>) == 0x10, "NiTMapBase has wrong size");  
+static_assert(sizeof(NiTMapBase<NiTDefaultAllocator<void*>, void*, void*>) == 0x10, "NiTMapBase has wrong size");  

@@ -3,7 +3,7 @@
 #include "Gamebryo/NiFrustum.hpp"
 #include "Gamebryo/NiRect.hpp"
 
-class NiCamera : NiAVObject
+class NiCamera : public NiAVObject
 {
   public:
     NiCamera();

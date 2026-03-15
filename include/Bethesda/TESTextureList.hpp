@@ -2,7 +2,8 @@
 #include <cstdint>
 #include "Bethesda/BSFileEntry.hpp"
 
-class TESTextureList {
+class TESTextureList 
+{
   public:
     TESTextureList();
     ~TESTextureList();

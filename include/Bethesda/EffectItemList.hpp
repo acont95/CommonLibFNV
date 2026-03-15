@@ -1,10 +1,11 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
+#include "Bethesda/EffectItem.hpp"
 
 class EffectItemList : BSSimpleList<EffectItem*> {
   public:
     EffectItemList();
-    ~EffectItemList();
+    virtual ~EffectItemList();
 
     int iHostileCount;
 };

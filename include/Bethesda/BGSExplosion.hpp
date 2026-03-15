@@ -1,5 +1,5 @@
 #pragma once
-#include "Bethesda/TESBoundObject.hpp
+#include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/TESEnchantableForm.hpp"
@@ -9,7 +9,8 @@
 #include "Bethesda/TESObjectLIGH.hpp"
 #include "Bethesda/BGSImpactDataSet.hpp"
 
-class BGSExplosion : TESBoundObject, TESFullName, TESModel, TESEnchantableForm, BGSPreloadable, TESImageSpaceModifiableForm {
+class BGSExplosion : TESBoundObject, TESFullName, TESModel, TESEnchantableForm, BGSPreloadable, TESImageSpaceModifiableForm 
+{
   public:
     BGSExplosion();
     ~BGSExplosion();

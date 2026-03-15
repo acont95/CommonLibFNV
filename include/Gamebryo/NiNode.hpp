@@ -3,7 +3,7 @@
 #include "Gamebryo/NiAVObject.hpp"
 #include "Gamebryo/NiTObjectArray.hpp"
 
-class NiNode : NiAVObject
+class NiNode : public NiAVObject
 {
   public:
     NiNode();

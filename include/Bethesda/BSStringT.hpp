@@ -7,7 +7,7 @@ class BSStringT {
     BSStringT();
     ~BSStringT();
 
-    T *pString;
+    T* pString;
     std::uint16_t sLen;
     std::uint16_t sMaxLen;
 };

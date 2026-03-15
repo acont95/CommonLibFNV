@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 
-class NiBinaryStream {
+class NiBinaryStream 
+{
   public:
     NiBinaryStream();
     virtual ~NiBinaryStream();

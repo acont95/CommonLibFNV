@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 
-class BSExtraData {
+class BSExtraData 
+{
   public:
     BSExtraData();
     virtual ~BSExtraData();

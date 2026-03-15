@@ -6,7 +6,7 @@
 #include "Gamebryo/NiTimeController.hpp"
 #include "Gamebryo/NiExtraData.hpp"
 
-class NiObjectNET : NiObject {
+class NiObjectNET : public NiObject {
   public:
     NiObjectNET();
     ~NiObjectNET();

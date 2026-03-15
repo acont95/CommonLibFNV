@@ -2,7 +2,7 @@
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/BSStringT.hpp"
 
-class TESFullName : BaseFormComponent {
+class TESFullName : public BaseFormComponent {
   public:
     TESFullName();
     ~TESFullName();

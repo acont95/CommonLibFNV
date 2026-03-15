@@ -1,7 +1,7 @@
 #pragma once
 #include "Bethesda/TESTexture.hpp"
 
-class TESIcon : TESTexture
+class TESIcon : public TESTexture
 {
   public:
     TESIcon();

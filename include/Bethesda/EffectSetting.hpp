@@ -9,6 +9,7 @@
 #include "Bethesda/TESDescription.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESIcon.hpp"
+#include "Bethesda/EffectArchetypes.hpp"
 
 class EffectSetting : TESForm, TESModel, TESDescription, TESFullName, TESIcon
 {

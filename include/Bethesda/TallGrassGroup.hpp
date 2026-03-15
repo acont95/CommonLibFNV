@@ -1,0 +1,35 @@
+#pragma once
+#include <cstdint>
+#include "Bethesda/BSMultiBoundNode.hpp"
+#include "Bethesda/TallGrassShaderProperty.hpp"
+#include "Gamebryo/NiPointer.hpp"
+#include "Gamebryo/NiGeometry.hpp"
+
+class TallGrassGroup
+{
+  public:
+    TallGrassGroup();
+    ~TallGrassGroup();
+
+    struct GrassInstanceData
+    {
+      float fXPos;
+      float fYPos;
+      float fZPos;
+      float fColor;
+    };
+
+    NiPointer<NiGeometry> spGrassGeometry;
+    NiPointer<BSMultiBoundNode> spMBGrassNode;
+    NiPointer<TallGrassShaderProperty::CachedGeometry> spCachedGeometry;
+    NiPointer<TallGrassShaderProperty> spGrassProperty;
+    std::uint16_t iMaxInstanceCount;
+    std::uint16_t iInstanceCount;
+    GrassInstanceData *pInstanceData;
+    int *plTerrainChunkSeed;
+    TallGrassShaderProperty::GrassParam kGrassParam;
+    int iCellCoord[2];
+    bool bLowDetail;
+};
+
+static_assert(sizeof(TallGrassGroup) == 0x48, "TallGrassGroup has wrong size");

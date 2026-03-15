@@ -1,0 +1,27 @@
+#pragma once
+#include "Bethesda/BGSTerrainNode.hpp"
+#include "Bethesda/BGSDistantObjectBlockLoadTask.hpp"
+
+class BGSDistantObjectBlock
+{
+  public:
+    BGSDistantObjectBlock();
+    ~BGSDistantObjectBlock();
+
+    BGSTerrainNode *pNode;
+    NiPointer<NiGeometry> spMesh;
+    NiPointer<BSMultiBoundNode> spNode;
+    NiPointer<NiGeometry> spOldMesh;
+    NiPointer<BSMultiBoundNode> spNodeStinger;
+    NiPointer<BSMultiBoundNode> spNodeStingerOld;
+    NiPointer<BGSDistantObjectBlockLoadTask> spLoadTask;
+    NiPointer<BGSDistantObjectBlockLoadTask> spLoadTaskStinger;
+    bool bDoneLoading;
+    bool bAttached;
+    bool bPrepared;
+    bool bHighPriority;
+    bool bDetachFlag;
+    int nDetachCount;
+};
+
+static_assert(sizeof(BGSDistantObjectBlock) == 0x2C, "BGSDistantObjectBlock has wrong size");

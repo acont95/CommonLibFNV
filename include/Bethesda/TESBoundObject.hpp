@@ -2,7 +2,7 @@
 #include "Gamebryo/NiNPShortPoint3.hpp"
 #include "Bethesda/TESObject.hpp"
 
-class TESBoundObject : TESObject
+class TESBoundObject : public TESObject
 {
   public:
     TESBoundObject();

@@ -1,5 +1,9 @@
 #pragma once
 #include <cstdint>
+#include "Gamebryo/NiCullingProcess.hpp"
+#include "Bethesda/BSCompoundFrustum.hpp"
+#include "Gamebryo/NiPointer.hpp"
+#include "Gamebryo/NiAccumulator.hpp"
 
 class BSCullingProcess : NiCullingProcess
 {
@@ -19,6 +23,8 @@ class BSCullingProcess : NiCullingProcess
     BSCullingProcess::BSCPCullingType kCullMode;
     BSCullingProcess::BSCPCullingType eTypeStackA[10];
     unsigned int iCTStackIndex;
-    BSCompoundFrustum *pCompoundFrustum;
+    BSCompoundFrustum* pCompoundFrustum;
     NiPointer<NiAccumulator> spAccumulator;
 };
+
+static_assert(sizeof(BSCullingProcess) == 0xC8, "BSCullingProcess has wrong size");

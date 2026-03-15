@@ -1,0 +1,79 @@
+#pragma once
+#include <Types.hpp>
+#include "Bethesda/BSRenderedTexture.hpp"
+#include "Bethesda/BSSimpleArray.hpp"
+#include "Bethesda/BSShaderAccumulator.hpp"
+#include "Bethesda/BSMultiBoundNode.hpp"
+#include "Bethesda/BSPortal.hpp"
+#include "Bethesda/BSPortalGraph.hpp"
+#include "Gamebryo/NiRefObject.hpp"
+#include "Gamebryo/NiTPointerList.hpp"
+#include "Gamebryo/NiTexture.hpp"
+#include "Gamebryo/NiLight.hpp"
+#include "Gamebryo/NiAVObject.hpp"
+#include "Gamebryo/NiPoint3.hpp"
+#include "Gamebryo/NiPointer.hpp"
+#include "Gamebryo/NiCamera.hpp"
+#include "Gamebryo/NiFrustumPlanes.hpp"
+#include "Gamebryo/NiTriBasedGeom.hpp"
+
+
+class ShadowSceneLight : NiRefObject
+{
+  public:
+    ShadowSceneLight();
+    virtual ~ShadowSceneLight();
+
+    enum eFrustumCull : __int32
+    {
+      SSL_NONE = 0x0,
+      SSL_POSX = 0x1,
+      SSL_NEGX = 0x2,
+      SSL_POSY = 0x4,
+      SSL_NEGY = 0x8,
+      SSL_POSZ = 0x10,
+      SSL_NEGZ = 0x20,
+      SSL_ALL = 0xFF,
+    };
+
+    int iEnabledPasses;
+    float fLuminance;
+    D3DXMATRIX kViewProjection;
+    D3DXMATRIX kShadowView;
+    D3DXMATRIX kShadowProj;
+    float fLODDimmer;
+    float fShadowLODDimmer;
+    float fShadowLODDimmerTarget;
+    float fShadowLODDimmerElapsed;
+    NiTPointerList<NiPointer<NiTriBasedGeom> > lGeomList;
+    bool bCastShadow;
+    bool bCubeShadowMap;
+    NiPointer<NiTexture> spSpecularAttenuationTexture;
+    bool bPointLight;
+    bool bAmbientLight;
+    NiPointer<NiLight> spLight;
+    bool bDynamicLight;
+    NiPoint3 bPointPosition;
+    NiPointer<BSRenderedTexture> spDynamicShadowMap;
+    unsigned __int16 usFrustumCull;
+    NiPointer<NiAVObject> spFrustumVis;
+    bool bShadowSpotlight;
+    float fSpotlightFOV;
+    float fSpotlightFalloff;
+    bool bShowDebugTexture;
+    NiPointer<NiAVObject> spShadowScene;
+    NiTPointerList<NiPointer<NiAVObject> > lRootList;
+    void *kGeomListFence;
+    NiPointer<NiTriBasedGeom> kGeomListFenceObject;
+    NiPointer<NiCamera> spShadowCamera;
+    NiFrustumPlanes kShadowCameraPlanes;
+    float pfClipSpacePlanes[24];
+    bool bClipSpacePlanesReady;
+    NiPointer<BSShaderAccumulator> spShadowAccumulator;
+    BSSimpleArray<BSMultiBoundNode *,1024> kMultiboundRooms;
+    BSSimpleArray<BSPortal *,1024> kPortals;
+    BSSimpleArray<NiNode *,1024> kProcessedNodes;
+    BSPortalGraph *pPortalGraph;
+};
+
+// static_assert(sizeof(ShadowSceneLight) == 0x250, "ShadowSceneLight has wrong size");

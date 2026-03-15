@@ -9,7 +9,7 @@ class BSTempEffect : NiObject
     ~BSTempEffect();
 
     float fLifetime;
-    TESObjectCELL *pCell;
+    TESObjectCELL* pCell;
     float fAge;
     bool bInitialized;
 };
