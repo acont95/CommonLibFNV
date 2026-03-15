@@ -17,9 +17,9 @@ class WaterShaderData
     float fWaveSpeed;
     float fFogDistNear;
     float fFogDistFar;
-    unsigned int iShallowWaterColor;
-    unsigned int iDeepWaterColor;
-    unsigned int iReflectionWaterColor;
+    std::uint32_t iShallowWaterColor;
+    std::uint32_t iDeepWaterColor;
+    std::uint32_t iReflectionWaterColor;
     std::uint8_t cBlend;
     float fRainForce;
     float fRainVelocity;

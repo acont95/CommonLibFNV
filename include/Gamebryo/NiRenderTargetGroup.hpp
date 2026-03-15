@@ -24,10 +24,10 @@ class NiRenderTargetGroup : NiObject
 
     bool bForceNoMSAASurface;
     bool bAddDSRestoreSurface;
-    unsigned int uiDepthBase;
+    std::uint32_t uiDepthBase;
     bool bResolveDepth;
     NiPointer<Ni2DBuffer> m_aspBuffers[4];
-    unsigned int m_uiNumBuffers;
+    std::uint32_t m_uiNumBuffers;
     NiPointer<NiDepthStencilBuffer> m_spDepthStencilBuffer;
     RendererData* m_pkRendererData;
 };

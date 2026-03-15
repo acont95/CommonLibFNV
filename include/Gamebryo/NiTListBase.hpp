@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTListItem.hpp"
 #include "Gamebryo/NiNode.hpp"
 #include "Gamebryo/NiMemObject.hpp"
@@ -13,7 +14,7 @@ class NiTListBase : NiMemObject
 
     class AntiBloatAllocator : TAllocator
     {
-      unsigned int m_uiCount;
+      std::uint32_t m_uiCount;
     };
 
     NiTListItem<T>* m_pkHead;

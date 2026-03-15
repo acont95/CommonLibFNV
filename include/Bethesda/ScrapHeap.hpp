@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class ScrapHeap
 {
@@ -8,7 +9,7 @@ class ScrapHeap
 
     struct Header
     {
-      unsigned int iSize;
+      std::uint32_t iSize;
       Header *pPrev;
     };
 

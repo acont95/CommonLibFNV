@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiRefObject.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 
@@ -9,7 +10,7 @@ class NiShader : NiRefObject
     ~NiShader();
 
     NiFixedString m_kName;
-    unsigned int m_uiImplementation;
+    std::uint32_t m_uiImplementation;
     bool m_bInitialized;
 };
 

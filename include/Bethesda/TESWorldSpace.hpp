@@ -15,8 +15,8 @@
 
 struct WORLD_MAP_DATA
 {
-  unsigned int iUsableWidth;
-  unsigned int iUsableHeight;
+  std::uint32_t iUsableWidth;
+  std::uint32_t iUsableHeight;
   std::int16_t sNWCellX;
   std::int16_t sNWCellY;
   std::int16_t sSECellX;
@@ -51,10 +51,10 @@ class TESWorldSpace : TESForm, TESFullName, TESTexture
     class OFFSET_DATA
     {
       public:
-        unsigned int *pCellFileOffsets;
+        std::uint32_t *pCellFileOffsets;
         NiPoint2 OffsetMinCoords;
         NiPoint2 OffsetMaxCoords;
-        unsigned int iFileOffset;
+        std::uint32_t iFileOffset;
     };
 
     NiTPointerMap<int,TESObjectCELL *> *pCellMap;
@@ -66,9 +66,9 @@ class TESWorldSpace : TESForm, TESFullName, TESTexture
     ImpactSwap *pImpactSwap;
     std::uint8_t cFlags;
     std::uint16_t sParentUseFlags;
-    NiTPointerMap<unsigned int,BSSimpleList<TESObjectREFR *> *> FixedPersistentRefMap;
+    NiTPointerMap<std::uint32_t,BSSimpleList<TESObjectREFR *> *> FixedPersistentRefMap;
     BSSimpleList<TESObjectREFR *> MobilePersistentRefList;
-    NiTPointerMap<unsigned int,BSSimpleList<TESObjectREFR *> *> *pOverlappedMultiboundMap;
+    NiTPointerMap<std::uint32_t,BSSimpleList<TESObjectREFR *> *> *pOverlappedMultiboundMap;
     NiPointer<BSPortalGraph> spPortalGraph;
     TESWorldSpace *pParentWorld;
     TESWaterForm *pWorldWater;

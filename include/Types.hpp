@@ -530,22 +530,22 @@ typedef struct D3DXMATRIX {
 class SCRIPT_LOCAL
 {
   public:
-    unsigned int uiID;
+    std::uint32_t uiID;
     double fValue;
     bool bIsInteger;
 };
 
 struct INTERIOR_DATA
 {
-  unsigned int iAmbient;
-  unsigned int iDirectional;
-  unsigned int iFog;
+  std::uint32_t iAmbient;
+  std::uint32_t iDirectional;
+  std::uint32_t iFog;
   float fFogNear;
   float fFogFar;
-  unsigned int iDirectionalXY;
-  unsigned int iDirectionalZ;
+  std::uint32_t iDirectionalXY;
+  std::uint32_t iDirectionalZ;
   float fDirectionalFade;
   float fClipDist;
   float fFogPower;
-  unsigned int iInteriorOffset;
+  std::uint32_t iInteriorOffset;
 };

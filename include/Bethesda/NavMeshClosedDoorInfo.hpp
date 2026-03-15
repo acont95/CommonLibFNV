@@ -7,7 +7,7 @@ class NavMeshClosedDoorInfo
     NavMeshClosedDoorInfo();
     ~NavMeshClosedDoorInfo();
 
-    unsigned int DoorFormID;
+    std::uint32_t DoorFormID;
     std::uint16_t iTriangleIndex;
 };
 

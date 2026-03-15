@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/ScrapHeap.hpp"
 
 template <typename Key, typename Value>
@@ -9,7 +10,7 @@ class BSMapItem
     ~BSMapItem();
 
     BSMapItem<Key, Value> *m_pkNext;
-    unsigned int m_key;
+    std::uint32_t m_key;
     ScrapHeap *m_val;
 };
 

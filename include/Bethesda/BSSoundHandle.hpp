@@ -15,7 +15,7 @@ class BSSoundHandle
       ASSUMED_STATE_PAUSED = 0x3,
     };
 
-    unsigned int iSoundID;
+    std::uint32_t iSoundID;
     bool bAssumeSuccess;
     BSSoundHandle::ASSUMED_STATE eState;
 };

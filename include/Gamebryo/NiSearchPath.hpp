@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class NiSearchPath
 {
@@ -6,7 +7,7 @@ class NiSearchPath
     NiSearchPath();
     virtual ~NiSearchPath();
 
-    unsigned int m_uiNextPath;
+    std::uint32_t m_uiNextPath;
     char m_acFilePath[260];
     char m_acReferencePath[260];
 };

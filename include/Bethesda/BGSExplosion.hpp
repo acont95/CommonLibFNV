@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESModel.hpp"
@@ -22,7 +23,7 @@ class BGSExplosion : TESBoundObject, TESFullName, TESModel, TESEnchantableForm, 
       float fRadius;
       TESObjectLIGH* pLight;
       TESSound* pSound1;
-      unsigned int iFlags;
+      std::uint32_t iFlags;
       float fImageSpaceRadius;
       BGSImpactDataSet* pImpactDataSet;
       TESSound* pSound2;

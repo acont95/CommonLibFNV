@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Gamebryo/NiTPointerAllocator.hpp"
 #include "Gamebryo/NiMemObject.hpp"
@@ -13,11 +14,11 @@ class NiTMapBase : NiMemObject
 
     struct AntiBloatAllocator : Allocator
     {
-      unsigned int m_uiCount;
+      std::uint32_t m_uiCount;
     };
 
-    unsigned int m_uiHashSize;
-    NiTMapItem<unsigned int, TESForm*>** m_ppkHashTable;
+    std::uint32_t m_uiHashSize;
+    NiTMapItem<std::uint32_t, TESForm*>** m_ppkHashTable;
     AntiBloatAllocator m_kAllocator;
 };
 

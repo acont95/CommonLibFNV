@@ -18,12 +18,12 @@ class NiTriShapeData : NiTriBasedGeomData
     {
       std::uint16_t *m_pusBlock;
       std::uint16_t *m_pusFreeBlock;
-      unsigned int m_uiBlockSize;
-      unsigned int m_uiFreeBlockSize;
+      std::uint32_t m_uiBlockSize;
+      std::uint32_t m_uiFreeBlockSize;
       SNAMemBlock *m_pkNext;
     };
 
-    unsigned int m_uiTriListLength;
+    std::uint32_t m_uiTriListLength;
     std::uint16_t *m_pusTriList;
     SharedNormalArray *m_pkSharedNormals;
     std::uint16_t m_usSharedNormalsArraySize;

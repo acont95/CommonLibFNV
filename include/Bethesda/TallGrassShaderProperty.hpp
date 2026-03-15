@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include <cstdint>
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TallGrassGroup.hpp"
 #include "Bethesda/GrassLoadTask.hpp"
@@ -33,7 +32,7 @@ class TallGrassShaderProperty : public BSShaderLightingProperty
     struct GrassParam
     {
       const char* pcGeomFilename;
-      unsigned int iGrassID;
+      std::uint32_t iGrassID;
       float fPositionRange;
       float fHeightRange;
       float fColorRange;

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Gamebryo/NiPoint3.hpp"
 
@@ -8,7 +9,7 @@ class NavMeshGrid
     NavMeshGrid();
     ~NavMeshGrid();
 
-    unsigned int iGridSize;
+    std::uint32_t iGridSize;
     float fColumnSectionLen;
     float fRowSectionLen;
     NiPoint3 GridBoundsMin;

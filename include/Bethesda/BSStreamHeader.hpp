@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class BSStreamHeader
 {
@@ -6,7 +7,7 @@ class BSStreamHeader
     BSStreamHeader();
     ~BSStreamHeader();
     
-    unsigned int uiVersion;
+    std::uint32_t uiVersion;
     char pAuthor[64];
     char pProcessScript[64];
     char pExportScript[64];

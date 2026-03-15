@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiGeometry.hpp"
 #include "Gamebryo/NiTPointerAllocator.hpp"
 
@@ -18,7 +19,7 @@ class BSTPersistentList
 
     class AntiBloatAllocator : TAllocator
     {
-      unsigned int uiCount;
+      std::uint32_t uiCount;
     };
 
 

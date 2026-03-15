@@ -22,7 +22,7 @@ class BSCullingProcess : NiCullingProcess
 
     BSCullingProcess::BSCPCullingType kCullMode;
     BSCullingProcess::BSCPCullingType eTypeStackA[10];
-    unsigned int iCTStackIndex;
+    std::uint32_t iCTStackIndex;
     BSCompoundFrustum* pCompoundFrustum;
     NiPointer<NiAccumulator> spAccumulator;
 };

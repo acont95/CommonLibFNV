@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 template <typename T>
 class NiTNewInterface
@@ -8,4 +9,4 @@ class NiTNewInterface
     ~NiTNewInterface();
 };
 
-static_assert(sizeof(NiTNewInterface<unsigned int>) == 0x1, "NiTNewInterface has wrong size");
+static_assert(sizeof(NiTNewInterface<std::uint32_t>) == 0x1, "NiTNewInterface has wrong size");

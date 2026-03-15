@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/NavMesh.hpp"
 #include "Bethesda/NavMeshBounds.hpp"
@@ -10,9 +11,9 @@ class NavMeshInfo
     NavMeshInfo();
     ~NavMeshInfo();
 
-    unsigned int NavMeshID;
-    unsigned int ParentSpaceID;
-    unsigned int uiFlags;
+    std::uint32_t NavMeshID;
+    std::uint32_t ParentSpaceID;
+    std::uint32_t uiFlags;
     int iCellKey;
     NiPoint3 ApproxLocation;
     TESForm *pParentSpace;

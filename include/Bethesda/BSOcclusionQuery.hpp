@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/D3DQuery.hpp"
 
 class BSOcclusionQuery
@@ -7,7 +8,7 @@ class BSOcclusionQuery
     BSOcclusionQuery();
     ~BSOcclusionQuery();
 
-    unsigned int uiNumTiles;
+    std::uint32_t uiNumTiles;
     D3DQuery* pQuery;
 };
 

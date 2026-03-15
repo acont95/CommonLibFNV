@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class TESHealthForm
 {
@@ -6,7 +7,7 @@ class TESHealthForm
     TESHealthForm();
     virtual ~TESHealthForm();
 
-    unsigned int iHealth;
+    std::uint32_t iHealth;
 };
 
 static_assert(sizeof(TESHealthForm) == 0x8, "TESHealthForm has wrong size");

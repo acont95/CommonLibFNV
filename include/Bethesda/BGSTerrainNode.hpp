@@ -32,7 +32,7 @@ class BGSTerrainNode
     };
 
     BGSTerrainManager *pManager;
-    unsigned int iLevel;
+    std::uint32_t iLevel;
     std::int16_t sBaseCellX;
     std::int16_t sBaseCellY;
     bool bHasGeometry;
@@ -48,7 +48,7 @@ class BGSTerrainNode
     float fSplitDistance;
     float fStartMorphDistance;
     float fEndMorphDistance;
-    unsigned int uiFadeStartTime;
+    std::uint32_t uiFadeStartTime;
     bool bTexFading;
     PARENT_POSITION ParentPosition;
     bool bPersistentNode;

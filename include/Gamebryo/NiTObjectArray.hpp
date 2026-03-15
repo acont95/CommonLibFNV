@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTArray.hpp"
 #include "Gamebryo/NiTNewInterface.hpp"
 
@@ -11,4 +12,4 @@ class NiTObjectArray : NiTArray<T, NiTNewInterface<T>>
 
 };
 
-static_assert(sizeof(NiTObjectArray<unsigned int>) == 0x10, "NiTObjectArray has wrong size");
+static_assert(sizeof(NiTObjectArray<std::uint32_t>) == 0x10, "NiTObjectArray has wrong size");

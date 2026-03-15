@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESWeather.hpp"
 #include "Bethesda/TESGlobal.hpp"
 
@@ -9,7 +10,7 @@ class WeatherEntry
     ~WeatherEntry();
 
     TESWeather *pWeather;
-    unsigned int uiChance;
+    std::uint32_t uiChance;
     TESGlobal *pChanceVar;
 };
 

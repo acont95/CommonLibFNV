@@ -100,7 +100,7 @@ class NiTexturingProperty : NiProperty
         ShaderMap();
         virtual ~ShaderMap();
 
-        unsigned int m_uiID;
+        std::uint32_t m_uiID;
     };
 
     std::uint16_t m_uFlags;

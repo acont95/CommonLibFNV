@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESQuest.hpp"
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/ScriptVariable.hpp"
@@ -7,10 +8,10 @@
 
 struct SCRIPT_HEADER
 {
-  unsigned int variableCount;
-  unsigned int refObjectCount;
-  unsigned int dataSize;
-  unsigned int m_uiLastID;
+  std::uint32_t variableCount;
+  std::uint32_t refObjectCount;
+  std::uint32_t dataSize;
+  std::uint32_t m_uiLastID;
   bool bIsQuestScript;
   bool bIsMagicEffectScript;
   bool bIsCompiled;
@@ -21,7 +22,7 @@ class SCRIPT_REFERENCED_OBJECT
   public:
     BSStringT<char> cEditorID;
     TESForm* pForm;
-    unsigned int uiVariableID;
+    std::uint32_t uiVariableID;
 };
 
 class Script : TESForm

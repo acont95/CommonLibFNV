@@ -60,7 +60,7 @@ class BSBatchRenderer : NiObject
         PassGroup();
         ~PassGroup();
 
-        BSTPersistentList<NiTPointerAllocator<unsigned int>,BSShaderProperty::RenderPass *> pListA[5];
+        BSTPersistentList<NiTPointerAllocator<std::uint32_t>,BSShaderProperty::RenderPass *> pListA[5];
         int iSize;
     };
 
@@ -77,17 +77,17 @@ class BSBatchRenderer : NiObject
 
         std::uint8_t ucFlags;
         std::uint16_t usCount;
-        unsigned int uiPassCount;
+        std::uint32_t uiPassCount;
         BSBatchRenderer *pBatchRenderer;
-        BSTPersistentList<NiTPointerAllocator<unsigned int>,BSShaderProperty::RenderPass *> PassList;
+        BSTPersistentList<NiTPointerAllocator<std::uint32_t>,BSShaderProperty::RenderPass *> PassList;
         float fDepth;
     };
 
     BSBatchRenderer::PassGroup *pRenderPassA;
-    NiTMap<unsigned int,unsigned int> RenderPassMap;
-    unsigned int uiRenderPassCount;
-    unsigned int uiCurrentFirstPass;
-    unsigned int uiCurrentLastPass;
+    NiTMap<std::uint32_t,std::uint32_t> RenderPassMap;
+    std::uint32_t uiRenderPassCount;
+    std::uint32_t uiCurrentFirstPass;
+    std::uint32_t uiCurrentLastPass;
     struct BSInstanceRendering *pInstanceRenderer;
     BSSimpleList<unsigned short> kActivePassIndexList;
     int iGroupingAlphas;

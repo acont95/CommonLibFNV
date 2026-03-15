@@ -54,7 +54,7 @@ class NiProcessorAffinity
     };
 
     Processor m_eIdealProcessor;
-    unsigned int m_uiAffinityMask;
+    std::uint32_t m_uiAffinityMask;
 };
 
 static_assert(sizeof(NiProcessorAffinity) == 0x8, "NiProcessorAffinity has wrong size");

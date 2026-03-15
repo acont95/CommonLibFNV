@@ -117,7 +117,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
     class WeatherSound
     {
       public:
-        unsigned int uiSoundFormID;
+        std::uint32_t uiSoundFormID;
         SoundType eType;
     };
 
@@ -125,11 +125,11 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
 
     TESTexture1024 cloudTexture[4];
     std::uint8_t ucCloudLayerSpeed[4];
-    unsigned int uiCloudColorData[4][6];
+    std::uint32_t uiCloudColorData[4][6];
     TESModel precipNIF;
     std::uint8_t ucWeatherData[15];
     float fFogData[6];
-    unsigned int uiColorData[10][6];
+    std::uint32_t uiColorData[10][6];
     TESWeather::WeatherSoundList soundList;
     float fHDRData[14];
     ImageSpaceParameterData pImageSpaceParameterMods[2];

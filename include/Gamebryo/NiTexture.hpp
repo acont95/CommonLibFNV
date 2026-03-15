@@ -62,8 +62,8 @@ class NiTexture : public NiObjectNET
         RendererData();
         ~RendererData();
         NiTexture *m_pkTexture;
-        unsigned int m_uiWidth;
-        unsigned int m_uiHeight;
+        std::uint32_t m_uiWidth;
+        std::uint32_t m_uiHeight;
         NiPixelFormat m_kPixelFormat;
         BSDegradePriority DegradePriorityRange;
         std::uint8_t cFlags;

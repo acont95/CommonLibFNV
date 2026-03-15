@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/Script.hpp"
 #include "Bethesda/BSSimpleList.hpp"
@@ -15,7 +16,7 @@ struct SCRIPT_EFFECT_DATA
 struct ACTION_OBJECT
 {
   TESForm *pForm;
-  unsigned int iFlags;
+  std::uint32_t iFlags;
 };
 
 

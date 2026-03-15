@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class ImageSpaceParameterData
 {
@@ -11,7 +12,7 @@ class ImageSpaceParameterData
     float pfGetHitData[3];
     float pfNightEyeData[4];
     float pfCinematicData[12];
-    unsigned int uiCinematicsEnabled;
+    std::uint32_t uiCinematicsEnabled;
 };
 
 static_assert(sizeof(ImageSpaceParameterData) == 0x98);

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/TESForm.hpp"
 
@@ -9,7 +10,7 @@ class BGSListForm : TESForm
     virtual ~BGSListForm();
 
     BSSimpleList<TESForm *> ListOfForms;
-    unsigned int iScriptAddedFormCount;
+    std::uint32_t iScriptAddedFormCount;
 };
 
 static_assert(sizeof(BGSListForm) == 0x24, "BGSListForm has wrong size");

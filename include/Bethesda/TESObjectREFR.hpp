@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESSound.hpp"
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESObjectCELL.hpp"
@@ -29,7 +30,7 @@ class TESObjectREFR : TESForm, TESChildCell
       int iUnderwaterCount;
       float fRelevantWaterHeight;
       float fCachedRadius;
-      unsigned int iFlags;
+      std::uint32_t iFlags;
       NiPointer<NiAVObject> m_spData3D;
       NiPointer<bhkPhantom> spPhantom;
     };

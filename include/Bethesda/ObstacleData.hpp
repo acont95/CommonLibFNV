@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/NavMeshInfo.hpp"
 #include "Bethesda/ReferenceObstacleArray.hpp"
@@ -21,7 +22,7 @@ class ObstacleData : NiRefObject
     NiPoint3 BoxMax;
     NiPoint3 aabbMin;
     NiPoint3 aabbMax;
-    unsigned int iLastUpdateTime;
+    std::uint32_t iLastUpdateTime;
     bool bActive;
     BSSimpleArray<NavMeshInfo *,1024> Navmeshes;
     NiPointer<NiTriShape> sp3DNode;

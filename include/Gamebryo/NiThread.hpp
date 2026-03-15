@@ -25,13 +25,13 @@ class NiThread
       COMPLETE = 0x2,
     };
 
-    unsigned int m_iThreadID;
+    std::uint32_t m_iThreadID;
     NiProcessorAffinity m_kAffinity;
-    unsigned int m_uiStackSize;
+    std::uint32_t m_uiStackSize;
     NiThreadProcedure* m_pkProcedure;
     Priority m_ePriority;
     volatile NiThread::Status m_eStatus;
-    volatile unsigned int m_uiReturnValue;
+    volatile std::uint32_t m_uiReturnValue;
     void* m_hThread;
     char* m_pcName;
 };

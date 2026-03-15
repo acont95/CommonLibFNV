@@ -124,7 +124,7 @@ class BSShaderProperty : public NiShadeProperty
         ~RenderPassArray();
 
         NiTObjectArray<RenderPass*> pPassA;
-        unsigned int iSize;
+        std::uint32_t iSize;
     };
 
     class PreviousTransform
@@ -143,7 +143,7 @@ class BSShaderProperty : public NiShadeProperty
       std::uint16_t usBoneCounter;
     };
 
-    unsigned int ulFlags[2];
+    std::uint32_t ulFlags[2];
     float fAlpha;
     float fFadeAlpha;
     float fEnvmapScale;

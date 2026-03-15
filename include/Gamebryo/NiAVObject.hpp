@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiNode.hpp"
 #include "Gamebryo/NiObjectNET.hpp"
 #include "Gamebryo/NiTPointerList.hpp"
@@ -16,7 +17,7 @@ class NiAVObject : NiObjectNET {
     NiPointer<NiCollisionObject> m_spCollisionObject;
     BSNiBound* m_kWorldBound;
     NiTPointerList<NiPointer<NiProperty>> m_kPropertyList;
-    unsigned int m_uFlags;
+    std::uint32_t m_uFlags;
     NiTransform m_kLocal;
     NiTransform m_kWorld;
 };

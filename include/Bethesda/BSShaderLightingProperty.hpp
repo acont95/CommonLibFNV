@@ -38,7 +38,7 @@ class BSShaderLightingProperty : public BSShaderProperty
 
     NiTPointerListSingleThread<ShadowSceneLight*> lLightList;
     float fForcedDarkness;
-    unsigned int uiReferenceID;
+    std::uint32_t uiReferenceID;
     bool bLightListChanged;
     void* kLightListFence;
 };

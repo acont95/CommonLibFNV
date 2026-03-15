@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/BSMap.hpp"
 #include "Bethesda/BGSTerrainNode.hpp"
@@ -15,7 +16,7 @@ class BGSDistantTreeBlock
     class TreeType
     {
       public:
-        unsigned int uiNumber;
+        std::uint32_t uiNumber;
         float fWidth;
         float fHeight;
         float u0;
@@ -31,8 +32,8 @@ class BGSDistantTreeBlock
         NiPoint3 Pos;
         float fRotZ;
         float fScale;
-        unsigned int id;
-        unsigned int uiGroup;
+        std::uint32_t id;
+        std::uint32_t uiGroup;
         bool bHidden;
     };
 
@@ -42,15 +43,15 @@ class BGSDistantTreeBlock
         BGSDistantTreeBlock::TreeType *pTreeType;
         NiPointer<BSResizableTriShape> spGeometry;
         BSSimpleArray<BGSDistantTreeBlock::InstanceData,1024> Instances;
-        unsigned int uiNum;
+        std::uint32_t uiNum;
         bool bShaderPropertyUpToDate;
     };
 
     NiPointer<BGSDistantTreeBlockLoadTask> spLoadTask;
     BSSimpleArray<BGSDistantTreeBlock::TreeGroup *,1024> TreeGroups;
-    BSMap<unsigned int,BGSDistantTreeBlock::InstanceData *> InstanceMap;
-    BSMap<unsigned int,BGSDistantTreeBlock::TreeGroup *> NextGroup;
-    BSSimpleArray<unsigned int,1024> TreesQueuedToHide;
+    BSMap<std::uint32_t,BGSDistantTreeBlock::InstanceData *> InstanceMap;
+    BSMap<std::uint32_t,BGSDistantTreeBlock::TreeGroup *> NextGroup;
+    BSSimpleArray<std::uint32_t,1024> TreesQueuedToHide;
     BGSTerrainNode *pNode;
     bool bDoneLoading;
     bool bAttached;

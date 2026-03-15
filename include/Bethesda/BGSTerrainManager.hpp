@@ -21,10 +21,10 @@ class BGSTerrainManager
     std::int16_t sMinCellY;
     std::int16_t sMaxCellX;
     std::int16_t sMaxCellY;
-    unsigned int iMaxLevel;
-    unsigned int iMinLevel;
-    unsigned int iRootLevel;
-    unsigned int iBlockLevel;
+    std::uint32_t iMaxLevel;
+    std::uint32_t iMinLevel;
+    std::uint32_t iRootLevel;
+    std::uint32_t iBlockLevel;
     bool bNeedsImmediateUpdate;
     bool bHasLOD;
     BSSimpleArray<TESObjectREFR *,1024> TreesQueuedToHide;

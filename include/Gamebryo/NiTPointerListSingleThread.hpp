@@ -1,9 +1,10 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTPointerAllocator.hpp"
 #include "Gamebryo/NiTPointerListBase.hpp"
 
 template <typename T>
-class NiTPointerListSingleThread : NiTPointerListBase<NiTPointerAllocator<unsigned int>, T>
+class NiTPointerListSingleThread : NiTPointerListBase<NiTPointerAllocator<std::uint32_t>, T>
 {
   public:
     NiTPointerListSingleThread();

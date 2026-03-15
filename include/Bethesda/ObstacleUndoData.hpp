@@ -25,10 +25,10 @@ class ObstacleUndoData : public NiRefObject
 
     OBSTACLE_UNDO_STATE eState;
     NiPointer<ObstacleData> spObstacle;
-    unsigned int iFirstAddedVertexIndex;
-    unsigned int iAddedVertexCount;
-    unsigned int iFirstAddedTriangleIndex;
-    unsigned int iAddedTriangleCount;
+    std::uint32_t iFirstAddedVertexIndex;
+    std::uint32_t iAddedVertexCount;
+    std::uint32_t iFirstAddedTriangleIndex;
+    std::uint32_t iAddedTriangleCount;
     BSSimpleArray<unsigned short,1024> OverlappedTriangles;
     BSSimpleArray<BoundsTriangleInfo,1024> BoundsTriangles;
     NiTMap<unsigned short,NiPointer<ObstacleData> > RemovedTriangleToObstacleMap;

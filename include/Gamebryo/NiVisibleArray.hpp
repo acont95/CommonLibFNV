@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiGeometry.hpp"
 
 class NiVisibleArray
@@ -8,9 +9,9 @@ class NiVisibleArray
     ~NiVisibleArray();
 
     NiGeometry** m_ppkArray;
-    unsigned int m_uiCurrentSize;
-    unsigned int m_uiAllocatedSize;
-    unsigned int m_uiGrowBy;
+    std::uint32_t m_uiCurrentSize;
+    std::uint32_t m_uiAllocatedSize;
+    std::uint32_t m_uiGrowBy;
 };
 
 static_assert(sizeof(NiVisibleArray) == 0x10, "NiVisibleArray has wrong size");

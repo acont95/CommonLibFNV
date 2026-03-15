@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSOcclusionQuery.hpp"
 #include "Gamebryo/NiPoint3.hpp"
 
@@ -10,12 +11,12 @@ class ReferenceVolume
 
     NiPoint3 Center;
     float fRadius;
-    unsigned int uiReferenceID;
+    std::uint32_t uiReferenceID;
     BSOcclusionQuery *pOcclusionQuery;
     bool bOccluded;
     bool bWaiting;
     bool bPerformTest;
-    unsigned int uiPixelCount;
+    std::uint32_t uiPixelCount;
 };
 
 static_assert(sizeof(ReferenceVolume) == 0x20);

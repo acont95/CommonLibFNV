@@ -70,7 +70,7 @@ class EffectArchetypes
     {
       const char *pcName;
       ActiveEffect *(__cdecl *pInstantiateFunction)(MagicCaster*, MagicItem*, EffectItem*);
-      unsigned int iFlags;
+      std::uint32_t iFlags;
       ActorValue::Index iFixedActorValue;
     };
 

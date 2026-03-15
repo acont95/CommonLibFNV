@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSMapItem.hpp"
 
 template <typename Key, typename Value>
@@ -8,9 +9,9 @@ class BSMapBase
     BSMapBase();
     virtual ~BSMapBase();
 
-    unsigned int m_uiHashSize;
+    std::uint32_t m_uiHashSize;
     BSMapItem<Key, Value> **m_ppkHashTable;
-    unsigned int m_uiCount;
+    std::uint32_t m_uiCount;
 };
 
 static_assert(sizeof(BSMapBase<void*, void*>) == 0x10, "BSMapBase has wrong size");

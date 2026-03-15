@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTriShape.hpp"
 #include "Gamebryo/NiBound.hpp"
 
@@ -8,7 +9,7 @@ class BSResizableTriShape : NiTriShape
     BSResizableTriShape();
     virtual ~BSResizableTriShape();
 
-    unsigned int uiNumPrimitives;
+    std::uint32_t uiNumPrimitives;
     NiBound LocalBound;
 };
 

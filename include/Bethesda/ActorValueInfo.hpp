@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESDescription.hpp"
@@ -15,7 +16,7 @@ class ActorValueInfo : TESForm, TESFullName, TESDescription, TESIcon
 
     char* sScriptName;
     BSStringT<char> sAbbreviation;
-    unsigned int uFlags;
+    std::uint32_t uFlags;
     ActorValue::Section eAVType;
     float (__cdecl *pDerivationFunction)(ActorValueOwner*, ActorValue::Index);
     ActorValue::Index (__cdecl *pMappingFunction)(ActorValueOwner*, ActorValue::Index);

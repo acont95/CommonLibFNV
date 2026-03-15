@@ -12,9 +12,9 @@ struct ENCOUNTER_ZONE_DATA
 
 struct ENCOUNTER_ZONE_GAME_DATA
 {
-  unsigned int iDetachTime;
-  unsigned int iAttachTime;
-  unsigned int iResetTime;
+  std::uint32_t iDetachTime;
+  std::uint32_t iAttachTime;
+  std::uint32_t iResetTime;
   std::uint16_t sZoneLevel;
 };
 

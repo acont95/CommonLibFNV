@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/Ni2DBuffer.hpp"
 #include "Gamebryo/NiRenderedTexture.hpp"
@@ -13,7 +14,7 @@ class NiRenderedTexture : NiTexture
     virtual ~NiRenderedTexture();
 
     NiPointer<Ni2DBuffer> m_spBuffer;
-    unsigned int uiAliasOffset;
+    std::uint32_t uiAliasOffset;
     NiRenderedTexture* pAliasTexture;
     Ni2DBuffer::MultiSamplePreference eMSAA;
     bool bRenderedTexture;

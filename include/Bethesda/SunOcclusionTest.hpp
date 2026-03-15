@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSOcclusionQuery.hpp"
 
 class SunOcclusionTest
@@ -10,8 +11,8 @@ class SunOcclusionTest
     BSOcclusionQuery* pOcclusionQuery;
     bool bWaiting;
     float fPercentOccluded;
-    unsigned int uiPixelCount;
-    unsigned int uiFrameCount;
+    std::uint32_t uiPixelCount;
+    std::uint32_t uiFrameCount;
 };
 
 static_assert(sizeof(SunOcclusionTest) == 0x14, "SunOcclusionTest has wrong size");

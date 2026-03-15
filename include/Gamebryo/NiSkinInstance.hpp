@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiSkinData.hpp"
 #include "Gamebryo/NiSkinPartition.hpp"
@@ -15,10 +16,10 @@ class NiSkinInstance : NiObject
     NiPointer<NiSkinPartition> m_spSkinPartition;
     NiAVObject* m_pkRootParent;
     NiAVObject** m_ppkBones;
-    unsigned int m_uiFrameID;
-    unsigned int m_uiNumMatrices;
-    unsigned int m_uiNumRegisters;
-    unsigned int m_uiAllocatedSize;
+    std::uint32_t m_uiFrameID;
+    std::uint32_t m_uiNumMatrices;
+    std::uint32_t m_uiNumRegisters;
+    std::uint32_t m_uiAllocatedSize;
     void *m_pvBoneMatrices;
     void *m_pvPrevBoneMatrices;
     void *m_pvSkinToWorldWorldToSkinMatrix;

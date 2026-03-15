@@ -32,8 +32,8 @@ class Ni2DBuffer : NiObject
         virtual ~RendererData();
     };
 
-    unsigned int m_uiWidth;
-    unsigned int m_uiHeight;
+    std::uint32_t m_uiWidth;
+    std::uint32_t m_uiHeight;
     NiPointer<Ni2DBuffer::RendererData> m_spRendererData;
 };
 

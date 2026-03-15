@@ -19,7 +19,7 @@ class TESQuestStageItem
     QUEST_STAGE_ITEM_DATA m_Data;
     TESCondition objConditions;
     Script cResultScript;
-    unsigned int m_fileOffset;
+    std::uint32_t m_fileOffset;
     std::uint8_t ucIndex;
     bool m_bHasLogEntry;
     Date *m_pLogDate;

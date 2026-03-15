@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSMultiBoundShape.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiObject.hpp"
@@ -9,7 +10,7 @@ class BSMultiBound : NiObject
     BSMultiBound();
     ~BSMultiBound();
 
-    unsigned int uiBoundFrameCount;
+    std::uint32_t uiBoundFrameCount;
     NiPointer<BSMultiBoundShape> spShape;
 };
 

@@ -31,8 +31,8 @@ class TESWaterForm : TESForm, TESFullName, TESAttackDamageForm
     TESWaterForm *pWaterWeatherControl[3];
     int iCurrentTextureSelect01;
     int iCurrentTextureSelect02;
-    unsigned int fFrequencyX;
-    unsigned int fFrequencyY;
+    std::uint32_t fFrequencyX;
+    std::uint32_t fFrequencyY;
     int iOctaves;
     float fAmplitude;
     float fLacunarity;

@@ -19,7 +19,7 @@ class BGSQuestObjective
     BGSQuestObjective();
     virtual ~BGSQuestObjective();
 
-    unsigned int iIndex;
+    std::uint32_t iIndex;
     BSStringT<char> cDisplayText;
     TESQuest *pOwnerQuest;
     BSSimpleList<TESQuestTarget*> ListTargets;

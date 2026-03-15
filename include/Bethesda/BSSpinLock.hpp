@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class BSSpinLock
 {
@@ -6,8 +7,8 @@ class BSSpinLock
     BSSpinLock();
     ~BSSpinLock();
 
-    volatile unsigned int uiOwningThread;
-    unsigned int uiLockCount;
+    volatile std::uint32_t uiOwningThread;
+    std::uint32_t uiLockCount;
 };
 
 static_assert(sizeof(BSSpinLock) == 0x8, "BSSpinLock has wrong size");

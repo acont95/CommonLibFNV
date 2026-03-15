@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESWaterForm.hpp"
 
 class BGSPlaceableWaterData
@@ -7,7 +8,7 @@ class BGSPlaceableWaterData
     BGSPlaceableWaterData();
     ~BGSPlaceableWaterData();
 
-    unsigned int ulFlags;
+    std::uint32_t ulFlags;
     TESWaterForm *pWaterType;
 };
 

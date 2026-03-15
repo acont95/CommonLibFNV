@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/ObstacleData.hpp"
 #include "Gamebryo/NiRefObject.hpp"
@@ -9,7 +10,7 @@ class ReferenceObstacleArray : NiRefObject
     ReferenceObstacleArray();
     virtual ~ReferenceObstacleArray();
 
-    unsigned int iFormID;
+    std::uint32_t iFormID;
     BSSimpleArray<NiPointer<ObstacleData>, 1024> Obstacles;
 };
 

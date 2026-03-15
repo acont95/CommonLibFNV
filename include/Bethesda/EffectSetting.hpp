@@ -20,7 +20,7 @@ class EffectSetting : TESForm, TESModel, TESDescription, TESFullName, TESIcon
 
     struct EffectSettingData
     {
-      unsigned int iFlags;
+      std::uint32_t iFlags;
       float fBaseCost;
       TESForm* pAssociatedItem;
       ActorValue::Index iAssociatedSkill;

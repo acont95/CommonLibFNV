@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiMemObject.hpp"
 
 class NiObjectGroup : public NiMemObject {
@@ -6,10 +7,10 @@ class NiObjectGroup : public NiMemObject {
     NiObjectGroup();
     ~NiObjectGroup();
 
-    unsigned int m_uiSize;
+    std::uint32_t m_uiSize;
     void* m_pvBuffer;
     void* m_pvFree;
-    unsigned int m_uiRefCount;
+    std::uint32_t m_uiRefCount;
 };
 
 static_assert(sizeof(NiObjectGroup) == 0x10, "NiObjectGroup has wrong size");

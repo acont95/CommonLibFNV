@@ -45,7 +45,7 @@ class BSShaderPPLightingProperty : BSShaderLightingProperty
         D3DBLENDOP eBlendOperation;
         D3DCMPFUNC eZTestFunction;
         NiPointer<NiTexture> spBlockOutTexture;
-        unsigned int iAlphaTest;
+        std::uint32_t iAlphaTest;
     };
 
     float fWaterDepthCameraOffset;
