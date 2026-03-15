@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/MagicItemForm.hpp"
 #include "Bethesda/TESWeather.hpp"
 #include "Bethesda/SpellItemData.hpp"
@@ -9,7 +10,7 @@ class SpellItem : MagicItemForm
     SpellItem();
     virtual ~SpellItem();
 
-    enum SpellFlag : __int32
+    enum SpellFlag : std::int32_t
     {
       COST_OVERRIDE = 0x1,
       ALWAYS_SUCCEEDS = 0x2,

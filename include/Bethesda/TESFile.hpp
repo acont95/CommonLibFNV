@@ -76,7 +76,7 @@ class TESFile {
     unsigned int iMasterCount;
     TESFile **m_pMasterPtrs;
     _FILETIME DeletedFormTime;
-    unsigned __int8 cCompileIndex;
+    std::uint8_t cCompileIndex;
     std::uint8_t pad02[3];
     BSStringT<char> cCreatedBy;
     BSStringT<char> cSummary;

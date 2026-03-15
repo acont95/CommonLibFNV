@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESObjectREFR.hpp"
 
 class NavMeshTriangleDoorPortal
@@ -8,7 +9,7 @@ class NavMeshTriangleDoorPortal
     ~NavMeshTriangleDoorPortal();
 
     TESObjectREFR *pDoorForm;
-    unsigned __int16 iOwningTriangleIndex;
+    std::uint16_t iOwningTriangleIndex;
 };
 
 static_assert(sizeof(NavMeshTriangleDoorPortal) == 0x8, "NavMeshTriangleDoorPortal has wrong size");

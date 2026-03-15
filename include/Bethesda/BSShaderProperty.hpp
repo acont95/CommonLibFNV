@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Types.hpp"
 #include "Bethesda/ShadowSceneLight.hpp"
 #include "Gamebryo/NiGeometry.hpp"
@@ -11,7 +12,7 @@ class BSShaderProperty : public NiShadeProperty
     BSShaderProperty();
     virtual ~BSShaderProperty();
 
-    enum TextureTypeEnum : __int32
+    enum TextureTypeEnum : std::int32_t
     {
       TEXTYPE_DIFFUSE = 0x0,
       TEXTYPE_GLOSS = 0x1,
@@ -19,7 +20,7 @@ class BSShaderProperty : public NiShadeProperty
       TEXTYPE_HAIR_LAYER = 0x2,
     };
 
-    enum etAccumulationHint : __int32
+    enum etAccumulationHint : std::int32_t
     {
       BSSP_HINT_NORMAL = 0x0,
       BSSP_HINT_SORT = 0x1,
@@ -38,7 +39,7 @@ class BSShaderProperty : public NiShadeProperty
       BSSP_HINT_GROUP_FADING = 0xE,
     };
 
-    enum EShaderPropertyFlag : __int32
+    enum EShaderPropertyFlag : std::int32_t
     {
       BSSP_SPECULAR = 0x0,
       BSSP_SKINNED = 0x1,
@@ -106,13 +107,13 @@ class BSShaderProperty : public NiShadeProperty
         ~RenderPass();
 
         NiGeometry *pGeometry;
-        unsigned __int16 usPassEnum;
-        unsigned __int8 eAccumulationHint;
+        std::uint16_t usPassEnum;
+        std::uint8_t eAccumulationHint;
         bool bFirstPass;
         bool bLastPass;
-        unsigned __int8 ucNumLights;
-        unsigned __int8 ucMaxNumLights;
-        unsigned __int8 ucExtraParam;
+        std::uint8_t ucNumLights;
+        std::uint8_t ucMaxNumLights;
+        std::uint8_t ucExtraParam;
         ShadowSceneLight **ppSceneLights;
     };
 
@@ -137,9 +138,9 @@ class BSShaderProperty : public NiShadeProperty
       D3DXMATRIX matWorldViewProjT;
       bool bBonesReady;
       bool bWorldReady;
-      unsigned __int16 usWorldViewCounter;
-      unsigned __int16 usWorldViewProjCounter;
-      unsigned __int16 usBoneCounter;
+      std::uint16_t usWorldViewCounter;
+      std::uint16_t usWorldViewProjCounter;
+      std::uint16_t usBoneCounter;
     };
 
     unsigned int ulFlags[2];

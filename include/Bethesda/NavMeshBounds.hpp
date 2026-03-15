@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Gamebryo/NiPoint3.hpp"
 
@@ -10,7 +11,7 @@ class NavMeshBounds
 
     struct NavMeshBoundsTriangle
     {
-      unsigned __int16 Vertices[3];
+      std::uint16_t Vertices[3];
     };
 
     NiPoint3 BoundingBoxMin;

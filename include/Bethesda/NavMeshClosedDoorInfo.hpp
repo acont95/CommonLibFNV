@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class NavMeshClosedDoorInfo
 {
@@ -7,7 +8,7 @@ class NavMeshClosedDoorInfo
     ~NavMeshClosedDoorInfo();
 
     unsigned int DoorFormID;
-    unsigned __int16 iTriangleIndex;
+    std::uint16_t iTriangleIndex;
 };
 
 static_assert(sizeof(NavMeshClosedDoorInfo) == 0x8, "NavMeshClosedDoorInfo has wrong size");

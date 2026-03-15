@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
 class BGSClipRoundsForm : BaseFormComponent 
@@ -7,7 +8,7 @@ class BGSClipRoundsForm : BaseFormComponent
     BGSClipRoundsForm();
     virtual ~BGSClipRoundsForm();
 
-    unsigned __int8 cClipRounds;
+    std::uint8_t cClipRounds;
 };
 
 static_assert(sizeof(BGSClipRoundsForm) == 0x8, "BGSClipRoundsForm has wrong size");

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESWorldSpace.hpp"
 #include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
@@ -16,10 +17,10 @@ class BGSTerrainManager
     BGSTerrainNode* pRootNode;
     NiPointer<NiNode> spLODRoot;
     NiPointer<NiNode> spLODWaterRoot;
-    __int16 sMinCellX;
-    __int16 sMinCellY;
-    __int16 sMaxCellX;
-    __int16 sMaxCellY;
+    std::int16_t sMinCellX;
+    std::int16_t sMinCellY;
+    std::int16_t sMaxCellX;
+    std::int16_t sMaxCellY;
     unsigned int iMaxLevel;
     unsigned int iMinLevel;
     unsigned int iRootLevel;

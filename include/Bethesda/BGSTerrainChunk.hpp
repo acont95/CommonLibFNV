@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BSMultiBoundNode.hpp"
 #include "Bethesda/TESObjectREFR.hpp"
@@ -13,7 +14,7 @@ class BGSTerrainChunk
     BGSTerrainChunk();
     ~BGSTerrainChunk();
     
-    enum ChunkTextureType : __int32
+    enum ChunkTextureType : std::int32_t
     {
       CHUNK_TEXTURE_DIFFUSE = 0x0,
       CHUNK_TEXTURE_NORMAL = 0x1,

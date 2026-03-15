@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class BoundsTriangleInfo
 {
@@ -6,9 +7,9 @@ class BoundsTriangleInfo
     BoundsTriangleInfo();
     ~BoundsTriangleInfo();
 
-    unsigned __int16 usTriangleIndex;
+    std::uint16_t usTriangleIndex;
     bool bPortals[3];
-    unsigned __int16 Triangles[3];
+    std::uint16_t Triangles[3];
 };
 
 static_assert(sizeof(BoundsTriangleInfo) == 0xC, "BoundsTriangleInfo has wrong size");

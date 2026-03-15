@@ -1,11 +1,12 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 
 struct ENCOUNTER_ZONE_DATA
 {
   TESForm *pZoneOwner;
   char iOwnerRank;
-  unsigned __int8 cMinLevel;
+  std::uint8_t cMinLevel;
   char cFlags;
 };
 
@@ -14,7 +15,7 @@ struct ENCOUNTER_ZONE_GAME_DATA
   unsigned int iDetachTime;
   unsigned int iAttachTime;
   unsigned int iResetTime;
-  unsigned __int16 sZoneLevel;
+  std::uint16_t sZoneLevel;
 };
 
 class BGSEncounterZone : TESForm

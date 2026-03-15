@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
@@ -8,7 +9,7 @@ class Ni2DBuffer : NiObject
     Ni2DBuffer();
     virtual ~Ni2DBuffer();
 
-    enum MultiSamplePreference : __int32
+    enum MultiSamplePreference : std::int32_t
     {
       MULTISAMPLE_NONE = 0x0,
       MULTISAMPLE_2 = 0x1,
@@ -16,7 +17,7 @@ class Ni2DBuffer : NiObject
       MULTISAMPLE_8 = 0x3,
     };
 
-    enum CopyFilterPreference : __int32
+    enum CopyFilterPreference : std::int32_t
     {
       COPY_FILTER_NONE = 0x0,
       COPY_FILTER_POINT = 0x1,

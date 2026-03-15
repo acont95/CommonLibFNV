@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/MagicSystem.hpp"
 #include "Bethesda/SkillLevel.hpp"
 
@@ -11,7 +12,7 @@ class SpellItemData
     MagicSystem::SpellType iSpellType;
     int iCostOverride;
     SkillLevel::Value eLevelOverride;
-    unsigned __int8 iFlags;
+    std::uint8_t iFlags;
 };
 
 static_assert(sizeof(SpellItemData) == 0x10, "SpellItemData has wrong size");

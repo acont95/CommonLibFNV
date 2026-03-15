@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESGlobal.hpp"  
 #include "Bethesda/TESTexture1024.hpp"   
@@ -12,7 +13,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
     TESWeather();
     ~TESWeather();
 
-    enum SoundType : __int32
+    enum SoundType : std::int32_t
     {
       WST_DEFAULT = 0x0,
       WST_PRECIP = 0x1,
@@ -21,13 +22,13 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       WST_COUNT = 0x4,
     };
 
-    enum WarningStatus : __int32
+    enum WarningStatus : std::int32_t
     {
       ENABLED = 0x0,
       SKIP = 0x2,
     };
 
-    enum WeatherData : __int32
+    enum WeatherData : std::int32_t
     {
       WD_WIND_SPEED = 0x0,
       WD_CLOUD_SPEED = 0x1,
@@ -50,7 +51,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       WD_COUNT = 0xF,
     };
 
-    enum FogData : __int32
+    enum FogData : std::int32_t
     {
       NEAR_DIST_DAY = 0x0,
       FAR_DIST_DAY = 0x1,
@@ -61,7 +62,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       FD_COUNT = 0x6,
     };
 
-    enum ColorType : __int32
+    enum ColorType : std::int32_t
     {
       SKY_UPPER = 0x0,
       FOG = 0x1,
@@ -75,7 +76,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       CLOUDS_UNUSED = 0x9,
     };
 
-    enum ColorTime : __int32
+    enum ColorTime : std::int32_t
     {
       SUNRISE = 0x0,
       DAY = 0x1,
@@ -86,7 +87,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       NUM_TIMES = 0x6,
     };
 
-    enum WeatherDataFlag : __int32
+    enum WeatherDataFlag : std::int32_t
     {
       WDF_PLEASANT = 0x1,
       WDF_CLOUDY = 0x2,
@@ -94,7 +95,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
       WDF_SNOW = 0x8,
     };
 
-    enum HDRDataType : __int32
+    enum HDRDataType : std::int32_t
     {
       HDR_EYE_ADAPT_SPEED = 0x0,
       HDR_BLUR_RADIUS = 0x1,
@@ -123,10 +124,10 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
     class WeatherSoundList : BSSimpleList<WeatherSound *>{};
 
     TESTexture1024 cloudTexture[4];
-    unsigned __int8 ucCloudLayerSpeed[4];
+    std::uint8_t ucCloudLayerSpeed[4];
     unsigned int uiCloudColorData[4][6];
     TESModel precipNIF;
-    unsigned __int8 ucWeatherData[15];
+    std::uint8_t ucWeatherData[15];
     float fFogData[6];
     unsigned int uiColorData[10][6];
     TESWeather::WeatherSoundList soundList;

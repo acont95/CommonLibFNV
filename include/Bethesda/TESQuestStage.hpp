@@ -1,11 +1,12 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/TESQuestStageItem.hpp"
 
 class QUEST_STAGE_DATA
 {
   public:
-    unsigned __int8 ucIndex;
+    std::uint8_t ucIndex;
     bool bIsDone;
 };
 

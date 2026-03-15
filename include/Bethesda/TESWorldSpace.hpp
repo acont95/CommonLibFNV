@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESTexture.hpp"
@@ -16,10 +17,10 @@ struct WORLD_MAP_DATA
 {
   unsigned int iUsableWidth;
   unsigned int iUsableHeight;
-  __int16 sNWCellX;
-  __int16 sNWCellY;
-  __int16 sSECellX;
-  __int16 sSECellY;
+  std::int16_t sNWCellX;
+  std::int16_t sNWCellY;
+  std::int16_t sSECellX;
+  std::int16_t sSECellY;
 };
 
 struct WORLD_MAP_OFFSET_DATA
@@ -36,7 +37,7 @@ class TESWorldSpace : TESForm, TESFullName, TESTexture
     TESWorldSpace();
     virtual ~TESWorldSpace();
 
-    enum PARENT_USE_FLAG : __int32
+    enum PARENT_USE_FLAG : std::int32_t
     {
       PU_LAND = 0x0,
       PU_LOD = 0x1,
@@ -63,8 +64,8 @@ class TESWorldSpace : TESForm, TESFullName, TESTexture
     TESClimate *pClimate;
     TESImageSpace *pImageSpace;
     ImpactSwap *pImpactSwap;
-    unsigned __int8 cFlags;
-    unsigned __int16 sParentUseFlags;
+    std::uint8_t cFlags;
+    std::uint16_t sParentUseFlags;
     NiTPointerMap<unsigned int,BSSimpleList<TESObjectREFR *> *> FixedPersistentRefMap;
     BSSimpleList<TESObjectREFR *> MobilePersistentRefList;
     NiTPointerMap<unsigned int,BSSimpleList<TESObjectREFR *> *> *pOverlappedMultiboundMap;

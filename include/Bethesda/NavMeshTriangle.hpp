@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class NavMeshTriangle
 {
@@ -6,8 +7,8 @@ class NavMeshTriangle
     NavMeshTriangle();
     ~NavMeshTriangle();
 
-    unsigned __int16 Vertices[3];
-    unsigned __int16 Triangles[3];
+    std::uint16_t Vertices[3];
+    std::uint16_t Triangles[3];
     unsigned int TriangleFlags;
 };
 

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
 class BGSEquipType : BaseFormComponent
@@ -7,7 +8,7 @@ class BGSEquipType : BaseFormComponent
     BGSEquipType();
     virtual ~BGSEquipType();
 
-    enum EQUIP_TYPE : __int32
+    enum EQUIP_TYPE : std::int32_t
     {
       ET_NONE = 0xFFFFFFFF,
       ET_BIG_GUN = 0x0,

@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <cstdint>
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TallGrassGroup.hpp"
 #include "Bethesda/GrassLoadTask.hpp"
@@ -60,7 +61,7 @@ class TallGrassShaderProperty : public BSShaderLightingProperty
         bool bTristrip;
         bool bBillboard;
         bool bQueued;
-        unsigned __int16 usInstanceTriCount;
+        std::uint16_t usInstanceTriCount;
     };
 
     TallGrassGroup* pGrassGroup;

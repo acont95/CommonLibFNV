@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include <Types.hpp>
 #include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
@@ -24,7 +25,7 @@ class ShadowSceneLight : NiRefObject
     ShadowSceneLight();
     virtual ~ShadowSceneLight();
 
-    enum eFrustumCull : __int32
+    enum eFrustumCull : std::int32_t
     {
       SSL_NONE = 0x0,
       SSL_POSX = 0x1,
@@ -55,7 +56,7 @@ class ShadowSceneLight : NiRefObject
     bool bDynamicLight;
     NiPoint3 bPointPosition;
     NiPointer<BSRenderedTexture> spDynamicShadowMap;
-    unsigned __int16 usFrustumCull;
+    std::uint16_t usFrustumCull;
     NiPointer<NiAVObject> spFrustumVis;
     bool bShadowSpotlight;
     float fSpotlightFOV;

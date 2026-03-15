@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/TESWeatherList.hpp"
@@ -10,19 +11,19 @@ class TESClimate : TESForm
     TESClimate();
     virtual ~TESClimate();
 
-    enum TextureType : __int32
+    enum TextureType : std::int32_t
     {
       TX_SUN = 0x0,
       TX_GLARE = 0x1,
       NUM_TEXTURES = 0x2,
     };
 
-    enum HourlyIncrements : __int32
+    enum HourlyIncrements : std::int32_t
     {
       HOURLY_INCREMENTS = 0x6,
     };
 
-    enum TransTime : __int32
+    enum TransTime : std::int32_t
     {
       SUNRISE_BEGIN = 0x0,
       SUNRISE_END = 0x1,
@@ -31,7 +32,7 @@ class TESClimate : TESForm
       NUM_TRANS_TIMES = 0x4,
     };
 
-    enum MiscData : __int32
+    enum MiscData : std::int32_t
     {
       VOLATILITY = 0x4,
       MOON_DATA = 0x5,
@@ -41,7 +42,7 @@ class TESClimate : TESForm
     TESModel mNightSky;
     TESWeatherList weatherList;
     TESTexture txSkyObjects[2];
-    unsigned __int8 ucData[6];
+    std::uint8_t ucData[6];
 };
 
 static_assert(sizeof(TESClimate) == 0x58, "TESClimate has wrong size");

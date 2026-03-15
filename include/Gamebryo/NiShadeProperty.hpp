@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiProperty.hpp"
 
 class NiShadeProperty : public NiProperty
@@ -7,7 +8,7 @@ class NiShadeProperty : public NiProperty
     NiShadeProperty();
     virtual ~NiShadeProperty();
 
-    unsigned __int16 m_uFlags;
+    std::uint16_t m_uFlags;
     int iShaderPropertyType;
 };
 

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class SkillLevel
 {
@@ -6,7 +7,7 @@ class SkillLevel
     SkillLevel();
     ~SkillLevel();
 
-    enum Value : __int32
+    enum Value : std::int32_t
     {
       NOVICE = 0x0,
       APPRENTICE = 0x1,

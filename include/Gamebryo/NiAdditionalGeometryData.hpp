@@ -11,7 +11,7 @@ class NiAdditionalGeometryData : NiObject
 
     struct NiAGDDataStream
     {
-      unsigned __int8 m_uFlags;
+      std::uint8_t m_uFlags;
       unsigned int m_uiType;
       unsigned int m_uiUnitSize;
       unsigned int m_uiTotalSize;
@@ -26,7 +26,7 @@ class NiAdditionalGeometryData : NiObject
         NiAGDDataBlock();
         virtual ~NiAGDDataBlock();
         unsigned int m_uiDataBlockSize;
-        unsigned __int8 *m_pucDataBlock;
+        std::uint8_t *m_pucDataBlock;
         bool m_bOwnData;
         bool m_bBSHeap;
     };

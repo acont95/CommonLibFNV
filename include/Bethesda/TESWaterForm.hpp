@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESTexture.hpp"
 #include "Bethesda/TESSound.hpp"
@@ -21,8 +22,8 @@ class TESWaterForm : TESForm, TESFullName, TESAttackDamageForm
     NiColorA fTexScroll1;
     NiColorA fTexScroll2;
     TESTexture NoiseTexture;
-    unsigned __int8 cAlpha;
-    unsigned __int8 cFlags;
+    std::uint8_t cAlpha;
+    std::uint8_t cFlags;
     __declspec(align(4)) BSStringT<char> cMaterialID;
     TESSound *pWaterSound;
     TESWaterForm *pRemappedWaterForm;

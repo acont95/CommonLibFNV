@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/NavMeshInfo.hpp"
 
 class NavMeshTriHandle
@@ -8,7 +9,7 @@ class NavMeshTriHandle
     ~NavMeshTriHandle();
 
     NavMeshInfo *pNavMeshInfo;
-    unsigned __int16 usTriangle;
+    std::uint16_t usTriangle;
 };
 
 static_assert(sizeof(NavMeshTriHandle) == 0x8, "NavMeshTriHandle has wrong size");

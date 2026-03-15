@@ -22,7 +22,7 @@ class NiSkinData : NiObject
       NiTransform m_kSkinToBone;
       NiBound m_kBound;
       NiSkinData::BoneVertData *m_pkBoneVertData;
-      unsigned __int16 m_usVerts;
+      std::uint16_t m_usVerts;
     };
 
     NiPointer<NiSkinPartition> m_spSkinPartition;

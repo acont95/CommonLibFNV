@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSCubeMapCamera.hpp"
 #include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSShaderAccumulator.hpp"
@@ -13,7 +14,7 @@ class BSCubeMapCamera : NiCamera
     BSCubeMapCamera();
     ~BSCubeMapCamera();
 
-    enum etCubeMapType : __int32
+    enum etCubeMapType : std::int32_t
     {
       BSCMC_CUBEMAP = 0x0,
       BSCMC_6TEXTURES = 0x1,

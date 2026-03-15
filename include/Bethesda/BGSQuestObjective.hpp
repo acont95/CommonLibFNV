@@ -1,10 +1,11 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TESQuest.hpp"
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/TESQuestTarget.hpp"
 
-enum QUEST_OBJECTIVE_STATE : __int32
+enum QUEST_OBJECTIVE_STATE : std::int32_t
 {
   QOS_DORMANT = 0x0,
   QOS_DISPLAYED = 0x1,

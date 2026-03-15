@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/TESObjectREFR.hpp"
 #include "Bethesda/TeleportPath.hpp"
@@ -9,7 +10,7 @@ class TESQuestTarget
     TESQuestTarget();
     ~TESQuestTarget();
 
-    unsigned __int8 cFlags;
+    std::uint8_t cFlags;
     TESCondition objConditions;
     TESObjectREFR *m_pTargetRef;
     TeleportPath m_TargetPath;

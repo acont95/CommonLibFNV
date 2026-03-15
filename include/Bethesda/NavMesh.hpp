@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESChildCell.hpp"
 #include "Bethesda/NavMeshVertex.hpp"
@@ -12,7 +13,7 @@
 
 struct NavMeshPOVEdge
 {
-  unsigned __int16 EdgeIndex;
+  std::uint16_t EdgeIndex;
 };
 
 struct NavMeshPOVData

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Havok/hkReferencedObject.hpp"
 #include "Havok/hkVector4.hpp"
 #include "Havok/hkArray.hpp"
@@ -15,7 +16,7 @@ class hkpMoppCode : hkReferencedObject
       hkVector4 m_offset;
     };
 
-    enum BuildType : __int32
+    enum BuildType : std::int32_t
     {
       BUILT_WITH_CHUNK_SUBDIVISION = 0x0,
       BUILT_WITHOUT_CHUNK_SUBDIVISION = 0x1,

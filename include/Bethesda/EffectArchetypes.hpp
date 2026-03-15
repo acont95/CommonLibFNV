@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/ActorValue.hpp"
 #include "Bethesda/ActiveEffect.hpp"
 #include "Bethesda/MagicCaster.hpp"
@@ -11,7 +12,7 @@ class EffectArchetypes
     EffectArchetypes();
     ~EffectArchetypes();
 
-    enum ArchetypeID : __int32
+    enum ArchetypeID : std::int32_t
     {
       ARCHETYPE_NONE = 0xFFFFFFFF,
       ARCHETYPE_START = 0x0,
@@ -55,7 +56,7 @@ class EffectArchetypes
       ARCHETYPE_COUNT = 0x25,
     };
 
-    enum ArchetypeFlag : __int32
+    enum ArchetypeFlag : std::int32_t
     {
       ASSOCIATED_ACTORVALUE = 0x2,
       ASSOCIATED_CREATURE = 0x4,

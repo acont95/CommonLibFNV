@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/Ni2DBuffer.hpp"
 #include "Gamebryo/NiDepthStencilBuffer.hpp"
@@ -9,7 +10,7 @@ class NiRenderTargetGroup : NiObject
     NiRenderTargetGroup();
     virtual ~NiRenderTargetGroup();
 
-    enum MaxRenderBuffers : __int32
+    enum MaxRenderBuffers : std::int32_t
     {
       MAX_RENDER_BUFFERS = 0x4,
     };

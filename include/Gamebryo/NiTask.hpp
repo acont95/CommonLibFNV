@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 
 class NiTask : NiObject
@@ -7,7 +8,7 @@ class NiTask : NiObject
     NiTask();
     virtual ~NiTask();
 
-    enum TaskStatus : __int32
+    enum TaskStatus : std::int32_t
     {
       RUNNING = 0x2,
       COMPLETED = 0x3,

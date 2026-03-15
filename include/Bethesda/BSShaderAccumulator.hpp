@@ -22,7 +22,7 @@ class BSShaderAccumulator : NiAlphaAccumulator
     BSShaderAccumulator();
     virtual ~BSShaderAccumulator();
 
-    enum etAccumulationMode : __int32
+    enum etAccumulationMode : std::int32_t
     {
       BSSA_ACCUMNORMAL = 0x0,
       BSSA_ACCUMDEPTHMAP = 0x1,
@@ -30,13 +30,13 @@ class BSShaderAccumulator : NiAlphaAccumulator
       BSSA_ACCUMNONE = 0x3,
     };
 
-    enum WATER_SIDE : __int32
+    enum WATER_SIDE : std::int32_t
     {
       ABOVE_WATER = 0x0,
       BELOW_WATER = 0x1,
     };
 
-    enum DepthTransformationEnum : __int32
+    enum DepthTransformationEnum : std::int32_t
     {
       VTRANS_DEFAULT = 0x0,
       VTRANS_SKINNED = 0x1,
@@ -56,8 +56,8 @@ class BSShaderAccumulator : NiAlphaAccumulator
     bool bAccumulate;
     bool b1stPerson;
     bool bRenderNoShader;
-    unsigned __int16 usQueryCount;
-    unsigned __int16 usQuerySize;
+    std::uint16_t usQueryCount;
+    std::uint16_t usQuerySize;
     BSOcclusionQuery **ppOcclusionQuery;
     NiTPointerList<NiGeometry *> pVolumetricFogGeometry;
     BSTPersistentList<NiTPointerAllocator<unsigned int>,NiGeometry *> pRenderedGeometryCache[4];

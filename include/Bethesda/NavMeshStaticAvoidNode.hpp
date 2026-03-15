@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/PathingAvoidNode.hpp"
 
 class NavMeshStaticAvoidNode : PathingAvoidNode
@@ -7,7 +8,7 @@ class NavMeshStaticAvoidNode : PathingAvoidNode
     NavMeshStaticAvoidNode();
     ~NavMeshStaticAvoidNode();
 
-    unsigned __int16 usTriangle;
+    std::uint16_t usTriangle;
 };
 
 static_assert(sizeof(NavMeshStaticAvoidNode) == 0x28, "NavMeshStaticAvoidNode has wrong size");

@@ -21,7 +21,7 @@ struct OBJ_WEAP_VATS_SPECIAL
   float fVATSSkillRequired;
   bool bSilent;
   bool bModRequired;
-  unsigned __int8 cFlags;
+  std::uint8_t cFlags;
 };
 
 class TESObjectWEAP : 

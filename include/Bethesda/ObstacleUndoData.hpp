@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/ObstacleData.hpp"
 #include "Bethesda/BoundsTriangleInfo.hpp"
@@ -13,7 +14,7 @@ class ObstacleUndoData : public NiRefObject
     ObstacleUndoData();
     virtual ~ObstacleUndoData();
 
-    enum OBSTACLE_UNDO_STATE : __int32
+    enum OBSTACLE_UNDO_STATE : std::int32_t
     {
       OBSTACLE_UNDO_STATE_INVALID = 0x0,
       OBSTACLE_UNDO_STATE_ACTIVE = 0x1,

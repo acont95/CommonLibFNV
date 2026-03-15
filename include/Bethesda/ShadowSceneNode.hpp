@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/ShadowSceneLight.hpp"
 #include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSCubeMapCamera.hpp"
@@ -17,7 +18,7 @@ class ShadowSceneNode : NiNode
     ShadowSceneNode();
     virtual ~ShadowSceneNode();
 
-    enum eChildNodes : __int32
+    enum eChildNodes : std::int32_t
     {
       SSN_CHILDNODE_SKY = 0x0,
       SSN_CHILDNODE_WEATHER = 0x1,
@@ -43,7 +44,7 @@ class ShadowSceneNode : NiNode
     NiTPointerList<NiPointer<ShadowSceneLight> > lLightQueueUpdate;
     NiTPointerList<NiPointer<NiAVObject> > lObjectQueueUpdate;
     NiTPointerList<NiPointer<NiAVObject> > lObjectQueueUpdateActiveOnly;
-    unsigned __int8 cSceneGraphIndex;
+    std::uint8_t cSceneGraphIndex;
     NiPointer<BSRenderedTexture> pWindowReflectionEnvMap;
     NiPointer<BSCubeMapCamera> spCubeMapCamera;
     int iCurrentCubeMapFace;

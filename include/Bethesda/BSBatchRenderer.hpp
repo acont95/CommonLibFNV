@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSTPersistentList.hpp"
 #include "Bethesda/BSShaderProperty.hpp"
 #include "Gamebryo/NiObject.hpp"
@@ -9,7 +10,7 @@ class BSBatchRenderer : NiObject
     BSBatchRenderer();
     virtual ~BSBatchRenderer();
 
-    enum RENDERPASS_BUCKET_TYPE : __int32
+    enum RENDERPASS_BUCKET_TYPE : std::int32_t
     {
       RBT_STANDARD = 0x0,
       RBT_TWO_SIDED_LIGHTING = 0x1,
@@ -19,7 +20,7 @@ class BSBatchRenderer : NiObject
       RBT_COUNT = 0x5,
     };
 
-    enum eStateUpdateFlag : __int32
+    enum eStateUpdateFlag : std::int32_t
     {
       BSBR_NONE = 0x0,
       BSBR_PASSCONSTANTS = 0x1,
@@ -34,7 +35,7 @@ class BSBatchRenderer : NiObject
       BSBR_ALL = 0xFFFF,
     };
 
-    enum GEOMETRY_GROUP_ENUM : __int32
+    enum GEOMETRY_GROUP_ENUM : std::int32_t
     {
       GG_LOD = 0x0,
       GG_NO_DEPTH = 0x1,
@@ -69,13 +70,13 @@ class BSBatchRenderer : NiObject
         GeometryGroup();
         ~GeometryGroup();
 
-        enum etFlags : __int32
+        enum etFlags : std::int32_t
         {
           BSSA_GEOMETRYGROUPFLAG_NOSORT = 0x0,
         };
 
-        unsigned __int8 ucFlags;
-        unsigned __int16 usCount;
+        std::uint8_t ucFlags;
+        std::uint16_t usCount;
         unsigned int uiPassCount;
         BSBatchRenderer *pBatchRenderer;
         BSTPersistentList<NiTPointerAllocator<unsigned int>,BSShaderProperty::RenderPass *> PassList;

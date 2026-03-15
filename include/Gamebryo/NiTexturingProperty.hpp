@@ -12,7 +12,7 @@ class NiTexturingProperty : NiProperty
     NiTexturingProperty();
     ~NiTexturingProperty();
 
-    enum ClampMode : __int32
+    enum ClampMode : std::int32_t
     {
       CLAMP_S_CLAMP_T = 0x0,
       CLAMP_S_WRAP_T = 0x1,
@@ -21,7 +21,7 @@ class NiTexturingProperty : NiProperty
       CLAMP_MAX_MODES = 0x4,
     };
 
-    enum FilterMode : __int32
+    enum FilterMode : std::int32_t
     {
       FILTER_NEAREST = 0x0,
       FILTER_BILERP = 0x1,
@@ -34,7 +34,7 @@ class NiTexturingProperty : NiProperty
       FILTER_MAX_MODES = 0x8,
     };
 
-    enum ApplyMode : __int32
+    enum ApplyMode : std::int32_t
     {
       APPLY_DECAL = 0x1,
       APPLY_DEPRECATED = 0x3,
@@ -42,7 +42,7 @@ class NiTexturingProperty : NiProperty
       APPLY_MAX_MODES = 0x5,
     };
 
-    enum MapClassID : __int32
+    enum MapClassID : std::int32_t
     {
       MAP_CLASS_BASE = 0x0,
       MAP_CLASS_BUMP = 0x1,
@@ -51,7 +51,7 @@ class NiTexturingProperty : NiProperty
       MAP_CLASS_MAX = 0x4,
     };
 
-    enum MapEnum : __int32
+    enum MapEnum : std::int32_t
     {
       BASE_INDEX = 0x0,
       DARK_INDEX = 0x1,
@@ -65,7 +65,7 @@ class NiTexturingProperty : NiProperty
       INDEX_MAX = 0xA,
     };
 
-    enum UnnamedTextureMask : __int32
+    enum UnnamedTextureMask : std::int32_t
     {
       MULTITEXTURE_MASK = 0x1,
       DECALCOUNT_MASK = 0xFF0,
@@ -78,7 +78,7 @@ class NiTexturingProperty : NiProperty
         Map();
         virtual ~Map();
 
-        enum UnnamedCoordMask : __int32
+        enum UnnamedCoordMask : std::int32_t
         {
           TEXCOORD_MASK = 0xFF,
           TEXCOORD_POS = 0x0,
@@ -89,7 +89,7 @@ class NiTexturingProperty : NiProperty
         };
 
 
-        unsigned __int16 m_uFlags;
+        std::uint16_t m_uFlags;
         NiPointer<NiTexture> m_spTexture;
         NiTextureTransform* m_pkTextureTransform;
     };

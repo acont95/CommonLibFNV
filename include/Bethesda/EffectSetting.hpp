@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/ActorValue.hpp"
 #include "Bethesda/TESObjectLIGH.hpp"
@@ -24,7 +25,7 @@ class EffectSetting : TESForm, TESModel, TESDescription, TESFullName, TESIcon
       TESForm* pAssociatedItem;
       ActorValue::Index iAssociatedSkill;
       ActorValue::Index iResistVariable;
-      __int16 iNumCounterEffects;
+      std::int16_t iNumCounterEffects;
       TESObjectLIGH *pLight;
       float fSpeed;
       TESEffectShader* pEffectShader;

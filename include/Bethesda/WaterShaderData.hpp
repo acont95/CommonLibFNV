@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 class WaterShaderData
 {
@@ -19,7 +20,7 @@ class WaterShaderData
     unsigned int iShallowWaterColor;
     unsigned int iDeepWaterColor;
     unsigned int iReflectionWaterColor;
-    unsigned __int8 cBlend;
+    std::uint8_t cBlend;
     float fRainForce;
     float fRainVelocity;
     float fRainFalloff;

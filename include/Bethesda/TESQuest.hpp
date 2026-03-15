@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESScriptableForm.hpp"
 #include "Bethesda/TESIcon.hpp"
@@ -12,8 +13,8 @@
 class QUEST_DATA
 {
   public:
-    unsigned __int8 ucFlags;
-    unsigned __int8 ucPriority;
+    std::uint8_t ucFlags;
+    std::uint8_t ucPriority;
     float fQuestDelayTime;
 };
 
@@ -28,7 +29,7 @@ class TESQuest : TESForm, TESScriptableForm, TESIcon, TESFullName
     BSSimpleList<BGSQuestObjective*> m_listObjectives;
     TESCondition objConditions;
     ScriptLocals *pScriptLocals;
-    unsigned __int8 cCurrentStage;
+    std::uint8_t cCurrentStage;
     BSStringT<char> cFormEditorID;
 };
 

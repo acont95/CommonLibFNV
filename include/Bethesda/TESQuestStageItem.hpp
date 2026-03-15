@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/Script.hpp"
 #include "Bethesda/TESQuest.hpp"
@@ -6,7 +7,7 @@
 
 struct QUEST_STAGE_ITEM_DATA
 {
-  unsigned __int8 iFlags;
+  std::uint8_t iFlags;
 };
 
 class TESQuestStageItem
@@ -19,7 +20,7 @@ class TESQuestStageItem
     TESCondition objConditions;
     Script cResultScript;
     unsigned int m_fileOffset;
-    unsigned __int8 ucIndex;
+    std::uint8_t ucIndex;
     bool m_bHasLogEntry;
     Date *m_pLogDate;
     TESQuest *m_pOwner;

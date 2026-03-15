@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include <d3d9types.h>
 #include "Bethesda/BSTextureSet.hpp"
 #include "Bethesda/BSShaderProperty.hpp"
@@ -52,10 +53,10 @@ class BSShaderPPLightingProperty : BSShaderLightingProperty
     NiColorA pHairTintColor;
     NiColorA LandBlendParamsA;
     NiPointer<BSTextureSet> spTextureSet;
-    unsigned __int16 iTextureCount;
+    std::uint16_t iTextureCount;
     NiPointer<NiTexture> *spTextures[7];
-    unsigned __int8 *pSpecularExponent;
-    unsigned __int16 usLandscapeTextures;
+    std::uint8_t *pSpecularExponent;
+    std::uint16_t usLandscapeTextures;
     bool *pbGlossMap;
     NiPointer<BSShaderPPLightingProperty::TangentSpaceData> spTangentSpaceData;
     float *pTextureSplatVertexData;

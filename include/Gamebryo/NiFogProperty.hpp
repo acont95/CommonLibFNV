@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiColor.hpp"
 #include "Gamebryo/NiProperty.hpp"
 
@@ -8,7 +9,7 @@ class NiFogProperty : NiProperty
     NiFogProperty();
     virtual ~NiFogProperty();
 
-    unsigned __int16 m_uFlags;
+    std::uint16_t m_uFlags;
     float m_fDepth;
     NiColor m_kColor;
 };

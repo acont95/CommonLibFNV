@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/NavMeshInfo.hpp"
 
 class NavMeshTriangleEdgePortal
@@ -8,7 +9,7 @@ class NavMeshTriangleEdgePortal
     ~NavMeshTriangleEdgePortal();
 
     NavMeshInfo *pOtherMesh;
-    unsigned __int16 sTriangle;
+    std::uint16_t sTriangle;
 };
 
 static_assert(sizeof(NavMeshTriangleEdgePortal) == 0x8, "NavMeshTriangleEdgePortal has wrong size");

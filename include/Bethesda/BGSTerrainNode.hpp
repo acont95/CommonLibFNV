@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BGSTerrainManager.hpp"
 #include "Bethesda/BGSTerrainChunk.hpp"
 #include "Bethesda/BGSDistantObjectBlock.hpp"
@@ -13,7 +14,7 @@ class BGSTerrainNode
     BGSTerrainNode();
     ~BGSTerrainNode();
 
-    enum PARENT_POSITION : __int32
+    enum PARENT_POSITION : std::int32_t
     {
       PP_TOPLEVEL = 0x0,
       PP_UPPER_LEFT = 0x1,
@@ -22,7 +23,7 @@ class BGSTerrainNode
       PP_LOWER_RIGHT = 0x4,
     };
 
-    enum DATA_TO_UNLOAD : __int32
+    enum DATA_TO_UNLOAD : std::int32_t
     {
       UNLOAD_TERRAIN_ONLY = 0x1,
       UNLOAD_OBJECTS_ONLY = 0x2,
@@ -32,8 +33,8 @@ class BGSTerrainNode
 
     BGSTerrainManager *pManager;
     unsigned int iLevel;
-    __int16 sBaseCellX;
-    __int16 sBaseCellY;
+    std::int16_t sBaseCellX;
+    std::int16_t sBaseCellY;
     bool bHasGeometry;
     bool bChildrenLoaded;
     BGSTerrainChunk *pChunk;

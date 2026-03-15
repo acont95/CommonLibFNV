@@ -54,9 +54,9 @@ class NiStream
     NiTPrimitiveSet<unsigned int> m_kLinkIDBlocks;
     unsigned int m_uiLinkBlockIndex;
     NiTPointerMap<NiObject const *,unsigned int> m_kRegisterMap;
-    unsigned __int16 m_usNiAVObjectFlags;
-    unsigned __int16 m_usNiTimeControllerFlags;
-    unsigned __int16 m_usNiPropertyFlags;
+    std::uint16_t m_usNiAVObjectFlags;
+    std::uint16_t m_usNiTimeControllerFlags;
+    std::uint16_t m_usNiPropertyFlags;
     NiStream::ThreadStatus m_eBackgroundLoadStatus;
     bool m_bBackgroundLoadExitStatus;
     unsigned int m_uiLoad;

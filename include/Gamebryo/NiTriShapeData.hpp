@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTriBasedGeomData.hpp"
 
 class NiTriShapeData : NiTriBasedGeomData
@@ -9,23 +10,23 @@ class NiTriShapeData : NiTriBasedGeomData
 
     class SharedNormalArray
     {
-      unsigned __int16 m_usNumSharedNormals;
-      unsigned __int16 *m_pusSharedNormalIndexArray;
+      std::uint16_t m_usNumSharedNormals;
+      std::uint16_t *m_pusSharedNormalIndexArray;
     };
 
     class SNAMemBlock
     {
-      unsigned __int16 *m_pusBlock;
-      unsigned __int16 *m_pusFreeBlock;
+      std::uint16_t *m_pusBlock;
+      std::uint16_t *m_pusFreeBlock;
       unsigned int m_uiBlockSize;
       unsigned int m_uiFreeBlockSize;
       SNAMemBlock *m_pkNext;
     };
 
     unsigned int m_uiTriListLength;
-    unsigned __int16 *m_pusTriList;
+    std::uint16_t *m_pusTriList;
     SharedNormalArray *m_pkSharedNormals;
-    unsigned __int16 m_usSharedNormalsArraySize;
+    std::uint16_t m_usSharedNormalsArraySize;
     SNAMemBlock *m_pkSNAMemoryBlocks;
 };
 

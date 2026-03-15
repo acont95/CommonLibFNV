@@ -77,7 +77,7 @@ class NiPixelFormat
     {
       Component m_eComponent;
       Representation m_eRepresentation;
-      unsigned __int8 m_ucBitsPerComponent;
+      std::uint8_t m_ucBitsPerComponent;
       bool m_bSigned;
     };
 
