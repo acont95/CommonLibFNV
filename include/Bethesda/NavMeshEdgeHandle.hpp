@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/NavMeshTriHandle.hpp"
 
 class NavMeshEdgeHandle : NavMeshTriHandle
@@ -7,7 +8,7 @@ class NavMeshEdgeHandle : NavMeshTriHandle
     NavMeshEdgeHandle();
     ~NavMeshEdgeHandle();
 
-    int iEdgeIndex;
+    std::int32_t iEdgeIndex;
 };
 
 static_assert(sizeof(NavMeshEdgeHandle) == 0xC, "NavMeshEdgeHandle has wrong size");

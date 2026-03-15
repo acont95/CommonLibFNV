@@ -47,7 +47,7 @@ class ShadowSceneNode : NiNode
     std::uint8_t cSceneGraphIndex;
     NiPointer<BSRenderedTexture> pWindowReflectionEnvMap;
     NiPointer<BSCubeMapCamera> spCubeMapCamera;
-    int iCurrentCubeMapFace;
+    std::int32_t iCurrentCubeMapFace;
     bool bDisableLightUpdate;
     bool bWireframe;
     NiPointer<BSFogProperty> spFog;

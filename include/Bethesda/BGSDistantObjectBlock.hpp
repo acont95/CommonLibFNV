@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BGSDistantObjectBlockLoadTask.hpp"
 
@@ -21,7 +22,7 @@ class BGSDistantObjectBlock
     bool bPrepared;
     bool bHighPriority;
     bool bDetachFlag;
-    int nDetachCount;
+    std::int32_t nDetachCount;
 };
 
 static_assert(sizeof(BGSDistantObjectBlock) == 0x2C, "BGSDistantObjectBlock has wrong size");

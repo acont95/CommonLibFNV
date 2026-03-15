@@ -14,4 +14,4 @@ class NiTSet
     std::uint32_t m_uiUsed;
 };
 
-static_assert(sizeof(NiTSet<int, NiTMallocInterface<int>>) == 0xC, "NiTSet has wrong size");
+static_assert(sizeof(NiTSet<std::int32_t, NiTMallocInterface<std::int32_t>>) == 0xC, "NiTSet has wrong size");

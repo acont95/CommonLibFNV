@@ -10,7 +10,7 @@ class SpellItemData
     ~SpellItemData();
 
     MagicSystem::SpellType iSpellType;
-    int iCostOverride;
+    std::int32_t iCostOverride;
     SkillLevel::Value eLevelOverride;
     std::uint8_t iFlags;
 };

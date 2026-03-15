@@ -49,14 +49,14 @@ class TallGrassShaderProperty : public BSShaderLightingProperty
       public:
         NiPointer<NiTriBasedGeomData> spTriGeomData;
         float *pInstanceIndex;
-        int iVertices;
+        std::int32_t iVertices;
         NiPointer<NiTexture> spBaseTexture;
         NiPointer<NiAlphaProperty> spAlphaBlend;
         NiPointer<NiAlphaProperty> spAlphaNoBlend;
         NiPointer<NiStencilProperty> spStencil;
         NiPointer<GrassLoadTask> spGrassLoadTask;
         float fBoundRadius;
-        int iMaxInstanceCount;
+        std::int32_t iMaxInstanceCount;
         bool bTristrip;
         bool bBillboard;
         bool bQueued;

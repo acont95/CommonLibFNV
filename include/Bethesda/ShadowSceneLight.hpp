@@ -37,7 +37,7 @@ class ShadowSceneLight : NiRefObject
       SSL_ALL = 0xFF,
     };
 
-    int iEnabledPasses;
+    std::int32_t iEnabledPasses;
     float fLuminance;
     D3DXMATRIX kViewProjection;
     D3DXMATRIX kShadowView;

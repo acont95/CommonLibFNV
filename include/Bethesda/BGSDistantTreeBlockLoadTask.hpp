@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BGSDistantTreeBlock.hpp"
 #include "Bethesda/QueuedFileEntry.hpp"
 
@@ -10,9 +11,9 @@ class BGSDistantTreeBlockLoadTask : QueuedFileEntry
 
     BGSDistantTreeBlock *pBlock;
     bool bFinishedQueuing;
-    int iX;
-    int iY;
-    int iLevel;
+    std::int32_t iX;
+    std::int32_t iY;
+    std::int32_t iLevel;
     bool bCanceled;
     bool bFileExists;
 };

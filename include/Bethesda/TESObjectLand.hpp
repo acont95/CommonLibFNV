@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESObjectCell.hpp"
 #include "Bethesda/TESLandTexture.hpp"
@@ -32,16 +33,16 @@ class TESObjectLAND : TESForm, TESChildCell
       TESLandTexture** pQuadTextureArray[4];
       float** ppPercentArrays[4];
       hkpMoppCode* pMoppCode;
-      NiTPointerMap<unsigned int, TESGrassAreaParam**> pmGrassMap[4];
+      NiTPointerMap<std::uint32_t, TESGrassAreaParam**> pmGrassMap[4];
       NiPointer<bhkRigidBody> spLandRB;
-      int iCellX;
-      int iCellY;
+      std::int32_t iCellX;
+      std::int32_t iCellY;
       float fBaseHeight;
     };
 
     struct OBJ_LAND
     {
-      unsigned int iFlags;
+      std::uint32_t iFlags;
     };
 
     OBJ_LAND Data;

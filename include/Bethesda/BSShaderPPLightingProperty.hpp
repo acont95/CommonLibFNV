@@ -63,7 +63,7 @@ class BSShaderPPLightingProperty : BSShaderLightingProperty
     NiTexturingProperty::ClampMode TextureClampMode;
     NiPointer<BSShaderPPLightingProperty::TextureEffectData> spTexEffectData;
     float fRefractionPower;
-    int iRefractionFirePeriod;
+    std::int32_t iRefractionFirePeriod;
     float fParallaxOccMaxPasses;
     float fParallaxOccScale;
     float fTerrainTexOffsetX;

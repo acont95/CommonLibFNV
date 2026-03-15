@@ -12,8 +12,8 @@ class EnchantmentItem : MagicItemForm
     struct EnchantmentItemData
     {
       MagicSystem::CastingType eCastingType;
-      int iChargeOverride;
-      int iCostOverride;
+      std::int32_t iChargeOverride;
+      std::int32_t iCostOverride;
       std::uint8_t iFlags;
     };
 

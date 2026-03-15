@@ -71,12 +71,12 @@ class BSShaderAccumulator : NiAlphaAccumulator
     bool bWaterRefraction;
     bool bCellHasWater;
     bool bUnderWater;
-    int iCurrentWaterHeight;
+    std::int32_t iCurrentWaterHeight;
     bool bRenderDecals;
     struct BSInstanceRendering *pInstanceRenderer;
     BSBatchRenderer *pBatchRenderer[2];
     std::uint32_t *puicurrentPassA;
-    int *picurrentBucketA;
+    std::int32_t *picurrentBucketA;
     bool *pbcurrentFirstPassA;
     bool *pbcurrentActiveA;
     std::uint32_t uiBatchRendererCount;

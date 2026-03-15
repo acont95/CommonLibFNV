@@ -29,11 +29,11 @@ class TESWaterForm : TESForm, TESFullName, TESAttackDamageForm
     TESWaterForm *pRemappedWaterForm;
     WaterShaderData Data;
     TESWaterForm *pWaterWeatherControl[3];
-    int iCurrentTextureSelect01;
-    int iCurrentTextureSelect02;
+    std::int32_t iCurrentTextureSelect01;
+    std::int32_t iCurrentTextureSelect02;
     std::uint32_t fFrequencyX;
     std::uint32_t fFrequencyY;
-    int iOctaves;
+    std::int32_t iOctaves;
     float fAmplitude;
     float fLacunarity;
     float fBias;
@@ -42,8 +42,8 @@ class TESWaterForm : TESForm, TESFullName, TESAttackDamageForm
     NiPointer<NiTexture> spNoiseTexture;
     BGSPlaceableWater *pPlaceableAutoWater;
     BGSPlaceableWater *pPlaceableLODWater;
-    int iRadiationDamage;
-    int iHealthRestoration;
+    std::int32_t iRadiationDamage;
+    std::int32_t iHealthRestoration;
     bool bResetNoiseTexture;
 };
 

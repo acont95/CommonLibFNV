@@ -14,7 +14,7 @@ class NavMeshInfo
     std::uint32_t NavMeshID;
     std::uint32_t ParentSpaceID;
     std::uint32_t uiFlags;
-    int iCellKey;
+    std::int32_t iCellKey;
     NiPoint3 ApproxLocation;
     TESForm *pParentSpace;
     float fPreferredPercent;

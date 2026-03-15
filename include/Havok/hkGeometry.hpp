@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Havok/hkArray.hpp"
 #include "Havok/hkVector4.hpp"
 #include "Havok/hkContainerHeapAllocator.hpp"
@@ -11,10 +12,10 @@ class hkGeometry
 
     struct Triangle
     {
-      int m_a;
-      int m_b;
-      int m_c;
-      int m_material;
+      std::int32_t m_a;
+      std::int32_t m_b;
+      std::int32_t m_c;
+      std::int32_t m_material;
     };
 
     hkArray<hkVector4, hkContainerHeapAllocator> m_vertices;

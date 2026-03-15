@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiRenderTargetGroup.hpp"
@@ -14,7 +15,7 @@ class BSRenderedTexture : NiObject
     NiPointer<NiRenderTargetGroup> spPreRestoreGroup;
     NiPointer<NiRenderTargetGroup> spRestoreGroup;
     NiPointer<NiRenderTargetGroup> spPostRestoreGroup;
-    int iAliasedType;
+    std::int32_t iAliasedType;
     NiPointer<NiRenderedTexture> spTexture[4];
 };
 

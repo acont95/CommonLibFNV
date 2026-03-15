@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BGSDistantObjectBlock.hpp"
 #include "Bethesda/TESWorldSpace.hpp"
 #include "Bethesda/BSMultiBoundNode.hpp"
@@ -12,9 +13,9 @@ class BGSDistantObjectBlockLoadTask : QueuedFileEntry
     virtual ~BGSDistantObjectBlockLoadTask();
 
     bool bFinishedQueuing;
-    int iX;
-    int iY;
-    int iLevel;
+    std::int32_t iX;
+    std::int32_t iY;
+    std::int32_t iLevel;
     BGSDistantObjectBlock *pBlock;
     TESWorldSpace *pWorldSpace;
     NiPointer<NiGeometry> spMesh;

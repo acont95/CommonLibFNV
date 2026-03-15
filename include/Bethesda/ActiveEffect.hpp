@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/MagicCaster.hpp"
 #include "Bethesda/MagicItem.hpp"
@@ -23,7 +24,7 @@ class ActiveEffect
     bool bFinished;
     bool bDone;
     bool bWornEnchantment;
-    int iFlags;
+    std::int32_t iFlags;
     float fMagnitude;
     float fDuration;
     MagicTarget* pTarget;

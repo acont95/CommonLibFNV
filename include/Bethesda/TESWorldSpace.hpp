@@ -57,7 +57,7 @@ class TESWorldSpace : TESForm, TESFullName, TESTexture
         std::uint32_t iFileOffset;
     };
 
-    NiTPointerMap<int,TESObjectCELL *> *pCellMap;
+    NiTPointerMap<std::int32_t,TESObjectCELL *> *pCellMap;
     TESObjectCELL *pPersistentCell;
     TESTerrainLODManager TerrainLODManager;
     BGSTerrainManager *pTerrainManager;

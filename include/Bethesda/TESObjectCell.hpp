@@ -23,8 +23,8 @@ class TESObjectCELL : public TESForm, public TESFullName
 
     struct EXTERIOR_DATA
     {
-      int iCellX;
-      int iCellY;
+      std::int32_t iCellX;
+      std::int32_t iCellY;
       char cLandHideFlags;
     };
 
@@ -51,7 +51,7 @@ class TESObjectCELL : public TESForm, public TESFullName
     union WorldData
     {
       TESWorldSpace* pWorldSpace;
-      unsigned int iTempDataOffset;
+      std::uint32_t iTempDataOffset;
     };
 
     std::uint8_t cCellFlags;
@@ -65,8 +65,8 @@ class TESObjectCELL : public TESForm, public TESFullName
     TESTexture WaterNoiseTexture;
     NavMeshArray *pNavMeshes;
     BSSpinLock kSpinLock;
-    int iCriticalQueuedRefCount;
-    int iQueuedRefCount;
+    std::int32_t iCriticalQueuedRefCount;
+    std::int32_t iQueuedRefCount;
     std::int16_t sNumRefsWithVisibleDistant;
     std::int16_t sNumLoadedRefsWithVisibleDistant;
     BSSimpleList<TESObjectREFR *> listReferences;
@@ -85,7 +85,7 @@ class TESObjectCELL : public TESForm, public TESFullName
     bool bUpdateTerrain;
     NiPointer<BSPortalGraph> spPortalGraph;
     BGSLightingTemplate *pLightingTemplate;
-    unsigned int iLightingTemplateInheritanceFlags;
+    std::uint32_t iLightingTemplateInheritanceFlags;
 };
 
 static_assert(sizeof(TESObjectCELL) == 0xB0, "TESObjectCELL has wrong size");

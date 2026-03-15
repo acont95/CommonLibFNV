@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/QueuedFileEntry.hpp"
 #include "BGSTerrainChunk.hpp"
 
@@ -9,9 +10,9 @@ class BGSTerrainChunkLoadTask : public QueuedFileEntry
     virtual ~BGSTerrainChunkLoadTask();
   
     bool bFinishedQueuing;
-    int iX;
-    int iY;
-    int iLevel;
+    std::int32_t iX;
+    std::int32_t iY;
+    std::int32_t iLevel;
     BGSTerrainChunk *pChunk;
     TESWorldSpace *pWorldSpace;
     NiPointer<NiGeometry> spMesh;

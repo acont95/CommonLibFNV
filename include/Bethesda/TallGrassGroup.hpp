@@ -26,9 +26,9 @@ class TallGrassGroup
     std::uint16_t iMaxInstanceCount;
     std::uint16_t iInstanceCount;
     GrassInstanceData *pInstanceData;
-    int *plTerrainChunkSeed;
+    std::int32_t *plTerrainChunkSeed;
     TallGrassShaderProperty::GrassParam kGrassParam;
-    int iCellCoord[2];
+    std::int32_t iCellCoord[2];
     bool bLowDetail;
 };
 

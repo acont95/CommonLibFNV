@@ -44,8 +44,8 @@ class EffectSetting : TESForm, TESModel, TESDescription, TESFullName, TESIcon
     void *pFilterValidationItem;
     EffectSetting::EffectSettingData data;
     BSSimpleList<EffectSetting*> counterEffects;
-    int iEffectLoadedCount;
-    int iAssociatedItemLoadedCount;
+    std::int32_t iEffectLoadedCount;
+    std::int32_t iAssociatedItemLoadedCount;
 };
 
 static_assert(sizeof(EffectSetting) == 0xB0, "EffectSetting has wrong size");

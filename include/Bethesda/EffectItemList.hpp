@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/EffectItem.hpp"
 
@@ -7,7 +8,7 @@ class EffectItemList : BSSimpleList<EffectItem*> {
     EffectItemList();
     virtual ~EffectItemList();
 
-    int iHostileCount;
+    std::int32_t iHostileCount;
 };
 
 static_assert(sizeof(EffectItemList) == 0x10, "EffectItemList has wrong size");

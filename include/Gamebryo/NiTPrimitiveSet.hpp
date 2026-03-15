@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Gamebryo/NiTMallocInterface.hpp"
 #include "Gamebryo/NiTSet.hpp"
 
@@ -10,4 +11,4 @@ class NiTPrimitiveSet : NiTSet<T, NiTMallocInterface<T>>
     ~NiTPrimitiveSet();
 };
 
-static_assert(sizeof(NiTPrimitiveSet<int>) == 0xC, "NiTPrimitiveSet has wrong size");
+static_assert(sizeof(NiTPrimitiveSet<std::int32_t>) == 0xC, "NiTPrimitiveSet has wrong size");

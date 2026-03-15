@@ -29,4 +29,4 @@ class BSTPersistentList
     AntiBloatAllocator Allocator;
 };
 
-static_assert(sizeof(BSTPersistentList<NiTPointerAllocator<int>, void*>) == 0x14, "BSTPersistentList has wrong size");
+static_assert(sizeof(BSTPersistentList<NiTPointerAllocator<std::int32_t>, void*>) == 0x14, "BSTPersistentList has wrong size");

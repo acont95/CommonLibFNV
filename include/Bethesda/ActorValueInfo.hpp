@@ -21,9 +21,9 @@ class ActorValueInfo : TESForm, TESFullName, TESDescription, TESIcon
     float (__cdecl *pDerivationFunction)(ActorValueOwner*, ActorValue::Index);
     ActorValue::Index (__cdecl *pMappingFunction)(ActorValueOwner*, ActorValue::Index);
     void (__cdecl *pModifiedCallback)(ActorValueOwner *, ActorValue::Index, float, float, ActorValueOwner *);
-    int iNumDependentActorValues;
+    std::int32_t iNumDependentActorValues;
     ActorValue::Index DependentActorValues[15];
-    int iEnumCount;
+    std::int32_t iEnumCount;
     char *sEnumNames[10];
 };
 

@@ -27,7 +27,7 @@ class TESObjectREFR : TESForm, TESChildCell
     struct LOADED_REF_DATA
     {
       TESObjectREFR* pCurrentWaterObject;
-      int iUnderwaterCount;
+      std::int32_t iUnderwaterCount;
       float fRelevantWaterHeight;
       float fCachedRadius;
       std::uint32_t iFlags;

@@ -148,7 +148,7 @@ class BSShaderProperty : public NiShadeProperty
     float fFadeAlpha;
     float fEnvmapScale;
     float fCameraDistance;
-    int iLastRenderPassState;
+    std::int32_t iLastRenderPassState;
     RenderPassArray* pRenderPassList;
     RenderPassArray* pDepthMapRenderPassList;
     RenderPassArray* pConstAlphaRenderPassList;
@@ -156,7 +156,7 @@ class BSShaderProperty : public NiShadeProperty
     RenderPassArray* pSIBlockRenderPassList;
     RenderPassArray* pWaterFogRenderPassList;
     RenderPassArray* pSilhouettePassList;
-    int iShader;
+    std::int32_t iShader;
     float fDepthBias;
 };
 

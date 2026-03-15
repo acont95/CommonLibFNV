@@ -61,7 +61,7 @@ class BSBatchRenderer : NiObject
         ~PassGroup();
 
         BSTPersistentList<NiTPointerAllocator<std::uint32_t>,BSShaderProperty::RenderPass *> pListA[5];
-        int iSize;
+        std::int32_t iSize;
     };
 
     class GeometryGroup
@@ -90,7 +90,7 @@ class BSBatchRenderer : NiObject
     std::uint32_t uiCurrentLastPass;
     struct BSInstanceRendering *pInstanceRenderer;
     BSSimpleList<unsigned short> kActivePassIndexList;
-    int iGroupingAlphas;
+    std::int32_t iGroupingAlphas;
     bool bAlphaGroupZPrePass;
     BSBatchRenderer::GeometryGroup *pGeometryGroupsA[13];
     BSBatchRenderer::GeometryGroup *pAlphaGroupA[2];

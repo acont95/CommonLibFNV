@@ -133,7 +133,7 @@ class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
     TESWeather::WeatherSoundList soundList;
     float fHDRData[14];
     ImageSpaceParameterData pImageSpaceParameterMods[2];
-    int iNumCloudLayers;
+    std::int32_t iNumCloudLayers;
 };
 
 static_assert(sizeof(TESWeather) == 0x36C, "TESWeather has wrong size");
