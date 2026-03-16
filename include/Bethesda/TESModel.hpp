@@ -4,7 +4,7 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TESTextureList.hpp"
 
-class TESModel : BaseFormComponent {
+class TESModel : public BaseFormComponent {
   public:
     TESModel();
     ~TESModel();

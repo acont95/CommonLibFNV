@@ -1,22 +1,22 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/SunOcclusionTest.hpp"
-#include "Bethesda/BSOcclusionQuery.hpp"
 #include "Bethesda/BSTPersistentList.hpp"
-#include "Bethesda/BSBatchRenderer.hpp"
-#include "Bethesda/ShadowSceneNode.hpp"
-#include "Bethesda/ShadowSceneLight.hpp"
-#include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSShaderManager.hpp"
-#include "Bethesda/ReferenceVolume.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
-#include "Gamebryo/NiGeometry.hpp"
+#include "Bethesda/BSShaderProperty.hpp"
+#include "Bethesda/BSRenderedTexture.hpp"
 #include "Gamebryo/NiTPointerMap.hpp"
-#include "Gamebryo/NiTPointerAllocator.hpp"
 #include "Gamebryo/NiCriticalSection.hpp"
 #include "Gamebryo/NiAlphaAccumulator.hpp"
+#include "Gamebryo/NiColorA.hpp"
+#include "Gamebryo/NiAVObject.hpp"
 
-class BSShaderAccumulator : NiAlphaAccumulator
+class BSOcclusionQuery;
+class BSBatchRenderer;
+class ShadowSceneNode;
+class ReferenceVolume;
+
+class BSShaderAccumulator : public NiAlphaAccumulator
 {
   public:
     BSShaderAccumulator();

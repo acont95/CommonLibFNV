@@ -2,7 +2,7 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 
-class NiExtraData : NiObject {
+class NiExtraData : public NiObject {
   public:
     NiExtraData();
     ~NiExtraData();

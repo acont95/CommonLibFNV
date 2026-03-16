@@ -3,7 +3,7 @@
 #include "Gamebryo/NiRefObject.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 
-class NiShader : NiRefObject
+class NiShader : public NiRefObject
 {
   public:
     NiShader();

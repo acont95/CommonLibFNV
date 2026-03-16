@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiFloatKey.hpp"
 #include "Gamebryo/NiAnimationKey.hpp"
 
-class NiFloatData : NiObject
+class NiFloatKey;
+
+class NiFloatData : public NiObject
 {
   public:
     NiFloatData();

@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiTListItem.hpp"
-#include "Gamebryo/NiNode.hpp"
 #include "Gamebryo/NiMemObject.hpp"
 #include "Gamebryo/NiTDefaultAllocator.hpp"
 
+template <typename T>
+class NiTListItem;
+
 template <class TAllocator, typename T>
-class NiTListBase : NiMemObject
+class NiTListBase : public NiMemObject
 {
   public:
     NiTListBase();

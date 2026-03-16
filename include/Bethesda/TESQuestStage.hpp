@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESQuestStageItem.hpp"
+
+class TESQuestStageItem;
 
 class QUEST_STAGE_DATA
 {

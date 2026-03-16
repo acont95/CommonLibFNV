@@ -1,5 +1,4 @@
 #pragma once
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiAVObject.hpp"
 #include "Gamebryo/NiTObjectArray.hpp"
 

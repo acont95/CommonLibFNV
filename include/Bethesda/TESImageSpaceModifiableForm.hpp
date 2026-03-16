@@ -1,8 +1,9 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
-#include "Bethesda/TESImageSpaceModifier.hpp"
 
-class TESImageSpaceModifiableForm : BaseFormComponent
+class TESImageSpaceModifier;
+
+class TESImageSpaceModifiableForm : public BaseFormComponent
 {
   public:
     TESImageSpaceModifiableForm();

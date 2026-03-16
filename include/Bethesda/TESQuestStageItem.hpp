@@ -2,8 +2,9 @@
 #include <cstdint>
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/Script.hpp"
-#include "Bethesda/TESQuest.hpp"
-#include "Bethesda/Date.hpp"
+
+class TESQuest;
+class Date;
 
 struct QUEST_STAGE_ITEM_DATA
 {

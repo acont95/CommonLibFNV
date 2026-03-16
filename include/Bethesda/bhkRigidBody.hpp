@@ -1,7 +1,6 @@
 #pragma once
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/bhkSerializable.hpp"
 #include "Bethesda/bhkEntity.hpp"
+#include "Bethesda/BSSimpleList.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
 class bhkRigidBody : public bhkEntity

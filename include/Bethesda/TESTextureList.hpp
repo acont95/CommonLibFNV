@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSFileEntry.hpp"
+
+class BSFileEntry;
 
 class TESTextureList 
 {

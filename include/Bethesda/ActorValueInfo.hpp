@@ -6,9 +6,14 @@
 #include "Bethesda/TESIcon.hpp"
 #include "Bethesda/ActorValue.hpp"
 #include "Bethesda/BSStringT.hpp"
-#include "Bethesda/ActorValueOwner.hpp"
 
-class ActorValueInfo : TESForm, TESFullName, TESDescription, TESIcon
+class ActorValueOwner;
+
+class ActorValueInfo : 
+  public TESForm, 
+  public TESFullName, 
+  public TESDescription, 
+  public TESIcon
 {
   public:
     ActorValueInfo();

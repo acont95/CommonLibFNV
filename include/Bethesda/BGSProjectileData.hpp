@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESObjectLIGH.hpp"
-#include "Bethesda/TESSound.hpp"
-#include "Bethesda/TESObjectWEAP.hpp"
-#include "Bethesda/BGSExplosion.hpp"
+
+class TESObjectLIGH;
+class TESSound;
+class TESObjectWEAP;
+class BGSExplosion;
 
 class BGSProjectileData {
   public:

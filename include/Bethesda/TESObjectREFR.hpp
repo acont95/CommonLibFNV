@@ -1,17 +1,16 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESSound.hpp"
-#include "Bethesda/TESBoundObject.hpp"
-#include "Bethesda/TESObjectCELL.hpp"
 #include "Bethesda/ExtraDataList.hpp"
 #include "Bethesda/TESChildCell.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/bhkPhantom.hpp"
-#include "Gamebryo/NiPoint3.hpp"
 #include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiPointer.hpp"
 
-class TESObjectREFR : TESForm, TESChildCell
+class TESSound;
+class TESBoundObject;
+class TESObjectCELL;
+
+class TESObjectREFR : public TESForm, public TESChildCell
 {
   public:
     TESObjectREFR();

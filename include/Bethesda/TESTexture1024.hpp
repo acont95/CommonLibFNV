@@ -1,8 +1,7 @@
 #pragma once
-#include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class TESTexture1024 : TESTexture
+class TESTexture1024 : public TESTexture
 {
   public:
     TESTexture1024();

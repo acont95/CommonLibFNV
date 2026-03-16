@@ -1,20 +1,19 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
-#include "Bethesda/TESObjectCell.hpp"
 #include "Bethesda/TESLandTexture.hpp"
-#include "Bethesda/TESObjectCELL.hpp"
-#include "Bethesda/TESGrassAreaParam.hpp"
 #include "Bethesda/QueuedFile.hpp"
 #include "Bethesda/bhkRigidBody.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiColorA.hpp"
-#include "Gamebryo/NiPoint2.hpp"
+#include "Bethesda/TESChildCell.hpp"
 #include "Gamebryo/NiLines.hpp"
-#include "Havok/hkpMoppCode.hpp"
+#include "Gamebryo/NiTPointerMap.hpp"
+#include "Gamebryo/NiPoint2.hpp"
 
+class TESObjectCELL;
+class TESGrassAreaParam;
+class NiColorA;
+class hkpMoppCode;
 
-class TESObjectLAND : TESForm, TESChildCell
+class TESObjectLAND : public TESForm, public TESChildCell
 {
   public:
     TESObjectLAND();

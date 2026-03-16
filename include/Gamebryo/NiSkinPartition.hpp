@@ -3,7 +3,7 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiGeometryData.hpp"
 
-class NiSkinPartition : NiObject
+class NiSkinPartition : public NiObject
 {
   public:
     NiSkinPartition();

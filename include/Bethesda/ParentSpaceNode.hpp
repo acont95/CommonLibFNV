@@ -1,6 +1,7 @@
 #pragma once
-#include "Bethesda/TESObjectCELL.hpp"
-#include "Bethesda/TESWorldSpace.hpp"
+
+class TESWorldSpace;
+class TESObjectCELL;
 
 class ParentSpaceNode
 {

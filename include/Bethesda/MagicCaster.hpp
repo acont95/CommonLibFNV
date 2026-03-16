@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/MagicLight.hpp"
+
+class MagicLight;
 
 class MagicCaster
 {

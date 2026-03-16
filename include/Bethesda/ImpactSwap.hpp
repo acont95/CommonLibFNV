@@ -1,6 +1,9 @@
 #pragma once
-#include "Bethesda/BSMap.hpp"
-#include "Bethesda/BGSImpactData.hpp"
+
+class BGSImpactData;
+template <typename Key, typename Value>
+class BSMap;
+
 // Need to add type defines
 class ImpactSwap
 {

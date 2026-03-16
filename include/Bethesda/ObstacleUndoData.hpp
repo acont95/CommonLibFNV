@@ -1,11 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/ObstacleData.hpp"
 #include "Bethesda/BoundsTriangleInfo.hpp"
 #include "Bethesda/PortalEdgeSwap.hpp"
-#include "Gamebryo/NiRefObject.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiTMap.hpp"
 
 class ObstacleUndoData : public NiRefObject

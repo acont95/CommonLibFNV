@@ -1,11 +1,12 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiCullingProcess.hpp"
-#include "Bethesda/BSCompoundFrustum.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiAccumulator.hpp"
+#include "Gamebryo/NiPointer.hpp"
 
-class BSCullingProcess : NiCullingProcess
+class BSCompoundFrustum;
+
+class BSCullingProcess : public NiCullingProcess
 {
   public:
     BSCullingProcess();

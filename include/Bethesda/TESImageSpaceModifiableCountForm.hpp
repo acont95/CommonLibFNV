@@ -1,10 +1,12 @@
 #pragma once
-#include "Bethesda/TESImageSpaceModifier.hpp"
 #include "Bethesda/BaseFormComponent.hpp"
 
+class TESImageSpaceModifier;
+
 template <size_t T>
-class TESImageSpaceModifiableCountForm : BaseFormComponent
+class TESImageSpaceModifiableCountForm : public BaseFormComponent
 {
+  
   public:
     TESImageSpaceModifiableCountForm();
     virtual ~TESImageSpaceModifiableCountForm();

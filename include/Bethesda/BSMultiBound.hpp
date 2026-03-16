@@ -2,9 +2,8 @@
 #include <cstdint>
 #include "Bethesda/BSMultiBoundShape.hpp"
 #include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiObject.hpp"
 
-class BSMultiBound : NiObject
+class BSMultiBound : public NiObject
 {
   public:
     BSMultiBound();

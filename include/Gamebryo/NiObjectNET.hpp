@@ -4,7 +4,8 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 #include "Gamebryo/NiTimeController.hpp"
-#include "Gamebryo/NiExtraData.hpp"
+
+class NiExtraData;
 
 class NiObjectNET : public NiObject {
   public:

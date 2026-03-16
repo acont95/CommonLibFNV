@@ -1,5 +1,4 @@
 #pragma once
-#include "Gamebryo/NiPointer.hpp" 
 #include "Gamebryo/NiProperty.hpp"
 
 class NiPropertyState

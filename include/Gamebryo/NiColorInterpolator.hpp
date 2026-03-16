@@ -5,7 +5,7 @@
 #include "Gamebryo/NiColorA.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
-class NiColorInterpolator : NiKeyBasedInterpolator
+class NiColorInterpolator : public NiKeyBasedInterpolator
 {
   public:
     NiColorInterpolator();

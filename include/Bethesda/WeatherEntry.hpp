@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESWeather.hpp"
-#include "Bethesda/TESGlobal.hpp"
+
+class TESWeather;
+class TESGlobal;
 
 class WeatherEntry
 {

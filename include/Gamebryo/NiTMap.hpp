@@ -1,9 +1,8 @@
 #pragma once
 #include "Gamebryo/NiTMapBase.hpp"
-#include "Gamebryo/NiTDefaultAllocator.hpp"
 
 template <typename Key, typename Value>
-class NiTMap : NiTMapBase<DFALL<NiTMapItem<Key, Value>>, Key, Value>
+class NiTMap : public NiTMapBase<DFALL<NiTMapItem<Key, Value>>, Key, Value>
 {
   public:
     NiTMap();

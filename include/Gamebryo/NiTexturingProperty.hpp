@@ -3,10 +3,10 @@
 #include "Gamebryo/NiTPrimitiveArray.hpp"
 #include "Gamebryo/NiProperty.hpp"
 #include "Gamebryo/NiTexture.hpp"
-#include "Gamebryo/NiTextureTransform.hpp"
-#include "Gamebryo/NiTexturingProperty.hpp"
 
-class NiTexturingProperty : NiProperty
+class NiTextureTransform;
+
+class NiTexturingProperty : public NiProperty
 {
   public:
     NiTexturingProperty();

@@ -1,8 +1,9 @@
 #pragma once
-#include "Bethesda/BSFileEntry.hpp"
 #include "Bethesda/QueuedFile.hpp"
 
-class QueuedFileEntry : QueuedFile
+class BSFileEntry;
+
+class QueuedFileEntry : public QueuedFile
 {
   public:
     QueuedFileEntry();

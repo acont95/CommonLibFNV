@@ -1,9 +1,9 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/TESForm.hpp"
-#include "Bethesda/BGSPlaceableWaterData.hpp"
+#include "Bethesda/TESSoundFile.hpp"
 
-class BGSMusicType : TESForm, TESSoundFile
+class BGSMusicType : public TESForm, public TESSoundFile
 {
   public:
     BGSMusicType();

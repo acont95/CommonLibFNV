@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiTask.hpp"
 
-class NiXenonRendererTask : NiTask
+class NiXenonRendererTask : public NiTask
 {
   public:
     NiXenonRendererTask();

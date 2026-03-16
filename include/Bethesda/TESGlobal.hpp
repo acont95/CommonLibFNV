@@ -2,7 +2,7 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TESForm.hpp"
 
-class TESGlobal : TESForm
+class TESGlobal : public TESForm
 {
   public:
     TESGlobal();

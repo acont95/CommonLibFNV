@@ -1,10 +1,10 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESQuest.hpp"
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/ScriptVariable.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/BSStringT.hpp"
+
+class TESQuest;
+class ScriptVariable;
 
 struct SCRIPT_HEADER
 {
@@ -25,7 +25,7 @@ class SCRIPT_REFERENCED_OBJECT
     std::uint32_t uiVariableID;
 };
 
-class Script : TESForm
+class Script : public TESForm
 {
   public:
     Script();

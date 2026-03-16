@@ -1,8 +1,9 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
-#include "Bethesda/TESForm.hpp"
 
-class BGSAmmoForm : BaseFormComponent
+class TESForm;
+
+class BGSAmmoForm : public BaseFormComponent
 {
   public:
     BGSAmmoForm();

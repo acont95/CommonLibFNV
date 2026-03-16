@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiGeometry.hpp"
 #include "Gamebryo/NiTPointerAllocator.hpp"
+
+class NiGeometry;
 
 template <class TAllocator, typename T>
 class BSTPersistentList

@@ -2,7 +2,7 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/ImageSpaceParameterData.hpp"
 
-class TESImageSpace : TESForm
+class TESImageSpace : public TESForm
 {
   public:
     TESImageSpace();

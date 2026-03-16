@@ -3,7 +3,7 @@
 #include "Gamebryo/NiTMallocInterface.hpp"
 
 template <typename T>
-class NiTPrimitiveArray : NiTArray<T, NiTMallocInterface<T>>
+class NiTPrimitiveArray : public NiTArray<T, NiTMallocInterface<T>>
 {
   public:
     NiTPrimitiveArray();

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BSTask.hpp"
 
-class IOTask : BSTask<std::int64_t>
+class IOTask : public BSTask<std::int64_t>
 {
   public:
     IOTask();

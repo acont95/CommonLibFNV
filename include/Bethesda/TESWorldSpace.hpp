@@ -1,17 +1,23 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESTexture.hpp"
-#include "Bethesda/TESObjectCELL.hpp"
 #include "Bethesda/TESTerrainLODManager.hpp"
-#include "Bethesda/TESClimate.hpp"
-#include "Bethesda/BGSTerrainManager.hpp"
-#include "Bethesda/TESImageSpace.hpp"
-#include "Bethesda/ImpactSwap.hpp"
-#include "Bethesda/TESWaterForm.hpp"
-#include "Bethesda/BGSEncounterZone.hpp"
-#include "Bethesda/BGSMusicType.hpp"
+#include "Bethesda/BSPortalGraph.hpp"
+#include "Bethesda/TESForm.hpp"
+#include "Gamebryo/NiTPointerMap.hpp"
+#include "Gamebryo/NiTMap.hpp"
+#include "Gamebryo/NiPoint2.hpp"
+
+class TESObjectCELL;
+class TESClimate;
+class BGSTerrainManager;
+class TESImageSpace;
+class ImpactSwap;
+class TESWaterForm;
+class BGSEncounterZone;
+class BGSMusicType;
+class TESObjectREFR;
 
 struct WORLD_MAP_DATA
 {
@@ -31,7 +37,7 @@ struct WORLD_MAP_OFFSET_DATA
 };
 
 
-class TESWorldSpace : TESForm, TESFullName, TESTexture
+class TESWorldSpace : public TESForm, public TESFullName, public TESTexture
 {
   public:
     TESWorldSpace();

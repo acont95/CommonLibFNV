@@ -4,7 +4,7 @@
 #include "Gamebryo/NiTPointerListBase.hpp"
 
 template <typename T>
-class NiTPointerListSingleThread : NiTPointerListBase<NiTPointerAllocator<std::uint32_t>, T>
+class NiTPointerListSingleThread : public NiTPointerListBase<NiTPointerAllocator<std::uint32_t>, T>
 {
   public:
     NiTPointerListSingleThread();

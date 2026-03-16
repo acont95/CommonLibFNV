@@ -2,11 +2,13 @@
 #include <cstdint>
 #include <windows.h>
 #include "Types.hpp"
-#include "Bethesda/TESObjectCell.hpp"
 #include "Bethesda/BSStringT.hpp"
-#include "Bethesda/BSFile.hpp"
-#include "Bethesda/TESObjectCell.hpp"
-#include "Gamebryo/NiTPointerMap.hpp"
+#include "Bethesda/BSSimpleList.hpp"
+
+class TESObjectCELL;
+class BSFile;
+template <typename Key, typename Value>
+class NiTPointerMap;
 
 class TESFile {
   public:

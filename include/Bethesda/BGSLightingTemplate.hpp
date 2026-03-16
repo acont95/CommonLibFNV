@@ -2,7 +2,7 @@
 #include "Types.hpp"
 #include "Bethesda/TESForm.hpp"
 
-class BGSLightingTemplate : TESForm
+class BGSLightingTemplate : public TESForm
 {
   public:
     BGSLightingTemplate();

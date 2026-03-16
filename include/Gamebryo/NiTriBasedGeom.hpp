@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiGeometry.hpp"
 
-class NiTriBasedGeom : NiGeometry
+class NiTriBasedGeom : public NiGeometry
 {
   public:
     NiTriBasedGeom();

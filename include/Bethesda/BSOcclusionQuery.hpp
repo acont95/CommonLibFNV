@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/D3DQuery.hpp"
+
+class D3DQuery;
 
 class BSOcclusionQuery
 {

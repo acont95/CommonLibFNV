@@ -2,7 +2,7 @@
 #include "Gamebryo/NiColorA.hpp"
 #include "Gamebryo/NiAnimationKey.hpp"
 
-class NiColorKey : NiAnimationKey
+class NiColorKey : public NiAnimationKey
 {
   public:
     NiColorKey();

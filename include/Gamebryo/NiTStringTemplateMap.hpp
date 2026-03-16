@@ -2,7 +2,7 @@
 #include "Gamebryo/NiTMap.hpp"
 
 template <class TParent, typename T>
-class NiTStringTemplateMap : TParent
+class NiTStringTemplateMap : public TParent
 {
   public:
     NiTStringTemplateMap();

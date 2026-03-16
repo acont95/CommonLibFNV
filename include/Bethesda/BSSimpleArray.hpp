@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiNode.hpp"
 
 template <typename T, std::uint32_t N>
 class BSSimpleArray

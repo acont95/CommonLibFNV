@@ -1,14 +1,15 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESSound.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Gamebryo/NiFloatInterpolator.hpp"
 #include "Gamebryo/NiColorInterpolator.hpp"
-#include "Gamebryo/NiLinFloatKey.hpp"
-#include "Gamebryo/NiLinColorKey.hpp"
 #include "Gamebryo/NiPoint2.hpp"
 
-class TESImageSpaceModifier : TESForm
+class TESSound;
+class NiLinFloatKey;
+class NiLinColorKey;
+
+class TESImageSpaceModifier : public TESForm
 {
   public:
     TESImageSpaceModifier();

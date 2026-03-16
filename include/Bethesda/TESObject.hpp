@@ -1,6 +1,7 @@
 #pragma once
 #include "Bethesda/TESForm.hpp"
-#include "Bethesda/TESObjectList.hpp"
+
+class TESObjectList;
 
 class TESObject : public TESForm {
   public:

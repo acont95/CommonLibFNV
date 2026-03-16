@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiColorKey.hpp"
 
-class NiLinColorKey : NiColorKey
+class NiLinColorKey : public NiColorKey
 {
   public:
     NiLinColorKey();

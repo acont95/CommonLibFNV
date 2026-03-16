@@ -2,8 +2,6 @@
 #include <cstdint>
 #include "Bethesda/BSMultiBoundNode.hpp"
 #include "Bethesda/TallGrassShaderProperty.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiGeometry.hpp"
 
 class TallGrassGroup
 {

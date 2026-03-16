@@ -1,8 +1,9 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiCamera.hpp"
 
-class NiAccumulator : NiObject {
+class NiCamera;
+
+class NiAccumulator : public NiObject {
   public:
     NiAccumulator();
     ~NiAccumulator();

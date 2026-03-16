@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/EffectItem.hpp"
 
-class EffectItemList : BSSimpleList<EffectItem*> {
+class EffectItem;
+
+class EffectItemList : public BSSimpleList<EffectItem*> {
   public:
     EffectItemList();
     virtual ~EffectItemList();

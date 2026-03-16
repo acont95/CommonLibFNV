@@ -1,12 +1,14 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
-#include "Gamebryo/NiTPointerAllocator.hpp"
 #include "Gamebryo/NiMemObject.hpp"
-#include "Gamebryo/NiTMapItem.hpp"
+#include "Gamebryo/NiTDefaultAllocator.hpp"
+
+class TESForm;
+template <typename Key, typename Value>
+class NiTMapItem;
 
 template <class Allocator, typename Key, typename Value>
-class NiTMapBase : NiMemObject
+class NiTMapBase : public NiMemObject
 {
   public:
     NiTMapBase();

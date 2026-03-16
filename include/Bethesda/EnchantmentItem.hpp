@@ -1,9 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/MagicSystem.hpp"
 #include "Bethesda/MagicItemForm.hpp"
+#include "Bethesda/MagicSystem.hpp"
 
-class EnchantmentItem : MagicItemForm 
+class EnchantmentItem : public MagicItemForm 
 {
   public:
     EnchantmentItem();

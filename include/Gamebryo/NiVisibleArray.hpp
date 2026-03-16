@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiGeometry.hpp"
+
+class NiGeometry;
 
 class NiVisibleArray
 {

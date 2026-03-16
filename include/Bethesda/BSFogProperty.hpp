@@ -1,9 +1,8 @@
 #pragma once
 #include "Gamebryo/NiFogProperty.hpp"
 #include "Gamebryo/NiPlane.hpp"
-#include "Gamebryo/NiColor.hpp"
 
-class BSFogProperty : NiFogProperty
+class BSFogProperty : public NiFogProperty
 {
   public:
     BSFogProperty();

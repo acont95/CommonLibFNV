@@ -1,8 +1,9 @@
 #pragma once
 #include "Bethesda/bhkRefObject.hpp"
-#include "Havok/hkSerializableCinfo.hpp"
 
-class bhkSerializable : bhkRefObject
+class hkSerializableCinfo;
+
+class bhkSerializable : public bhkRefObject
 {
   public:
     bhkSerializable();

@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiProcessorAffinity.hpp"
-#include "Gamebryo/NiThreadProcedure.hpp"
+
+class NiThreadProcedure;
 
 class NiThread
 {

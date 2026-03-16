@@ -1,19 +1,21 @@
 #pragma once
 #include <cstdint>
-#include "Types.hpp"
-#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
-#include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/ExtraDataList.hpp"
-#include "Bethesda/TESObjectLAND.hpp"
 #include "Bethesda/TESTexture.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
-#include "Bethesda/TESWorldSpace.hpp"
-#include "Bethesda/NavMeshArray.hpp"
 #include "Bethesda/BSSpinLock.hpp"
-#include "Bethesda/BGSLightingTemplate.hpp"
-#include "Gamebryo/NiPointer.hpp"
+#include "Bethesda/BSMultiBoundNode.hpp"
+#include "Bethesda/BSPortalGraph.hpp"
+#include "Bethesda/TESForm.hpp"
 #include "Gamebryo/NiTMap.hpp"
+
+class TESObjectLAND;
+class TESObjectREFR;
+class TESWorldSpace;
+class NavMeshArray;
+class BGSLightingTemplate;
+
+struct INTERIOR_DATA;
 
 class TESObjectCELL : public TESForm, public TESFullName
 {

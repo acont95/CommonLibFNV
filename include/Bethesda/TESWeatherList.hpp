@@ -1,8 +1,9 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/WeatherEntry.hpp"
 
-class TESWeatherList : BSSimpleList<WeatherEntry*>
+class WeatherEntry;
+
+class TESWeatherList : public BSSimpleList<WeatherEntry*>
 {
   public:
     TESWeatherList();

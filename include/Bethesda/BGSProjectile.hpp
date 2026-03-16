@@ -2,12 +2,17 @@
 #include "Types.hpp"
 #include "Bethesda/BGSProjectileData.hpp"
 #include "Bethesda/TESModel.hpp"
-#include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESBoundObject.hpp"
+#include "Bethesda/TESFullName.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
 #include "Bethesda/BGSDestructibleObjectForm.hpp"
 
-class BGSProjectile  : TESBoundObject, TESFullName, TESModel, BGSPreloadable, BGSDestructibleObjectForm
+class BGSProjectile  : 
+  public TESBoundObject, 
+  public TESFullName, 
+  public TESModel, 
+  public BGSPreloadable, 
+  public BGSDestructibleObjectForm
 {
   public:
     BGSProjectile();

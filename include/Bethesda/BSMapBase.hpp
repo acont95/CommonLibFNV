@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSMapItem.hpp"
+
+template <typename Key, typename Value>
+class BSMapItem;
 
 template <typename Key, typename Value>
 class BSMapBase

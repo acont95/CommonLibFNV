@@ -1,7 +1,7 @@
 #pragma once 
 #include "Gamebryo/NiObject.hpp"
 
-class BSTextureSet : NiObject
+class BSTextureSet : public NiObject
 {
   public:
     BSTextureSet();

@@ -2,7 +2,7 @@
 #include "Bethesda/QueuedFileEntry.hpp"
 #include "Bethesda/BSStream.hpp"
 
-class GrassLoadTask : QueuedFileEntry
+class GrassLoadTask : public QueuedFileEntry
 {
   public:
     GrassLoadTask();

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BSHash.hpp"
 
-class BSFileEntry : BSHash {
+class BSFileEntry : public BSHash {
   public:
     BSFileEntry();
     ~BSFileEntry();

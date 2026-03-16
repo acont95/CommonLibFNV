@@ -3,7 +3,7 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiTPrimitiveArray.hpp"
 
-class NiAdditionalGeometryData : NiObject
+class NiAdditionalGeometryData : public NiObject
 {
   public:
     NiAdditionalGeometryData();

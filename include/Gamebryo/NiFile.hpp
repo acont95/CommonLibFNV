@@ -4,7 +4,7 @@
 #include <windows.h>
 #include "Gamebryo/NiBinaryStream.hpp"
 
-class NiFile : NiBinaryStream {
+class NiFile : public NiBinaryStream {
   public:
     NiFile();
     ~NiFile();

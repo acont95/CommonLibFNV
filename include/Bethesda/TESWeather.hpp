@@ -1,13 +1,12 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/TESForm.hpp"
-#include "Bethesda/TESGlobal.hpp"  
 #include "Bethesda/TESTexture1024.hpp"   
 #include "Bethesda/TESModel.hpp"   
 #include "Bethesda/ImageSpaceParameterData.hpp"     
 #include "Bethesda/TESImageSpaceModifiableCountForm.hpp" 
 
-class TESWeather : TESForm, TESImageSpaceModifiableCountForm<6>
+class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
 {
   public:
     TESWeather();

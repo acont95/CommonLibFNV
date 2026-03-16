@@ -3,7 +3,7 @@
 #include "Gamebryo/NiTPointerAllocator.hpp"
 
 template <typename T>
-class NiTPointerList : NiTPointerListBase<NiTPointerAllocator<size_t>, T>
+class NiTPointerList : public NiTPointerListBase<NiTPointerAllocator<size_t>, T>
 {
   public:
     NiTPointerList();

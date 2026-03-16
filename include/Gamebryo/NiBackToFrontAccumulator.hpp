@@ -1,9 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiAccumulator.hpp"
-#include "Gamebryo/NiGeometry.hpp"
+#include "Gamebryo/NiTPointerList.hpp"
 
-class NiBackToFrontAccumulator : NiAccumulator
+class NiGeometry;
+
+class NiBackToFrontAccumulator : public NiAccumulator
 {
   public:
     NiBackToFrontAccumulator();

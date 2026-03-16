@@ -1,11 +1,11 @@
 #pragma once
 #include <cstdint>
+#include "Bethesda/TESWeatherList.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESModel.hpp"
-#include "Bethesda/TESWeatherList.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class TESClimate : TESForm
+class TESClimate : public TESForm
 {
   public:
     TESClimate();

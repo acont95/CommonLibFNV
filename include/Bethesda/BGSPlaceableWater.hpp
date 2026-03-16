@@ -1,7 +1,9 @@
 #pragma once
 #include "Bethesda/BGSPlaceableWaterData.hpp"
+#include "Bethesda/TESBoundObject.hpp"
+#include "Bethesda/TESModel.hpp"
 
-class BGSPlaceableWater : TESBoundObject, TESModel
+class BGSPlaceableWater : public TESBoundObject, public TESModel
 {
   public:
     BGSPlaceableWater();

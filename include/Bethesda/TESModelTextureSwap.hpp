@@ -2,7 +2,8 @@
 #include <cstdint>
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/BGSTextureSet.hpp"
+
+class BGSTextureSet;
 
 class TESModelTextureSwap : public TESModel
 {

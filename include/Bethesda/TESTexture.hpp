@@ -2,7 +2,7 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESTexture : BaseFormComponent
+class TESTexture : public BaseFormComponent
 {
   public:
     TESTexture();

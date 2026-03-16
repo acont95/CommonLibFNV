@@ -1,13 +1,14 @@
 #pragma once
 #include <cstdint>
 #include "Types.hpp"
+#include "Bethesda/DecalData.hpp"
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESModel.hpp"
-#include "Bethesda/BGSTextureSet.hpp"
-#include "Bethesda/TESSound.hpp"
-#include "Bethesda/DecalData.hpp"
 
-class BGSImpactData : TESForm, TESModel
+class TESSound;
+class BGSTextureSet;
+
+class BGSImpactData : public TESForm, public TESModel
 {
   public:
     BGSImpactData();

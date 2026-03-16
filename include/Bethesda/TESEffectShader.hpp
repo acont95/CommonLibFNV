@@ -3,7 +3,7 @@
 #include "Bethesda/EffectShaderData.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class TESEffectShader : TESForm
+class TESEffectShader : public TESForm
 {
   public:
     TESEffectShader();

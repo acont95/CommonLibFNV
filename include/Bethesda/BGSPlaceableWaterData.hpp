@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESWaterForm.hpp"
+
+class TESWaterForm;
 
 class BGSPlaceableWaterData
 {

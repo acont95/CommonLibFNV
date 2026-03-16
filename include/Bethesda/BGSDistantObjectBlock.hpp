@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BGSDistantObjectBlockLoadTask.hpp"
+
+class BGSTerrainNode;
 
 class BGSDistantObjectBlock
 {

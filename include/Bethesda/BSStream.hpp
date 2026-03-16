@@ -2,11 +2,12 @@
 #include <cstdint>
 #include "Bethesda/BSNodeReferences.hpp"
 #include "Gamebryo/NiStream.hpp"
-#include "Gamebryo/NiTStringMap.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiObjectNET.hpp"
 
-class BSStream : NiStream
+class NiObjectNET;
+template <typename T>
+class NiTStringMap;
+
+class BSStream : public NiStream
 {
   public:
     BSStream();

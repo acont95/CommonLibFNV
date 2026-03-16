@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESDescription : BaseFormComponent
+class TESDescription : public BaseFormComponent
 {
   public:
     TESDescription();

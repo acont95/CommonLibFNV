@@ -2,7 +2,7 @@
 #include "Gamebryo/NiMemObject.hpp"
 
 template <typename Key, typename Value>
-class NiTMapItem : NiMemObject
+class NiTMapItem : public NiMemObject
 {
   public:
     NiTMapItem();

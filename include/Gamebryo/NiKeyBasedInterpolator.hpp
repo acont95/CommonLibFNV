@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiInterpolator.hpp"
 
-class NiKeyBasedInterpolator : NiInterpolator
+class NiKeyBasedInterpolator : public NiInterpolator
 {
   public:
     NiKeyBasedInterpolator();

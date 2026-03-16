@@ -2,9 +2,12 @@
 #include <cstdint>
 #include "Bethesda/BSTPersistentList.hpp"
 #include "Bethesda/BSShaderProperty.hpp"
+#include "Bethesda/BSSimpleList.hpp"
 #include "Gamebryo/NiObject.hpp"
+#include "Gamebryo/NiTMap.hpp"
+#include "Gamebryo/NiTPointerList.hpp"
 
-class BSBatchRenderer : NiObject
+class BSBatchRenderer : public NiObject
 {
   public:
     BSBatchRenderer();

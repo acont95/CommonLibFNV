@@ -2,7 +2,7 @@
 #include "Gamebryo/NiDynamicEffect.hpp"
 #include "Gamebryo/NiColor.hpp"
 
-class NiLight : NiDynamicEffect
+class NiLight : public NiDynamicEffect
 {
   public:
     NiLight();

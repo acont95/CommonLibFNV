@@ -1,10 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiTMallocInterface.hpp"
 #include "Gamebryo/NiTSet.hpp"
 
 template <typename T>
-class NiTPrimitiveSet : NiTSet<T, NiTMallocInterface<T>>
+class NiTPrimitiveSet : public NiTSet<T, NiTMallocInterface<T>>
 {
   public:
     NiTPrimitiveSet();

@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESGlobal.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
+
+class TESGlobal;
+class TESObjectREFR;
 
 class TESConditionItem
 {

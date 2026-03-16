@@ -17,7 +17,7 @@ class BSSoundHandle
 
     std::uint32_t iSoundID;
     bool bAssumeSuccess;
-    BSSoundHandle::ASSUMED_STATE eState;
+    ASSUMED_STATE eState;
 };
 
 static_assert(sizeof(BSSoundHandle) == 0xC, "BSSoundHandle has wrong size");

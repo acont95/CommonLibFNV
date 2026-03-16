@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Gamebryo/NiProperty.hpp"
 
-class NiStencilProperty : NiProperty
+class NiStencilProperty : public NiProperty
 {
   public:
     NiStencilProperty();

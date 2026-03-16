@@ -2,10 +2,11 @@
 #include "Types.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Bethesda/IOTask.hpp"
-#include "Bethesda/QueuedChildren.hpp"
-#include "Bethesda/QueuedParents.hpp"
 
-class QueuedFile : IOTask
+class QueuedChildren;
+class QueuedParents;
+
+class QueuedFile : public IOTask
 {
   public:
     QueuedFile();

@@ -1,7 +1,7 @@
 #pragma once
 #include "Bethesda/TESBoundObject.hpp"
 
-class TESBoundAnimObject : TESBoundObject
+class TESBoundAnimObject : public TESBoundObject
 {
   public:
     TESBoundAnimObject();

@@ -1,20 +1,20 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSStreamHeader.hpp"
-#include "Gamebryo/NiTPrimitiveArray.hpp"
-#include "Gamebryo/NiSearchPath.hpp"
 #include "Gamebryo/NiTLargeObjectArray.hpp"
 #include "Gamebryo/NiTLargePrimitiveArray.hpp"
-#include "Gamebryo/NiBinaryStream.hpp"
 #include "Gamebryo/NiTPrimitiveSet.hpp"
 #include "Gamebryo/NiTPointerMap.hpp"
-#include "Gamebryo/NiProcessorAffinity.hpp"
+#include "Gamebryo/NiFixedString.hpp"
+#include "Gamebryo/NiThread.hpp"
+#include "Gamebryo/NiThreadProcedure.hpp"
+#include "Gamebryo/NiTPrimitiveArray.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiFixedString.hpp"
-#include "Gamebryo/NiStream.hpp"
-#include "Gamebryo/NiThread.hpp"
-#include "Gamebryo/NiObjectGroup.hpp"
+
+class NiSearchPath;
+class NiBinaryStream;
+class NiObjectGroup;
 
 class NiStream
 {

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Gamebryo/NiTriBasedGeomData.hpp"
 
-class NiTriShapeData : NiTriBasedGeomData
+class NiTriShapeData : public NiTriBasedGeomData
 {
   public:
     NiTriShapeData();

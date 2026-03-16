@@ -1,11 +1,12 @@
 #pragma once
-#include "Bethesda/BSCompoundFrustum.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
-#include "Bethesda/ShadowSceneLight.hpp"
-#include "Bethesda/BSPortal.hpp"
 #include "Gamebryo/NiNode.hpp"
 
-class BSPortalSharedNode : NiNode
+class BSCompoundFrustum;
+class BSPortal;
+class ShadowSceneLight;
+
+class BSPortalSharedNode : public NiNode
 {
   public:
     BSPortalSharedNode();

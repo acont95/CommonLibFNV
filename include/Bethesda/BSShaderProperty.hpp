@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Types.hpp"
-#include "Bethesda/ShadowSceneLight.hpp"
-#include "Gamebryo/NiGeometry.hpp"
 #include "Gamebryo/NiTObjectArray.hpp"
 #include "Gamebryo/NiShadeProperty.hpp"
+
+class ShadowSceneLight;
+class NiGeometry;
 
 class BSShaderProperty : public NiShadeProperty
 {

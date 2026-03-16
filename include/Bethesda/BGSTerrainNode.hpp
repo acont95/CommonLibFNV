@@ -1,12 +1,12 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSTerrainManager.hpp"
-#include "Bethesda/BGSTerrainChunk.hpp"
-#include "Bethesda/BGSDistantObjectBlock.hpp"
-#include "Bethesda/BGSDistantTreeBlock.hpp"
-#include "Bethesda/BGSTerrainNode.hpp"
 #include "Gamebryo/NiNode.hpp"
-#include "Gamebryo/NiPoint3.hpp"
+
+class BGSTerrainManager;
+class BGSTerrainChunk;
+class BGSDistantObjectBlock;
+class BGSDistantTreeBlock;
+class BGSTerrainNode;
 
 class BGSTerrainNode
 {

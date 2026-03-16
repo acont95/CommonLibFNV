@@ -1,11 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiRenderTargetGroup.hpp"
 #include "Gamebryo/NiRenderedTexture.hpp"
 
-class BSRenderedTexture : NiObject
+class BSRenderedTexture : public NiObject
 {
   public:
     BSRenderedTexture();

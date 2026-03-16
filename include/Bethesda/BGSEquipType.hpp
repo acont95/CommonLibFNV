@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
-class BGSEquipType : BaseFormComponent
+class BGSEquipType : public BaseFormComponent
 {
   public:
     BGSEquipType();

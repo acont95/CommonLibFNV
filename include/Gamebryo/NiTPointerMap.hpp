@@ -4,7 +4,7 @@
 #include "Gamebryo/NiTPointerAllocator.hpp"
 
 template <typename Key, typename Value>
-class NiTPointerMap : NiTMapBase<NiTPointerAllocator<std::uint32_t>, Key, Value>
+class NiTPointerMap : public NiTMapBase<NiTPointerAllocator<std::uint32_t>, Key, Value>
 {
   public:
     NiTPointerMap();

@@ -2,7 +2,6 @@
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/ParentSpaceNode.hpp"
 #include "Bethesda/TeleportLink.hpp"
-#include "Gamebryo/NiPoint3.hpp"
 
 class TeleportPath
 {

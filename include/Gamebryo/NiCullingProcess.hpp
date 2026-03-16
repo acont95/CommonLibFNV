@@ -1,11 +1,12 @@
 #pragma once
 #include "Gamebryo/NiMemObject.hpp"
-#include "Gamebryo/NiVisibleArray.hpp"
 #include "Gamebryo/NiFrustum.hpp"
-#include "Gamebryo/NiCamera.hpp"
 #include "Gamebryo/NiFrustumPlanes.hpp"
 
-class NiCullingProcess : NiMemObject
+class NiVisibleArray;
+class NiCamera;
+
+class NiCullingProcess : public NiMemObject
 {
   public:
     NiCullingProcess();

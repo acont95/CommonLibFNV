@@ -1,9 +1,13 @@
 #pragma once
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModelTextureSwap.hpp"
-#include "Bethesda/TESIcon.hpp"
 #include "Bethesda/TESScriptableForm.hpp"
 #include "Bethesda/TESDescription.hpp"
+#include "Bethesda/TESFullName.hpp"
+#include "Bethesda/TESValueForm.hpp"
+#include "Bethesda/TESWeightForm.hpp"
+#include "Bethesda/BGSDestructibleObjectForm.hpp"
+#include "Bethesda/BGSMessageIcon.hpp"
 #include "Bethesda/BGSPickupPutdownSounds.hpp"
 
 class TESObjectIMOD :

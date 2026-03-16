@@ -3,7 +3,7 @@
 #include "Gamebryo/NiColor.hpp"
 #include "Gamebryo/NiProperty.hpp"
 
-class NiFogProperty : NiProperty
+class NiFogProperty : public NiProperty
 {
   public:
     NiFogProperty();

@@ -4,8 +4,9 @@
 #include "Havok/hkVector4.hpp"
 #include "Havok/hkArray.hpp"
 #include "Havok/hkEnum.hpp"
+#include "Havok/hkContainerHeapAllocator.hpp"
 
-class hkpMoppCode : hkReferencedObject
+class hkpMoppCode : public hkReferencedObject
 {
   public:
     hkpMoppCode();

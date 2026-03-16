@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSOcclusionQuery.hpp"
 #include "Gamebryo/NiPoint3.hpp"
+
+class BSOcclusionQuery;
 
 class ReferenceVolume
 {

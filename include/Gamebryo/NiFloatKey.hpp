@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiAnimationKey.hpp"
 
-class NiFloatKey : NiAnimationKey
+class NiFloatKey : public NiAnimationKey
 {
   public:
     NiFloatKey();

@@ -1,12 +1,11 @@
 #pragma once
 #include "Gamebryo/NiPropertyState.hpp"
-#include "Gamebryo/NiGeometryData.hpp"
 #include "Gamebryo/NiSkinInstance.hpp"
-#include "Gamebryo/NiShader.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiAVObject.hpp"
 
-class NiGeometry : NiAVObject
+class NiShader;
+
+class NiGeometry : public NiAVObject
 {
   public:
     NiGeometry();

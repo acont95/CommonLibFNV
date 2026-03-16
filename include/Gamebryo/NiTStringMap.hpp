@@ -1,10 +1,8 @@
 #pragma once
-#include "Bethesda/TESForm.hpp"
-#include "Gamebryo/NiTMap.hpp"
 #include "Gamebryo/NiTStringTemplateMap.hpp"
 
 template <typename T>
-class NiTStringMap : NiTStringTemplateMap<NiTMap<char const*, T>, T>
+class NiTStringMap : public NiTStringTemplateMap<NiTMap<char const*, T>, T>
 {
   public:
     NiTStringMap();

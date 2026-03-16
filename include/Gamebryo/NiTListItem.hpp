@@ -2,7 +2,7 @@
 #include "Gamebryo/NiMemObject.hpp"
 
 template <typename T>
-class NiTListItem : NiMemObject
+class NiTListItem : public NiMemObject
 {
   public:
     NiTListItem();

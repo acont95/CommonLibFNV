@@ -1,10 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/QueuedFile.hpp"
-#include "Gamebryo/NiPointer.hpp"
+#include "Bethesda/BSSimpleArray.hpp"
 
-class QueuedChildren : BSSimpleArray<NiPointer<QueuedFile>, 1024>
+class QueuedChildren : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
 {
   public:
     QueuedChildren();

@@ -1,9 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiObjectNet.hpp"
+#include "Gamebryo/NiPointer.hpp"
 
-class NiTimeController : NiObject
+class NiObjectNET;
+
+class NiTimeController : public NiObject
 {
   public:
     NiTimeController();

@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSTextureSet.hpp"
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESGrass.hpp"
+#include "Bethesda/TESForm.hpp"
 
-class TESLandTexture : TESForm 
+class BGSTextureSet;
+class TESGrass;
+
+class TESLandTexture : public TESForm 
 {
   public:
     TESLandTexture();

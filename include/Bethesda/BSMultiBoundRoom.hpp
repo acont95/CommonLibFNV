@@ -1,14 +1,13 @@
 #pragma once
 #include "Bethesda/BSMultiBoundNode.hpp"
-#include "Bethesda/BSPortal.hpp"
-#include "Bethesda/BSOcclusionPlane.hpp"
-#include "Bethesda/BSCompoundFrustum.hpp"
-#include "Bethesda/BSMultiBound.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
 
-class BSMultiBoundRoom : BSMultiBoundNode 
+class BSPortal;
+class BSOcclusionPlane;
+class BSCompoundFrustum;
+class ShadowSceneLight;
+
+class BSMultiBoundRoom : public BSMultiBoundNode 
 {
   public:
     BSMultiBoundRoom();

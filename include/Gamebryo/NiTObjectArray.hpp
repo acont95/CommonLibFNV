@@ -4,7 +4,7 @@
 #include "Gamebryo/NiTNewInterface.hpp"
 
 template <typename T>
-class NiTObjectArray : NiTArray<T, NiTNewInterface<T>>
+class NiTObjectArray : public NiTArray<T, NiTNewInterface<T>>
 {
   public:
     NiTObjectArray();

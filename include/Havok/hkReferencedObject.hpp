@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Havok/hkBaseObject.hpp"
 
-class hkReferencedObject : hkBaseObject
+class hkReferencedObject : public hkBaseObject
 {
   public:
     hkReferencedObject();

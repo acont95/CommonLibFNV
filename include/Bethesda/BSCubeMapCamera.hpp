@@ -1,14 +1,11 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSCubeMapCamera.hpp"
-#include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSShaderAccumulator.hpp"
-#include "Bethesda/ShadowSceneLight.hpp"
 #include "Gamebryo/NiCamera.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiAVObject.hpp"
 
-class BSCubeMapCamera : NiCamera
+class ShadowSceneLight;
+
+class BSCubeMapCamera : public NiCamera
 {
   public:
     BSCubeMapCamera();

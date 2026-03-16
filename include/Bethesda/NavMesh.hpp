@@ -1,7 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
-#include "Bethesda/TESChildCell.hpp"
 #include "Bethesda/NavMeshVertex.hpp"
 #include "Bethesda/NavMeshTriangle.hpp"
 #include "Bethesda/EdgeExtraInfo.hpp"
@@ -10,6 +8,10 @@
 #include "Bethesda/NavMeshGrid.hpp"
 #include "Bethesda/ObstacleUndoData.hpp"
 #include "Bethesda/NavMeshStaticAvoidNode.hpp"
+#include "Bethesda/TESForm.hpp"
+#include "Bethesda/TESChildCell.hpp"
+
+class TESObjectCELL;
 
 struct NavMeshPOVEdge
 {
@@ -22,7 +24,7 @@ struct NavMeshPOVData
   NavMeshPOVEdge Edge2;
 };
 
-class NavMesh : TESForm, TESChildCell, NiRefObject
+class NavMesh : public TESForm, public TESChildCell, public NiRefObject
 {
   public:
     NavMesh();

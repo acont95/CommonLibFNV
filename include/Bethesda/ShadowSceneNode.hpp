@@ -1,18 +1,12 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/ShadowSceneLight.hpp"
-#include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSCubeMapCamera.hpp"
 #include "Bethesda/BSFogProperty.hpp"
 #include "Bethesda/BSCompoundFrustum.hpp"
 #include "Gamebryo/NiNode.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiNode.hpp"
-#include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiPoint3.hpp"
 
-class ShadowSceneNode : NiNode
+class ShadowSceneNode : public NiNode
 {
   public:
     ShadowSceneNode();

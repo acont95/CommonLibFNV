@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiBackToFrontAccumulator.hpp"
 
-class NiAlphaAccumulator : NiBackToFrontAccumulator
+class NiAlphaAccumulator : public NiBackToFrontAccumulator
 {
   public:
     NiAlphaAccumulator();

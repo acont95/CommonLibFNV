@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiColorKey.hpp"
 #include "Gamebryo/NiAnimationKey.hpp"
 
-class NiColorData : NiObject
+class NiColorKey;
+
+class NiColorData : public NiObject
 {
   public:
     NiColorData();

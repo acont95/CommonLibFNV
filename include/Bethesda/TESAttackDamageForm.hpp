@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESAttackDamageForm : BaseFormComponent
+class TESAttackDamageForm : public BaseFormComponent
 {
   public:
     TESAttackDamageForm();

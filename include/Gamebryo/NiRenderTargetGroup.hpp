@@ -1,10 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/Ni2DBuffer.hpp"
 #include "Gamebryo/NiDepthStencilBuffer.hpp"
 
-class NiRenderTargetGroup : NiObject
+class NiRenderTargetGroup : public NiObject
 {
   public:
     NiRenderTargetGroup();

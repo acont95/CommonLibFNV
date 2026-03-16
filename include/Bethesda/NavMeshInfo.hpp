@@ -1,9 +1,12 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
-#include "Bethesda/NavMesh.hpp"
-#include "Bethesda/NavMeshBounds.hpp"
+#include "Bethesda/BSSimpleArray.hpp"
 #include "Gamebryo/NiPoint3.hpp"
+
+class TESForm;
+class TESObjectREFR;
+class NavMesh;
+class NavMeshBounds;
 
 class NavMeshInfo
 {

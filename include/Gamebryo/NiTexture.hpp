@@ -1,10 +1,8 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSDegradePriority.hpp"
-#include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiObjectNET.hpp"
 #include "Gamebryo/NiPixelFormat.hpp"
-#include "Gamebryo/NiObject.hpp"
 
 class NiTexture : public NiObjectNET
 {
@@ -56,7 +54,7 @@ class NiTexture : public NiObjectNET
         MipFlag m_eMipMapped;
     };
 
-    class RendererData : NiObject
+    class RendererData : public NiObject
     {
       public:
         RendererData();

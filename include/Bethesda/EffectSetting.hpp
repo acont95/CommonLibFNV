@@ -1,18 +1,22 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/ActorValue.hpp"
-#include "Bethesda/TESObjectLIGH.hpp"
-#include "Bethesda/TESEffectShader.hpp"
-#include "Bethesda/TESSound.hpp"
-#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESModel.hpp"
-#include "Bethesda/TESDescription.hpp"
+#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESIcon.hpp"
+#include "Bethesda/TESDescription.hpp"
 #include "Bethesda/EffectArchetypes.hpp"
 
-class EffectSetting : TESForm, TESModel, TESDescription, TESFullName, TESIcon
+class TESObjectLIGH;
+class TESEffectShader;
+class TESSound;
+
+class EffectSetting : 
+  public TESForm, 
+  public TESModel, 
+  public TESDescription, 
+  public TESFullName, 
+  public TESIcon
 {
   public:
     EffectSetting();

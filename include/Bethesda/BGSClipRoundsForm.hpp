@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
-class BGSClipRoundsForm : BaseFormComponent 
+class BGSClipRoundsForm : public BaseFormComponent 
 {
   public:
     BGSClipRoundsForm();

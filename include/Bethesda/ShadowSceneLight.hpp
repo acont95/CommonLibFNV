@@ -4,22 +4,15 @@
 #include "Bethesda/BSRenderedTexture.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/BSShaderAccumulator.hpp"
-#include "Bethesda/BSMultiBoundNode.hpp"
-#include "Bethesda/BSPortal.hpp"
-#include "Bethesda/BSPortalGraph.hpp"
-#include "Gamebryo/NiRefObject.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
-#include "Gamebryo/NiTexture.hpp"
 #include "Gamebryo/NiLight.hpp"
-#include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiPoint3.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiCamera.hpp"
 #include "Gamebryo/NiFrustumPlanes.hpp"
 #include "Gamebryo/NiTriBasedGeom.hpp"
 
+class BSMultiBoundNode;
+class BSPortal;
+class BSPortalGraph;
 
-class ShadowSceneLight : NiRefObject
+class ShadowSceneLight : public NiRefObject
 {
   public:
     ShadowSceneLight();

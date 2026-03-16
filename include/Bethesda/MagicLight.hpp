@@ -1,8 +1,7 @@
 #pragma once
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiNode.hpp"
 #include "Gamebryo/NiLight.hpp"
-#include "Bethesda/TESObjectLIGH.hpp"
+
+class TESObjectLIGH;
 
 class MagicLight
 {

@@ -1,7 +1,8 @@
 #pragma once
-#include "Bethesda/MagicItem.hpp"
-#include "Bethesda/MagicCaster.hpp"
-#include "Bethesda/ActiveEffect.hpp"
+
+class MagicItem;
+class MagicCaster;
+class ActiveEffect;
 
 class SpellDispelData
 {

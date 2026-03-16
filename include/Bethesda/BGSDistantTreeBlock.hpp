@@ -2,10 +2,11 @@
 #include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/BSMap.hpp"
-#include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BGSDistantTreeBlockLoadTask.hpp"
 #include "Bethesda/BSResizableTriShape.hpp"
 #include "Gamebryo/NiTriShapeData.hpp"
+
+class BGSTerrainNode;
 
 class BGSDistantTreeBlock
 {

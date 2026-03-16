@@ -1,7 +1,7 @@
 #pragma once
 #include "Bethesda/BaseExtraList.hpp"
 
-class ExtraDataList : BaseExtraList {
+class ExtraDataList : public BaseExtraList {
   public:
     ExtraDataList();
     ~ExtraDataList();

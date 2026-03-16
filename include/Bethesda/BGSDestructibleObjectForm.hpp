@@ -1,8 +1,9 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
-#include "Bethesda/DestructibleObjectData.hpp"
 
-class BGSDestructibleObjectForm : BaseFormComponent
+class DestructibleObjectData;
+
+class BGSDestructibleObjectForm : public BaseFormComponent
 {
   public:
     BGSDestructibleObjectForm();

@@ -1,9 +1,8 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
 
-class NiDynamicEffect : NiAVObject
+class NiDynamicEffect : public NiAVObject
 {
   public:
     NiDynamicEffect();

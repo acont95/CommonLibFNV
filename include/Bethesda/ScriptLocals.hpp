@@ -1,10 +1,18 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
-#include "Bethesda/Script.hpp"
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/Script.hpp"
-#include "Types.hpp"
+
+class TESForm;
+class Script;
+template <typename T>
+class BSSimpleList;
+
+class SCRIPT_LOCAL
+{
+  public:
+    unsigned int uiID;
+    double fValue;
+    bool bIsInteger;
+};
 
 struct SCRIPT_EFFECT_DATA
 {

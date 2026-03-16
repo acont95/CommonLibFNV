@@ -1,6 +1,7 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESConditionItem.hpp"
+
+class TESConditionItem;
 
 class TESCondition
 {

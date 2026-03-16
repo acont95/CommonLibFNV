@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/ActorValueInfo.hpp"
+
+class ActorValueInfo;
 
 class ActorValue
 {

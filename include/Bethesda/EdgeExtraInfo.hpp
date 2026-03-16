@@ -11,7 +11,6 @@ enum EDGE_EXTRA_INFO_TYPE : std::int32_t
   EIT_ENABLE_DISABLE_PORTAL = 0x3,
 };
 
-
 class EdgeExtraInfo
 {
   public:

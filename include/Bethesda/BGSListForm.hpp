@@ -1,9 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/TESForm.hpp"
 
-class BGSListForm : TESForm
+class BGSListForm : public TESForm
 {
   public:
     BGSListForm();

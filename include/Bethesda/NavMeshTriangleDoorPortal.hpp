@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESObjectREFR.hpp"
+
+class TESObjectREFR;
 
 class NavMeshTriangleDoorPortal
 {

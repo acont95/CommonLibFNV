@@ -1,9 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiPoint3.hpp"
 #include "Gamebryo/NiObject.hpp"
 
-class BSMultiBoundShape : NiObject
+class BSMultiBoundShape : public NiObject
 {
   public:
     BSMultiBoundShape();
@@ -17,7 +16,7 @@ class BSMultiBoundShape : NiObject
       BS_CULL_OCCLUDED = 0x3,
     };
 
-    BSMultiBoundShape::BSMBCullResult kCullResult;
+    BSMBCullResult kCullResult;
 };
 
 static_assert(sizeof(BSMultiBoundShape) == 0xC, "BSMultiBoundShape has wrong size");

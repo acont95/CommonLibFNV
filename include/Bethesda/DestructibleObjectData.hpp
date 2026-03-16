@@ -1,8 +1,9 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiPointer.hpp"
-#include "Bethesda/DestructibleObjectStage.hpp"
 #include "Bethesda/QueuedFile.hpp"
+
+class DestructibleObjectStage;
 
 class DestructibleObjectData
 {

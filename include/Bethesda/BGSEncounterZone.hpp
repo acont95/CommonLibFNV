@@ -18,7 +18,7 @@ struct ENCOUNTER_ZONE_GAME_DATA
   std::uint16_t sZoneLevel;
 };
 
-class BGSEncounterZone : TESForm
+class BGSEncounterZone : public TESForm
 {
   public:
     BGSEncounterZone();

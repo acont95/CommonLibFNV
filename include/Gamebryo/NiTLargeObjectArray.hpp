@@ -1,9 +1,9 @@
 #pragma once
-#include "Bethesda/BSStream.hpp"
 #include "Gamebryo/NiTNewInterface.hpp"
+#include "Gamebryo/NiTLargeArray.hpp"
 
 template <typename T>
-class NiTLargeObjectArray : NiTLargeArray<T, NiTNewInterface<T>>
+class NiTLargeObjectArray : public NiTLargeArray<T, NiTNewInterface<T>>
 {
   public:
     NiTLargeObjectArray();

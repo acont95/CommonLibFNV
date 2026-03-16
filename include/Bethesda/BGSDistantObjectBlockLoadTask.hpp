@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSDistantObjectBlock.hpp"
-#include "Bethesda/TESWorldSpace.hpp"
 #include "Bethesda/BSMultiBoundNode.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiGeometry.hpp"
+#include "Bethesda/QueuedFileEntry.hpp"
 
-class BGSDistantObjectBlockLoadTask : QueuedFileEntry
+class BGSDistantObjectBlock;
+class TESWorldSpace;
+
+class BGSDistantObjectBlockLoadTask : public QueuedFileEntry
 {
   public:
     BGSDistantObjectBlockLoadTask();

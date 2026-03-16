@@ -2,7 +2,8 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESFile.hpp"
+
+class TESFile;
 
 class TESForm : public BaseFormComponent {
   public:

@@ -1,6 +1,5 @@
 #pragma once
 #include "Gamebryo/NiMatrix3.hpp"
-#include "Gamebryo/NiPoint3.hpp"
 
 class NiTransform
 {

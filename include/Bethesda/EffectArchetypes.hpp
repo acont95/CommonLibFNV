@@ -2,9 +2,10 @@
 #include <cstdint>
 #include "Bethesda/ActorValue.hpp"
 #include "Bethesda/ActiveEffect.hpp"
-#include "Bethesda/MagicCaster.hpp"
-#include "Bethesda/MagicItem.hpp"
-#include "Bethesda/EffectItem.hpp"
+
+class MagicCaster;
+class MagicItem;
+class EffectItem;
 
 class EffectArchetypes
 {

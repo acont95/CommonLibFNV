@@ -3,7 +3,7 @@
 #include "Bethesda/EffectItemList.hpp"
 
 
-class MagicItem : TESFullName, EffectItemList 
+class MagicItem : public TESFullName, public EffectItemList 
 {
   public:
     MagicItem();

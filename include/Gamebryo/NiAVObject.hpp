@@ -1,14 +1,14 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiNode.hpp"
-#include "Gamebryo/NiObjectNET.hpp"
 #include "Gamebryo/NiTPointerList.hpp"
 #include "Gamebryo/NiCollisionObject.hpp"
 #include "Gamebryo/NiProperty.hpp"
 #include "Gamebryo/NiTransform.hpp"
-#include "Bethesda/BSNiBound.hpp"
 
-class NiAVObject : NiObjectNET {
+class NiNode;
+class BSNiBound;
+
+class NiAVObject : public NiObjectNET {
   public:
     NiAVObject();
     virtual ~NiAVObject();

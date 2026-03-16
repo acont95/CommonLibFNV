@@ -1,12 +1,12 @@
 #pragma once
 #include "Bethesda/BSMultiBoundShape.hpp"
-#include "Bethesda/BSOcclusionPlane.hpp"
 #include "Gamebryo/NiFrustumPlanes.hpp"
-#include "Gamebryo/NiPoint3.hpp"
 #include "Gamebryo/NiPoint2.hpp"
 #include "Gamebryo/NiMatrix3.hpp"
 
-class BSOcclusionPlane : NiObject
+class NiAVObject;
+
+class BSOcclusionPlane : public NiObject
 {
   public:
     BSOcclusionPlane();

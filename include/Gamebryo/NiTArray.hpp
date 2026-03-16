@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiPointer.hpp"
 
 template <typename T, typename TAllocator>
 class NiTArray

@@ -1,9 +1,10 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiTPrimitiveArray.hpp"
-#include "Gamebryo/NiAVObject.hpp"
 
-class BSNodeReferences : NiObject
+class NiAVObject;
+
+class BSNodeReferences : public NiObject
 {
   public:
     BSNodeReferences();

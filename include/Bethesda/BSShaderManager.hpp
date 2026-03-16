@@ -981,14 +981,14 @@ class BSShaderManager
       BSSM_SHADOW_LOOPFILTER = 0x3,
     };
 
-    class XenonPreloadShadersTask : NiXenonRendererTask
+    class XenonPreloadShadersTask : public NiXenonRendererTask
     {
       public:
         XenonPreloadShadersTask();
         virtual ~XenonPreloadShadersTask();
     };
 
-    class XenonReloadShadersTask : NiXenonRendererTask
+    class XenonReloadShadersTask : public NiXenonRendererTask
     {
       public:
         XenonReloadShadersTask();

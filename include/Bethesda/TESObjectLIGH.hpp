@@ -1,10 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESSound.hpp"
 #include "Bethesda/TESBoundAnimObject.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESModelTextureSwap.hpp"
-#include "Bethesda/TESIcon.hpp"
 #include "Bethesda/BGSMessageIcon.hpp"
 #include "Bethesda/TESScriptableForm.hpp"
 #include "Bethesda/TESWeightForm.hpp"
@@ -12,16 +10,18 @@
 #include "Bethesda/BGSDestructibleObjectForm.hpp"
 #include "Gamebryo/NiColor.hpp"
 
+class TESSound;
+
 class TESObjectLIGH : 
-    TESBoundAnimObject, 
-    TESFullName, 
-    TESModelTextureSwap, 
-    TESIcon, 
-    BGSMessageIcon, 
-    TESScriptableForm, 
-    TESWeightForm, 
-    TESValueForm, 
-    BGSDestructibleObjectForm
+    public TESBoundAnimObject, 
+    public TESFullName, 
+    public TESModelTextureSwap, 
+    public TESIcon, 
+    public BGSMessageIcon, 
+    public TESScriptableForm, 
+    public TESWeightForm, 
+    public TESValueForm, 
+    public BGSDestructibleObjectForm
 {
   public:
     TESObjectLIGH();

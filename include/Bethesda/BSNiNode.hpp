@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiNode.hpp"
 
-class BSNiNode : NiNode
+class BSNiNode : public NiNode
 {
   public:
     BSNiNode();

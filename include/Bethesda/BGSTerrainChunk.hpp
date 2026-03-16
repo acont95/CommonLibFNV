@@ -1,12 +1,12 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSTerrainNode.hpp"
-#include "Bethesda/BSMultiBoundNode.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
 #include "Bethesda/BGSTerrainChunkLoadTask.hpp"
 #include "Bethesda/BSShaderPPLightingProperty.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiGeometry.hpp"
+
+class BGSTerrainNode;
+class TESObjectREFR;
+class BGSTerrainNode;
+class BGSTerrainNode;
 
 class BGSTerrainChunk
 {

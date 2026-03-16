@@ -1,6 +1,7 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/SpellDispelData.hpp"
+
+class SpellDispelData;
 
 class MagicTarget
 {

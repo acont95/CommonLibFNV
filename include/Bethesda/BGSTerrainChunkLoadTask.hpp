@@ -1,7 +1,10 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/QueuedFileEntry.hpp"
-#include "BGSTerrainChunk.hpp"
+#include "Bethesda/TESWorldSpace.hpp"
+#include "Gamebryo/NiGeometry.hpp"
+
+class BGSTerrainChunk;
 
 class BGSTerrainChunkLoadTask : public QueuedFileEntry
 {

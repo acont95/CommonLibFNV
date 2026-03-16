@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/bhkWorldObject.hpp"
 
-class bhkPhantom : bhkWorldObject
+class bhkPhantom : public bhkWorldObject
 {
   public:
     bhkPhantom();

@@ -1,18 +1,14 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSStringT.hpp"
-#include "Bethesda/TallGrassGroup.hpp"
 #include "Bethesda/GrassLoadTask.hpp"
 #include "Bethesda/BSShaderLightingProperty.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiTexture.hpp"
-#include "Gamebryo/NiRefObject.hpp"
+#include "Bethesda/BSStringT.hpp"
 #include "Gamebryo/NiTriBasedGeomData.hpp"
 #include "Gamebryo/NiTexturingProperty.hpp"
 #include "Gamebryo/NiAlphaProperty.hpp"
 #include "Gamebryo/NiStencilProperty.hpp"
 
+class TallGrassGroup;
 
 class TallGrassShaderProperty : public BSShaderLightingProperty
 {

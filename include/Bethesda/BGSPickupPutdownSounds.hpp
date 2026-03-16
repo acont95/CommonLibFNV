@@ -1,5 +1,7 @@
 #pragma once
-#include "Bethesda/TESSound.hpp"
+#include "Bethesda/BaseFormComponent.hpp"
+
+class TESSound;
 
 class BGSPickupPutdownSounds : public BaseFormComponent
 {

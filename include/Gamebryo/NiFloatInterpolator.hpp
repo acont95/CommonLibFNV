@@ -4,7 +4,7 @@
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiKeyBasedInterpolator.hpp"
 
-class NiFloatInterpolator : NiKeyBasedInterpolator
+class NiFloatInterpolator : public NiKeyBasedInterpolator
 {
   public:
     NiFloatInterpolator();

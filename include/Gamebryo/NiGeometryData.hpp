@@ -1,14 +1,14 @@
 #pragma once 
 #include <cstdint>
-#include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiBound.hpp"
-#include "Gamebryo/NiPoint3.hpp"
-#include "Gamebryo/NiColorA.hpp"
-#include "Gamebryo/NiPoint2.hpp"
 #include "Gamebryo/NiAdditionalGeometryData.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
-class NiGeometryData : NiObject
+class NiPoint3;
+class NiColorA;
+class NiPoint2;
+
+class NiGeometryData : public NiObject
 {
   public:
     NiGeometryData();

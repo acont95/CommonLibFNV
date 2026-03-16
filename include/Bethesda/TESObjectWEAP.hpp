@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
+#include "Types.hpp"
 #include "Bethesda/ActorValue.hpp"
-#include "Bethesda/BGSProjectile.hpp"
 #include "Bethesda/TESHealthForm.hpp"
 #include "Bethesda/BGSAmmoForm.hpp"
 #include "Bethesda/BGSClipRoundsForm.hpp"
@@ -9,9 +9,22 @@
 #include "Bethesda/BGSEquipType.hpp"
 #include "Bethesda/BGSBipedModelList.hpp"
 #include "Bethesda/BGSPickupPutdownSounds.hpp"
-#include "Bethesda/TESModel.hpp"
 #include "Bethesda/TESObjectSTAT.hpp"
-#include "Bethesda/TESObjectIMOD.hpp"
+#include "Bethesda/TESFullName.hpp"
+#include "Bethesda/TESScriptableForm.hpp"
+#include "Bethesda/TESEnchantableForm.hpp"
+#include "Bethesda/TESValueForm.hpp"
+#include "Bethesda/TESWeightForm.hpp"
+#include "Bethesda/TESAttackDamageForm.hpp"
+#include "Bethesda/BGSDestructibleObjectForm.hpp"
+#include "Bethesda/BGSPreloadable.hpp"
+#include "Bethesda/BGSMessageIcon.hpp"
+
+class BGSProjectile;
+class TESObjectIMOD;
+class SpellItem;
+class TESEffectShader;
+class BGSImpactDataSet;
 
 struct OBJ_WEAP_VATS_SPECIAL
 {
@@ -25,25 +38,25 @@ struct OBJ_WEAP_VATS_SPECIAL
 };
 
 class TESObjectWEAP : 
-  TESBoundObject, 
-  TESFullName, 
-  TESModelTextureSwap, 
-  TESIcon, 
-  TESScriptableForm, 
-  TESEnchantableForm, 
-  TESValueForm, 
-  TESWeightForm, 
-  TESHealthForm, 
-  TESAttackDamageForm, 
-  BGSAmmoForm, 
-  BGSClipRoundsForm, 
-  BGSDestructibleObjectForm, 
-  BGSRepairItemList, 
-  BGSEquipType, 
-  BGSPreloadable, 
-  BGSMessageIcon, 
-  BGSBipedModelList, 
-  BGSPickupPutdownSounds 
+  public TESBoundObject, 
+  public TESFullName, 
+  public TESModelTextureSwap, 
+  public TESIcon, 
+  public TESScriptableForm, 
+  public TESEnchantableForm, 
+  public TESValueForm, 
+  public TESWeightForm, 
+  public TESHealthForm, 
+  public TESAttackDamageForm, 
+  public BGSAmmoForm, 
+  public BGSClipRoundsForm, 
+  public BGSDestructibleObjectForm, 
+  public BGSRepairItemList, 
+  public BGSEquipType, 
+  public BGSPreloadable, 
+  public BGSMessageIcon, 
+  public BGSBipedModelList, 
+  public BGSPickupPutdownSounds 
 {
   public:
     TESObjectWEAP();

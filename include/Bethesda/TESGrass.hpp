@@ -3,7 +3,7 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModel.hpp"
 
-class TESGrass : TESBoundObject, TESModel
+class TESGrass : public TESBoundObject, public TESModel
 {
   public:
     TESGrass();

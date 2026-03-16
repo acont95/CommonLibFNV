@@ -2,7 +2,7 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESSoundFile : BaseFormComponent {
+class TESSoundFile : public BaseFormComponent {
   public:
     TESSoundFile();
     ~TESSoundFile();

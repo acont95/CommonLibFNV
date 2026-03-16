@@ -1,9 +1,10 @@
 #pragma once
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
-#include "Bethesda/BGSImpactData.hpp"
 
-class BGSImpactDataSet : TESForm, BGSPreloadable
+class BGSImpactData;
+
+class BGSImpactDataSet : public TESForm, public BGSPreloadable
 {
   public:
     BGSImpactDataSet();

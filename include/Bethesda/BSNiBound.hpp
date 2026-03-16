@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiBound.hpp"
 
-class BSNiBound : NiBound
+class BSNiBound : public NiBound
 {
   public:
     BSNiBound();

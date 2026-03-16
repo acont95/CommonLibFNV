@@ -3,7 +3,6 @@
 #include "Bethesda/MagicSystem.hpp"
 #include "Bethesda/ActorValue.hpp"
 
-
 class EffectItemData
 {
   public:

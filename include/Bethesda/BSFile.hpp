@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <Gamebryo/NiFile.hpp>
 
-class BSFile : NiFile
+class BSFile : public NiFile
 {  
   public:
     BSFile();

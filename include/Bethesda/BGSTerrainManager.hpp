@@ -1,11 +1,12 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESWorldSpace.hpp"
-#include "Bethesda/BGSTerrainNode.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiNode.hpp"
+
+class TESWorldSpace;
+class BGSTerrainNode;
+class TESObjectREFR;
 
 class BGSTerrainManager
 {

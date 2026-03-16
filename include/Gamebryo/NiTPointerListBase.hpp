@@ -2,7 +2,7 @@
 #include "Gamebryo/NiTListBase.hpp"
 
 template <typename TAllocator, typename T>
-class NiTPointerListBase : NiTListBase<TAllocator, T>
+class NiTPointerListBase : public NiTListBase<TAllocator, T>
 {
   public:
     NiTPointerListBase();

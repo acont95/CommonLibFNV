@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSExtraData.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Gamebryo/NiFrustumPlanes.hpp"
 #include "Gamebryo/NiPoint3.hpp"
+
+class BSFileEntry;
 
 class BSCompoundFrustum {
   public:

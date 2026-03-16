@@ -3,7 +3,7 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
-class Ni2DBuffer : NiObject
+class Ni2DBuffer : public NiObject
 {
   public:
     Ni2DBuffer();

@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/Ni2DBuffer.hpp"
 
-class NiDepthStencilBuffer : Ni2DBuffer
+class NiDepthStencilBuffer : public Ni2DBuffer
 {
   public:
     NiDepthStencilBuffer();

@@ -1,10 +1,10 @@
 #pragma once
-#include "Bethesda/BSMultiBoundRoom.hpp"
 #include "Bethesda/BSPortalSharedNode.hpp"
 #include "Bethesda/BSOcclusionPlane.hpp"
-#include "Gamebryo/NiPointer.hpp"
 
-class BSPortal : BSOcclusionPlane
+class BSMultiBoundRoom;
+
+class BSPortal : public BSOcclusionPlane
 {
   public:
     BSPortal();

@@ -443,14 +443,6 @@ enum CHUNK_ID : std::int32_t
   XXXX_ID = 0x58585858,
 };
 
-enum SOUND_LEVEL : std::int32_t
-{
-  SOUND_LEVEL_LOUD = 0x0,
-  SOUND_LEVEL_NORMAL = 0x1,
-  SOUND_LEVEL_SILENT = 0x2,
-  SOUND_LEVEL_COUNT = 0x3,
-};
-
 enum MEM_CONTEXT : std::int32_t
 {
   MEM_CONTEXT_STATICVARS = 0x0,

@@ -1,13 +1,10 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/Ni2DBuffer.hpp"
-#include "Gamebryo/NiRenderedTexture.hpp"
+#include <d3d9types.h>
 #include "Gamebryo/Ni2DBuffer.hpp"
 #include "Gamebryo/NiTexture.hpp"
-#include <d3d9types.h>
 
-class NiRenderedTexture : NiTexture
+class NiRenderedTexture : public NiTexture
 {
   public:
     NiRenderedTexture();

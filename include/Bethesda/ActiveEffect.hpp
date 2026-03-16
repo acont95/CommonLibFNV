@@ -1,14 +1,16 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/MagicCaster.hpp"
-#include "Bethesda/MagicItem.hpp"
-#include "Bethesda/MagicHitEffect.hpp"
-#include "Bethesda/EffectItem.hpp"
-#include "Bethesda/MagicTarget.hpp"
 #include "Bethesda/MagicSystem.hpp"
-#include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/BSSoundHandle.hpp"
+
+class ActiveEffect;
+class MagicItem;
+class MagicCaster;
+class MagicTarget;
+class EffectItem;
+class TESBoundObject;
+class MagicHitEffect;
 
 class ActiveEffect
 {

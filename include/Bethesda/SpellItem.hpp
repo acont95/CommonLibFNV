@@ -1,10 +1,9 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/MagicItemForm.hpp"
-#include "Bethesda/TESWeather.hpp"
 #include "Bethesda/SpellItemData.hpp"
 
-class SpellItem : MagicItemForm
+class SpellItem : public MagicItemForm
 {
   public:
     SpellItem();

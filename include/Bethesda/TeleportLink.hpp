@@ -1,6 +1,7 @@
 #pragma once
-#include "Bethesda/TESObjectREFR.hpp"
 #include "Gamebryo/NiPoint3.hpp"
+
+class TESObjectREFR;
 
 class TeleportLink
 {

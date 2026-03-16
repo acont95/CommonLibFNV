@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSDistantTreeBlock.hpp"
 #include "Bethesda/QueuedFileEntry.hpp"
 
-class BGSDistantTreeBlockLoadTask : QueuedFileEntry
+class BGSDistantTreeBlock;
+
+class BGSDistantTreeBlockLoadTask : public QueuedFileEntry
 {
   public:
     BGSDistantTreeBlockLoadTask();

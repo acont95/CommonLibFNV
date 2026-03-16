@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include "Havok/hkGeometry.hpp"
 
 template <typename T>
 class hkArrayBase

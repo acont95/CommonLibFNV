@@ -1,8 +1,9 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/TESCondition.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
 #include "Bethesda/TeleportPath.hpp"
+
+class TESObjectREFR;
 
 class TESQuestTarget
 {

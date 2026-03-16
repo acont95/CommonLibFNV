@@ -3,7 +3,7 @@
 #include "Bethesda/TESBoundAnimObject.hpp"
 #include "Bethesda/TESSoundFile.hpp"
 
-class TESSound : TESBoundAnimObject, TESSoundFile
+class TESSound : public TESBoundAnimObject, public TESSoundFile
 {
   public:
     TESSound();

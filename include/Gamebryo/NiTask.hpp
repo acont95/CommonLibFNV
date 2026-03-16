@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 
-class NiTask : NiObject
+class NiTask : public NiObject
 {
   public:
     NiTask();

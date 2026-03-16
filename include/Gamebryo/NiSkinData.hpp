@@ -1,11 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiSkinPartition.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiTransform.hpp"
 
-class NiSkinData : NiObject
+class NiSkinData : public NiObject
 {
   public:
     NiSkinData();

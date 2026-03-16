@@ -4,7 +4,7 @@
 #include "Gamebryo/NiMatrix3.hpp"
 #include "Gamebryo/NiMemObject.hpp"
 
-class NiTextureTransform : NiMemObject
+class NiTextureTransform : public NiMemObject
 {
   public:
     NiTextureTransform();

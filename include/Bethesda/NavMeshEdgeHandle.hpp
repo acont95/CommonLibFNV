@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/NavMeshTriHandle.hpp"
 
-class NavMeshEdgeHandle : NavMeshTriHandle
+class NavMeshEdgeHandle : public NavMeshTriHandle
 {
   public:
     NavMeshEdgeHandle();

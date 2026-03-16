@@ -1,9 +1,10 @@
 #pragma once
-#include "Bethesda/ActiveEffect.hpp"
-#include "Bethesda/TESObjectREFR.hpp"
 #include "Bethesda/BSTempEffect.hpp"
 
-class MagicHitEffect : BSTempEffect
+class ActiveEffect;
+class TESObjectREFR;
+
+class MagicHitEffect : public BSTempEffect
 {
   public:
     MagicHitEffect();

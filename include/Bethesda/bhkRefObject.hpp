@@ -1,8 +1,9 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
-#include "Bethesda/hkReferencedObject.hpp"
 
-class bhkRefObject : NiObject
+class hkReferencedObject;
+
+class bhkRefObject : public NiObject
 {
   public:
     bhkRefObject();

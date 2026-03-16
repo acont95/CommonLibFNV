@@ -3,7 +3,7 @@
 #include "Gamebryo/NiTAbstractPoolAllocator.hpp"
 
 template <typename T>
-class NiTPointerAllocator : NiTAbstractPoolAllocator<T>
+class NiTPointerAllocator : public NiTAbstractPoolAllocator<T>
 {
   public:
     NiTPointerAllocator();

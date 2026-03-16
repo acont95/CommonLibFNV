@@ -2,15 +2,17 @@
 #include <cstdint>
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESTexture.hpp"
-#include "Bethesda/TESSound.hpp"
 #include "Bethesda/WaterShaderData.hpp"
-#include "Bethesda/SpellItem.hpp"
-#include "Bethesda/BGSPlaceableWater.hpp"
 #include "Bethesda/TESAttackDamageForm.hpp"
-#include "Gamebryo/NiPointer.hpp"
+#include "Bethesda/TESFullName.hpp"
+#include "Bethesda/BSRenderedTexture.hpp"
 #include "Gamebryo/NiColorA.hpp"
 
-class TESWaterForm : TESForm, TESFullName, TESAttackDamageForm
+class TESSound;
+class SpellItem;
+class BGSPlaceableWater;
+
+class TESWaterForm : public TESForm, public TESFullName, public TESAttackDamageForm
 {
   public:
     TESWaterForm();

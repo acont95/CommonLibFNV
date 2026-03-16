@@ -1,14 +1,13 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSSimpleArray.hpp"
-#include "Bethesda/NavMeshInfo.hpp"
-#include "Bethesda/ReferenceObstacleArray.hpp"
-#include "Gamebryo/NiRefObject.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiPoint3.hpp"
-#include "Gamebryo/NiMatrix3.hpp"
+#include "Bethesda/bhkRigidBody.hpp"
+#include "Gamebryo/NiTriShape.hpp"
 
-class ObstacleData : NiRefObject
+class NavMeshInfo;
+class ReferenceObstacleArray;
+
+class ObstacleData : public NiRefObject
 {
   public:
     ObstacleData();

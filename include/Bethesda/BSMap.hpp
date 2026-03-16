@@ -2,7 +2,7 @@
 #include "Bethesda/BSMapBase.hpp"
 
 template <typename Key, typename Value>
-class BSMap : BSMapBase<Key, Value>
+class BSMap : public BSMapBase<Key, Value>
 {
   public:
     BSMap();

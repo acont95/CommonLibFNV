@@ -1,11 +1,10 @@
 #pragma once
 #include "Bethesda/BSNiNode.hpp"
-#include "Gamebryo/NiPointer.hpp"
 #include "Bethesda/BSMultiBound.hpp"
 #include "Bethesda/BSCullingProcess.hpp"
 
 
-class BSMultiBoundNode : BSNiNode
+class BSMultiBoundNode : public BSNiNode
 {
   public:
     BSMultiBoundNode();

@@ -1,9 +1,8 @@
 #pragma once
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/MagicItem.hpp"
-#include "Bethesda/MagicSystem.hpp"
 
-class MagicItemForm : TESForm, MagicItem {
+class MagicItemForm : public TESForm, public MagicItem {
   public:
     MagicItemForm();
     ~MagicItemForm();

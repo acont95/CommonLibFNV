@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/PathingAvoidNode.hpp"
 
-class NavMeshStaticAvoidNode : PathingAvoidNode
+class NavMeshStaticAvoidNode : public PathingAvoidNode
 {
   public:
     NavMeshStaticAvoidNode();

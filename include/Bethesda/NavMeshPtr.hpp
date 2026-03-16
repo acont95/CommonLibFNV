@@ -1,8 +1,7 @@
 #pragma once
 #include "Bethesda/NavMesh.hpp"
-#include "Gamebryo/NiPointer.hpp"
 
-class NavMeshPtr : NiPointer<NavMesh>
+class NavMeshPtr : public NiPointer<NavMesh>
 {
   public:
     NavMeshPtr();

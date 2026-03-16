@@ -3,9 +3,10 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/BGSDebrisData.hpp"
 
-class BGSDebris : TESForm, BGSPreloadable
+class BGSDebrisData;
+
+class BGSDebris : public TESForm, public BGSPreloadable
 {
   public:
     BGSDebris();

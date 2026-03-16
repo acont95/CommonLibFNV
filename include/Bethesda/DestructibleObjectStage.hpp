@@ -1,8 +1,9 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BGSExplosion.hpp"
-#include "Bethesda/BGSDebris.hpp"
-#include "Bethesda/TESModelTextureSwap.hpp"
+
+class BGSExplosion;
+class BGSDebris;
+class TESModelTextureSwap;
 
 class DestructibleObjectStage
 {

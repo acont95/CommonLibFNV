@@ -1,7 +1,9 @@
 #pragma once
-#include "Bethesda/BGSListForm.hpp"
+#include "Bethesda/BaseFormComponent.hpp"
 
-class BGSBipedModelList : BaseFormComponent
+class BGSListForm;
+
+class BGSBipedModelList : public BaseFormComponent
 {
   public:
     BGSBipedModelList();

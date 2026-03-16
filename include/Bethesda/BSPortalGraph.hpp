@@ -1,22 +1,18 @@
 #pragma once
-#include "Bethesda/BSOcclusionPlane.hpp"
 #include "Bethesda/BSMultiBoundRoom.hpp"
-#include "Bethesda/BSPortal.hpp"
-#include "Bethesda/BSSimpleArray.hpp"
-#include "Gamebryo/NiTPointerList.hpp"
-#include "Gamebryo/NiAVObject.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiNode.hpp"
-#include "Gamebryo/NiRefObject.hpp"
 
-class BSPortalGraph : NiRefObject
+class BSOcclusionPlane;
+class BSPortal;
+class BSOcclusionPlane;
+
+class BSPortalGraph : public NiRefObject
 {
   public:
     BSPortalGraph();
     virtual ~BSPortalGraph();
 
     NiTPointerList<BSOcclusionPlane *> lOccluderList;
-    __unaligned __declspec(align(1)) NiTPointerList<BSPortal *> lPortalList;
+    NiTPointerList<BSPortal *> lPortalList;
     NiTPointerList<NiPointer<BSMultiBoundRoom> > lMultiBoundRoomList;
     NiPointer<BSMultiBoundRoom> spMultiBoundRoomRoot;
     NiTPointerList<NiPointer<BSMultiBoundRoom> > lMultiBoundRoomAccumList;

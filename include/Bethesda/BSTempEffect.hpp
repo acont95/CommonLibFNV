@@ -1,8 +1,9 @@
 #pragma once
-#include "Bethesda/TESObjectCELL.hpp"
 #include "Gamebryo/NiObject.hpp"
 
-class BSTempEffect : NiObject
+class TESObjectCELL;
+
+class BSTempEffect : public NiObject
 {
   public:
     BSTempEffect();

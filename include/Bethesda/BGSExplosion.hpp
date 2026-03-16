@@ -1,16 +1,24 @@
 #pragma once
 #include <cstdint>
+#include "Types.hpp"
+#include "Bethesda/TESEnchantableForm.hpp"
+#include "Bethesda/TESImageSpaceModifiableForm.hpp"
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/TESModel.hpp"
-#include "Bethesda/TESEnchantableForm.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
-#include "Bethesda/TESImageSpaceModifiableForm.hpp"
-#include "Bethesda/TESSound.hpp"
-#include "Bethesda/TESObjectLIGH.hpp"
-#include "Bethesda/BGSImpactDataSet.hpp"
 
-class BGSExplosion : TESBoundObject, TESFullName, TESModel, TESEnchantableForm, BGSPreloadable, TESImageSpaceModifiableForm 
+class TESObjectLIGH;
+class TESSound;
+class BGSImpactDataSet;
+
+class BGSExplosion : 
+  public TESBoundObject, 
+  public TESFullName, 
+  public TESModel, 
+  public TESEnchantableForm, 
+  public BGSPreloadable, 
+  public TESImageSpaceModifiableForm 
 {
   public:
     BGSExplosion();

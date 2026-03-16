@@ -1,14 +1,14 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESScriptableForm.hpp"
 #include "Bethesda/TESIcon.hpp"
 #include "Bethesda/TESFullName.hpp"
-#include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESQuestStage.hpp"
+#include "Bethesda/TESForm.hpp"
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/ScriptLocals.hpp"
-#include "Bethesda/BGSQuestObjective.hpp"
+
+class TESQuestStage;
+class BGSQuestObjective;
 
 class QUEST_DATA
 {
@@ -18,7 +18,7 @@ class QUEST_DATA
     float fQuestDelayTime;
 };
 
-class TESQuest : TESForm, TESScriptableForm, TESIcon, TESFullName
+class TESQuest : public TESForm, public TESScriptableForm, public TESIcon, public TESFullName
 {
   public:
     TESQuest();

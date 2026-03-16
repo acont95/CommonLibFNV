@@ -2,6 +2,8 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModelTextureSwap.hpp"
 
+class TESSound;
+
 class TESObjectSTAT : 
   public TESBoundObject, 
   public TESModelTextureSwap

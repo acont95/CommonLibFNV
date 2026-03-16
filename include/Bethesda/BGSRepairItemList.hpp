@@ -1,5 +1,6 @@
 #pragma once
-#include "Bethesda/BGSListForm.hpp"
+
+class BGSListForm;
 
 class BGSRepairItemList
 {

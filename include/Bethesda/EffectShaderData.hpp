@@ -2,7 +2,8 @@
 #include <cstdint>
 #include <d3d9types.h>
 #include "Gamebryo/NiPoint3.hpp"
-#include "Bethesda/BGSDebris.hpp"
+
+class BGSDebris;
 
 class EffectShaderData
 {

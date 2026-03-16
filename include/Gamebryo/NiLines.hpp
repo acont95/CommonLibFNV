@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiGeometry.hpp"
 
-class NiLines : NiGeometry
+class NiLines : public NiGeometry
 {
   public:
     NiLines();

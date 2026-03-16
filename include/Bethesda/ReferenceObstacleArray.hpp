@@ -1,10 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/ObstacleData.hpp"
-#include "Gamebryo/NiRefObject.hpp"
 
-class ReferenceObstacleArray : NiRefObject
+class ReferenceObstacleArray : public NiRefObject
 {
   public:
     ReferenceObstacleArray();

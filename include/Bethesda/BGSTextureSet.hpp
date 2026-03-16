@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/BSTextureSet.hpp"
+#include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESTexture.hpp"
-#include "Bethesda/DecalData.hpp"
-#include "Bethesda/BSFileEntry.hpp"
 
-class BGSTextureSet : TESBoundObject, BSTextureSet
+class DecalData;
+class BSFileEntry;
+
+class BGSTextureSet : public TESBoundObject, public BSTextureSet
 {
   public:
     BGSTextureSet();

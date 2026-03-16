@@ -1,7 +1,7 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
 
-class NiInterpolator : NiObject
+class NiInterpolator : public NiObject
 {
   public:
     NiInterpolator();

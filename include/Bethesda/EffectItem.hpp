@@ -1,8 +1,8 @@
 #pragma once
-#include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/EffectItemData.hpp"
-#include "Bethesda/EffectSetting.hpp"
 #include "Bethesda/TESCondition.hpp"
+
+class EffectSetting;
 
 class EffectItem 
 {

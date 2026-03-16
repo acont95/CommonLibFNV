@@ -1,7 +1,7 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class BGSPreloadable : BaseFormComponent
+class BGSPreloadable : public BaseFormComponent
 {
   public:
     BGSPreloadable();

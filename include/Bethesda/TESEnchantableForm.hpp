@@ -1,10 +1,11 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
-#include "Bethesda/TESForm.hpp"
-#include "Bethesda/EnchantmentItem.hpp"
+#include "Bethesda/MagicSystem.hpp"
 
-class TESEnchantableForm : BaseFormComponent {
+class EnchantmentItem;
+
+class TESEnchantableForm : public BaseFormComponent {
   public:
     TESEnchantableForm();
     ~TESEnchantableForm();

@@ -2,7 +2,7 @@
 #include "Gamebryo/NiTLargeArray.hpp"
 
 template <typename T>
-class NiTLargePrimitiveArray : NiTLargeArray<T, NiTMallocInterface<T>>
+class NiTLargePrimitiveArray : public NiTLargeArray<T, NiTMallocInterface<T>>
 {
   public:
     NiTLargePrimitiveArray();

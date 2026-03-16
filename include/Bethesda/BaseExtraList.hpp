@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/BSExtraData.hpp"
+
+class BSExtraData;
 
 class BaseExtraList {
   public:

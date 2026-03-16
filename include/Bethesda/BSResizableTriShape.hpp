@@ -1,9 +1,8 @@
 #pragma once
 #include <cstdint>
 #include "Gamebryo/NiTriShape.hpp"
-#include "Gamebryo/NiBound.hpp"
 
-class BSResizableTriShape : NiTriShape
+class BSResizableTriShape : public NiTriShape
 {
   public:
     BSResizableTriShape();

@@ -1,8 +1,9 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
-#include "Gamebryo/NiAVObject.hpp"
 
-class NiCollisionObject : NiObject
+class NiAVObject;
+
+class NiCollisionObject : public NiObject
 {
   public:
     NiCollisionObject();

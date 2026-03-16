@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
-#include "Bethesda/TESObject.hpp"
+
+class TESObject;
+class TESObjectCELL;
 
 class TESObjectList {
   public:

@@ -1,9 +1,10 @@
 #pragma once
 #include <cstdint>
 #include "Bethesda/BSStringT.hpp"
-#include "Bethesda/TESQuest.hpp"
 #include "Bethesda/BSSimpleList.hpp"
-#include "Bethesda/TESQuestTarget.hpp"
+
+class TESQuest;
+class TESQuestTarget;
 
 enum QUEST_OBJECTIVE_STATE : std::int32_t
 {

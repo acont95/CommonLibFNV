@@ -2,13 +2,12 @@
 #include <cstdint>
 #include <d3d9types.h>
 #include "Bethesda/BSTextureSet.hpp"
-#include "Bethesda/BSShaderProperty.hpp"
-#include "Gamebryo/NiColorA.hpp"
-#include "Gamebryo/NiPointer.hpp"
-#include "Gamebryo/NiTexture.hpp"
+#include "Bethesda/BSShaderLightingProperty.hpp"
 #include "Gamebryo/NiTexturingProperty.hpp"
+#include "Gamebryo/NiPoint3.hpp"
+#include "Gamebryo/NiColorA.hpp"
 
-class BSShaderPPLightingProperty : BSShaderLightingProperty
+class BSShaderPPLightingProperty : public BSShaderLightingProperty
 {
   public:
     BSShaderPPLightingProperty();

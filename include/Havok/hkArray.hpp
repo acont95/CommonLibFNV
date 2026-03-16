@@ -2,7 +2,7 @@
 #include "Havok/hkArrayBase.hpp"
 
 template <typename T, typename TAllocator>
-class hkArray : hkArrayBase<T>
+class hkArray : public hkArrayBase<T>
 {
   public:
     hkArray();

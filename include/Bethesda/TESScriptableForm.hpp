@@ -1,7 +1,9 @@
 #pragma once
-#include "Bethesda/Script.hpp"
+#include "Bethesda/BaseFormComponent.hpp"
 
-class TESScriptableForm : BaseFormComponent
+class Script;
+
+class TESScriptableForm : public BaseFormComponent
 {
   public:
     TESScriptableForm();
