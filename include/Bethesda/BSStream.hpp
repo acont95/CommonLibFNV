@@ -13,7 +13,7 @@ class BSStream : public NiStream
     BSStream();
     virtual ~BSStream();
 
-    enum OBJECT_REF_LEVELS : std::int32_t
+    enum OBJECT_REF_LEVELS
     {
       ORL_BASIC = 0x0,
       ORL_CHILDREN = 0x1,
@@ -25,7 +25,7 @@ class BSStream : public NiStream
       ORL_ALL = 0x1F,
     };
 
-    enum OBJECTREFFLAGS : std::int32_t
+    enum OBJECTREFFLAGS
     {
       ORF_ADDING = 0x80,
     };

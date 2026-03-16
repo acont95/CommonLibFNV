@@ -16,7 +16,7 @@ class TallGrassShaderProperty : public BSShaderLightingProperty
     TallGrassShaderProperty();
     ~TallGrassShaderProperty();
 
-    enum TerrainGeometrySection : std::int32_t
+    enum TerrainGeometrySection
     {
       TGSP_NONE = 0x0,
       TGSP_UPPERLEFT = 0x1,

@@ -7,7 +7,7 @@ class NiAlphaProperty
     NiAlphaProperty();
     ~NiAlphaProperty();
 
-    enum AlphaFunction : std::int32_t
+    enum AlphaFunction
     {
       ALPHA_ONE = 0x0,
       ALPHA_ZERO = 0x1,
@@ -23,7 +23,7 @@ class NiAlphaProperty
       ALPHA_MAX_MODES = 0xB,
     };
 
-    enum TestFunction : std::int32_t
+    enum TestFunction
     {
       TEST_MAX_MODES = 0x8,
     };

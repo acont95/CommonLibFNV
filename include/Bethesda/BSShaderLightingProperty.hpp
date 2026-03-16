@@ -9,7 +9,7 @@ class BSShaderLightingProperty : public BSShaderProperty
     BSShaderLightingProperty();
     virtual ~BSShaderLightingProperty();
 
-    enum etConstantIndex : std::int32_t
+    enum etConstantIndex
     {
       SLP_SC_AMBIENT = 0x0,
       SLP_SC_LIGHTCOLOR = 0x1,
@@ -29,7 +29,7 @@ class BSShaderLightingProperty : public BSShaderProperty
       SLP_SC_COUNT = 0x25,
     };
 
-    enum etLightType : std::int32_t
+    enum etLightType
     {
       SLP_LT_NONE = 0x0,
       SLP_LT_DIR = 0x1,

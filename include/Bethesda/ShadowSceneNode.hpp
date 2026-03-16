@@ -12,7 +12,7 @@ class ShadowSceneNode : public NiNode
     ShadowSceneNode();
     virtual ~ShadowSceneNode();
 
-    enum eChildNodes : std::int32_t
+    enum eChildNodes
     {
       SSN_CHILDNODE_SKY = 0x0,
       SSN_CHILDNODE_WEATHER = 0x1,

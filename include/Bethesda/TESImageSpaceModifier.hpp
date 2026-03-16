@@ -15,14 +15,14 @@ class TESImageSpaceModifier : public TESForm
     TESImageSpaceModifier();
     ~TESImageSpaceModifier();
 
-    enum ImageSpaceModifierOperations : std::int32_t
+    enum ImageSpaceModifierOperations
     {
       IMAOP_MULT = 0x0,
       IMAOP_ADD = 0x1,
       IMAOP_COUNT = 0x2,
     };
 
-    enum ImageSpaceOpParameterEnum : std::int32_t
+    enum ImageSpaceOpParameterEnum
     {
       IMAGESPACEOPPARAM_HDR_FIRST = 0x0,
       IMAGESPACEOPPARAM_HDR_EYE_ADAPT_SPEED = 0x0,

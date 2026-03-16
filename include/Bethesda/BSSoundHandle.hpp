@@ -7,7 +7,7 @@ class BSSoundHandle
     BSSoundHandle();
     ~BSSoundHandle();
 
-    enum ASSUMED_STATE : std::int32_t
+    enum ASSUMED_STATE
     {
       ASSUMED_STATE_INITIALIZED = 0x0,
       ASSUMED_STATE_PLAYING = 0x1,

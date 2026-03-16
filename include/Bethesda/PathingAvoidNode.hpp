@@ -8,7 +8,7 @@ class PathingAvoidNode
     PathingAvoidNode();
     ~PathingAvoidNode();
 
-    enum AVOID_NODE_TYPE : std::int32_t
+    enum AVOID_NODE_TYPE
     {
       AVOID_NODE_SPHERE = 0x0,
       AVOID_NODE_CYLINDER = 0x1,

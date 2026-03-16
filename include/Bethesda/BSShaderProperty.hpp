@@ -13,7 +13,7 @@ class BSShaderProperty : public NiShadeProperty
     BSShaderProperty();
     virtual ~BSShaderProperty();
 
-    enum TextureTypeEnum : std::int32_t
+    enum TextureTypeEnum
     {
       TEXTYPE_DIFFUSE = 0x0,
       TEXTYPE_GLOSS = 0x1,
@@ -21,7 +21,7 @@ class BSShaderProperty : public NiShadeProperty
       TEXTYPE_HAIR_LAYER = 0x2,
     };
 
-    enum etAccumulationHint : std::int32_t
+    enum etAccumulationHint
     {
       BSSP_HINT_NORMAL = 0x0,
       BSSP_HINT_SORT = 0x1,
@@ -40,7 +40,7 @@ class BSShaderProperty : public NiShadeProperty
       BSSP_HINT_GROUP_FADING = 0xE,
     };
 
-    enum EShaderPropertyFlag : std::int32_t
+    enum EShaderPropertyFlag
     {
       BSSP_SPECULAR = 0x0,
       BSSP_SKINNED = 0x1,

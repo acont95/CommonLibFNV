@@ -6,7 +6,7 @@
 class TESQuest;
 class TESQuestTarget;
 
-enum QUEST_OBJECTIVE_STATE : std::int32_t
+enum QUEST_OBJECTIVE_STATE
 {
   QOS_DORMANT = 0x0,
   QOS_DISPLAYED = 0x1,

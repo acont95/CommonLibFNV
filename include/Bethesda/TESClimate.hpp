@@ -11,19 +11,19 @@ class TESClimate : public TESForm
     TESClimate();
     virtual ~TESClimate();
 
-    enum TextureType : std::int32_t
+    enum TextureType
     {
       TX_SUN = 0x0,
       TX_GLARE = 0x1,
       NUM_TEXTURES = 0x2,
     };
 
-    enum HourlyIncrements : std::int32_t
+    enum HourlyIncrements
     {
       HOURLY_INCREMENTS = 0x6,
     };
 
-    enum TransTime : std::int32_t
+    enum TransTime
     {
       SUNRISE_BEGIN = 0x0,
       SUNRISE_END = 0x1,
@@ -32,7 +32,7 @@ class TESClimate : public TESForm
       NUM_TRANS_TIMES = 0x4,
     };
 
-    enum MiscData : std::int32_t
+    enum MiscData
     {
       VOLATILITY = 0x4,
       MOON_DATA = 0x5,

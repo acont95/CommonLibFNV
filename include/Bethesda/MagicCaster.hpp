@@ -9,7 +9,7 @@ class MagicCaster
     MagicCaster();
     virtual ~MagicCaster();
 
-    enum State : std::int32_t
+    enum State
     {
       NO_SPELL = 0x0,
       AIM = 0x1,

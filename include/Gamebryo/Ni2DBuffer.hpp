@@ -9,7 +9,7 @@ class Ni2DBuffer : public NiObject
     Ni2DBuffer();
     virtual ~Ni2DBuffer();
 
-    enum MultiSamplePreference : std::int32_t
+    enum MultiSamplePreference
     {
       MULTISAMPLE_NONE = 0x0,
       MULTISAMPLE_2 = 0x1,
@@ -17,7 +17,7 @@ class Ni2DBuffer : public NiObject
       MULTISAMPLE_8 = 0x3,
     };
 
-    enum CopyFilterPreference : std::int32_t
+    enum CopyFilterPreference
     {
       COPY_FILTER_NONE = 0x0,
       COPY_FILTER_POINT = 0x1,

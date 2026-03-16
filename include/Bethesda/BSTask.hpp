@@ -8,7 +8,7 @@ class BSTask
     BSTask();
     virtual ~BSTask();
 
-    enum BS_TASK_STATE : std::int32_t
+    enum BS_TASK_STATE
     {
       BS_TASK_STATE_PENDING = 0x0,
       BS_TASK_STATE_QUEUED = 0x1,

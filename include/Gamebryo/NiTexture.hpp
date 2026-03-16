@@ -16,7 +16,7 @@ class NiTexture : public NiObjectNET
         FormatPrefs();
         ~FormatPrefs();
 
-        enum PixelLayout : std::int32_t
+        enum PixelLayout
         {
           PALETTIZED_8 = 0x0,
           HIGH_COLOR_16 = 0x1,
@@ -35,14 +35,14 @@ class NiTexture : public NiObjectNET
           FLOAT_COLOR_128 = 0xE,
         };
 
-        enum AlphaFormat : std::int32_t
+        enum AlphaFormat
         {
           BINARY = 0x1,
           SMOOTH = 0x2,
           ALPHA_DEFAULT = 0x3,
         };
 
-        enum MipFlag : std::int32_t
+        enum MipFlag
         {
           NO = 0x0,
           YES = 0x1,

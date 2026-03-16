@@ -43,7 +43,7 @@ class TESWorldSpace : public TESForm, public TESFullName, public TESTexture
     TESWorldSpace();
     virtual ~TESWorldSpace();
 
-    enum PARENT_USE_FLAG : std::int32_t
+    enum PARENT_USE_FLAG
     {
       PU_LAND = 0x0,
       PU_LOD = 0x1,

@@ -9,7 +9,7 @@ class SpellItem : public MagicItemForm
     SpellItem();
     virtual ~SpellItem();
 
-    enum SpellFlag : std::int32_t
+    enum SpellFlag
     {
       COST_OVERRIDE = 0x1,
       ALWAYS_SUCCEEDS = 0x2,

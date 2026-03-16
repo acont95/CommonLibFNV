@@ -7,7 +7,7 @@ class NiPixelFormat
     NiPixelFormat();
     ~NiPixelFormat();
 
-    enum Format : std::int32_t
+    enum Format
     {
       FORMAT_RGB = 0x0,
       FORMAT_RGBA = 0x1,
@@ -28,14 +28,14 @@ class NiPixelFormat
       FORMAT_MAX = 0x11,
     };
 
-    enum Tiling : std::int32_t
+    enum Tiling
     {
       TILE_NONE = 0x0,
       TILE_XENON = 0x1,
       TILE_MAX = 0x2,
     };
 
-    enum Component : std::int32_t
+    enum Component
     {
       COMP_RED = 0x0,
       COMP_GREEN = 0x1,
@@ -61,7 +61,7 @@ class NiPixelFormat
       NUM_COMPS = 0x4,
     };
 
-    enum Representation : std::int32_t
+    enum Representation
     {
       REP_FIXED = 0x0,
       REP_HALF = 0x1,

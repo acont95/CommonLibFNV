@@ -13,7 +13,7 @@ class NiFile : public NiBinaryStream {
     virtual const char*	GetFilename() const;
     virtual std::uint32_t GetFileSize();
 
-    enum OpenMode : std::int32_t
+    enum OpenMode
     {
       READ_ONLY = 0x0,
       WRITE_ONLY = 0x1,

@@ -7,7 +7,7 @@ class NiProcessorAffinity
     NiProcessorAffinity();
     ~NiProcessorAffinity();
 
-    enum Processor : std::int32_t
+    enum Processor
     {
       PROCESSOR_0 = 0x1,
       PROCESSOR_1 = 0x2,

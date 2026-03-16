@@ -7,7 +7,7 @@ class SkillLevel
     SkillLevel();
     ~SkillLevel();
 
-    enum Value : std::int32_t
+    enum Value
     {
       NOVICE = 0x0,
       APPRENTICE = 0x1,

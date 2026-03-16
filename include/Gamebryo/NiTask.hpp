@@ -8,7 +8,7 @@ class NiTask : public NiObject
     NiTask();
     virtual ~NiTask();
 
-    enum TaskStatus : std::int32_t
+    enum TaskStatus
     {
       RUNNING = 0x2,
       COMPLETED = 0x3,

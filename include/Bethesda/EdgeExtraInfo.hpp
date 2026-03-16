@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Bethesda/NavMeshTriangleEdgePortal.hpp"
 
-enum EDGE_EXTRA_INFO_TYPE : std::int32_t
+enum EDGE_EXTRA_INFO_TYPE
 {
   EIT_INVALID = 0xFFFFFFFF,
   EIT_PORTAL = 0x0,

@@ -9,7 +9,7 @@ class ActorValue
     ActorValue();
     ~ActorValue();
 
-    enum Index : std::int32_t
+    enum Index 
     {
       AGGRESSION = 0x0,
       CONFIDENCE = 0x1,
@@ -111,7 +111,7 @@ class ActorValue
       ATTRIBUTE_NONE = 0xFFFFFFFF,
     };
 
-    enum Section : std::int32_t
+    enum Section
     {
       ATTRIBUTE = 0x0,
       DERIVED_ATTRIBUTE = 0x1,
@@ -123,7 +123,7 @@ class ActorValue
       SECTION_COUNT = 0x8,
     };
 
-    enum Flags : std::int32_t
+    enum Flags
     {
       FAST_MODIFIER = 0x1,
       CREATURE_MAPPED = 0x2,

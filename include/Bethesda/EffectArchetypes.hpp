@@ -13,7 +13,7 @@ class EffectArchetypes
     EffectArchetypes();
     ~EffectArchetypes();
 
-    enum ArchetypeID : std::int32_t
+    enum ArchetypeID
     {
       ARCHETYPE_NONE = 0xFFFFFFFF,
       ARCHETYPE_START = 0x0,
@@ -57,7 +57,7 @@ class EffectArchetypes
       ARCHETYPE_COUNT = 0x25,
     };
 
-    enum ArchetypeFlag : std::int32_t
+    enum ArchetypeFlag
     {
       ASSOCIATED_ACTORVALUE = 0x2,
       ASSOCIATED_CREATURE = 0x4,

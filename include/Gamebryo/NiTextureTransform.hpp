@@ -10,7 +10,7 @@ class NiTextureTransform : public NiMemObject
     NiTextureTransform();
     ~NiTextureTransform();
 
-    enum TransformMethod : std::int32_t
+    enum TransformMethod
     {
       MAYA_DEPRECATED_TRANSFORM = 0x0,
       MAX_TRANSFORM = 0x1,

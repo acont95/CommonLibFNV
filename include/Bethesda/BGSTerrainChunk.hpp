@@ -14,7 +14,7 @@ class BGSTerrainChunk
     BGSTerrainChunk();
     ~BGSTerrainChunk();
     
-    enum ChunkTextureType : std::int32_t
+    enum ChunkTextureType
     {
       CHUNK_TEXTURE_DIFFUSE = 0x0,
       CHUNK_TEXTURE_NORMAL = 0x1,

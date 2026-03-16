@@ -8,7 +8,7 @@ class BSShaderManager
     BSShaderManager();
     ~BSShaderManager();
 
-    enum eBSSMPassEnum : std::int32_t
+    enum eBSSMPassEnum
     {
       BSSM_DISABLED = 0x0,
       BSSM_RENDERPASSES_FIRST = 0x1,
@@ -789,7 +789,7 @@ class BSShaderManager
       BSSM_COUNT = 0x2F4,
     };
 
-    enum ShaderEnum : std::int32_t
+    enum ShaderEnum
     {
       BSSM_SHADER_NOSHADER = 0x0,
       BSSM_SHADER_MP_SHADOWLIGHTSHADER = 0x1,
@@ -829,7 +829,7 @@ class BSShaderManager
       BSSM_SHADER_COUNT = 0x23,
     };
 
-    enum ShaderTypeEnum : std::int32_t
+    enum ShaderTypeEnum
     {
       BSSM_SHADERTYPE_UNKNOWN = 0xFFFFFFFF,
       BSSM_SHADERTYPE_BASE = 0x0,
@@ -863,7 +863,7 @@ class BSShaderManager
       BSSM_SHADERTYPE_COUNT = 0x1A,
     };
 
-    enum PropertyTypeEnum : std::int32_t
+    enum PropertyTypeEnum
     {
       BSSM_PROPERTYTYPE_UNKNOWN = 0xFFFFFFFF,
       BSSM_PROPERTYTYPE_BASE = 0x0,
@@ -898,7 +898,7 @@ class BSShaderManager
       BSSM_PROPERTYTYPE_COUNT = 0x19,
     };
 
-    enum eObjectType : std::int32_t
+    enum eObjectType
     {
       BSSM_OBJ_UNITIALIZED = 0x0,
       BSSM_OBJ_STATICARCHITECTURE = 0x1,
@@ -909,7 +909,7 @@ class BSShaderManager
       BSSM_OBJ_UNKNOWN = 0x6,
     };
 
-    enum BSShaderTimerMode : std::int32_t
+    enum BSShaderTimerMode
     {
       TIMER_MODE_DEFAULT = 0x0,
       TIMER_MODE_DELTA = 0x1,
@@ -918,7 +918,7 @@ class BSShaderManager
       TIMER_MODE_COUNT = 0x4,
     };
 
-    enum eSceneGraphEnum : std::int32_t
+    enum eSceneGraphEnum
     {
       BSSM_SSN_WORLD = 0x0,
       BSSM_SSN_UITERMINALS = 0x1,
@@ -927,7 +927,7 @@ class BSShaderManager
       BSSM_SSN_COUNT = 0x4,
     };
 
-    enum etShaderLevel : std::int32_t
+    enum etShaderLevel
     {
       BSSM_SV_NONE = 0x0,
       BSSM_SV_1_X = 0x1,
@@ -940,7 +940,7 @@ class BSShaderManager
       BSSM_SV_COUNT = 0x7,
     };
 
-    enum etRenderMode : std::int32_t
+    enum etRenderMode
     {
       BSSM_RENDER_NORMAL = 0x0,
       BSSM_RENDER_NUMLIGHTS = 0x1,
@@ -961,19 +961,19 @@ class BSShaderManager
       BSSM_RENDER_COUNT = 0x10,
     };
 
-    enum etRenderFlag : std::int32_t
+    enum etRenderFlag
     {
       BSSM_RENDERFLAG_COLORWRITEDISABLE = 0x0,
     };
 
-    enum BATCHRENDERER_CREATION_MODE : std::int32_t
+    enum BATCHRENDERER_CREATION_MODE
     {
       BRCM_NORMAL = 0x63,
       BRCM_NO_GROUPS = 0x64,
       BRCM_ALPHA_GROUP = 0x65,
     };
 
-    enum etShadowMode : std::int32_t
+    enum etShadowMode
     {
       BSSM_SHADOW_ISFILTER = 0x0,
       BSSM_SHADOW_PCF4 = 0x1,

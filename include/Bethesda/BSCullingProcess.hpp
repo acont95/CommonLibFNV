@@ -12,7 +12,7 @@ class BSCullingProcess : public NiCullingProcess
     BSCullingProcess();
     ~BSCullingProcess();
 
-    enum BSCPCullingType : std::int32_t
+    enum BSCPCullingType
     {
       BSCP_CULL_NORMAL = 0x0,
       BSCP_CULL_ALLPASS = 0x1,

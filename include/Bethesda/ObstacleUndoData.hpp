@@ -11,7 +11,7 @@ class ObstacleUndoData : public NiRefObject
     ObstacleUndoData();
     virtual ~ObstacleUndoData();
 
-    enum OBSTACLE_UNDO_STATE : std::int32_t
+    enum OBSTACLE_UNDO_STATE
     {
       OBSTACLE_UNDO_STATE_INVALID = 0x0,
       OBSTACLE_UNDO_STATE_ACTIVE = 0x1,

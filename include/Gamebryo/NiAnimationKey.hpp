@@ -7,7 +7,7 @@ class NiAnimationKey
     NiAnimationKey();
     ~NiAnimationKey();
 
-    enum KeyContent : std::int32_t
+    enum KeyContent
     {
       FLOATKEY = 0x0,
       POSKEY = 0x1,
@@ -18,7 +18,7 @@ class NiAnimationKey
       NUMKEYCONTENTS = 0x6,
     };
 
-    enum KeyType : std::int32_t
+    enum KeyType
     {
       NOINTERP = 0x0,
       LINKEY = 0x1,

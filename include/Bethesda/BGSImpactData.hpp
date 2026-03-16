@@ -14,7 +14,7 @@ class BGSImpactData : public TESForm, public TESModel
     BGSImpactData();
     ~BGSImpactData();
 
-    enum ORIENTATION : std::int32_t
+    enum ORIENTATION
     {
       ORIENT_SURFACE_NORMAL = 0x0,
       ORIENT_PROJ_VECTOR = 0x1,

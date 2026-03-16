@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <Windows.h>
 
-enum SOUND_LEVEL : std::int32_t
+enum SOUND_LEVEL
 {
   SOUND_LEVEL_LOUD = 0x0,
   SOUND_LEVEL_NORMAL = 0x1,
@@ -10,7 +10,7 @@ enum SOUND_LEVEL : std::int32_t
   SOUND_LEVEL_COUNT = 0x3,
 };
 
-enum TES_RETURN_CODE : std::int32_t
+enum TES_RETURN_CODE
 {
   TES_ERROR_NONE = 0x0,
   TES_ERROR_NOT_FOUND = 0x1,
@@ -28,7 +28,7 @@ enum TES_RETURN_CODE : std::int32_t
   TES_ERROR_CREATE_FAILURE = 0xD,
 };
 
-enum CHUNK_ID : std::int32_t
+enum CHUNK_ID
 {
   NO_CHUNK = 0x0,
   HEDR_ID = 0x52444548,
@@ -444,7 +444,7 @@ enum CHUNK_ID : std::int32_t
   XXXX_ID = 0x58585858,
 };
 
-enum MEM_CONTEXT : std::int32_t
+enum MEM_CONTEXT
 {
   MEM_CONTEXT_STATICVARS = 0x0,
   MEM_CONTEXT_EXTERNAL = 0x1,

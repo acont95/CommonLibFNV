@@ -62,7 +62,7 @@ class TESObjectWEAP :
     TESObjectWEAP();
     virtual ~TESObjectWEAP();
 
-    enum WEAPONHITBEHAVIOR : std::int32_t
+    enum WEAPONHITBEHAVIOR
     {
       WHB_NORMAL = 0x0,
       WHB_DISMEMBER_ONLY = 0x1,
@@ -70,7 +70,7 @@ class TESObjectWEAP :
       WHB_NO_DISMEMBER_OR_EXPLODE = 0x3,
     };
 
-    enum WEAPON_RUMBLE_PATTERN : std::int32_t
+    enum WEAPON_RUMBLE_PATTERN
     {
       RUMBLE_CONSTANT = 0x0,
       RUMBLE_PERIODIC_SQUARE = 0x1,
@@ -79,7 +79,7 @@ class TESObjectWEAP :
       RUMBLE_PATTERN_COUNT = 0x4,
     };
 
-    enum WEAPON_MOD_EFFECT : std::int32_t
+    enum WEAPON_MOD_EFFECT
     {
       WEAPON_MOD_NONE = 0x0,
       WEAPON_MOD_INCREASE_WEAPON_DAMAGE = 0x1,

@@ -17,7 +17,7 @@ class hkpMoppCode : public hkReferencedObject
       hkVector4 m_offset;
     };
 
-    enum BuildType : std::int32_t
+    enum BuildType
     {
       BUILT_WITH_CHUNK_SUBDIVISION = 0x0,
       BUILT_WITHOUT_CHUNK_SUBDIVISION = 0x1,

@@ -22,7 +22,7 @@ class BSShaderAccumulator : public NiAlphaAccumulator
     BSShaderAccumulator();
     virtual ~BSShaderAccumulator();
 
-    enum etAccumulationMode : std::int32_t
+    enum etAccumulationMode
     {
       BSSA_ACCUMNORMAL = 0x0,
       BSSA_ACCUMDEPTHMAP = 0x1,
@@ -30,13 +30,13 @@ class BSShaderAccumulator : public NiAlphaAccumulator
       BSSA_ACCUMNONE = 0x3,
     };
 
-    enum WATER_SIDE : std::int32_t
+    enum WATER_SIDE
     {
       ABOVE_WATER = 0x0,
       BELOW_WATER = 0x1,
     };
 
-    enum DepthTransformationEnum : std::int32_t
+    enum DepthTransformationEnum
     {
       VTRANS_DEFAULT = 0x0,
       VTRANS_SKINNED = 0x1,

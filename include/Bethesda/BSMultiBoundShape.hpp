@@ -8,7 +8,7 @@ class BSMultiBoundShape : public NiObject
     BSMultiBoundShape();
     virtual ~BSMultiBoundShape();
 
-    enum BSMBCullResult : std::int32_t
+    enum BSMBCullResult
     {
       BS_CULL_UNTESTED = 0x0,
       BS_CULL_VISIBLE = 0x1,

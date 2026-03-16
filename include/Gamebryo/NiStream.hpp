@@ -22,7 +22,7 @@ class NiStream
     NiStream();
     virtual ~NiStream();
 
-    enum ThreadStatus : std::int32_t
+    enum ThreadStatus
     {
       PAUSING = 0x3,
     };

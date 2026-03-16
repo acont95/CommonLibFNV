@@ -8,7 +8,7 @@ class NiRenderTargetGroup : public NiObject
     NiRenderTargetGroup();
     virtual ~NiRenderTargetGroup();
 
-    enum MaxRenderBuffers : std::int32_t
+    enum MaxRenderBuffers
     {
       MAX_RENDER_BUFFERS = 0x4,
     };

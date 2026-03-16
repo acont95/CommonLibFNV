@@ -10,7 +10,7 @@ class NiThread
     NiThread();
     virtual ~NiThread();
 
-    enum Priority : std::int32_t
+    enum Priority
     {
       LOWEST = 0x1,
       BELOW_NORMAL = 0x2,
@@ -20,7 +20,7 @@ class NiThread
       NUM_PRIORITIES = 0x7,
     };
 
-    volatile enum Status : std::int32_t
+    volatile enum Status
     {
       SUSPENDED = 0x1,
       COMPLETE = 0x2,

@@ -13,7 +13,7 @@ class BSBatchRenderer : public NiObject
     BSBatchRenderer();
     virtual ~BSBatchRenderer();
 
-    enum RENDERPASS_BUCKET_TYPE : std::int32_t
+    enum RENDERPASS_BUCKET_TYPE
     {
       RBT_STANDARD = 0x0,
       RBT_TWO_SIDED_LIGHTING = 0x1,
@@ -23,7 +23,7 @@ class BSBatchRenderer : public NiObject
       RBT_COUNT = 0x5,
     };
 
-    enum eStateUpdateFlag : std::int32_t
+    enum eStateUpdateFlag
     {
       BSBR_NONE = 0x0,
       BSBR_PASSCONSTANTS = 0x1,
@@ -38,7 +38,7 @@ class BSBatchRenderer : public NiObject
       BSBR_ALL = 0xFFFF,
     };
 
-    enum GEOMETRY_GROUP_ENUM : std::int32_t
+    enum GEOMETRY_GROUP_ENUM
     {
       GG_LOD = 0x0,
       GG_NO_DEPTH = 0x1,
@@ -73,7 +73,7 @@ class BSBatchRenderer : public NiObject
         GeometryGroup();
         ~GeometryGroup();
 
-        enum etFlags : std::int32_t
+        enum etFlags
         {
           BSSA_GEOMETRYGROUPFLAG_NOSORT = 0x0,
         };

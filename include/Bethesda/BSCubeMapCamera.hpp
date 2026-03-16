@@ -11,7 +11,7 @@ class BSCubeMapCamera : public NiCamera
     BSCubeMapCamera();
     ~BSCubeMapCamera();
 
-    enum etCubeMapType : std::int32_t
+    enum etCubeMapType
     {
       BSCMC_CUBEMAP = 0x0,
       BSCMC_6TEXTURES = 0x1,

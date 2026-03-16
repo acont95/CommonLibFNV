@@ -18,7 +18,7 @@ class ShadowSceneLight : public NiRefObject
     ShadowSceneLight();
     virtual ~ShadowSceneLight();
 
-    enum eFrustumCull : std::int32_t
+    enum eFrustumCull
     {
       SSL_NONE = 0x0,
       SSL_POSX = 0x1,

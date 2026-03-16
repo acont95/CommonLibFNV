@@ -6,7 +6,7 @@ class MagicSystem {
     MagicSystem();
     ~MagicSystem();
 
-    enum School : std::int32_t
+    enum School
     {
       ALTERATION = 0x0,
       CONJURATION = 0x1,
@@ -17,7 +17,7 @@ class MagicSystem {
       SCHOOL_COUNT = 0x6,
     };
 
-    enum SpellType : std::int32_t
+    enum SpellType
     {
       SPELL = 0x0,
       DISEASE = 0x1,
@@ -33,7 +33,7 @@ class MagicSystem {
       SPELL_TYPE_COUNT = 0xB,
     };
 
-    enum FlareType : std::int32_t
+    enum FlareType
     {
       FLARE_NONE = 0x0,
       FLARE_FIRE = 0x1,
@@ -42,7 +42,7 @@ class MagicSystem {
       FLARE_WEAPON = 0x8,
     };
 
-    enum Range : std::int32_t
+    enum Range
     {
       SELF = 0x0,
       TOUCH = 0x1,
@@ -50,7 +50,7 @@ class MagicSystem {
       RANGE_COUNT = 0x3,
     };
 
-    enum CastingType : std::int32_t
+    enum CastingType
     {
       CAST_ONCE = 0x0,
       WHEN_USED = 0x1,
@@ -59,7 +59,7 @@ class MagicSystem {
       CASTING_COUNT = 0x4,
     };
 
-    enum ProjectileType : std::int32_t
+    enum ProjectileType
     {
       BALL = 0x0,
       BOLT = 0x1,

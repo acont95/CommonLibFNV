@@ -8,7 +8,7 @@ class BGSEquipType : public BaseFormComponent
     BGSEquipType();
     virtual ~BGSEquipType();
 
-    enum EQUIP_TYPE : std::int32_t
+    enum EQUIP_TYPE
     {
       ET_NONE = 0xFFFFFFFF,
       ET_BIG_GUN = 0x0,

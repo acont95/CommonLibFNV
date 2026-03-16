@@ -14,7 +14,7 @@ class BGSTerrainNode
     BGSTerrainNode();
     ~BGSTerrainNode();
 
-    enum PARENT_POSITION : std::int32_t
+    enum PARENT_POSITION
     {
       PP_TOPLEVEL = 0x0,
       PP_UPPER_LEFT = 0x1,
@@ -23,7 +23,7 @@ class BGSTerrainNode
       PP_LOWER_RIGHT = 0x4,
     };
 
-    enum DATA_TO_UNLOAD : std::int32_t
+    enum DATA_TO_UNLOAD
     {
       UNLOAD_TERRAIN_ONLY = 0x1,
       UNLOAD_OBJECTS_ONLY = 0x2,

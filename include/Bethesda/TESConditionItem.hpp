@@ -16,7 +16,7 @@ class TESConditionItem
       float fValue;
     };
 
-    enum CONDITIONITEMOBJECT : std::int32_t
+    enum CONDITIONITEMOBJECT
     {
       CIO_SELF = 0x0,
       CIO_TARGET = 0x1,

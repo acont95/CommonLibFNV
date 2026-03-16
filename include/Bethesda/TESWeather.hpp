@@ -12,7 +12,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
     TESWeather();
     ~TESWeather();
 
-    enum SoundType : std::int32_t
+    enum SoundType
     {
       WST_DEFAULT = 0x0,
       WST_PRECIP = 0x1,
@@ -21,13 +21,13 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       WST_COUNT = 0x4,
     };
 
-    enum WarningStatus : std::int32_t
+    enum WarningStatus
     {
       ENABLED = 0x0,
       SKIP = 0x2,
     };
 
-    enum WeatherData : std::int32_t
+    enum WeatherData
     {
       WD_WIND_SPEED = 0x0,
       WD_CLOUD_SPEED = 0x1,
@@ -50,7 +50,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       WD_COUNT = 0xF,
     };
 
-    enum FogData : std::int32_t
+    enum FogData
     {
       NEAR_DIST_DAY = 0x0,
       FAR_DIST_DAY = 0x1,
@@ -61,7 +61,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       FD_COUNT = 0x6,
     };
 
-    enum ColorType : std::int32_t
+    enum ColorType
     {
       SKY_UPPER = 0x0,
       FOG = 0x1,
@@ -75,7 +75,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       CLOUDS_UNUSED = 0x9,
     };
 
-    enum ColorTime : std::int32_t
+    enum ColorTime
     {
       SUNRISE = 0x0,
       DAY = 0x1,
@@ -86,7 +86,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       NUM_TIMES = 0x6,
     };
 
-    enum WeatherDataFlag : std::int32_t
+    enum WeatherDataFlag
     {
       WDF_PLEASANT = 0x1,
       WDF_CLOUDY = 0x2,
@@ -94,7 +94,7 @@ class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
       WDF_SNOW = 0x8,
     };
 
-    enum HDRDataType : std::int32_t
+    enum HDRDataType
     {
       HDR_EYE_ADAPT_SPEED = 0x0,
       HDR_BLUR_RADIUS = 0x1,
