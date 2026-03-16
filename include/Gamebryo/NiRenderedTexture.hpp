@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include <d3d9types.h>
+#include <d3d9.h>
 #include "Gamebryo/Ni2DBuffer.hpp"
 #include "Gamebryo/NiTexture.hpp"
 

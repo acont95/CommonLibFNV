@@ -7,16 +7,17 @@ class TESForm;
 template <typename Key, typename Value>
 class NiTMapItem;
 
-template <class Allocator, typename Key, typename Value>
+template <class TAllocator, typename Key, typename Value>
 class NiTMapBase : public NiMemObject
 {
   public:
     NiTMapBase();
     virtual ~NiTMapBase();
 
-    struct AntiBloatAllocator : Allocator
+    class AntiBloatAllocator : public TAllocator
     {
-      std::uint32_t m_uiCount;
+      public:
+        std::uint32_t m_uiCount;
     };
 
     std::uint32_t m_uiHashSize;

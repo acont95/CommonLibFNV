@@ -13,9 +13,10 @@ class NiTListBase : public NiMemObject
     NiTListBase();
     ~NiTListBase();
 
-    class AntiBloatAllocator : TAllocator
+    class AntiBloatAllocator : public TAllocator
     {
-      std::uint32_t m_uiCount;
+      public:
+        std::uint32_t m_uiCount;
     };
 
     NiTListItem<T>* m_pkHead;

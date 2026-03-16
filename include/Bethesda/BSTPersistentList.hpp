@@ -18,7 +18,7 @@ class BSTPersistentList
       NiGeometry *tElement;
     };
 
-    class AntiBloatAllocator : TAllocator
+    class AntiBloatAllocator : public TAllocator
     {
       std::uint32_t uiCount;
     };

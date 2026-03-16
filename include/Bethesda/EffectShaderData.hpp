@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include <d3d9types.h>
+#include <d3d9.h>
 #include "Gamebryo/NiPoint3.hpp"
 
 class BGSDebris;

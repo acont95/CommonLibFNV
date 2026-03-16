@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include <d3d9types.h>
+#include <d3d9.h>
 #include "Bethesda/BSTextureSet.hpp"
 #include "Bethesda/BSShaderLightingProperty.hpp"
 #include "Gamebryo/NiTexturingProperty.hpp"

@@ -1,6 +1,7 @@
+#pragma once
 #include <cstdint>
 #include <Windows.h>
-/* 856 */
+
 enum SOUND_LEVEL : std::int32_t
 {
   SOUND_LEVEL_LOUD = 0x0,
