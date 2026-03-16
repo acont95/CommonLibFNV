@@ -2,19 +2,23 @@
 #include "Gamebryo/NiNPShortPoint3.hpp"
 #include "Bethesda/TESObject.hpp"
 
-class TESBoundObject : public TESObject
-{
-  public:
-    TESBoundObject();
-    virtual ~TESBoundObject();
+namespace CommonLib {
 
-    struct BOUND_DATA
-    {
-      NiNPShortPoint3 BoundMin;
-      NiNPShortPoint3 BoundMax;
-    };
+  class TESBoundObject : public TESObject
+  {
+    public:
+      TESBoundObject();
+      virtual ~TESBoundObject();
 
-    BOUND_DATA BoundData;
-};
+      struct BOUND_DATA
+      {
+        NiNPShortPoint3 BoundMin;
+        NiNPShortPoint3 BoundMax;
+      };
 
-static_assert(sizeof(TESBoundObject) == 0x30, "TESBoundObject has wrong size");
+      BOUND_DATA BoundData;
+  };
+
+  static_assert(sizeof(TESBoundObject) == 0x30, "TESBoundObject has wrong size");
+  
+} // namespace CommonLib

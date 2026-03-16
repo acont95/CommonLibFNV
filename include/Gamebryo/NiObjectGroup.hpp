@@ -2,15 +2,19 @@
 #include <cstdint>
 #include "Gamebryo/NiMemObject.hpp"
 
-class NiObjectGroup : public NiMemObject {
-  public:
-    NiObjectGroup();
-    ~NiObjectGroup();
+namespace CommonLib {
 
-    std::uint32_t m_uiSize;
-    void* m_pvBuffer;
-    void* m_pvFree;
-    std::uint32_t m_uiRefCount;
-};
+  class NiObjectGroup : public NiMemObject {
+    public:
+      NiObjectGroup();
+      ~NiObjectGroup();
 
-static_assert(sizeof(NiObjectGroup) == 0x10, "NiObjectGroup has wrong size");
+      std::uint32_t m_uiSize;
+      void* m_pvBuffer;
+      void* m_pvFree;
+      std::uint32_t m_uiRefCount;
+  };
+
+  static_assert(sizeof(NiObjectGroup) == 0x10, "NiObjectGroup has wrong size");
+  
+} // namespace CommonLib

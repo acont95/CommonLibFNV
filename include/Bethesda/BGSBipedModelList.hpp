@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class BGSListForm;
+namespace CommonLib {
 
-class BGSBipedModelList : public BaseFormComponent
-{
-  public:
-    BGSBipedModelList();
-    virtual ~BGSBipedModelList();
+  class BGSListForm;
 
-    BGSListForm *pListForm;
-};
+  class BGSBipedModelList : public BaseFormComponent
+  {
+    public:
+      BGSBipedModelList();
+      virtual ~BGSBipedModelList();
 
-static_assert(sizeof(BGSBipedModelList) == 0x8, "BGSBipedModelList has wrong size");
+      BGSListForm *pListForm;
+  };
+
+  static_assert(sizeof(BGSBipedModelList) == 0x8, "BGSBipedModelList has wrong size");
+  
+} // namespace CommonLib

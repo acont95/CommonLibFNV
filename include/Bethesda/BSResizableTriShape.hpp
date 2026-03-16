@@ -2,14 +2,18 @@
 #include <cstdint>
 #include "Gamebryo/NiTriShape.hpp"
 
-class BSResizableTriShape : public NiTriShape
-{
-  public:
-    BSResizableTriShape();
-    virtual ~BSResizableTriShape();
+namespace CommonLib {
 
-    std::uint32_t uiNumPrimitives;
-    NiBound LocalBound;
-};
+  class BSResizableTriShape : public NiTriShape
+  {
+    public:
+      BSResizableTriShape();
+      virtual ~BSResizableTriShape();
 
-static_assert(sizeof(BSResizableTriShape) == 0xD8, "BSResizableTriShape has wrong size");
+      std::uint32_t uiNumPrimitives;
+      NiBound LocalBound;
+  };
+
+  static_assert(sizeof(BSResizableTriShape) == 0xD8, "BSResizableTriShape has wrong size");
+  
+} // namespace CommonLib

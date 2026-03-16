@@ -1,13 +1,17 @@
 #pragma once
 #include <cstdint>
 
-class TESValueForm
-{
-  public:
-    TESValueForm();
-    virtual ~TESValueForm();
+namespace CommonLib {
 
-    std::uint32_t iValue;
-};
+  class TESValueForm
+  {
+    public:
+      TESValueForm();
+      virtual ~TESValueForm();
 
-static_assert(sizeof(TESValueForm) == 0x8, "TESValueForm has wrong size");
+      std::uint32_t iValue;
+  };
+
+  static_assert(sizeof(TESValueForm) == 0x8, "TESValueForm has wrong size");
+  
+} // namespace CommonLib

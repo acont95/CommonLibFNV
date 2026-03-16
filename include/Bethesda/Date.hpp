@@ -1,14 +1,18 @@
 #pragma once
 #include <cstdint>
 
-class Date
-{
-  public:
-    Date();
-    ~Date();
+namespace CommonLib {
 
-    std::uint16_t sDate;
-    std::uint16_t sYear;
-};
+  class Date
+  {
+    public:
+      Date();
+      ~Date();
 
-static_assert(sizeof(Date) == 0x4, "Date has wrong size");
+      std::uint16_t sDate;
+      std::uint16_t sYear;
+  };
+
+  static_assert(sizeof(Date) == 0x4, "Date has wrong size");
+  
+} // namespace CommonLib

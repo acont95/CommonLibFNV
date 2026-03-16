@@ -1,16 +1,20 @@
 #pragma once
 #include "Bethesda/TESTextureList.hpp"
 
-class BGSDebrisData
-{
-  public:
-    BGSDebrisData();
-    ~BGSDebrisData();
+namespace CommonLib {
 
-    char cPercentage;
-    char cFlags;
-    char *pFileName;
-    TESTextureList TextureList;
-};
+  class BGSDebrisData
+  {
+    public:
+      BGSDebrisData();
+      ~BGSDebrisData();
 
-static_assert(sizeof(BGSDebrisData) == 0x10, "BGSDebrisData has wrong size");
+      char cPercentage;
+      char cFlags;
+      char *pFileName;
+      TESTextureList TextureList;
+  };
+
+  static_assert(sizeof(BGSDebrisData) == 0x10, "BGSDebrisData has wrong size");
+  
+} // namespace CommonLib

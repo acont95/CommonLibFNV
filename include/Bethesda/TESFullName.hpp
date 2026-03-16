@@ -2,12 +2,16 @@
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/BSStringT.hpp"
 
-class TESFullName : public BaseFormComponent {
-  public:
-    TESFullName();
-    ~TESFullName();
+namespace CommonLib {
 
-    BSStringT<char> cFullName;
-};
+  class TESFullName : public BaseFormComponent {
+    public:
+      TESFullName();
+      ~TESFullName();
 
-static_assert(sizeof(TESFullName) == 0xC, "TESFullName has wrong size");
+      BSStringT<char> cFullName;
+  };
+
+  static_assert(sizeof(TESFullName) == 0xC, "TESFullName has wrong size");
+  
+} // namespace CommonLib

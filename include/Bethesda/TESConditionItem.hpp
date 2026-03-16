@@ -1,47 +1,51 @@
 #pragma once
 #include <cstdint>
 
-class TESGlobal;
-class TESObjectREFR;
+namespace CommonLib {
 
-class TESConditionItem
-{
-  public:
-    TESConditionItem();
-    ~TESConditionItem();
+  class TESGlobal;
+  class TESObjectREFR;
 
-    union GlobalData
-    {
-      TESGlobal* pGlobal;
-      float fValue;
-    };
+  class TESConditionItem
+  {
+    public:
+      TESConditionItem();
+      ~TESConditionItem();
 
-    enum CONDITIONITEMOBJECT
-    {
-      CIO_SELF = 0x0,
-      CIO_TARGET = 0x1,
-      CIO_REF = 0x2,
-      CIO_COMBATTARGET = 0x3,
-      CIO_LINKEDREF = 0x4,
-      CIO_COUNT = 0x5,
-    };
+      union GlobalData
+      {
+        TESGlobal* pGlobal;
+        float fValue;
+      };
 
-    struct FUNCTION_DATA
-    {
-      std::uint16_t iFunction;
-      void* pParam[2];
-    };
+      enum CONDITIONITEMOBJECT
+      {
+        CIO_SELF = 0x0,
+        CIO_TARGET = 0x1,
+        CIO_REF = 0x2,
+        CIO_COMBATTARGET = 0x3,
+        CIO_LINKEDREF = 0x4,
+        CIO_COUNT = 0x5,
+      };
 
-    struct CONDITION_ITEM_DATA
-    {
-      char iFlags;
-      GlobalData uGlobalData;
-      FUNCTION_DATA FunctionData;
-      CONDITIONITEMOBJECT eObject;
-      TESObjectREFR* pRunOnRef;
-    };
+      struct FUNCTION_DATA
+      {
+        std::uint16_t iFunction;
+        void* pParam[2];
+      };
 
-    CONDITION_ITEM_DATA Data;
-};
+      struct CONDITION_ITEM_DATA
+      {
+        char iFlags;
+        GlobalData uGlobalData;
+        FUNCTION_DATA FunctionData;
+        CONDITIONITEMOBJECT eObject;
+        TESObjectREFR* pRunOnRef;
+      };
 
-static_assert(sizeof(TESConditionItem) == 0x1C, "TESConditionItem has wrong size");
+      CONDITION_ITEM_DATA Data;
+  };
+
+  static_assert(sizeof(TESConditionItem) == 0x1C, "TESConditionItem has wrong size");
+  
+} // namespace CommonLib

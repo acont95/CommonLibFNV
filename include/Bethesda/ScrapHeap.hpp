@@ -1,22 +1,26 @@
 #pragma once
 #include <cstdint>
 
-class ScrapHeap
-{
-  public:
-    ScrapHeap();
-    ~ScrapHeap();
+namespace CommonLib {
 
-    struct Header
-    {
-      std::uint32_t iSize;
-      Header *pPrev;
-    };
+  class ScrapHeap
+  {
+    public:
+      ScrapHeap();
+      ~ScrapHeap();
 
-    char *pMemHeap;
-    char *pCurrentStackLoc;
-    char *pEndHeap;
-    Header *pLastBlock;
-};
+      struct Header
+      {
+        std::uint32_t iSize;
+        Header *pPrev;
+      };
 
-static_assert(sizeof(ScrapHeap) == 0x10, "ScrapHeap has wrong size");
+      char *pMemHeap;
+      char *pCurrentStackLoc;
+      char *pEndHeap;
+      Header *pLastBlock;
+  };
+
+  static_assert(sizeof(ScrapHeap) == 0x10, "ScrapHeap has wrong size");
+  
+} // namespace CommonLib

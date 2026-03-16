@@ -3,11 +3,15 @@
 #include "Bethesda/QueuedFile.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
 
-class QueuedParents : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
-{
-  public:
-    QueuedParents();
-    ~QueuedParents();
-};
+namespace CommonLib {
 
-static_assert(sizeof(QueuedParents) == 0x10);
+  class QueuedParents : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
+  {
+    public:
+      QueuedParents();
+      ~QueuedParents();
+  };
+
+  static_assert(sizeof(QueuedParents) == 0x10);
+  
+} // namespace CommonLib

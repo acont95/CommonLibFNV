@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class TESWaterForm;
+namespace CommonLib {
 
-class BGSPlaceableWaterData
-{
-  public:
-    BGSPlaceableWaterData();
-    ~BGSPlaceableWaterData();
+  class TESWaterForm;
 
-    std::uint32_t ulFlags;
-    TESWaterForm *pWaterType;
-};
+  class BGSPlaceableWaterData
+  {
+    public:
+      BGSPlaceableWaterData();
+      ~BGSPlaceableWaterData();
 
-static_assert(sizeof(BGSPlaceableWaterData) == 0x8, "BGSPlaceableWaterData has wrong size");
+      std::uint32_t ulFlags;
+      TESWaterForm *pWaterType;
+  };
+
+  static_assert(sizeof(BGSPlaceableWaterData) == 0x8, "BGSPlaceableWaterData has wrong size");
+  
+} // namespace CommonLib

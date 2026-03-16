@@ -1,14 +1,18 @@
 #pragma once
 
-class NiPoint3
-{
-  public:
-    NiPoint3();
-    ~NiPoint3();
+namespace CommonLib {
 
-    float x;
-    float y;
-    float z;
-};
+  class NiPoint3
+  {
+    public:
+      NiPoint3();
+      ~NiPoint3();
 
-static_assert(sizeof(NiPoint3) == 0xC, "NiPoint3 has wrong size");
+      float x;
+      float y;
+      float z;
+  };
+
+  static_assert(sizeof(NiPoint3) == 0xC, "NiPoint3 has wrong size");
+  
+} // namespace CommonLib

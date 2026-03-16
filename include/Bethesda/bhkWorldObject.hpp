@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Bethesda/bhkSerializable.hpp"
 
-class bhkWorldObject : public bhkSerializable
-{
-  public:
-    bhkWorldObject();
-    ~bhkWorldObject();
+namespace CommonLib {
 
-    std::uint32_t iFlags;
-};
+  class bhkWorldObject : public bhkSerializable
+  {
+    public:
+      bhkWorldObject();
+      ~bhkWorldObject();
 
-static_assert(sizeof(bhkWorldObject) == 0x14, "bhkWorldObject has wrong size");
+      std::uint32_t iFlags;
+  };
+
+  static_assert(sizeof(bhkWorldObject) == 0x14, "bhkWorldObject has wrong size");
+  
+} // namespace CommonLib

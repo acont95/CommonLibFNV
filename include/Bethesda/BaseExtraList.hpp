@@ -1,15 +1,19 @@
 #pragma once
 #include <cstdint>
 
-class BSExtraData;
+namespace CommonLib {
 
-class BaseExtraList {
-  public:
-    BaseExtraList();
-    virtual ~BaseExtraList();
+  class BSExtraData;
 
-    BSExtraData* pHead;
-    std::uint8_t iFlags[21];
-};
+  class BaseExtraList {
+    public:
+      BaseExtraList();
+      virtual ~BaseExtraList();
 
-static_assert(sizeof(BaseExtraList) == 0x20, "BaseExtraList has wrong size");
+      BSExtraData* pHead;
+      std::uint8_t iFlags[21];
+  };
+
+  static_assert(sizeof(BaseExtraList) == 0x20, "BaseExtraList has wrong size");
+  
+} // namespace CommonLib

@@ -1,15 +1,19 @@
 #pragma once
 #include <cstdint>
 
-class BoundsTriangleInfo
-{
-  public:
-    BoundsTriangleInfo();
-    ~BoundsTriangleInfo();
+namespace CommonLib {
 
-    std::uint16_t usTriangleIndex;
-    bool bPortals[3];
-    std::uint16_t Triangles[3];
-};
+  class BoundsTriangleInfo
+  {
+    public:
+      BoundsTriangleInfo();
+      ~BoundsTriangleInfo();
 
-static_assert(sizeof(BoundsTriangleInfo) == 0xC, "BoundsTriangleInfo has wrong size");
+      std::uint16_t usTriangleIndex;
+      bool bPortals[3];
+      std::uint16_t Triangles[3];
+  };
+
+  static_assert(sizeof(BoundsTriangleInfo) == 0xC, "BoundsTriangleInfo has wrong size");
+  
+} // namespace CommonLib

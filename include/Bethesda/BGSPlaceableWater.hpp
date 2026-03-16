@@ -3,13 +3,17 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModel.hpp"
 
-class BGSPlaceableWater : public TESBoundObject, public TESModel
-{
-  public:
-    BGSPlaceableWater();
-    virtual ~BGSPlaceableWater();
+namespace CommonLib {
 
-    BGSPlaceableWaterData Data;
-};
+  class BGSPlaceableWater : public TESBoundObject, public TESModel
+  {
+    public:
+      BGSPlaceableWater();
+      virtual ~BGSPlaceableWater();
 
-static_assert(sizeof(BGSPlaceableWater) == 0x50, "BGSPlaceableWater has wrong size");
+      BGSPlaceableWaterData Data;
+  };
+
+  static_assert(sizeof(BGSPlaceableWater) == 0x50, "BGSPlaceableWater has wrong size");
+
+} // namespace CommonLib

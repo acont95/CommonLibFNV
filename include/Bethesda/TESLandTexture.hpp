@@ -2,26 +2,30 @@
 #include <cstdint>
 #include "Bethesda/TESForm.hpp"
 
-class BGSTextureSet;
-class TESGrass;
+namespace CommonLib {
 
-class TESLandTexture : public TESForm 
-{
-  public:
-    TESLandTexture();
-    ~TESLandTexture();
+  class BGSTextureSet;
+  class TESGrass;
 
-    struct TEXTURE_HAVOK_DATA
-    {
-      std::uint8_t cMaterialType;
-      std::uint8_t cFriction;
-      std::uint8_t cRestitution;
-    };
+  class TESLandTexture : public TESForm 
+  {
+    public:
+      TESLandTexture();
+      ~TESLandTexture();
 
-    BGSTextureSet* pTextureSet;
-    TEXTURE_HAVOK_DATA HavokData;
-    std::uint8_t cSpecularExponent;
-    BSSimpleList<TESGrass*> TextureGrassList;
-};
+      struct TEXTURE_HAVOK_DATA
+      {
+        std::uint8_t cMaterialType;
+        std::uint8_t cFriction;
+        std::uint8_t cRestitution;
+      };
 
-static_assert(sizeof(TESLandTexture) == 0x28, "TESLandTexture has wrong size");
+      BGSTextureSet* pTextureSet;
+      TEXTURE_HAVOK_DATA HavokData;
+      std::uint8_t cSpecularExponent;
+      BSSimpleList<TESGrass*> TextureGrassList;
+  };
+
+  static_assert(sizeof(TESLandTexture) == 0x28, "TESLandTexture has wrong size");
+  
+} // namespace CommonLib

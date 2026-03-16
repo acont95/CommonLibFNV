@@ -1,26 +1,30 @@
 #pragma once
 #include "Gamebryo/NiLight.hpp"
 
-class TESObjectLIGH;
+namespace CommonLib {
 
-class MagicLight
-{
-  public:
-    MagicLight();
-    ~MagicLight();
+  class TESObjectLIGH;
 
-    struct REFR_LIGHT
-    {
-      NiPointer<NiLight> spLight;
-      float fWantDimmer;
-    };
+  class MagicLight
+  {
+    public:
+      MagicLight();
+      ~MagicLight();
 
-    NiPointer<NiNode> pParent;
-    TESObjectLIGH *pLightObject;
-    REFR_LIGHT LightData;
-    float fFadeTimer;
-    float fFadeTargetTime;
-    bool bFadeIn;
-};
+      struct REFR_LIGHT
+      {
+        NiPointer<NiLight> spLight;
+        float fWantDimmer;
+      };
 
-static_assert(sizeof(MagicLight) == 0x1C, "MagicLight has wrong size");
+      NiPointer<NiNode> pParent;
+      TESObjectLIGH *pLightObject;
+      REFR_LIGHT LightData;
+      float fFadeTimer;
+      float fFadeTargetTime;
+      bool bFadeIn;
+  };
+
+  static_assert(sizeof(MagicLight) == 0x1C, "MagicLight has wrong size");
+  
+} // namespace CommonLib

@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class NiBinaryStream 
-{
-  public:
-    NiBinaryStream();
-    virtual ~NiBinaryStream();
+namespace CommonLib {
 
-    std::uint32_t m_uiAbsoluteCurrentPos;
+  class NiBinaryStream 
+  {
+    public:
+      NiBinaryStream();
+      virtual ~NiBinaryStream();
 
-    std::uint32_t (__cdecl *m_pfnRead)(NiBinaryStream *, void *, std::uint32_t, std::uint32_t *, std::uint32_t);
-    std::uint32_t (__cdecl *m_pfnWrite)(NiBinaryStream *, const void *, std::uint32_t, std::uint32_t *, std::uint32_t);
-};
+      std::uint32_t m_uiAbsoluteCurrentPos;
 
-static_assert(sizeof(NiBinaryStream) == 0x10, "NiBinaryStream has wrong size");
+      std::uint32_t (__cdecl *m_pfnRead)(NiBinaryStream *, void *, std::uint32_t, std::uint32_t *, std::uint32_t);
+      std::uint32_t (__cdecl *m_pfnWrite)(NiBinaryStream *, const void *, std::uint32_t, std::uint32_t *, std::uint32_t);
+  };
+
+  static_assert(sizeof(NiBinaryStream) == 0x10, "NiBinaryStream has wrong size");
+  
+} // namespace CommonLib

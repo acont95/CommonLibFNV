@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class TESObject;
-class TESObjectCELL;
+namespace CommonLib {
 
-class TESObjectList {
-  public:
-    TESObjectList();
-    ~TESObjectList();
+  class TESObject;
+  class TESObjectCELL;
 
-    std::uint32_t lnk_dwCount;
-    TESObject *lnk_lpRoot;
-    TESObject *lnk_lpTail;
-    TESObjectCELL *pOwner;
-};
+  class TESObjectList {
+    public:
+      TESObjectList();
+      ~TESObjectList();
+
+      std::uint32_t lnk_dwCount;
+      TESObject *lnk_lpRoot;
+      TESObject *lnk_lpTail;
+      TESObjectCELL *pOwner;
+  };
+  
+} // namespace CommonLib

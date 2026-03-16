@@ -1,16 +1,20 @@
 #pragma once
 
-template <typename T>
-class NiPointer {
-  public:
-    NiPointer();
-    ~NiPointer();
+namespace CommonLib {
 
-    T* m_pObject;
+  template <typename T>
+  class NiPointer {
+    public:
+      NiPointer();
+      ~NiPointer();
 
-    operator T* () const;
-    T& operator*() const;
-    T* operator->() const;
-};
+      T* m_pObject;
 
-static_assert(sizeof(NiPointer<void*>) == 0x4, "NiPointer has wrong size");
+      operator T* () const;
+      T& operator*() const;
+      T* operator->() const;
+  };
+
+  static_assert(sizeof(NiPointer<void*>) == 0x4, "NiPointer has wrong size");
+    
+} // namespace CommonLib

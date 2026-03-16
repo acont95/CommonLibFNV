@@ -4,26 +4,30 @@
 #include "Gamebryo/NiMatrix3.hpp"
 #include "Gamebryo/NiMemObject.hpp"
 
-class NiTextureTransform : public NiMemObject
-{
-  public:
-    NiTextureTransform();
-    ~NiTextureTransform();
+namespace CommonLib {
 
-    enum TransformMethod
-    {
-      MAYA_DEPRECATED_TRANSFORM = 0x0,
-      MAX_TRANSFORM = 0x1,
-      MAYA_TRANSFORM = 0x2,
-    };
+  class NiTextureTransform : public NiMemObject
+  {
+    public:
+      NiTextureTransform();
+      ~NiTextureTransform();
 
-    NiPoint2 m_kTranslate;
-    float m_fRotate;
-    NiPoint2 m_kScale;
-    NiPoint2 m_kCenter;
-    bool m_bMatrixDirty;
-    NiMatrix3 m_kMatrix;
-    NiTextureTransform::TransformMethod m_eMethod;
-};
+      enum TransformMethod
+      {
+        MAYA_DEPRECATED_TRANSFORM = 0x0,
+        MAX_TRANSFORM = 0x1,
+        MAYA_TRANSFORM = 0x2,
+      };
 
-static_assert(sizeof(NiTextureTransform) == 0x48, "NiTextureTransform has wrong size");
+      NiPoint2 m_kTranslate;
+      float m_fRotate;
+      NiPoint2 m_kScale;
+      NiPoint2 m_kCenter;
+      bool m_bMatrixDirty;
+      NiMatrix3 m_kMatrix;
+      NiTextureTransform::TransformMethod m_eMethod;
+  };
+
+  static_assert(sizeof(NiTextureTransform) == 0x48, "NiTextureTransform has wrong size");
+  
+} // namespace CommonLib

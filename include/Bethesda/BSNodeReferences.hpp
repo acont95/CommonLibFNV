@@ -2,15 +2,19 @@
 #include "Gamebryo/NiObject.hpp"
 #include "Gamebryo/NiTPrimitiveArray.hpp"
 
-class NiAVObject;
+namespace CommonLib {
 
-class BSNodeReferences : public NiObject
-{
-  public:
-    BSNodeReferences();
-    virtual ~BSNodeReferences();
+  class NiAVObject;
 
-    NiTPrimitiveArray<NiAVObject*> RefNodeA;
-};
+  class BSNodeReferences : public NiObject
+  {
+    public:
+      BSNodeReferences();
+      virtual ~BSNodeReferences();
 
-static_assert(sizeof(BSNodeReferences) == 0x18, "BSNodeReferences has wrong size");
+      NiTPrimitiveArray<NiAVObject*> RefNodeA;
+  };
+
+  static_assert(sizeof(BSNodeReferences) == 0x18, "BSNodeReferences has wrong size");
+  
+} // namespace CommonLib

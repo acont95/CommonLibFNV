@@ -5,18 +5,22 @@
 #include "Gamebryo/NiFixedString.hpp"
 #include "Gamebryo/NiTimeController.hpp"
 
-class NiExtraData;
+namespace CommonLib {
 
-class NiObjectNET : public NiObject {
-  public:
-    NiObjectNET();
-    ~NiObjectNET();
+  class NiExtraData;
 
-    NiFixedString m_kName;
-    NiPointer<NiTimeController> m_spControllers;
-    NiExtraData** m_ppkExtra;
-    std::uint16_t m_usExtraDataSize;
-    std::uint16_t m_usMaxSize;
-};
+  class NiObjectNET : public NiObject {
+    public:
+      NiObjectNET();
+      ~NiObjectNET();
 
-static_assert(sizeof(NiObjectNET) == 0x18, "NiObjectNET has wrong size");
+      NiFixedString m_kName;
+      NiPointer<NiTimeController> m_spControllers;
+      NiExtraData** m_ppkExtra;
+      std::uint16_t m_usExtraDataSize;
+      std::uint16_t m_usMaxSize;
+  };
+
+  static_assert(sizeof(NiObjectNET) == 0x18, "NiObjectNET has wrong size");
+  
+} // namespace CommonLib

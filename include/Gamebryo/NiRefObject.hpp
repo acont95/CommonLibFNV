@@ -1,13 +1,17 @@
 #pragma once
 #include <cstdint>
 
-class NiRefObject
-{
-  public:
-    NiRefObject();
-    virtual ~NiRefObject();
+namespace CommonLib {
 
-    std::uint32_t m_uiRefCount;
-};
+  class NiRefObject
+  {
+    public:
+      NiRefObject();
+      virtual ~NiRefObject();
 
-static_assert(sizeof(NiRefObject) == 0x8, "NiRefObject has wrong size");
+      std::uint32_t m_uiRefCount;
+  };
+
+  static_assert(sizeof(NiRefObject) == 0x8, "NiRefObject has wrong size");
+  
+} // namespace CommonLib

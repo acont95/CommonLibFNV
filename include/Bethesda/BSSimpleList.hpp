@@ -1,13 +1,17 @@
 #pragma once
 
-template <typename T>
-class BSSimpleList {
-  public:
-    BSSimpleList();
-    ~BSSimpleList();
+namespace CommonLib {
 
-    T m_item;
-    BSSimpleList<T>* m_pkNext;
-};
+  template <typename T>
+  class BSSimpleList {
+    public:
+      BSSimpleList();
+      ~BSSimpleList();
 
-static_assert(sizeof(BSSimpleList<void*>) == 0x8, "BSSimpleList has wrong size");
+      T m_item;
+      BSSimpleList<T>* m_pkNext;
+  };
+
+  static_assert(sizeof(BSSimpleList<void*>) == 0x8, "BSSimpleList has wrong size");
+  
+} // namespace CommonLib

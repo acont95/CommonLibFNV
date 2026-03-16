@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Gamebryo/NiGeometryData.hpp"
 
-class NiTriBasedGeomData : public NiGeometryData
-{
-  public:
-    NiTriBasedGeomData();
-    ~NiTriBasedGeomData();
+namespace CommonLib {
 
-    std::uint16_t m_usTriangles;
-};
+  class NiTriBasedGeomData : public NiGeometryData
+  {
+    public:
+      NiTriBasedGeomData();
+      ~NiTriBasedGeomData();
 
-static_assert(sizeof(NiTriBasedGeomData) == 0x44, "NiTriBasedGeomData has wrong size");
+      std::uint16_t m_usTriangles;
+  };
+
+  static_assert(sizeof(NiTriBasedGeomData) == 0x44, "NiTriBasedGeomData has wrong size");
+  
+} // namespace CommonLib

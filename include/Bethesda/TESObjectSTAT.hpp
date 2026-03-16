@@ -2,18 +2,22 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModelTextureSwap.hpp"
 
-class TESSound;
+namespace CommonLib {
 
-class TESObjectSTAT : 
-  public TESBoundObject, 
-  public TESModelTextureSwap
-{
-  public:
-    TESObjectSTAT();
-    virtual ~TESObjectSTAT();
+  class TESSound;
 
-    char cPassThroughSoundIndex;
-    TESSound *pRandomSound;
-};
+  class TESObjectSTAT : 
+    public TESBoundObject, 
+    public TESModelTextureSwap
+  {
+    public:
+      TESObjectSTAT();
+      virtual ~TESObjectSTAT();
 
-static_assert(sizeof(TESObjectSTAT) == 0x58, "TESObjectSTAT has wrong size");
+      char cPassThroughSoundIndex;
+      TESSound *pRandomSound;
+  };
+
+  static_assert(sizeof(TESObjectSTAT) == 0x58, "TESObjectSTAT has wrong size");
+  
+} // namespace CommonLib

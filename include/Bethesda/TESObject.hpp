@@ -1,16 +1,20 @@
 #pragma once
 #include "Bethesda/TESForm.hpp"
 
-class TESObjectList;
+namespace CommonLib {
 
-class TESObject : public TESForm {
-  public:
-    TESObject();
-    ~TESObject();
+  class TESObjectList;
 
-    TESObjectList *m_pParentList;
-    TESObject *nod_lpPrev;
-    TESObject *nod_lpNext;
-};
+  class TESObject : public TESForm {
+    public:
+      TESObject();
+      ~TESObject();
 
-static_assert(sizeof(TESObject) == 0x24, "TESObject has wrong size");
+      TESObjectList *m_pParentList;
+      TESObject *nod_lpPrev;
+      TESObject *nod_lpNext;
+  };
+
+  static_assert(sizeof(TESObject) == 0x24, "TESObject has wrong size");
+  
+} // namespace CommonLib

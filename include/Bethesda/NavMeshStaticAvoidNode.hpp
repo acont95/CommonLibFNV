@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Bethesda/PathingAvoidNode.hpp"
 
-class NavMeshStaticAvoidNode : public PathingAvoidNode
-{
-  public:
-    NavMeshStaticAvoidNode();
-    ~NavMeshStaticAvoidNode();
+namespace CommonLib {
 
-    std::uint16_t usTriangle;
-};
+  class NavMeshStaticAvoidNode : public PathingAvoidNode
+  {
+    public:
+      NavMeshStaticAvoidNode();
+      ~NavMeshStaticAvoidNode();
 
-static_assert(sizeof(NavMeshStaticAvoidNode) == 0x28, "NavMeshStaticAvoidNode has wrong size");
+      std::uint16_t usTriangle;
+  };
+
+  static_assert(sizeof(NavMeshStaticAvoidNode) == 0x28, "NavMeshStaticAvoidNode has wrong size");
+
+} // namespace CommonLib

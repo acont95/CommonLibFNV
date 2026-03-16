@@ -2,18 +2,22 @@
 #include "Bethesda/EffectItemData.hpp"
 #include "Bethesda/TESCondition.hpp"
 
-class EffectSetting;
+namespace CommonLib {
 
-class EffectItem 
-{
-  public:
-    EffectItem();
-    ~EffectItem();
+  class EffectSetting;
 
-    EffectItemData data;
-    EffectSetting *pEffectSetting;
-    float fRawCost;
-    TESCondition Conditions;
-};
+  class EffectItem 
+  {
+    public:
+      EffectItem();
+      ~EffectItem();
 
-static_assert(sizeof(EffectItem) == 0x24, "EffectItem has wrong size");
+      EffectItemData data;
+      EffectSetting *pEffectSetting;
+      float fRawCost;
+      TESCondition Conditions;
+  };
+
+  static_assert(sizeof(EffectItem) == 0x24, "EffectItem has wrong size");
+  
+} // namespace CommonLib

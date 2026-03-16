@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
 
-class TESConditionItem;
+namespace CommonLib {
 
-class TESCondition
-{
-  public:
-    TESCondition();
-    ~TESCondition();
+  class TESConditionItem;
 
-    BSSimpleList<TESConditionItem*> listConditions;
-};
+  class TESCondition
+  {
+    public:
+      TESCondition();
+      ~TESCondition();
 
-static_assert(sizeof(TESCondition) == 0x8, "TESCondition has wrong size");
+      BSSimpleList<TESConditionItem*> listConditions;
+  };
+
+  static_assert(sizeof(TESCondition) == 0x8, "TESCondition has wrong size");
+  
+} // namespace CommonLib

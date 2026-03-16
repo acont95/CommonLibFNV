@@ -3,19 +3,23 @@
 #include "Gamebryo/NiPointer.hpp"
 #include "Bethesda/IOTask.hpp"
 
-class QueuedChildren;
-class QueuedParents;
+namespace CommonLib {
 
-class QueuedFile : public IOTask
-{
-  public:
-    QueuedFile();
-    ~QueuedFile();
+  class QueuedChildren;
+  class QueuedParents;
 
-    MEM_CONTEXT eContext;
-    NiPointer<QueuedFile> spParent;
-    QueuedChildren* pChildren;
-    QueuedParents* pAdditionalParents;
-};
+  class QueuedFile : public IOTask
+  {
+    public:
+      QueuedFile();
+      ~QueuedFile();
 
-static_assert(sizeof(QueuedFile) == 0x28);
+      MEM_CONTEXT eContext;
+      NiPointer<QueuedFile> spParent;
+      QueuedChildren* pChildren;
+      QueuedParents* pAdditionalParents;
+  };
+
+  static_assert(sizeof(QueuedFile) == 0x28);
+  
+} // namespace CommonLib

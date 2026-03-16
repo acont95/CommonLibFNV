@@ -1,13 +1,17 @@
 #pragma once
 #include "Gamebryo/NiPoint3.hpp"
 
-class NavMeshVertex
-{
-  public:
-    NavMeshVertex();
-    ~NavMeshVertex();
+namespace CommonLib {
 
-    NiPoint3 Location;
-};
+  class NavMeshVertex
+  {
+    public:
+      NavMeshVertex();
+      ~NavMeshVertex();
 
-static_assert(sizeof(NavMeshVertex) == 0xC, "NavMeshVertex has wrong size");
+      NiPoint3 Location;
+  };
+
+  static_assert(sizeof(NavMeshVertex) == 0xC, "NavMeshVertex has wrong size");
+  
+} // namespace CommonLib

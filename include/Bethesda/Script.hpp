@@ -3,43 +3,47 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/BSStringT.hpp"
 
-class TESQuest;
-class ScriptVariable;
+namespace CommonLib {
 
-struct SCRIPT_HEADER
-{
-  std::uint32_t variableCount;
-  std::uint32_t refObjectCount;
-  std::uint32_t dataSize;
-  std::uint32_t m_uiLastID;
-  bool bIsQuestScript;
-  bool bIsMagicEffectScript;
-  bool bIsCompiled;
-};
+  class TESQuest;
+  class ScriptVariable;
 
-class SCRIPT_REFERENCED_OBJECT
-{
-  public:
-    BSStringT<char> cEditorID;
-    TESForm* pForm;
-    std::uint32_t uiVariableID;
-};
+  struct SCRIPT_HEADER
+  {
+    std::uint32_t variableCount;
+    std::uint32_t refObjectCount;
+    std::uint32_t dataSize;
+    std::uint32_t m_uiLastID;
+    bool bIsQuestScript;
+    bool bIsMagicEffectScript;
+    bool bIsCompiled;
+  };
 
-class Script : public TESForm
-{
-  public:
-    Script();
-    ~Script();
+  class SCRIPT_REFERENCED_OBJECT
+  {
+    public:
+      BSStringT<char> cEditorID;
+      TESForm* pForm;
+      std::uint32_t uiVariableID;
+  };
 
-    SCRIPT_HEADER m_header;
-    char *m_text;
-    char *m_data;
-    float fProfilerTimer;
-    float fQuestScriptDelay;
-    float fQuestScriptGetSecondsBuffer;
-    TESQuest *pOwnerQuest;
-    BSSimpleList<SCRIPT_REFERENCED_OBJECT *> listRefObjects;
-    BSSimpleList<ScriptVariable *> listVariables;
-};
+  class Script : public TESForm
+  {
+    public:
+      Script();
+      ~Script();
 
-static_assert(sizeof(Script) == 0x54, "Script has wrong size");
+      SCRIPT_HEADER m_header;
+      char *m_text;
+      char *m_data;
+      float fProfilerTimer;
+      float fQuestScriptDelay;
+      float fQuestScriptGetSecondsBuffer;
+      TESQuest *pOwnerQuest;
+      BSSimpleList<SCRIPT_REFERENCED_OBJECT *> listRefObjects;
+      BSSimpleList<ScriptVariable *> listVariables;
+  };
+
+  static_assert(sizeof(Script) == 0x54, "Script has wrong size");
+  
+} // namespace CommonLib

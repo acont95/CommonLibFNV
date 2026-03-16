@@ -3,29 +3,33 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BSSimpleList.hpp"
 
-class TESQuest;
-class TESQuestTarget;
+namespace CommonLib {
 
-enum QUEST_OBJECTIVE_STATE
-{
-  QOS_DORMANT = 0x0,
-  QOS_DISPLAYED = 0x1,
-  QOS_COMPLETED = 0x2,
-  QOS_COMPLETED_DISPLAYED = 0x3,
-};
+  class TESQuest;
+  class TESQuestTarget;
 
-class BGSQuestObjective
-{
-  public:
-    BGSQuestObjective();
-    virtual ~BGSQuestObjective();
+  enum QUEST_OBJECTIVE_STATE
+  {
+    QOS_DORMANT = 0x0,
+    QOS_DISPLAYED = 0x1,
+    QOS_COMPLETED = 0x2,
+    QOS_COMPLETED_DISPLAYED = 0x3,
+  };
 
-    std::uint32_t iIndex;
-    BSStringT<char> cDisplayText;
-    TESQuest *pOwnerQuest;
-    BSSimpleList<TESQuestTarget*> ListTargets;
-    bool bInitialized;
-    QUEST_OBJECTIVE_STATE eState;
-};
+  class BGSQuestObjective
+  {
+    public:
+      BGSQuestObjective();
+      virtual ~BGSQuestObjective();
 
-static_assert(sizeof(BGSQuestObjective) == 0x24, "BGSQuestObjective has wrong size");
+      std::uint32_t iIndex;
+      BSStringT<char> cDisplayText;
+      TESQuest *pOwnerQuest;
+      BSSimpleList<TESQuestTarget*> ListTargets;
+      bool bInitialized;
+      QUEST_OBJECTIVE_STATE eState;
+  };
+
+  static_assert(sizeof(BGSQuestObjective) == 0x24, "BGSQuestObjective has wrong size");
+  
+} // namespace CommonLib

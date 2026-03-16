@@ -3,15 +3,18 @@
 #include "Bethesda/BSMultiBound.hpp"
 #include "Bethesda/BSCullingProcess.hpp"
 
+namespace CommonLib {
 
-class BSMultiBoundNode : public BSNiNode
-{
-  public:
-    BSMultiBoundNode();
-    ~BSMultiBoundNode();
+  class BSMultiBoundNode : public BSNiNode
+  {
+    public:
+      BSMultiBoundNode();
+      ~BSMultiBoundNode();
 
-    NiPointer<BSMultiBound> spMultiBound;
-    BSCullingProcess::BSCPCullingType CullingMode;
-};
+      NiPointer<BSMultiBound> spMultiBound;
+      BSCullingProcess::BSCPCullingType CullingMode;
+  };
 
-static_assert(sizeof(BSMultiBoundNode) == 0xB4, "BSMultiBoundNode has wrong size");
+  static_assert(sizeof(BSMultiBoundNode) == 0xB4, "BSMultiBoundNode has wrong size");
+  
+} // namespace CommonLib

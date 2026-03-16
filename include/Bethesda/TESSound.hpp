@@ -3,32 +3,36 @@
 #include "Bethesda/TESBoundAnimObject.hpp"
 #include "Bethesda/TESSoundFile.hpp"
 
-class TESSound : public TESBoundAnimObject, public TESSoundFile
-{
-  public:
-    TESSound();
-    ~TESSound();
+namespace CommonLib {
 
-    struct SOUND_DATA
-    {
-      std::uint8_t iMin;
-      std::uint8_t iMax;
-      char iPitch;
-      std::uint8_t iPadding1;
-      std::uint32_t iFlags;
-      std::uint16_t iAttenuation;
-      std::uint16_t iTimeConstraints;
-      std::uint16_t pAttenuationCurve[5];
-      std::uint16_t iReverbAttenuation;
-      std::uint32_t iPriority;
-      std::uint32_t iLoopBegin;
-      std::uint32_t iLoopEnd;
-    };
+  class TESSound : public TESBoundAnimObject, public TESSoundFile
+  {
+    public:
+      TESSound();
+      ~TESSound();
 
-    BSStringT<char> cFormEditorID;
-    SOUND_DATA data;
-    char cRandomPercentChance;
-    std::uint8_t pad01[3];
-};
+      struct SOUND_DATA
+      {
+        std::uint8_t iMin;
+        std::uint8_t iMax;
+        char iPitch;
+        std::uint8_t iPadding1;
+        std::uint32_t iFlags;
+        std::uint16_t iAttenuation;
+        std::uint16_t iTimeConstraints;
+        std::uint16_t pAttenuationCurve[5];
+        std::uint16_t iReverbAttenuation;
+        std::uint32_t iPriority;
+        std::uint32_t iLoopBegin;
+        std::uint32_t iLoopEnd;
+      };
 
-static_assert(sizeof(TESSound) == 0x6C, "TESSound has wrong size");
+      BSStringT<char> cFormEditorID;
+      SOUND_DATA data;
+      char cRandomPercentChance;
+      std::uint8_t pad01[3];
+  };
+
+  static_assert(sizeof(TESSound) == 0x6C, "TESSound has wrong size");
+  
+} // namespace CommonLib

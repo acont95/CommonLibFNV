@@ -7,20 +7,24 @@
 #include "Bethesda/BGSPreloadable.hpp"
 #include "Bethesda/BGSDestructibleObjectForm.hpp"
 
-class BGSProjectile  : 
-  public TESBoundObject, 
-  public TESFullName, 
-  public TESModel, 
-  public BGSPreloadable, 
-  public BGSDestructibleObjectForm
-{
-  public:
-    BGSProjectile();
-    ~BGSProjectile();
+namespace CommonLib {
 
-    BGSProjectileData Data;
-    TESModel MuzzleFlashModel;
-    SOUND_LEVEL eSoundLevel;
-};
+  class BGSProjectile  : 
+    public TESBoundObject, 
+    public TESFullName, 
+    public TESModel, 
+    public BGSPreloadable, 
+    public BGSDestructibleObjectForm
+  {
+    public:
+      BGSProjectile();
+      ~BGSProjectile();
 
-static_assert(sizeof(BGSProjectile) == 0xD0);
+      BGSProjectileData Data;
+      TESModel MuzzleFlashModel;
+      SOUND_LEVEL eSoundLevel;
+  };
+
+  static_assert(sizeof(BGSProjectile) == 0xD0);
+  
+} // namespace CommonLib

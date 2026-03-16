@@ -1,13 +1,17 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
 
-class NiInterpolator : public NiObject
-{
-  public:
-    NiInterpolator();
-    ~NiInterpolator();
+namespace CommonLib {
 
-    float m_fLastTime;
-};
+  class NiInterpolator : public NiObject
+  {
+    public:
+      NiInterpolator();
+      ~NiInterpolator();
 
-static_assert(sizeof(NiInterpolator) == 0xC, "NiInterpolator has wrong size");
+      float m_fLastTime;
+  };
+
+  static_assert(sizeof(NiInterpolator) == 0xC, "NiInterpolator has wrong size");
+  
+} // namespace CommonLib

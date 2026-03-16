@@ -10,22 +10,26 @@
 #include "Bethesda/BGSMessageIcon.hpp"
 #include "Bethesda/BGSPickupPutdownSounds.hpp"
 
-class TESObjectIMOD :
-    public TESBoundObject,
-    public TESFullName,
-    public TESModelTextureSwap,
-    public TESIcon,
-    public TESScriptableForm,
-    public TESDescription,
-    public TESValueForm,
-    public TESWeightForm,
-    public BGSDestructibleObjectForm,
-    public BGSMessageIcon,
-    public BGSPickupPutdownSounds
-{
-  public:
-    TESObjectIMOD();
-    virtual ~TESObjectIMOD();
-};
+namespace CommonLib {
 
-static_assert(sizeof(TESObjectIMOD) == 0xB0, "TESObjectIMOD has wrong size");
+  class TESObjectIMOD :
+      public TESBoundObject,
+      public TESFullName,
+      public TESModelTextureSwap,
+      public TESIcon,
+      public TESScriptableForm,
+      public TESDescription,
+      public TESValueForm,
+      public TESWeightForm,
+      public BGSDestructibleObjectForm,
+      public BGSMessageIcon,
+      public BGSPickupPutdownSounds
+  {
+    public:
+      TESObjectIMOD();
+      virtual ~TESObjectIMOD();
+  };
+
+  static_assert(sizeof(TESObjectIMOD) == 0xB0, "TESObjectIMOD has wrong size");
+  
+} // namespace CommonLib

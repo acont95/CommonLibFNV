@@ -2,28 +2,32 @@
 #include <cstdint>
 #include "Bethesda/BGSDistantObjectBlockLoadTask.hpp"
 
-class BGSTerrainNode;
+namespace CommonLib {
 
-class BGSDistantObjectBlock
-{
-  public:
-    BGSDistantObjectBlock();
-    ~BGSDistantObjectBlock();
+  class BGSTerrainNode;
 
-    BGSTerrainNode *pNode;
-    NiPointer<NiGeometry> spMesh;
-    NiPointer<BSMultiBoundNode> spNode;
-    NiPointer<NiGeometry> spOldMesh;
-    NiPointer<BSMultiBoundNode> spNodeStinger;
-    NiPointer<BSMultiBoundNode> spNodeStingerOld;
-    NiPointer<BGSDistantObjectBlockLoadTask> spLoadTask;
-    NiPointer<BGSDistantObjectBlockLoadTask> spLoadTaskStinger;
-    bool bDoneLoading;
-    bool bAttached;
-    bool bPrepared;
-    bool bHighPriority;
-    bool bDetachFlag;
-    std::int32_t nDetachCount;
-};
+  class BGSDistantObjectBlock
+  {
+    public:
+      BGSDistantObjectBlock();
+      ~BGSDistantObjectBlock();
 
-static_assert(sizeof(BGSDistantObjectBlock) == 0x2C, "BGSDistantObjectBlock has wrong size");
+      BGSTerrainNode *pNode;
+      NiPointer<NiGeometry> spMesh;
+      NiPointer<BSMultiBoundNode> spNode;
+      NiPointer<NiGeometry> spOldMesh;
+      NiPointer<BSMultiBoundNode> spNodeStinger;
+      NiPointer<BSMultiBoundNode> spNodeStingerOld;
+      NiPointer<BGSDistantObjectBlockLoadTask> spLoadTask;
+      NiPointer<BGSDistantObjectBlockLoadTask> spLoadTaskStinger;
+      bool bDoneLoading;
+      bool bAttached;
+      bool bPrepared;
+      bool bHighPriority;
+      bool bDetachFlag;
+      std::int32_t nDetachCount;
+  };
+
+  static_assert(sizeof(BGSDistantObjectBlock) == 0x2C, "BGSDistantObjectBlock has wrong size");
+  
+} // namespace CommonLib

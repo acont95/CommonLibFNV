@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/NavMeshEdgeHandle.hpp"
 
-class PortalEdgeSwap
-{
-  public:
-    PortalEdgeSwap();
-    ~PortalEdgeSwap();
+namespace CommonLib {
 
-    NavMeshEdgeHandle hOldEdge;
-    NavMeshEdgeHandle hNewEdge;
-    bool bFromAddition;
-};
+  class PortalEdgeSwap
+  {
+    public:
+      PortalEdgeSwap();
+      ~PortalEdgeSwap();
 
-static_assert(sizeof(PortalEdgeSwap) == 0x1C, "PortalEdgeSwap has wrong size");
+      NavMeshEdgeHandle hOldEdge;
+      NavMeshEdgeHandle hNewEdge;
+      bool bFromAddition;
+  };
+
+  static_assert(sizeof(PortalEdgeSwap) == 0x1C, "PortalEdgeSwap has wrong size");
+  
+} // namespace CommonLib

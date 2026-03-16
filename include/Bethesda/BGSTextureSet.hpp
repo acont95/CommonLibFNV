@@ -4,19 +4,23 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class DecalData;
-class BSFileEntry;
+namespace CommonLib {
 
-class BGSTextureSet : public TESBoundObject, public BSTextureSet
-{
-  public:
-    BGSTextureSet();
-    ~BGSTextureSet();
+  class DecalData;
+  class BSFileEntry;
 
-    TESTexture pTextures[7];
-    DecalData* pDecalData;
-    std::uint16_t iFlags;
-    BSFileEntry* pTextureFileEntries[7];
-};
+  class BGSTextureSet : public TESBoundObject, public BSTextureSet
+  {
+    public:
+      BGSTextureSet();
+      ~BGSTextureSet();
 
-static_assert(sizeof(BGSTextureSet) == 0xB0, "BGSTextureSet has wrong size");
+      TESTexture pTextures[7];
+      DecalData* pDecalData;
+      std::uint16_t iFlags;
+      BSFileEntry* pTextureFileEntries[7];
+  };
+
+  static_assert(sizeof(BGSTextureSet) == 0xB0, "BGSTextureSet has wrong size");
+  
+} // namespace CommonLib

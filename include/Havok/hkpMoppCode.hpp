@@ -6,27 +6,31 @@
 #include "Havok/hkEnum.hpp"
 #include "Havok/hkContainerHeapAllocator.hpp"
 
-class hkpMoppCode : public hkReferencedObject
-{
-  public:
-    hkpMoppCode();
-    virtual ~hkpMoppCode();
+namespace CommonLib {
 
-    struct CodeInfo
-    {
-      hkVector4 m_offset;
-    };
+  class hkpMoppCode : public hkReferencedObject
+  {
+    public:
+      hkpMoppCode();
+      virtual ~hkpMoppCode();
 
-    enum BuildType
-    {
-      BUILT_WITH_CHUNK_SUBDIVISION = 0x0,
-      BUILT_WITHOUT_CHUNK_SUBDIVISION = 0x1,
-      BUILD_NOT_SET = 0x2,
-    };
+      struct CodeInfo
+      {
+        hkVector4 m_offset;
+      };
 
-    CodeInfo m_info;
-    hkArray<unsigned char, hkContainerHeapAllocator> m_data;
-    hkEnum<enum hkpMoppCode::BuildType, signed char> m_buildType;
-};
+      enum BuildType
+      {
+        BUILT_WITH_CHUNK_SUBDIVISION = 0x0,
+        BUILT_WITHOUT_CHUNK_SUBDIVISION = 0x1,
+        BUILD_NOT_SET = 0x2,
+      };
 
-static_assert(sizeof(hkpMoppCode) == 0x30, "hkpMoppCode has wrong size");
+      CodeInfo m_info;
+      hkArray<unsigned char, hkContainerHeapAllocator> m_data;
+      hkEnum<enum hkpMoppCode::BuildType, signed char> m_buildType;
+  };
+
+  static_assert(sizeof(hkpMoppCode) == 0x30, "hkpMoppCode has wrong size");
+  
+} // namespace CommonLib

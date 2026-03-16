@@ -3,22 +3,26 @@
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/BSSimpleList.hpp"
 
-class BGSTextureSet;
+namespace CommonLib {
 
-class TESModelTextureSwap : public TESModel
-{
-  public:
-    TESModelTextureSwap();
-    ~TESModelTextureSwap();
+  class BGSTextureSet;
 
-    struct TEX_SWAP
-    {
-      BGSTextureSet* pNewTexture;
-      std::int32_t iGeomIndex;
-      char pGeomName[128];
-    };
+  class TESModelTextureSwap : public TESModel
+  {
+    public:
+      TESModelTextureSwap();
+      ~TESModelTextureSwap();
 
-    BSSimpleList<TEX_SWAP*> TextureSwapList;
-};
+      struct TEX_SWAP
+      {
+        BGSTextureSet* pNewTexture;
+        std::int32_t iGeomIndex;
+        char pGeomName[128];
+      };
 
-static_assert(sizeof(TESModelTextureSwap) == 0x20);
+      BSSimpleList<TEX_SWAP*> TextureSwapList;
+  };
+
+  static_assert(sizeof(TESModelTextureSwap) == 0x20);
+  
+} // namespace CommonLib

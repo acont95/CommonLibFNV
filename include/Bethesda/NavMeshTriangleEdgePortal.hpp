@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class NavMeshInfo;
+namespace CommonLib {
 
-class NavMeshTriangleEdgePortal
-{
-  public:
-    NavMeshTriangleEdgePortal();
-    ~NavMeshTriangleEdgePortal();
+  class NavMeshInfo;
 
-    NavMeshInfo *pOtherMesh;
-    std::uint16_t sTriangle;
-};
+  class NavMeshTriangleEdgePortal
+  {
+    public:
+      NavMeshTriangleEdgePortal();
+      ~NavMeshTriangleEdgePortal();
 
-static_assert(sizeof(NavMeshTriangleEdgePortal) == 0x8, "NavMeshTriangleEdgePortal has wrong size");
+      NavMeshInfo *pOtherMesh;
+      std::uint16_t sTriangle;
+  };
+
+  static_assert(sizeof(NavMeshTriangleEdgePortal) == 0x8, "NavMeshTriangleEdgePortal has wrong size");
+  
+} // namespace CommonLib

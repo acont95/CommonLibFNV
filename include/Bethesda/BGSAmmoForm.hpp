@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESForm;
+namespace CommonLib {
 
-class BGSAmmoForm : public BaseFormComponent
-{
-  public:
-    BGSAmmoForm();
-    virtual ~BGSAmmoForm();
+  class TESForm;
 
-    TESForm *pFormAmmo;
-};
+  class BGSAmmoForm : public BaseFormComponent
+  {
+    public:
+      BGSAmmoForm();
+      virtual ~BGSAmmoForm();
 
-static_assert(sizeof(BGSAmmoForm) == 0x8, "BGSAmmoForm has wrong size");
+      TESForm *pFormAmmo;
+  };
+
+  static_assert(sizeof(BGSAmmoForm) == 0x8, "BGSAmmoForm has wrong size");
+  
+} // namespace CommonLib

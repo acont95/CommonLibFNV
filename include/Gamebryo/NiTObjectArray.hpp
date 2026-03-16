@@ -3,13 +3,17 @@
 #include "Gamebryo/NiTArray.hpp"
 #include "Gamebryo/NiTNewInterface.hpp"
 
-template <typename T>
-class NiTObjectArray : public NiTArray<T, NiTNewInterface<T>>
-{
-  public:
-    NiTObjectArray();
-    ~NiTObjectArray();
+namespace CommonLib {
 
-};
+  template <typename T>
+  class NiTObjectArray : public NiTArray<T, NiTNewInterface<T>>
+  {
+    public:
+      NiTObjectArray();
+      ~NiTObjectArray();
 
-static_assert(sizeof(NiTObjectArray<std::uint32_t>) == 0x10, "NiTObjectArray has wrong size");
+  };
+
+  static_assert(sizeof(NiTObjectArray<std::uint32_t>) == 0x10, "NiTObjectArray has wrong size");
+  
+} // namespace CommonLib

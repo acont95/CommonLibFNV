@@ -1,13 +1,17 @@
 #pragma once
 #include "Gamebryo/NiProperty.hpp"
 
-class NiPropertyState
-{
-  public:
-    NiPropertyState();
-    ~NiPropertyState();
+namespace CommonLib {
 
-    NiPointer<NiProperty> m_aspProps[7];
-};
+  class NiPropertyState
+  {
+    public:
+      NiPropertyState();
+      ~NiPropertyState();
 
-static_assert(sizeof(NiPropertyState) == 0x1C, "NiPropertyState has wrong size");
+      NiPointer<NiProperty> m_aspProps[7];
+  };
+
+  static_assert(sizeof(NiPropertyState) == 0x1C, "NiPropertyState has wrong size");
+  
+} // namespace CommonLib

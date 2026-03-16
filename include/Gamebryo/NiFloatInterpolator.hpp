@@ -4,15 +4,19 @@
 #include "Gamebryo/NiPointer.hpp"
 #include "Gamebryo/NiKeyBasedInterpolator.hpp"
 
-class NiFloatInterpolator : public NiKeyBasedInterpolator
-{
-  public:
-    NiFloatInterpolator();
-    ~NiFloatInterpolator();
+namespace CommonLib {
 
-    float m_fFloatValue;
-    NiPointer<NiFloatData> m_spFloatData;
-    std::uint32_t m_uiLastIdx;
-};
+  class NiFloatInterpolator : public NiKeyBasedInterpolator
+  {
+    public:
+      NiFloatInterpolator();
+      ~NiFloatInterpolator();
 
-static_assert(sizeof(NiFloatInterpolator) == 0x18, "NiFloatInterpolator has wrong size");
+      float m_fFloatValue;
+      NiPointer<NiFloatData> m_spFloatData;
+      std::uint32_t m_uiLastIdx;
+  };
+
+  static_assert(sizeof(NiFloatInterpolator) == 0x18, "NiFloatInterpolator has wrong size");
+  
+} // namespace CommonLib

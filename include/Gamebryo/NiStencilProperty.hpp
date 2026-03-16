@@ -2,15 +2,19 @@
 #include <cstdint>
 #include "Gamebryo/NiProperty.hpp"
 
-class NiStencilProperty : public NiProperty
-{
-  public:
-    NiStencilProperty();
-    ~NiStencilProperty();
+namespace CommonLib {
 
-    std::uint16_t m_uFlags;
-    std::uint32_t m_uiRef;
-    std::uint32_t m_uiMask;
-};
+  class NiStencilProperty : public NiProperty
+  {
+    public:
+      NiStencilProperty();
+      ~NiStencilProperty();
 
-static_assert(sizeof(NiStencilProperty) == 0x24, "NiStencilProperty has wrong size");
+      std::uint16_t m_uFlags;
+      std::uint32_t m_uiRef;
+      std::uint32_t m_uiMask;
+  };
+
+  static_assert(sizeof(NiStencilProperty) == 0x24, "NiStencilProperty has wrong size");
+  
+} // namespace CommonLib

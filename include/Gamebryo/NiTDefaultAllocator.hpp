@@ -1,14 +1,18 @@
 #pragma once
 
-template <typename T>
-class NiTDefaultAllocator
-{
-  public:
-    NiTDefaultAllocator();
-    ~NiTDefaultAllocator();
-};
+namespace CommonLib {
 
-template <typename T>
-using DFALL = NiTDefaultAllocator<T>;
+  template <typename T>
+  class NiTDefaultAllocator
+  {
+    public:
+      NiTDefaultAllocator();
+      ~NiTDefaultAllocator();
+  };
 
-static_assert(sizeof(NiTDefaultAllocator<void*>) == 0x1, "NiTDefaultAllocator has wrong size");
+  template <typename T>
+  using DFALL = NiTDefaultAllocator<T>;
+
+  static_assert(sizeof(NiTDefaultAllocator<void*>) == 0x1, "NiTDefaultAllocator has wrong size");
+  
+} // namespace CommonLib

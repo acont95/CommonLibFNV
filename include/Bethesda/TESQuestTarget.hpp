@@ -3,18 +3,22 @@
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/TeleportPath.hpp"
 
-class TESObjectREFR;
+namespace CommonLib {
 
-class TESQuestTarget
-{
-  public:
-    TESQuestTarget();
-    ~TESQuestTarget();
+  class TESObjectREFR;
 
-    std::uint8_t cFlags;
-    TESCondition objConditions;
-    TESObjectREFR *m_pTargetRef;
-    TeleportPath m_TargetPath;
-};
+  class TESQuestTarget
+  {
+    public:
+      TESQuestTarget();
+      ~TESQuestTarget();
 
-static_assert(sizeof(TESQuestTarget) == 0x48, "TESQuestTarget has wrong size");
+      std::uint8_t cFlags;
+      TESCondition objConditions;
+      TESObjectREFR *m_pTargetRef;
+      TeleportPath m_TargetPath;
+  };
+
+  static_assert(sizeof(TESQuestTarget) == 0x48, "TESQuestTarget has wrong size");
+  
+} // namespace CommonLib

@@ -3,20 +3,24 @@
 #include "Gamebryo/NiPointer.hpp"
 #include "Bethesda/QueuedFile.hpp"
 
-class DestructibleObjectStage;
+namespace CommonLib {
 
-class DestructibleObjectData
-{
-  public:
-    DestructibleObjectData();
-    ~DestructibleObjectData();
+  class DestructibleObjectStage;
 
-    uint32_t iHealth;
-    uint8_t cNumStages;
-    uint8_t cFlags;
-    DestructibleObjectStage** pStagesArray;
-    volatile std::int32_t iReplacementModelRefCount;
-    NiPointer<QueuedFile> spPreloadedReplacementModels;
-};
+  class DestructibleObjectData
+  {
+    public:
+      DestructibleObjectData();
+      ~DestructibleObjectData();
 
-static_assert(sizeof(DestructibleObjectData) == 0x14);
+      uint32_t iHealth;
+      uint8_t cNumStages;
+      uint8_t cFlags;
+      DestructibleObjectStage** pStagesArray;
+      volatile std::int32_t iReplacementModelRefCount;
+      NiPointer<QueuedFile> spPreloadedReplacementModels;
+  };
+
+  static_assert(sizeof(DestructibleObjectData) == 0x14);
+  
+} // namespace CommonLib

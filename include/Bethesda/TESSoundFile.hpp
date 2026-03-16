@@ -2,12 +2,16 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESSoundFile : public BaseFormComponent {
-  public:
-    TESSoundFile();
-    ~TESSoundFile();
+namespace CommonLib {
 
-    BSStringT<char> cSoundFile;
-};
+  class TESSoundFile : public BaseFormComponent {
+    public:
+      TESSoundFile();
+      ~TESSoundFile();
 
-static_assert(sizeof(TESSoundFile) == 0xC, "TESSoundFile has wrong size");
+      BSStringT<char> cSoundFile;
+  };
+
+  static_assert(sizeof(TESSoundFile) == 0xC, "TESSoundFile has wrong size");
+  
+} // namespace CommonLib

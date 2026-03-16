@@ -2,12 +2,16 @@
 #include <cstdint>
 #include "Gamebryo/NiTSet.hpp"
 
-template <typename T>
-class NiTPrimitiveSet : public NiTSet<T, NiTMallocInterface<T>>
-{
-  public:
-    NiTPrimitiveSet();
-    ~NiTPrimitiveSet();
-};
+namespace CommonLib {
 
-static_assert(sizeof(NiTPrimitiveSet<std::int32_t>) == 0xC, "NiTPrimitiveSet has wrong size");
+  template <typename T>
+  class NiTPrimitiveSet : public NiTSet<T, NiTMallocInterface<T>>
+  {
+    public:
+      NiTPrimitiveSet();
+      ~NiTPrimitiveSet();
+  };
+
+  static_assert(sizeof(NiTPrimitiveSet<std::int32_t>) == 0xC, "NiTPrimitiveSet has wrong size");
+  
+} // namespace CommonLib

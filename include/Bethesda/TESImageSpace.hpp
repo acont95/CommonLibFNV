@@ -2,13 +2,17 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/ImageSpaceParameterData.hpp"
 
-class TESImageSpace : public TESForm
-{
-  public:
-    TESImageSpace();
-    virtual ~TESImageSpace();
+namespace CommonLib {
 
-    ImageSpaceParameterData Data;
-};
+  class TESImageSpace : public TESForm
+  {
+    public:
+      TESImageSpace();
+      virtual ~TESImageSpace();
 
-static_assert(sizeof(TESImageSpace) == 0xB0, "TESImageSpace has wrong size");
+      ImageSpaceParameterData Data;
+  };
+
+  static_assert(sizeof(TESImageSpace) == 0xB0, "TESImageSpace has wrong size");
+  
+} // namespace CommonLib

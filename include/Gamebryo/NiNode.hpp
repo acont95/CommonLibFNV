@@ -2,13 +2,17 @@
 #include "Gamebryo/NiAVObject.hpp"
 #include "Gamebryo/NiTObjectArray.hpp"
 
-class NiNode : public NiAVObject
-{
-  public:
-    NiNode();
-    virtual ~NiNode();
+namespace CommonLib {
 
-    NiTObjectArray<NiPointer<NiAVObject>> m_kChildren;
-};
+  class NiNode : public NiAVObject
+  {
+    public:
+      NiNode();
+      virtual ~NiNode();
 
-static_assert(sizeof(NiNode) == 0xAC, "NiNode has wrong size");
+      NiTObjectArray<NiPointer<NiAVObject>> m_kChildren;
+  };
+
+  static_assert(sizeof(NiNode) == 0xAC, "NiNode has wrong size");
+  
+} // namespace CommonLib

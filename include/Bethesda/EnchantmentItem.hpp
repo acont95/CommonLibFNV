@@ -3,21 +3,25 @@
 #include "Bethesda/MagicItemForm.hpp"
 #include "Bethesda/MagicSystem.hpp"
 
-class EnchantmentItem : public MagicItemForm 
-{
-  public:
-    EnchantmentItem();
-    ~EnchantmentItem();
+namespace CommonLib {
 
-    struct EnchantmentItemData
-    {
-      MagicSystem::CastingType eCastingType;
-      std::int32_t iChargeOverride;
-      std::int32_t iCostOverride;
-      std::uint8_t iFlags;
-    };
+  class EnchantmentItem : public MagicItemForm 
+  {
+    public:
+      EnchantmentItem();
+      ~EnchantmentItem();
 
-    EnchantmentItemData data;
-};  
+      struct EnchantmentItemData
+      {
+        MagicSystem::CastingType eCastingType;
+        std::int32_t iChargeOverride;
+        std::int32_t iCostOverride;
+        std::uint8_t iFlags;
+      };
 
-static_assert(sizeof(EnchantmentItem) == 0x44, "EnchantmentItem has wrong size");
+      EnchantmentItemData data;
+  };  
+
+  static_assert(sizeof(EnchantmentItem) == 0x44, "EnchantmentItem has wrong size");
+  
+} // namespace CommonLib

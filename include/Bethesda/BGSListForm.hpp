@@ -2,14 +2,18 @@
 #include <cstdint>
 #include "Bethesda/TESForm.hpp"
 
-class BGSListForm : public TESForm
-{
-  public:
-    BGSListForm();
-    virtual ~BGSListForm();
+namespace CommonLib {
 
-    BSSimpleList<TESForm *> ListOfForms;
-    std::uint32_t iScriptAddedFormCount;
-};
+  class BGSListForm : public TESForm
+  {
+    public:
+      BGSListForm();
+      virtual ~BGSListForm();
 
-static_assert(sizeof(BGSListForm) == 0x24, "BGSListForm has wrong size");
+      BSSimpleList<TESForm *> ListOfForms;
+      std::uint32_t iScriptAddedFormCount;
+  };
+
+  static_assert(sizeof(BGSListForm) == 0x24, "BGSListForm has wrong size");
+  
+} // namespace CommonLib

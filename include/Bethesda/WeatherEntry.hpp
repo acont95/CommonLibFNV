@@ -1,18 +1,22 @@
 #pragma once
 #include <cstdint>
 
-class TESWeather;
-class TESGlobal;
+namespace CommonLib {
 
-class WeatherEntry
-{
-  public:
-    WeatherEntry();
-    ~WeatherEntry();
+  class TESWeather;
+  class TESGlobal;
 
-    TESWeather *pWeather;
-    std::uint32_t uiChance;
-    TESGlobal *pChanceVar;
-};
+  class WeatherEntry
+  {
+    public:
+      WeatherEntry();
+      ~WeatherEntry();
 
-static_assert(sizeof(WeatherEntry) == 0xC, "WeatherEntry has wrong size");
+      TESWeather *pWeather;
+      std::uint32_t uiChance;
+      TESGlobal *pChanceVar;
+  };
+
+  static_assert(sizeof(WeatherEntry) == 0xC, "WeatherEntry has wrong size");
+  
+} // namespace CommonLib

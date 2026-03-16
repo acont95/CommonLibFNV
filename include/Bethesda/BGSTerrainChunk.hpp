@@ -3,37 +3,41 @@
 #include "Bethesda/BGSTerrainChunkLoadTask.hpp"
 #include "Bethesda/BSShaderPPLightingProperty.hpp"
 
-class BGSTerrainNode;
-class TESObjectREFR;
-class BGSTerrainNode;
-class BGSTerrainNode;
+namespace CommonLib {
 
-class BGSTerrainChunk
-{
-  public:
-    BGSTerrainChunk();
-    ~BGSTerrainChunk();
-    
-    enum ChunkTextureType
-    {
-      CHUNK_TEXTURE_DIFFUSE = 0x0,
-      CHUNK_TEXTURE_NORMAL = 0x1,
-    };
+  class BGSTerrainNode;
+  class TESObjectREFR;
+  class BGSTerrainNode;
+  class BGSTerrainNode;
 
-    BGSTerrainNode *pNode;
-    NiPointer<NiGeometry> spMesh;
-    NiPointer<NiGeometry> spWater;
-    NiPointer<NiGeometry> spWaterAtReflectionHeight;
-    NiPointer<BSMultiBoundNode> spNode;
-    NiPointer<BSMultiBoundNode> spWaterNode;
-    NiPointer<BSMultiBoundNode> spWaterReflNode;
-    TESObjectREFR *pLODWaterRef;
-    TESObjectREFR *pLODWaterAtReflectionHeightRef;
-    NiPointer<BGSTerrainChunkLoadTask> spLoadTask;
-    bool bDoneLoading;
-    bool bAttached;
-    bool bPrepared;
-    NiPointer<BSShaderPPLightingProperty> spLightingProp;
-};
+  class BGSTerrainChunk
+  {
+    public:
+      BGSTerrainChunk();
+      ~BGSTerrainChunk();
+      
+      enum ChunkTextureType
+      {
+        CHUNK_TEXTURE_DIFFUSE = 0x0,
+        CHUNK_TEXTURE_NORMAL = 0x1,
+      };
 
-static_assert(sizeof(BGSTerrainChunk) == 0x30, "BGSTerrainChunk has wrong size");
+      BGSTerrainNode *pNode;
+      NiPointer<NiGeometry> spMesh;
+      NiPointer<NiGeometry> spWater;
+      NiPointer<NiGeometry> spWaterAtReflectionHeight;
+      NiPointer<BSMultiBoundNode> spNode;
+      NiPointer<BSMultiBoundNode> spWaterNode;
+      NiPointer<BSMultiBoundNode> spWaterReflNode;
+      TESObjectREFR *pLODWaterRef;
+      TESObjectREFR *pLODWaterAtReflectionHeightRef;
+      NiPointer<BGSTerrainChunkLoadTask> spLoadTask;
+      bool bDoneLoading;
+      bool bAttached;
+      bool bPrepared;
+      NiPointer<BSShaderPPLightingProperty> spLightingProp;
+  };
+
+  static_assert(sizeof(BGSTerrainChunk) == 0x30, "BGSTerrainChunk has wrong size");
+  
+} // namespace CommonLib

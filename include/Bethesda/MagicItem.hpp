@@ -2,12 +2,15 @@
 #include "Bethesda/TESFullName.hpp"
 #include "Bethesda/EffectItemList.hpp"
 
+namespace CommonLib {
 
-class MagicItem : public TESFullName, public EffectItemList 
-{
-  public:
-    MagicItem();
-    ~MagicItem();
-};
+  class MagicItem : public TESFullName, public EffectItemList 
+  {
+    public:
+      MagicItem();
+      ~MagicItem();
+  };
 
-static_assert(sizeof(MagicItem) == 0x1C, "MagicItem has wrong size");
+  static_assert(sizeof(MagicItem) == 0x1C, "MagicItem has wrong size");
+  
+} // namespace CommonLib

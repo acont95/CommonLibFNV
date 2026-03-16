@@ -1,11 +1,15 @@
 #pragma once 
 #include "Gamebryo/NiObject.hpp"
 
-class BSTextureSet : public NiObject
-{
-  public:
-    BSTextureSet();
-    ~BSTextureSet();
-};
+namespace CommonLib {
 
-static_assert(sizeof(BSTextureSet) == 0x8, "BSTextureSet has wrong size");
+  class BSTextureSet : public NiObject
+  {
+    public:
+      BSTextureSet();
+      ~BSTextureSet();
+  };
+
+  static_assert(sizeof(BSTextureSet) == 0x8, "BSTextureSet has wrong size");
+  
+} // namespace CommonLib

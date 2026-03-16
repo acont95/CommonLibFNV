@@ -1,10 +1,14 @@
 #pragma once
 
-class hkSerializableCinfo
-{
-  public:
-    hkSerializableCinfo();
-    ~hkSerializableCinfo();
-};
+namespace CommonLib {
 
-static_assert(sizeof(hkSerializableCinfo) == 0x1, "hkSerializableCinfo has wrong size");
+  class hkSerializableCinfo
+  {
+    public:
+      hkSerializableCinfo();
+      ~hkSerializableCinfo();
+  };
+
+  static_assert(sizeof(hkSerializableCinfo) == 0x1, "hkSerializableCinfo has wrong size");
+  
+} // namespace CommonLib

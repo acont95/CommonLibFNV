@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Bethesda/NavMeshTriHandle.hpp"
 
-class NavMeshEdgeHandle : public NavMeshTriHandle
-{
-  public:
-    NavMeshEdgeHandle();
-    ~NavMeshEdgeHandle();
+namespace CommonLib {
 
-    std::int32_t iEdgeIndex;
-};
+  class NavMeshEdgeHandle : public NavMeshTriHandle
+  {
+    public:
+      NavMeshEdgeHandle();
+      ~NavMeshEdgeHandle();
 
-static_assert(sizeof(NavMeshEdgeHandle) == 0xC, "NavMeshEdgeHandle has wrong size");
+      std::int32_t iEdgeIndex;
+  };
+
+  static_assert(sizeof(NavMeshEdgeHandle) == 0xC, "NavMeshEdgeHandle has wrong size");
+  
+} // namespace CommonLib

@@ -8,46 +8,50 @@
 #include "Gamebryo/NiTPointerMap.hpp"
 #include "Gamebryo/NiPoint2.hpp"
 
-class TESObjectCELL;
-class TESGrassAreaParam;
-class NiColorA;
-class hkpMoppCode;
+namespace CommonLib {
 
-class TESObjectLAND : public TESForm, public TESChildCell
-{
-  public:
-    TESObjectLAND();
-    ~TESObjectLAND();
+  class TESObjectCELL;
+  class TESGrassAreaParam;
+  class NiColorA;
+  class hkpMoppCode;
 
-    struct LoadedLandData
-    {
-      NiNode** ppMesh;
-      NiPoint3** ppVertices;
-      NiPoint3** ppNormals;
-      NiColorA** ppColorsA;
-      bool** ppNormalsSet;
-      NiPointer<NiLines> spBorder;
-      NiPoint2 HeightExtents;
-      TESLandTexture* pDefQuadTexture[4];
-      TESLandTexture** pQuadTextureArray[4];
-      float** ppPercentArrays[4];
-      hkpMoppCode* pMoppCode;
-      NiTPointerMap<std::uint32_t, TESGrassAreaParam**> pmGrassMap[4];
-      NiPointer<bhkRigidBody> spLandRB;
-      std::int32_t iCellX;
-      std::int32_t iCellY;
-      float fBaseHeight;
-    };
+  class TESObjectLAND : public TESForm, public TESChildCell
+  {
+    public:
+      TESObjectLAND();
+      ~TESObjectLAND();
 
-    struct OBJ_LAND
-    {
-      std::uint32_t iFlags;
-    };
+      struct LoadedLandData
+      {
+        NiNode** ppMesh;
+        NiPoint3** ppVertices;
+        NiPoint3** ppNormals;
+        NiColorA** ppColorsA;
+        bool** ppNormalsSet;
+        NiPointer<NiLines> spBorder;
+        NiPoint2 HeightExtents;
+        TESLandTexture* pDefQuadTexture[4];
+        TESLandTexture** pQuadTextureArray[4];
+        float** ppPercentArrays[4];
+        hkpMoppCode* pMoppCode;
+        NiTPointerMap<std::uint32_t, TESGrassAreaParam**> pmGrassMap[4];
+        NiPointer<bhkRigidBody> spLandRB;
+        std::int32_t iCellX;
+        std::int32_t iCellY;
+        float fBaseHeight;
+      };
 
-    OBJ_LAND Data;
-    TESObjectCELL* pParentCell;
-    NiPointer<QueuedFile> spQueuedTextures;
-    LoadedLandData *pLoadedData;
-};
+      struct OBJ_LAND
+      {
+        std::uint32_t iFlags;
+      };
 
-static_assert(sizeof(TESObjectLAND) == 0x2C, "TESObjectLAND has wrong size");
+      OBJ_LAND Data;
+      TESObjectCELL* pParentCell;
+      NiPointer<QueuedFile> spQueuedTextures;
+      LoadedLandData *pLoadedData;
+  };
+
+  static_assert(sizeof(TESObjectLAND) == 0x2C, "TESObjectLAND has wrong size");
+  
+} // namespace CommonLib

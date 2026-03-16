@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class TESObjectREFR;
+namespace CommonLib {
 
-class NavMeshTriangleDoorPortal
-{
-  public:
-    NavMeshTriangleDoorPortal();
-    ~NavMeshTriangleDoorPortal();
+  class TESObjectREFR;
 
-    TESObjectREFR *pDoorForm;
-    std::uint16_t iOwningTriangleIndex;
-};
+  class NavMeshTriangleDoorPortal
+  {
+    public:
+      NavMeshTriangleDoorPortal();
+      ~NavMeshTriangleDoorPortal();
 
-static_assert(sizeof(NavMeshTriangleDoorPortal) == 0x8, "NavMeshTriangleDoorPortal has wrong size");
+      TESObjectREFR *pDoorForm;
+      std::uint16_t iOwningTriangleIndex;
+  };
+
+  static_assert(sizeof(NavMeshTriangleDoorPortal) == 0x8, "NavMeshTriangleDoorPortal has wrong size");
+  
+} // namespace CommonLib

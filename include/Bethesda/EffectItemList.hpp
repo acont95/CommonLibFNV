@@ -2,14 +2,18 @@
 #include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 
-class EffectItem;
+namespace CommonLib {
 
-class EffectItemList : public BSSimpleList<EffectItem*> {
-  public:
-    EffectItemList();
-    virtual ~EffectItemList();
+  class EffectItem;
 
-    std::int32_t iHostileCount;
-};
+  class EffectItemList : public BSSimpleList<EffectItem*> {
+    public:
+      EffectItemList();
+      virtual ~EffectItemList();
 
-static_assert(sizeof(EffectItemList) == 0x10, "EffectItemList has wrong size");
+      std::int32_t iHostileCount;
+  };
+
+  static_assert(sizeof(EffectItemList) == 0x10, "EffectItemList has wrong size");
+  
+} // namespace CommonLib

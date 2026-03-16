@@ -2,22 +2,26 @@
 #include <cstdint>
 #include "Gamebryo/NiPoint3.hpp"
 
-class BSOcclusionQuery;
+namespace CommonLib {
 
-class ReferenceVolume
-{
-  public:
-    ReferenceVolume();
-    ~ReferenceVolume();
+  class BSOcclusionQuery;
 
-    NiPoint3 Center;
-    float fRadius;
-    std::uint32_t uiReferenceID;
-    BSOcclusionQuery *pOcclusionQuery;
-    bool bOccluded;
-    bool bWaiting;
-    bool bPerformTest;
-    std::uint32_t uiPixelCount;
-};
+  class ReferenceVolume
+  {
+    public:
+      ReferenceVolume();
+      ~ReferenceVolume();
 
-static_assert(sizeof(ReferenceVolume) == 0x20);
+      NiPoint3 Center;
+      float fRadius;
+      std::uint32_t uiReferenceID;
+      BSOcclusionQuery *pOcclusionQuery;
+      bool bOccluded;
+      bool bWaiting;
+      bool bPerformTest;
+      std::uint32_t uiPixelCount;
+  };
+
+  static_assert(sizeof(ReferenceVolume) == 0x20);
+  
+} // namespace CommonLib

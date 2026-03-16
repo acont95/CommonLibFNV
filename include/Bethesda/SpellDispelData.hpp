@@ -1,18 +1,22 @@
 #pragma once
 
-class MagicItem;
-class MagicCaster;
-class ActiveEffect;
+namespace CommonLib {
 
-class SpellDispelData
-{
-  public:
-    SpellDispelData();
-    ~SpellDispelData();
+  class MagicItem;
+  class MagicCaster;
+  class ActiveEffect;
 
-    MagicItem* pSpell;
-    MagicCaster* pCaster;
-    ActiveEffect* pActiveEffect;
-};
+  class SpellDispelData
+  {
+    public:
+      SpellDispelData();
+      ~SpellDispelData();
 
-static_assert(sizeof(SpellDispelData) == 0xC, "SpellDispelData has wrong size");
+      MagicItem* pSpell;
+      MagicCaster* pCaster;
+      ActiveEffect* pActiveEffect;
+  };
+
+  static_assert(sizeof(SpellDispelData) == 0xC, "SpellDispelData has wrong size");
+  
+} // namespace CommonLib

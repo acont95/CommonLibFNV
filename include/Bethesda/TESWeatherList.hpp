@@ -1,13 +1,17 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
 
-class WeatherEntry;
+namespace CommonLib {
 
-class TESWeatherList : public BSSimpleList<WeatherEntry*>
-{
-  public:
-    TESWeatherList();
-    ~TESWeatherList();
-};
+  class WeatherEntry;
 
-static_assert(sizeof(TESWeatherList) == 0x8, "TESWeatherList has wrong size");
+  class TESWeatherList : public BSSimpleList<WeatherEntry*>
+  {
+    public:
+      TESWeatherList();
+      ~TESWeatherList();
+  };
+
+  static_assert(sizeof(TESWeatherList) == 0x8, "TESWeatherList has wrong size");
+  
+} // namespace CommonLib

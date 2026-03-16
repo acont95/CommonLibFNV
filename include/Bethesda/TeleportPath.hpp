@@ -3,16 +3,20 @@
 #include "Bethesda/ParentSpaceNode.hpp"
 #include "Bethesda/TeleportLink.hpp"
 
-class TeleportPath
-{
-  public:
-    TeleportPath();
-    ~TeleportPath();
+namespace CommonLib {
 
-    BSSimpleArray<ParentSpaceNode,1024> Spaces;
-    BSSimpleArray<TeleportLink,1024> Doors;
-    NiPoint3 Start;
-    NiPoint3 End;
-};
+  class TeleportPath
+  {
+    public:
+      TeleportPath();
+      ~TeleportPath();
 
-static_assert(sizeof(TeleportPath) == 0x38, "TeleportPath has wrong size");
+      BSSimpleArray<ParentSpaceNode,1024> Spaces;
+      BSSimpleArray<TeleportLink,1024> Doors;
+      NiPoint3 Start;
+      NiPoint3 End;
+  };
+
+  static_assert(sizeof(TeleportPath) == 0x38, "TeleportPath has wrong size");
+  
+} // namespace CommonLib

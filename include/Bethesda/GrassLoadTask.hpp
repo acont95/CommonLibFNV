@@ -2,13 +2,17 @@
 #include "Bethesda/QueuedFileEntry.hpp"
 #include "Bethesda/BSStream.hpp"
 
-class GrassLoadTask : public QueuedFileEntry
-{
-  public:
-    GrassLoadTask();
-    virtual ~GrassLoadTask();
+namespace CommonLib {
 
-    BSStream m_kStream;
-};
+  class GrassLoadTask : public QueuedFileEntry
+  {
+    public:
+      GrassLoadTask();
+      virtual ~GrassLoadTask();
 
-static_assert(sizeof(GrassLoadTask) == 0x600, "GrassLoadTask has wrong size");
+      BSStream m_kStream;
+  };
+
+  static_assert(sizeof(GrassLoadTask) == 0x600, "GrassLoadTask has wrong size");
+  
+} // namespace CommonLib

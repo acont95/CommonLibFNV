@@ -1,17 +1,21 @@
 #pragma once
 #include <cstdint>
 
-class BSHash 
-{
-  public:
-    BSHash();
-    ~BSHash();
+namespace CommonLib {
 
-    std::uint8_t cLast;
-    std::uint8_t cLast2;
-    std::uint8_t cLength;
-    std::uint8_t cFirst;
-    std::uint32_t iCRC;
-};
+  class BSHash 
+  {
+    public:
+      BSHash();
+      ~BSHash();
 
-static_assert(sizeof(BSHash) == 0x8, "BSHash has wrong size");
+      std::uint8_t cLast;
+      std::uint8_t cLast2;
+      std::uint8_t cLength;
+      std::uint8_t cFirst;
+      std::uint32_t iCRC;
+  };
+
+  static_assert(sizeof(BSHash) == 0x8, "BSHash has wrong size");
+  
+} // namespace CommonLib

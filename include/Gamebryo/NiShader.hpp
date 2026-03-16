@@ -3,15 +3,19 @@
 #include "Gamebryo/NiRefObject.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 
-class NiShader : public NiRefObject
-{
-  public:
-    NiShader();
-    ~NiShader();
+namespace CommonLib {
 
-    NiFixedString m_kName;
-    std::uint32_t m_uiImplementation;
-    bool m_bInitialized;
-};
+  class NiShader : public NiRefObject
+  {
+    public:
+      NiShader();
+      ~NiShader();
 
-static_assert(sizeof(NiShader) == 0x14, "NiShader has wrong size");
+      NiFixedString m_kName;
+      std::uint32_t m_uiImplementation;
+      bool m_bInitialized;
+  };
+
+  static_assert(sizeof(NiShader) == 0x14, "NiShader has wrong size");
+  
+} // namespace CommonLib

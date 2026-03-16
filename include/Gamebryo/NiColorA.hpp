@@ -1,15 +1,19 @@
 #pragma once
 
-class NiColorA
-{
-  public:
-    NiColorA();
-    ~NiColorA();
+namespace CommonLib {
 
-    float r;
-    float g;
-    float b;
-    float a;
-};
+  class NiColorA
+  {
+    public:
+      NiColorA();
+      ~NiColorA();
 
-static_assert(sizeof(NiColorA) == 0x10, "NiColorA has wrong size");
+      float r;
+      float g;
+      float b;
+      float a;
+  };
+
+  static_assert(sizeof(NiColorA) == 0x10, "NiColorA has wrong size");
+  
+} // namespace CommonLib

@@ -5,15 +5,19 @@
 #include "Gamebryo/NiColorA.hpp"
 #include "Gamebryo/NiPointer.hpp"
 
-class NiColorInterpolator : public NiKeyBasedInterpolator
-{
-  public:
-    NiColorInterpolator();
-    ~NiColorInterpolator();
+namespace CommonLib {
 
-    NiColorA m_kColorValue;
-    NiPointer<NiColorData> m_spColorData;
-    std::uint32_t m_uiLastIdx;
-}; 
+  class NiColorInterpolator : public NiKeyBasedInterpolator
+  {
+    public:
+      NiColorInterpolator();
+      ~NiColorInterpolator();
 
-static_assert(sizeof(NiColorInterpolator) == 0x24, "NiColorInterpolator has wrong size");
+      NiColorA m_kColorValue;
+      NiPointer<NiColorData> m_spColorData;
+      std::uint32_t m_uiLastIdx;
+  }; 
+
+  static_assert(sizeof(NiColorInterpolator) == 0x24, "NiColorInterpolator has wrong size");
+  
+} // namespace CommonLib

@@ -7,69 +7,73 @@
 #include "Gamebryo/NiPoint3.hpp"
 #include "Gamebryo/NiColorA.hpp"
 
-class BSShaderPPLightingProperty : public BSShaderLightingProperty
-{
-  public:
-    BSShaderPPLightingProperty();
-    virtual ~BSShaderPPLightingProperty();
+namespace CommonLib {
 
-    class TangentSpaceData : public NiRefObject
-    {
-      public:
-        TangentSpaceData();
-        virtual ~TangentSpaceData();
+  class BSShaderPPLightingProperty : public BSShaderLightingProperty
+  {
+    public:
+      BSShaderPPLightingProperty();
+      virtual ~BSShaderPPLightingProperty();
 
-        bool bOwnsMemory;
-        NiPoint3 *pTangentExtraData;
-        NiPoint3 *pBinormalExtraData;
-    };
+      class TangentSpaceData : public NiRefObject
+      {
+        public:
+          TangentSpaceData();
+          virtual ~TangentSpaceData();
 
-    class TextureEffectData : public NiRefObject
-    {
-      public:
-        TextureEffectData();
-        virtual ~TextureEffectData();
+          bool bOwnsMemory;
+          NiPoint3 *pTangentExtraData;
+          NiPoint3 *pBinormalExtraData;
+      };
 
-        NiPointer<NiTexture> spTexture;
-        NiColorA CurrentFillColor;
-        NiColorA CurrentRimColor;
-        NiColorA FillColor;
-        NiColorA RimColor;
-        float fTextureUOffset;
-        float fTextureVOffset;
-        float fEdgeExponent;
-        float fBoundDiameter;
-        D3DBLEND eSrcBlendMode;
-        D3DBLEND eDestBlendMode;
-        D3DBLENDOP eBlendOperation;
-        D3DCMPFUNC eZTestFunction;
-        NiPointer<NiTexture> spBlockOutTexture;
-        std::uint32_t iAlphaTest;
-    };
+      class TextureEffectData : public NiRefObject
+      {
+        public:
+          TextureEffectData();
+          virtual ~TextureEffectData();
 
-    float fWaterDepthCameraOffset;
-    float fGeomorphParam;
-    NiColorA pHairTintColor;
-    NiColorA LandBlendParamsA;
-    NiPointer<BSTextureSet> spTextureSet;
-    std::uint16_t iTextureCount;
-    NiPointer<NiTexture> *spTextures[7];
-    std::uint8_t *pSpecularExponent;
-    std::uint16_t usLandscapeTextures;
-    bool *pbGlossMap;
-    NiPointer<BSShaderPPLightingProperty::TangentSpaceData> spTangentSpaceData;
-    float *pTextureSplatVertexData;
-    NiTexturingProperty::ClampMode TextureClampMode;
-    NiPointer<BSShaderPPLightingProperty::TextureEffectData> spTexEffectData;
-    float fRefractionPower;
-    std::int32_t iRefractionFirePeriod;
-    float fParallaxOccMaxPasses;
-    float fParallaxOccScale;
-    float fTerrainTexOffsetX;
-    float fTerrainTexOffsetY;
-    float fTerrainTexFade;
-    float fTerrainDetailTexScale;
-    BSShaderProperty::RenderPass *pRenderDepthPass;
-};
+          NiPointer<NiTexture> spTexture;
+          NiColorA CurrentFillColor;
+          NiColorA CurrentRimColor;
+          NiColorA FillColor;
+          NiColorA RimColor;
+          float fTextureUOffset;
+          float fTextureVOffset;
+          float fEdgeExponent;
+          float fBoundDiameter;
+          D3DBLEND eSrcBlendMode;
+          D3DBLEND eDestBlendMode;
+          D3DBLENDOP eBlendOperation;
+          D3DCMPFUNC eZTestFunction;
+          NiPointer<NiTexture> spBlockOutTexture;
+          std::uint32_t iAlphaTest;
+      };
 
-static_assert(sizeof(BSShaderPPLightingProperty) == 0x108, "BSShaderPPLightingProperty has wrong size");
+      float fWaterDepthCameraOffset;
+      float fGeomorphParam;
+      NiColorA pHairTintColor;
+      NiColorA LandBlendParamsA;
+      NiPointer<BSTextureSet> spTextureSet;
+      std::uint16_t iTextureCount;
+      NiPointer<NiTexture> *spTextures[7];
+      std::uint8_t *pSpecularExponent;
+      std::uint16_t usLandscapeTextures;
+      bool *pbGlossMap;
+      NiPointer<BSShaderPPLightingProperty::TangentSpaceData> spTangentSpaceData;
+      float *pTextureSplatVertexData;
+      NiTexturingProperty::ClampMode TextureClampMode;
+      NiPointer<BSShaderPPLightingProperty::TextureEffectData> spTexEffectData;
+      float fRefractionPower;
+      std::int32_t iRefractionFirePeriod;
+      float fParallaxOccMaxPasses;
+      float fParallaxOccScale;
+      float fTerrainTexOffsetX;
+      float fTerrainTexOffsetY;
+      float fTerrainTexFade;
+      float fTerrainDetailTexScale;
+      BSShaderProperty::RenderPass *pRenderDepthPass;
+  };
+
+  static_assert(sizeof(BSShaderPPLightingProperty) == 0x108, "BSShaderPPLightingProperty has wrong size");
+  
+} // namespace CommonLib

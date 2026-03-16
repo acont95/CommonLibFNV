@@ -1,11 +1,15 @@
 #pragma once
 #include "Gamebryo/NiGeometry.hpp"
 
-class NiTriBasedGeom : public NiGeometry
-{
-  public:
-    NiTriBasedGeom();
-    virtual ~NiTriBasedGeom();
-};
+namespace CommonLib {
 
-static_assert(sizeof(NiTriBasedGeom) == 0xC4, "NiTriBasedGeom has wrong size");
+  class NiTriBasedGeom : public NiGeometry
+  {
+    public:
+      NiTriBasedGeom();
+      virtual ~NiTriBasedGeom();
+  };
+
+  static_assert(sizeof(NiTriBasedGeom) == 0xC4, "NiTriBasedGeom has wrong size");
+  
+} // namespace CommonLib

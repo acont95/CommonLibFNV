@@ -1,14 +1,18 @@
 #pragma once
 
-class BGSListForm;
+namespace CommonLib {
 
-class BGSRepairItemList
-{
-  public:
-    BGSRepairItemList();
-    virtual ~BGSRepairItemList();
+  class BGSListForm;
 
-    BGSListForm *pListForm;
-};
+  class BGSRepairItemList
+  {
+    public:
+      BGSRepairItemList();
+      virtual ~BGSRepairItemList();
 
-static_assert(sizeof(BGSRepairItemList) == 0x8, "BGSRepairItemList has wrong size");
+      BGSListForm *pListForm;
+  };
+
+  static_assert(sizeof(BGSRepairItemList) == 0x8, "BGSRepairItemList has wrong size");
+  
+} // namespace CommonLib

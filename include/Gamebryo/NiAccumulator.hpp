@@ -1,14 +1,18 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
 
-class NiCamera;
+namespace CommonLib {
 
-class NiAccumulator : public NiObject {
-  public:
-    NiAccumulator();
-    ~NiAccumulator();
+  class NiCamera;
 
-    const NiCamera *m_pkCamera;
-};
+  class NiAccumulator : public NiObject {
+    public:
+      NiAccumulator();
+      ~NiAccumulator();
 
-static_assert(sizeof(NiAccumulator) == 0xC, "BSExtraData has wrong size");
+      const NiCamera *m_pkCamera;
+  };
+
+  static_assert(sizeof(NiAccumulator) == 0xC, "BSExtraData has wrong size");
+  
+} // namespace CommonLib

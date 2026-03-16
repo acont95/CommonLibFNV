@@ -3,40 +3,44 @@
 #include "Bethesda/TESBoundObject.hpp"
 #include "Bethesda/TESModel.hpp"
 
-class TESGrass : public TESBoundObject, public TESModel
-{
-  public:
-    TESGrass();
-    ~TESGrass();
+namespace CommonLib {
 
-    enum GRASS_WATER_STATE
-    {
-      GWS_ABOVE_ONLY_ATLEAST = 0x0,
-      GWS_ABOVE_ONLY_ATMOST = 0x1,
-      GWS_BELOW_ONLY_ATLEAST = 0x2,
-      GWS_BELOW_ONLY_ATMOST = 0x3,
-      GWS_BOTH_ATLEAST = 0x4,
-      GWS_BOTH_ATMOST = 0x5,
-      GWS_BOTH_ATMOST_ABOVE = 0x6,
-      GWS_BOTH_ATMOST_BELOW = 0x7,
-      GWS_COUNT = 0x8,
-    };
+  class TESGrass : public TESBoundObject, public TESModel
+  {
+    public:
+      TESGrass();
+      ~TESGrass();
 
-    struct GRASS_DATA
-    {
-      std::uint8_t cDensity;
-      std::uint8_t cMinSlopeDegrees;
-      std::uint8_t cMaxSlopeDegrees;
-      std::uint16_t sDistanceFromWaterLevel;
-      TESGrass::GRASS_WATER_STATE eUnderwater;
-      float fPositionRange;
-      float fHeightRange;
-      float fColorRange;
-      float fWavePeriod;
-      char cFlags;
-    };
+      enum GRASS_WATER_STATE
+      {
+        GWS_ABOVE_ONLY_ATLEAST = 0x0,
+        GWS_ABOVE_ONLY_ATMOST = 0x1,
+        GWS_BELOW_ONLY_ATLEAST = 0x2,
+        GWS_BELOW_ONLY_ATMOST = 0x3,
+        GWS_BOTH_ATLEAST = 0x4,
+        GWS_BOTH_ATMOST = 0x5,
+        GWS_BOTH_ATMOST_ABOVE = 0x6,
+        GWS_BOTH_ATMOST_BELOW = 0x7,
+        GWS_COUNT = 0x8,
+      };
 
-    TESGrass::GRASS_DATA Data;
-};
+      struct GRASS_DATA
+      {
+        std::uint8_t cDensity;
+        std::uint8_t cMinSlopeDegrees;
+        std::uint8_t cMaxSlopeDegrees;
+        std::uint16_t sDistanceFromWaterLevel;
+        TESGrass::GRASS_WATER_STATE eUnderwater;
+        float fPositionRange;
+        float fHeightRange;
+        float fColorRange;
+        float fWavePeriod;
+        char cFlags;
+      };
 
-static_assert(sizeof(TESGrass) == 0x68, "TESGrass has wrong size");
+      TESGrass::GRASS_DATA Data;
+  };
+
+  static_assert(sizeof(TESGrass) == 0x68, "TESGrass has wrong size");
+  
+} // namespace CommonLib

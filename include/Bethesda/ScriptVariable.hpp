@@ -2,14 +2,18 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Types.hpp"
 
-class ScriptVariable
-{
-  public:
-    ScriptVariable();
-    ~ScriptVariable();
+namespace CommonLib {
 
-    SCRIPT_LOCAL data;
-    BSStringT<char> cName;
-};
+  class ScriptVariable
+  {
+    public:
+      ScriptVariable();
+      ~ScriptVariable();
 
-static_assert(sizeof(ScriptVariable) == 0x20);
+      SCRIPT_LOCAL data;
+      BSStringT<char> cName;
+  };
+
+  static_assert(sizeof(ScriptVariable) == 0x20);
+  
+} // namespace CommonLib

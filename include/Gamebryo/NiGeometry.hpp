@@ -3,18 +3,22 @@
 #include "Gamebryo/NiSkinInstance.hpp"
 #include "Gamebryo/NiAVObject.hpp"
 
-class NiShader;
+namespace CommonLib {
 
-class NiGeometry : public NiAVObject
-{
-  public:
-    NiGeometry();
-    ~NiGeometry();
+  class NiShader;
 
-    NiPropertyState m_PropertyState;
-    NiPointer<NiGeometryData> m_spModelData;
-    NiPointer<NiSkinInstance> m_spSkinInstance;
-    NiShader *m_spShader;
-};
+  class NiGeometry : public NiAVObject
+  {
+    public:
+      NiGeometry();
+      ~NiGeometry();
 
-static_assert(sizeof(NiGeometry) == 0xC4, "NiGeometry has wrong size");
+      NiPropertyState m_PropertyState;
+      NiPointer<NiGeometryData> m_spModelData;
+      NiPointer<NiSkinInstance> m_spSkinInstance;
+      NiShader *m_spShader;
+  };
+
+  static_assert(sizeof(NiGeometry) == 0xC4, "NiGeometry has wrong size");
+  
+} // namespace CommonLib

@@ -1,10 +1,14 @@
 #pragma once
 
-class TESChildCell
-{
-  public:
-    TESChildCell();
-    virtual ~TESChildCell();
-};
+namespace CommonLib {
 
-static_assert(sizeof(TESChildCell) == 0x4, "TESChildCell has wrong size");
+  class TESChildCell
+  {
+    public:
+      TESChildCell();
+      virtual ~TESChildCell();
+  };
+
+  static_assert(sizeof(TESChildCell) == 0x4, "TESChildCell has wrong size");
+  
+} // namespace CommonLib

@@ -2,13 +2,17 @@
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Bethesda/NavMeshPtr.hpp"
 
-class NavMeshArray
-{
-  public:
-    NavMeshArray();
-    ~NavMeshArray();
+namespace CommonLib {
 
-    BSSimpleArray<NavMeshPtr, 1024> NavMeshes;
-};
+  class NavMeshArray
+  {
+    public:
+      NavMeshArray();
+      ~NavMeshArray();
 
-static_assert(sizeof(NavMeshArray) == 0x10, "NavMeshArray has wrong size");
+      BSSimpleArray<NavMeshPtr, 1024> NavMeshes;
+  };
+
+  static_assert(sizeof(NavMeshArray) == 0x10, "NavMeshArray has wrong size");
+  
+} // namespace CommonLib

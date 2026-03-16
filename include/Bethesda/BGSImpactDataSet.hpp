@@ -2,15 +2,19 @@
 #include "Bethesda/TESForm.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
 
-class BGSImpactData;
+namespace CommonLib {
 
-class BGSImpactDataSet : public TESForm, public BGSPreloadable
-{
-  public:
-    BGSImpactDataSet();
-    ~BGSImpactDataSet();
+  class BGSImpactData;
 
-    BGSImpactData *ppImpactData[12];
-};
+  class BGSImpactDataSet : public TESForm, public BGSPreloadable
+  {
+    public:
+      BGSImpactDataSet();
+      ~BGSImpactDataSet();
 
-static_assert(sizeof(BGSImpactDataSet) == 0x4C, "BGSImpactDataSet has wrong size");
+      BGSImpactData *ppImpactData[12];
+  };
+
+  static_assert(sizeof(BGSImpactDataSet) == 0x4C, "BGSImpactDataSet has wrong size");
+  
+} // namespace CommonLib

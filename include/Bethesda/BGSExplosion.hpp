@@ -8,41 +8,45 @@
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/BGSPreloadable.hpp"
 
-class TESObjectLIGH;
-class TESSound;
-class BGSImpactDataSet;
+namespace CommonLib {
 
-class BGSExplosion : 
-  public TESBoundObject, 
-  public TESFullName, 
-  public TESModel, 
-  public TESEnchantableForm, 
-  public BGSPreloadable, 
-  public TESImageSpaceModifiableForm 
-{
-  public:
-    BGSExplosion();
-    ~BGSExplosion();
+  class TESObjectLIGH;
+  class TESSound;
+  class BGSImpactDataSet;
 
-    struct BGSExplosionData
-    {
-      float fForce;
-      float fDamage;
-      float fRadius;
-      TESObjectLIGH* pLight;
-      TESSound* pSound1;
-      std::uint32_t iFlags;
-      float fImageSpaceRadius;
-      BGSImpactDataSet* pImpactDataSet;
-      TESSound* pSound2;
-      float fRadiationRads;
-      float fRadiationDissipationTime;
-      float fRadiationRadius;
-      SOUND_LEVEL eSoundLevel;
-    };
+  class BGSExplosion : 
+    public TESBoundObject, 
+    public TESFullName, 
+    public TESModel, 
+    public TESEnchantableForm, 
+    public BGSPreloadable, 
+    public TESImageSpaceModifiableForm 
+  {
+    public:
+      BGSExplosion();
+      ~BGSExplosion();
 
-    TESBoundObject* pImpactPlacedObject;
-    BGSExplosionData Data;
-};
+      struct BGSExplosionData
+      {
+        float fForce;
+        float fDamage;
+        float fRadius;
+        TESObjectLIGH* pLight;
+        TESSound* pSound1;
+        std::uint32_t iFlags;
+        float fImageSpaceRadius;
+        BGSImpactDataSet* pImpactDataSet;
+        TESSound* pSound2;
+        float fRadiationRads;
+        float fRadiationDissipationTime;
+        float fRadiationRadius;
+        SOUND_LEVEL eSoundLevel;
+      };
 
-static_assert(sizeof(BGSExplosion) == 0xA8, "BGSExplosion has wrong size");
+      TESBoundObject* pImpactPlacedObject;
+      BGSExplosionData Data;
+  };
+
+  static_assert(sizeof(BGSExplosion) == 0xA8, "BGSExplosion has wrong size");
+  
+} // namespace CommonLib

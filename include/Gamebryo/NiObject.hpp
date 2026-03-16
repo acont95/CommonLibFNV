@@ -1,11 +1,15 @@
 #pragma once
 #include "Gamebryo/NiRefObject.hpp"
 
-class NiObject : public NiRefObject 
-{
-  public:
-    NiObject();
-    ~NiObject();
-};
+namespace CommonLib {
 
-static_assert(sizeof(NiObject) == 0x8, "NiObject has wrong size");
+  class NiObject : public NiRefObject 
+  {
+    public:
+      NiObject();
+      ~NiObject();
+  };
+
+  static_assert(sizeof(NiObject) == 0x8, "NiObject has wrong size");
+  
+} // namespace CommonLib

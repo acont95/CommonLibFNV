@@ -1,19 +1,23 @@
 #pragma once
 #include <cstdint>
 
-template <typename Key, typename Value>
-class BSMapItem;
+namespace CommonLib {
 
-template <typename Key, typename Value>
-class BSMapBase
-{
-  public:
-    BSMapBase();
-    virtual ~BSMapBase();
+  template <typename Key, typename Value>
+  class BSMapItem;
 
-    std::uint32_t m_uiHashSize;
-    BSMapItem<Key, Value> **m_ppkHashTable;
-    std::uint32_t m_uiCount;
-};
+  template <typename Key, typename Value>
+  class BSMapBase
+  {
+    public:
+      BSMapBase();
+      virtual ~BSMapBase();
 
-static_assert(sizeof(BSMapBase<void*, void*>) == 0x10, "BSMapBase has wrong size");
+      std::uint32_t m_uiHashSize;
+      BSMapItem<Key, Value> **m_ppkHashTable;
+      std::uint32_t m_uiCount;
+  };
+
+  static_assert(sizeof(BSMapBase<void*, void*>) == 0x10, "BSMapBase has wrong size");
+  
+} // namespace CommonLib

@@ -1,10 +1,14 @@
 #pragma once
 
-class NiMemObject
-{
-  public:
-    NiMemObject();
-    ~NiMemObject();
-};
+namespace CommonLib {
 
-static_assert(sizeof(NiMemObject) == 0x1, "NiMemObject has wrong size");
+  class NiMemObject
+  {
+    public:
+      NiMemObject();
+      ~NiMemObject();
+  };
+
+  static_assert(sizeof(NiMemObject) == 0x1, "NiMemObject has wrong size");
+  
+} // namespace CommonLib

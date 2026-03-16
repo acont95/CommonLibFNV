@@ -2,22 +2,26 @@
 #include "Bethesda/BSMultiBoundNode.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
 
-class BSPortal;
-class BSOcclusionPlane;
-class BSCompoundFrustum;
-class ShadowSceneLight;
+namespace CommonLib {
 
-class BSMultiBoundRoom : public BSMultiBoundNode 
-{
-  public:
-    BSMultiBoundRoom();
-    virtual ~BSMultiBoundRoom();
+  class BSPortal;
+  class BSOcclusionPlane;
+  class BSCompoundFrustum;
+  class ShadowSceneLight;
 
-    NiTPointerList<BSPortal *> kPortalList;
-    NiTPointerList<BSOcclusionPlane *> lOccluderList;
-    BSCompoundFrustum *pCompoundFrustum;
-    NiTPointerList<NiPointer<BSMultiBound> > kJoinedMultiBoundList;
-    BSSimpleArray<ShadowSceneLight *,1024> kLights;
-};
+  class BSMultiBoundRoom : public BSMultiBoundNode 
+  {
+    public:
+      BSMultiBoundRoom();
+      virtual ~BSMultiBoundRoom();
 
-static_assert(sizeof(BSMultiBoundRoom) == 0xEC, "BSMultiBoundRoom has wrong size");
+      NiTPointerList<BSPortal *> kPortalList;
+      NiTPointerList<BSOcclusionPlane *> lOccluderList;
+      BSCompoundFrustum *pCompoundFrustum;
+      NiTPointerList<NiPointer<BSMultiBound> > kJoinedMultiBoundList;
+      BSSimpleArray<ShadowSceneLight *,1024> kLights;
+  };
+
+  static_assert(sizeof(BSMultiBoundRoom) == 0xEC, "BSMultiBoundRoom has wrong size");
+  
+} // namespace CommonLib

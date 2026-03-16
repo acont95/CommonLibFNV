@@ -1,16 +1,20 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class Script;
+namespace CommonLib {
 
-class TESScriptableForm : public BaseFormComponent
-{
-  public:
-    TESScriptableForm();
-    virtual ~TESScriptableForm();
+  class Script;
 
-    Script *pFormScript;
-    bool bIsInitialized;
-};
+  class TESScriptableForm : public BaseFormComponent
+  {
+    public:
+      TESScriptableForm();
+      virtual ~TESScriptableForm();
 
-static_assert(sizeof(TESScriptableForm) == 0xC, "TESScriptableForm has wrong size");
+      Script *pFormScript;
+      bool bIsInitialized;
+  };
+
+  static_assert(sizeof(TESScriptableForm) == 0xC, "TESScriptableForm has wrong size");
+    
+} // namespace CommonLib

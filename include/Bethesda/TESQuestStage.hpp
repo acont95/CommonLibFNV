@@ -2,23 +2,27 @@
 #include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 
-class TESQuestStageItem;
+namespace CommonLib {
 
-class QUEST_STAGE_DATA
-{
-  public:
-    std::uint8_t ucIndex;
-    bool bIsDone;
-};
+  class TESQuestStageItem;
 
-class TESQuestStage
-{
-  public:
-    TESQuestStage();
-    ~TESQuestStage();
+  class QUEST_STAGE_DATA
+  {
+    public:
+      std::uint8_t ucIndex;
+      bool bIsDone;
+  };
 
-    QUEST_STAGE_DATA m_Data;
-    BSSimpleList<TESQuestStageItem*> listStageItems;
-};
+  class TESQuestStage
+  {
+    public:
+      TESQuestStage();
+      ~TESQuestStage();
 
-static_assert(sizeof(TESQuestStage) == 0xC, "TESQuestStage has wrong size");
+      QUEST_STAGE_DATA m_Data;
+      BSSimpleList<TESQuestStageItem*> listStageItems;
+  };
+
+  static_assert(sizeof(TESQuestStage) == 0xC, "TESQuestStage has wrong size");
+  
+} // namespace CommonLib

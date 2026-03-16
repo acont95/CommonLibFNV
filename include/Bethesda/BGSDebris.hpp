@@ -4,15 +4,19 @@
 #include "Bethesda/BGSPreloadable.hpp"
 #include "Bethesda/BSSimpleList.hpp"
 
-class BGSDebrisData;
+namespace CommonLib {
 
-class BGSDebris : public TESForm, public BGSPreloadable
-{
-  public:
-    BGSDebris();
-    ~BGSDebris();
+  class BGSDebrisData;
 
-    BSSimpleList<BGSDebrisData*> DataList;
-};
+  class BGSDebris : public TESForm, public BGSPreloadable
+  {
+    public:
+      BGSDebris();
+      ~BGSDebris();
 
-static_assert(sizeof(BGSDebris) == 0x24, "BGSDebris has wrong size");
+      BSSimpleList<BGSDebrisData*> DataList;
+  };
+
+  static_assert(sizeof(BGSDebris) == 0x24, "BGSDebris has wrong size");
+  
+} // namespace CommonLib

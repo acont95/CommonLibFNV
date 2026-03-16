@@ -1,19 +1,23 @@
 #pragma once
 #include <cstdint>
 
-class BSOcclusionQuery;
+namespace CommonLib {
 
-class SunOcclusionTest
-{
-  public:
-    SunOcclusionTest();
-    ~SunOcclusionTest();
+  class BSOcclusionQuery;
 
-    BSOcclusionQuery* pOcclusionQuery;
-    bool bWaiting;
-    float fPercentOccluded;
-    std::uint32_t uiPixelCount;
-    std::uint32_t uiFrameCount;
-};
+  class SunOcclusionTest
+  {
+    public:
+      SunOcclusionTest();
+      ~SunOcclusionTest();
 
-static_assert(sizeof(SunOcclusionTest) == 0x14, "SunOcclusionTest has wrong size");
+      BSOcclusionQuery* pOcclusionQuery;
+      bool bWaiting;
+      float fPercentOccluded;
+      std::uint32_t uiPixelCount;
+      std::uint32_t uiFrameCount;
+  };
+
+  static_assert(sizeof(SunOcclusionTest) == 0x14, "SunOcclusionTest has wrong size");
+  
+} // namespace CommonLib

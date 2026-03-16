@@ -2,14 +2,18 @@
 #include <cstdint>
 #include "Gamebryo/NiPlane.hpp" 
 
-class NiFrustumPlanes
-{
-  public:
-    NiFrustumPlanes();
-    ~NiFrustumPlanes();
+namespace CommonLib {
 
-    NiPlane m_akCullingPlanes[6];
-    std::uint32_t m_uiActivePlanes;
-};
+  class NiFrustumPlanes
+  {
+    public:
+      NiFrustumPlanes();
+      ~NiFrustumPlanes();
 
-static_assert(sizeof(NiFrustumPlanes) == 0x64, "NiFrustumPlanes has wrong size");
+      NiPlane m_akCullingPlanes[6];
+      std::uint32_t m_uiActivePlanes;
+  };
+
+  static_assert(sizeof(NiFrustumPlanes) == 0x64, "NiFrustumPlanes has wrong size");
+  
+} // namespace CommonLib

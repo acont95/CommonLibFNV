@@ -2,13 +2,17 @@
 #include "Types.hpp"
 #include "Bethesda/TESForm.hpp"
 
-class BGSLightingTemplate : public TESForm
-{
-  public:
-    BGSLightingTemplate();
-    virtual ~BGSLightingTemplate();
+namespace CommonLib {
 
-    INTERIOR_DATA Data;
-};
+  class BGSLightingTemplate : public TESForm
+  {
+    public:
+      BGSLightingTemplate();
+      virtual ~BGSLightingTemplate();
 
-static_assert(sizeof(BGSLightingTemplate) == 0x44, "BGSLightingTemplate has wrong size");
+      INTERIOR_DATA Data;
+  };
+
+  static_assert(sizeof(BGSLightingTemplate) == 0x44, "BGSLightingTemplate has wrong size");
+  
+} // namespace CommonLib

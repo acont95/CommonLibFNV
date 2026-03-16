@@ -1,15 +1,19 @@
 #pragma once
 #include <cstdint>
 
-template <typename T>
-class BSStringT {
-  public:
-    BSStringT();
-    ~BSStringT();
+namespace CommonLib {
 
-    T* pString;
-    std::uint16_t sLen;
-    std::uint16_t sMaxLen;
-};
+  template <typename T>
+  class BSStringT {
+    public:
+      BSStringT();
+      ~BSStringT();
 
-static_assert(sizeof(BSStringT<char>) == 0x8, "BSStringT<char> has wrong size");
+      T* pString;
+      std::uint16_t sLen;
+      std::uint16_t sMaxLen;
+  };
+
+  static_assert(sizeof(BSStringT<char>) == 0x8, "BSStringT<char> has wrong size");
+  
+} // namespace CommonLib

@@ -1,15 +1,19 @@
 #pragma once
 #include "Gamebryo/NiMatrix3.hpp"
 
-class NiTransform
-{
-  public:
-    NiTransform();
-    ~NiTransform();
+namespace CommonLib {
 
-    NiMatrix3 m_Rotate;
-    NiPoint3 m_Translate;
-    float m_fScale;
-};
+  class NiTransform
+  {
+    public:
+      NiTransform();
+      ~NiTransform();
 
-static_assert(sizeof(NiTransform) == 0x34, "NiTransform has wrong size");
+      NiMatrix3 m_Rotate;
+      NiPoint3 m_Translate;
+      float m_fScale;
+  };
+
+  static_assert(sizeof(NiTransform) == 0x34, "NiTransform has wrong size");
+  
+} // namespace CommonLib

@@ -1,16 +1,20 @@
 #pragma once
 #include "Gamebryo/NiPoint3.hpp"
 
-class TESObjectREFR;
+namespace CommonLib {
 
-class TeleportLink
-{
-  public:
-    TeleportLink();
-    ~TeleportLink();
+  class TESObjectREFR;
 
-    TESObjectREFR *pDoor;
-    NiPoint3 DoorTeleportLocation;
-};
+  class TeleportLink
+  {
+    public:
+      TeleportLink();
+      ~TeleportLink();
 
-static_assert(sizeof(TeleportLink) == 0x10, "TeleportLink has wrong size");
+      TESObjectREFR *pDoor;
+      NiPoint3 DoorTeleportLocation;
+  };
+
+  static_assert(sizeof(TeleportLink) == 0x10, "TeleportLink has wrong size");
+  
+} // namespace CommonLib

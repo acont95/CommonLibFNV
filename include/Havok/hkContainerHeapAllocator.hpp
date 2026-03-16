@@ -1,10 +1,14 @@
 #pragma once
 
-class hkContainerHeapAllocator
-{
-  public:
-    hkContainerHeapAllocator();
-    ~hkContainerHeapAllocator();
-};
+namespace CommonLib {
 
-static_assert(sizeof(hkContainerHeapAllocator) == 0x1, "hkContainerHeapAllocator has wrong size");
+  class hkContainerHeapAllocator
+  {
+    public:
+      hkContainerHeapAllocator();
+      ~hkContainerHeapAllocator();
+  };
+
+  static_assert(sizeof(hkContainerHeapAllocator) == 0x1, "hkContainerHeapAllocator has wrong size");
+  
+} // namespace CommonLib

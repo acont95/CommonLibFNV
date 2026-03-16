@@ -5,44 +5,48 @@
 #include "Bethesda/TESModel.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class TESClimate : public TESForm
-{
-  public:
-    TESClimate();
-    virtual ~TESClimate();
+namespace CommonLib {
 
-    enum TextureType
-    {
-      TX_SUN = 0x0,
-      TX_GLARE = 0x1,
-      NUM_TEXTURES = 0x2,
-    };
+  class TESClimate : public TESForm
+  {
+    public:
+      TESClimate();
+      virtual ~TESClimate();
 
-    enum HourlyIncrements
-    {
-      HOURLY_INCREMENTS = 0x6,
-    };
+      enum TextureType
+      {
+        TX_SUN = 0x0,
+        TX_GLARE = 0x1,
+        NUM_TEXTURES = 0x2,
+      };
 
-    enum TransTime
-    {
-      SUNRISE_BEGIN = 0x0,
-      SUNRISE_END = 0x1,
-      SUNSET_BEGIN = 0x2,
-      SUNSET_END = 0x3,
-      NUM_TRANS_TIMES = 0x4,
-    };
+      enum HourlyIncrements
+      {
+        HOURLY_INCREMENTS = 0x6,
+      };
 
-    enum MiscData
-    {
-      VOLATILITY = 0x4,
-      MOON_DATA = 0x5,
-      NUM_SLIDERS = 0x6,
-    };
+      enum TransTime
+      {
+        SUNRISE_BEGIN = 0x0,
+        SUNRISE_END = 0x1,
+        SUNSET_BEGIN = 0x2,
+        SUNSET_END = 0x3,
+        NUM_TRANS_TIMES = 0x4,
+      };
 
-    TESModel mNightSky;
-    TESWeatherList weatherList;
-    TESTexture txSkyObjects[2];
-    std::uint8_t ucData[6];
-};
+      enum MiscData
+      {
+        VOLATILITY = 0x4,
+        MOON_DATA = 0x5,
+        NUM_SLIDERS = 0x6,
+      };
 
-static_assert(sizeof(TESClimate) == 0x58, "TESClimate has wrong size");
+      TESModel mNightSky;
+      TESWeatherList weatherList;
+      TESTexture txSkyObjects[2];
+      std::uint8_t ucData[6];
+  };
+
+  static_assert(sizeof(TESClimate) == 0x58, "TESClimate has wrong size");
+  
+} // namespace CommonLib

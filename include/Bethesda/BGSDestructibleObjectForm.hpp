@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class DestructibleObjectData;
+namespace CommonLib {
 
-class BGSDestructibleObjectForm : public BaseFormComponent
-{
-  public:
-    BGSDestructibleObjectForm();
-    ~BGSDestructibleObjectForm();
+  class DestructibleObjectData;
 
-    DestructibleObjectData *pData;
-};
+  class BGSDestructibleObjectForm : public BaseFormComponent
+  {
+    public:
+      BGSDestructibleObjectForm();
+      ~BGSDestructibleObjectForm();
 
-static_assert(sizeof(BGSDestructibleObjectForm) == 0x8);
+      DestructibleObjectData *pData;
+  };
+
+  static_assert(sizeof(BGSDestructibleObjectForm) == 0x8);
+
+} // namespace CommonLib

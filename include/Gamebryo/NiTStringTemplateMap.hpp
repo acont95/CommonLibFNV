@@ -1,14 +1,18 @@
 #pragma once
 #include "Gamebryo/NiTMap.hpp"
 
-template <class TParent, typename T>
-class NiTStringTemplateMap : public TParent
-{
-  public:
-    NiTStringTemplateMap();
-    virtual ~NiTStringTemplateMap();
+namespace CommonLib {
 
-    bool m_bCopy;
-};
+  template <class TParent, typename T>
+  class NiTStringTemplateMap : public TParent
+  {
+    public:
+      NiTStringTemplateMap();
+      virtual ~NiTStringTemplateMap();
 
-static_assert(sizeof(NiTStringTemplateMap<NiTMap<char const*, void*>, void*>) == 0x14, "NiTStringTemplateMap has wrong size");
+      bool m_bCopy;
+  };
+
+  static_assert(sizeof(NiTStringTemplateMap<NiTMap<char const*, void*>, void*>) == 0x14, "NiTStringTemplateMap has wrong size");
+  
+} // namespace CommonLib

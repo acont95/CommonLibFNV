@@ -2,11 +2,15 @@
 #include <cstdint>
 #include "Bethesda/BSTask.hpp"
 
-class IOTask : public BSTask<std::int64_t>
-{
-  public:
-    IOTask();
-    ~IOTask();
-};
+namespace CommonLib {
 
-static_assert(sizeof(IOTask) == 0x18);
+  class IOTask : public BSTask<std::int64_t>
+  {
+    public:
+      IOTask();
+      ~IOTask();
+  };
+
+  static_assert(sizeof(IOTask) == 0x18);
+  
+} // namespace CommonLib

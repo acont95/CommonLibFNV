@@ -1,16 +1,20 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESSound;
+namespace CommonLib {
 
-class BGSPickupPutdownSounds : public BaseFormComponent
-{
-  public:
-    BGSPickupPutdownSounds();
-    virtual ~BGSPickupPutdownSounds();
+  class TESSound;
 
-    TESSound *pPickupSound;
-    TESSound *pPutdownSound;
-};
+  class BGSPickupPutdownSounds : public BaseFormComponent
+  {
+    public:
+      BGSPickupPutdownSounds();
+      virtual ~BGSPickupPutdownSounds();
 
-static_assert(sizeof(BGSPickupPutdownSounds) == 0xC, "BGSPickupPutdownSounds has wrong size");
+      TESSound *pPickupSound;
+      TESSound *pPutdownSound;
+  };
+
+  static_assert(sizeof(BGSPickupPutdownSounds) == 0xC, "BGSPickupPutdownSounds has wrong size");
+  
+} // namespace CommonLib

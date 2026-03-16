@@ -2,14 +2,18 @@
 #include <Windows.h>
 #include <cstdint>
 
-class NiCriticalSection
-{
-  public:
-    NiCriticalSection();
-    ~NiCriticalSection();
+namespace CommonLib {
 
-    CRITICAL_SECTION m_kCriticalSection;
-    std::uint8_t pad01[104];
-};
+  class NiCriticalSection
+  {
+    public:
+      NiCriticalSection();
+      ~NiCriticalSection();
 
-static_assert(sizeof(NiCriticalSection) == 0x80, "NiCriticalSection has wrong size");
+      CRITICAL_SECTION m_kCriticalSection;
+      std::uint8_t pad01[104];
+  };
+
+  static_assert(sizeof(NiCriticalSection) == 0x80, "NiCriticalSection has wrong size");
+  
+} // namespace CommonLib

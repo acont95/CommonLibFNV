@@ -2,13 +2,17 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESTexture : public BaseFormComponent
-{
-  public:
-    TESTexture();
-    ~TESTexture();
+namespace CommonLib {
 
-    BSStringT<char> TextureName;
-};
+  class TESTexture : public BaseFormComponent
+  {
+    public:
+      TESTexture();
+      ~TESTexture();
 
-static_assert(sizeof(TESTexture) == 0xC, "TESTexture has wrong size");
+      BSStringT<char> TextureName;
+  };
+
+  static_assert(sizeof(TESTexture) == 0xC, "TESTexture has wrong size");
+  
+} // namespace CommonLib

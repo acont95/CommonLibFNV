@@ -3,16 +3,20 @@
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/MagicSystem.hpp"
 
-class EnchantmentItem;
+namespace CommonLib {
 
-class TESEnchantableForm : public BaseFormComponent {
-  public:
-    TESEnchantableForm();
-    ~TESEnchantableForm();
+  class EnchantmentItem;
 
-    EnchantmentItem* pFormEnchanting;
-    std::uint16_t iAmountofEnchantment;
-    MagicSystem::CastingType eCastingType;
-};
+  class TESEnchantableForm : public BaseFormComponent {
+    public:
+      TESEnchantableForm();
+      ~TESEnchantableForm();
 
-static_assert(sizeof(TESEnchantableForm) == 0x10, "TESEnchantableForm has wrong size");
+      EnchantmentItem* pFormEnchanting;
+      std::uint16_t iAmountofEnchantment;
+      MagicSystem::CastingType eCastingType;
+  };
+
+  static_assert(sizeof(TESEnchantableForm) == 0x10, "TESEnchantableForm has wrong size");
+    
+} // namespace CommonLib

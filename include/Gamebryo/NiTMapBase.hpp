@@ -3,26 +3,30 @@
 #include "Gamebryo/NiMemObject.hpp"
 #include "Gamebryo/NiTDefaultAllocator.hpp"
 
-class TESForm;
-template <typename Key, typename Value>
-class NiTMapItem;
+namespace CommonLib {
 
-template <class TAllocator, typename Key, typename Value>
-class NiTMapBase : public NiMemObject
-{
-  public:
-    NiTMapBase();
-    virtual ~NiTMapBase();
+  class TESForm;
+  template <typename Key, typename Value>
+  class NiTMapItem;
 
-    class AntiBloatAllocator : public TAllocator
-    {
-      public:
-        std::uint32_t m_uiCount;
-    };
+  template <class TAllocator, typename Key, typename Value>
+  class NiTMapBase : public NiMemObject
+  {
+    public:
+      NiTMapBase();
+      virtual ~NiTMapBase();
 
-    std::uint32_t m_uiHashSize;
-    NiTMapItem<std::uint32_t, TESForm*>** m_ppkHashTable;
-    AntiBloatAllocator m_kAllocator;
-};
+      class AntiBloatAllocator : public TAllocator
+      {
+        public:
+          std::uint32_t m_uiCount;
+      };
 
-static_assert(sizeof(NiTMapBase<NiTDefaultAllocator<void*>, void*, void*>) == 0x10, "NiTMapBase has wrong size");  
+      std::uint32_t m_uiHashSize;
+      NiTMapItem<std::uint32_t, TESForm*>** m_ppkHashTable;
+      AntiBloatAllocator m_kAllocator;
+  };
+
+  static_assert(sizeof(NiTMapBase<NiTDefaultAllocator<void*>, void*, void*>) == 0x10, "NiTMapBase has wrong size");  
+  
+} // namespace CommonLib

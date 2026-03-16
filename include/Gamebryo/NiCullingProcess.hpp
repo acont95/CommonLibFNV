@@ -3,20 +3,24 @@
 #include "Gamebryo/NiFrustum.hpp"
 #include "Gamebryo/NiFrustumPlanes.hpp"
 
-class NiVisibleArray;
-class NiCamera;
+namespace CommonLib {
 
-class NiCullingProcess : public NiMemObject
-{
-  public:
-    NiCullingProcess();
-    virtual ~NiCullingProcess();
+  class NiVisibleArray;
+  class NiCamera;
 
-    const bool m_bUseVirtualAppend;
-    NiVisibleArray* m_pkVisibleSet;
-    const NiCamera* m_pkCamera;
-    NiFrustum m_kFrustum;
-    NiFrustumPlanes m_kPlanes;
-};
+  class NiCullingProcess : public NiMemObject
+  {
+    public:
+      NiCullingProcess();
+      virtual ~NiCullingProcess();
 
-static_assert(sizeof(NiCullingProcess) == 0x90, "NiCullingProcess has wrong size");
+      const bool m_bUseVirtualAppend;
+      NiVisibleArray* m_pkVisibleSet;
+      const NiCamera* m_pkCamera;
+      NiFrustum m_kFrustum;
+      NiFrustumPlanes m_kPlanes;
+  };
+
+  static_assert(sizeof(NiCullingProcess) == 0x90, "NiCullingProcess has wrong size");
+  
+} // namespace CommonLib

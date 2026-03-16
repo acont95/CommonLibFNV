@@ -1,12 +1,16 @@
 #pragma once
 
-class TESWeightForm
-{
-  public:
-    TESWeightForm();
-    virtual ~TESWeightForm();
+namespace CommonLib {
 
-    float fWeight;
-};
+  class TESWeightForm
+  {
+    public:
+      TESWeightForm();
+      virtual ~TESWeightForm();
 
-static_assert(sizeof(TESWeightForm) == 0x8, "TESWeightForm has wrong size");
+      float fWeight;
+  };
+
+  static_assert(sizeof(TESWeightForm) == 0x8, "TESWeightForm has wrong size");
+  
+} // namespace CommonLib

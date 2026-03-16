@@ -10,37 +10,41 @@
 #include "Bethesda/BGSDestructibleObjectForm.hpp"
 #include "Gamebryo/NiColor.hpp"
 
-class TESSound;
+namespace CommonLib {
 
-class TESObjectLIGH : 
-    public TESBoundAnimObject, 
-    public TESFullName, 
-    public TESModelTextureSwap, 
-    public TESIcon, 
-    public BGSMessageIcon, 
-    public TESScriptableForm, 
-    public TESWeightForm, 
-    public TESValueForm, 
-    public BGSDestructibleObjectForm
-{
-  public:
-    TESObjectLIGH();
-    virtual ~TESObjectLIGH();
+  class TESSound;
 
-    struct OBJ_LIGH
-    {
-      std::int32_t time;
-      std::uint32_t radius;
-      std::uint32_t color;
-      std::uint32_t flags;
-      float fFallOffExponent;
-      float fFOV;
-    };
+  class TESObjectLIGH : 
+      public TESBoundAnimObject, 
+      public TESFullName, 
+      public TESModelTextureSwap, 
+      public TESIcon, 
+      public BGSMessageIcon, 
+      public TESScriptableForm, 
+      public TESWeightForm, 
+      public TESValueForm, 
+      public BGSDestructibleObjectForm
+  {
+    public:
+      TESObjectLIGH();
+      virtual ~TESObjectLIGH();
 
-    OBJ_LIGH data;
-    float fFade;
-    TESSound* m_pSound;
-    NiColor EmittanceColor;
-};
+      struct OBJ_LIGH
+      {
+        std::int32_t time;
+        std::uint32_t radius;
+        std::uint32_t color;
+        std::uint32_t flags;
+        float fFallOffExponent;
+        float fFOV;
+      };
 
-static_assert(sizeof(TESObjectLIGH) == 0xC8, "TESObjectLIGH has wrong size");
+      OBJ_LIGH data;
+      float fFade;
+      TESSound* m_pSound;
+      NiColor EmittanceColor;
+  };
+
+  static_assert(sizeof(TESObjectLIGH) == 0xC8, "TESObjectLIGH has wrong size");
+  
+} // namespace CommonLib

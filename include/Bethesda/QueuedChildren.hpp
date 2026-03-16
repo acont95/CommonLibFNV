@@ -3,13 +3,17 @@
 #include "Bethesda/QueuedFile.hpp"
 #include "Bethesda/BSSimpleArray.hpp"
 
-class QueuedChildren : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
-{
-  public:
-    QueuedChildren();
-    ~QueuedChildren();
+namespace CommonLib {
 
-    volatile std::uint32_t iNumChildrenFinished;
-};
+  class QueuedChildren : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
+  {
+    public:
+      QueuedChildren();
+      ~QueuedChildren();
 
-static_assert(sizeof(QueuedChildren) == 0x14);
+      volatile std::uint32_t iNumChildrenFinished;
+  };
+
+  static_assert(sizeof(QueuedChildren) == 0x14);
+  
+} // namespace CommonLib

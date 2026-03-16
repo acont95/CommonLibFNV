@@ -2,16 +2,20 @@
 #include "Bethesda/BSPortalSharedNode.hpp"
 #include "Bethesda/BSOcclusionPlane.hpp"
 
-class BSMultiBoundRoom;
+namespace CommonLib {
 
-class BSPortal : public BSOcclusionPlane
-{
-  public:
-    BSPortal();
-    virtual ~BSPortal();
+  class BSMultiBoundRoom;
 
-    BSMultiBoundRoom *pMultiBoundRoom[2];
-    NiPointer<BSPortalSharedNode> spSharedGeometry;
-};
+  class BSPortal : public BSOcclusionPlane
+  {
+    public:
+      BSPortal();
+      virtual ~BSPortal();
 
-static_assert(sizeof(BSPortal) == 0x108, "BSPortal has wrong size");
+      BSMultiBoundRoom *pMultiBoundRoom[2];
+      NiPointer<BSPortalSharedNode> spSharedGeometry;
+  };
+
+  static_assert(sizeof(BSPortal) == 0x108, "BSPortal has wrong size");
+  
+} // namespace CommonLib

@@ -2,32 +2,36 @@
 #include <cstdint>
 #include "Gamebryo/NiTPointerAllocator.hpp"
 
-class NiGeometry;
+namespace CommonLib {
 
-template <class TAllocator, typename T>
-class BSTPersistentList
-{
-  public:
-    BSTPersistentList();
-    virtual ~BSTPersistentList();
+  class NiGeometry;
 
-    struct ListItem
-    {
-      ListItem *pNext;
-      ListItem *pPrev;
-      NiGeometry *tElement;
-    };
+  template <class TAllocator, typename T>
+  class BSTPersistentList
+  {
+    public:
+      BSTPersistentList();
+      virtual ~BSTPersistentList();
 
-    class AntiBloatAllocator : public TAllocator
-    {
-      std::uint32_t uiCount;
-    };
+      struct ListItem
+      {
+        ListItem *pNext;
+        ListItem *pPrev;
+        NiGeometry *tElement;
+      };
+
+      class AntiBloatAllocator : public TAllocator
+      {
+        std::uint32_t uiCount;
+      };
 
 
-    ListItem *pHead;
-    ListItem *pTail;
-    ListItem *pNextFreeItem;
-    AntiBloatAllocator Allocator;
-};
+      ListItem *pHead;
+      ListItem *pTail;
+      ListItem *pNextFreeItem;
+      AntiBloatAllocator Allocator;
+  };
 
-static_assert(sizeof(BSTPersistentList<NiTPointerAllocator<std::int32_t>, void*>) == 0x14, "BSTPersistentList has wrong size");
+  static_assert(sizeof(BSTPersistentList<NiTPointerAllocator<std::int32_t>, void*>) == 0x14, "BSTPersistentList has wrong size");
+  
+} // namespace CommonLib

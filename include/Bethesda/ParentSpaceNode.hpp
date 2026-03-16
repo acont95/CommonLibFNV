@@ -1,17 +1,21 @@
 #pragma once
 
-class TESWorldSpace;
-class TESObjectCELL;
+namespace CommonLib {
 
-class ParentSpaceNode
-{
-  public:
-    ParentSpaceNode();
-    ~ParentSpaceNode();
+  class TESWorldSpace;
+  class TESObjectCELL;
 
-    bool bWorldSpace;
-    TESWorldSpace *pWorldSpace;
-    TESObjectCELL *pInteriorCell;
-};
+  class ParentSpaceNode
+  {
+    public:
+      ParentSpaceNode();
+      ~ParentSpaceNode();
 
-static_assert(sizeof(ParentSpaceNode) == 0xC, "ParentSpaceNode has wrong size");
+      bool bWorldSpace;
+      TESWorldSpace *pWorldSpace;
+      TESObjectCELL *pInteriorCell;
+  };
+
+  static_assert(sizeof(ParentSpaceNode) == 0xC, "ParentSpaceNode has wrong size");
+  
+} // namespace CommonLib

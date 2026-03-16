@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Bethesda/bhkWorldObject.hpp"
 
-class bhkPhantom : public bhkWorldObject
-{
-  public:
-    bhkPhantom();
-    ~bhkPhantom();
+namespace CommonLib {
 
-    std::uint8_t cFlags;
-};
+  class bhkPhantom : public bhkWorldObject
+  {
+    public:
+      bhkPhantom();
+      ~bhkPhantom();
 
-static_assert(sizeof(bhkPhantom) == 0x18, "bhkPhantom has wrong size");
+      std::uint8_t cFlags;
+  };
+
+  static_assert(sizeof(bhkPhantom) == 0x18, "bhkPhantom has wrong size");
+  
+} // namespace CommonLib

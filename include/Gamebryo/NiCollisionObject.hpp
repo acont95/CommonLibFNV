@@ -1,15 +1,19 @@
 #pragma once
 #include "Gamebryo/NiObject.hpp"
 
-class NiAVObject;
+namespace CommonLib {
 
-class NiCollisionObject : public NiObject
-{
-  public:
-    NiCollisionObject();
-    ~NiCollisionObject();
+  class NiAVObject;
 
-    NiAVObject* m_pkSceneObject;
-};
+  class NiCollisionObject : public NiObject
+  {
+    public:
+      NiCollisionObject();
+      ~NiCollisionObject();
 
-static_assert(sizeof(NiCollisionObject) == 0xC, "NiCollisionObject has wrong size");
+      NiAVObject* m_pkSceneObject;
+  };
+
+  static_assert(sizeof(NiCollisionObject) == 0xC, "NiCollisionObject has wrong size");
+  
+} // namespace CommonLib

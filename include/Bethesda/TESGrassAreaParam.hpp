@@ -1,14 +1,18 @@
 #pragma once
 #include "Bethesda/TallGrassShaderProperty.hpp"
 
-class TESGrassAreaParam
-{
-  public:
-    TESGrassAreaParam();
-    ~TESGrassAreaParam();
+namespace CommonLib {
 
-    TallGrassShaderProperty::GrassParam kGrassParam;
-    float pfDensity[9];
-};
+  class TESGrassAreaParam
+  {
+    public:
+      TESGrassAreaParam();
+      ~TESGrassAreaParam();
 
-static_assert(sizeof(TESGrassAreaParam) == 0x44, "TESGrassAreaParam has wrong size");
+      TallGrassShaderProperty::GrassParam kGrassParam;
+      float pfDensity[9];
+  };
+
+  static_assert(sizeof(TESGrassAreaParam) == 0x44, "TESGrassAreaParam has wrong size");
+  
+} // namespace CommonLib

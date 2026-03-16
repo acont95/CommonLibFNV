@@ -7,30 +7,34 @@
 #include "Bethesda/TESCondition.hpp"
 #include "Bethesda/ScriptLocals.hpp"
 
-class TESQuestStage;
-class BGSQuestObjective;
+namespace CommonLib {
 
-class QUEST_DATA
-{
-  public:
-    std::uint8_t ucFlags;
-    std::uint8_t ucPriority;
-    float fQuestDelayTime;
-};
+  class TESQuestStage;
+  class BGSQuestObjective;
 
-class TESQuest : public TESForm, public TESScriptableForm, public TESIcon, public TESFullName
-{
-  public:
-    TESQuest();
-    virtual ~TESQuest();
+  class QUEST_DATA
+  {
+    public:
+      std::uint8_t ucFlags;
+      std::uint8_t ucPriority;
+      float fQuestDelayTime;
+  };
 
-    QUEST_DATA data;
-    BSSimpleList<TESQuestStage*> m_listStages;
-    BSSimpleList<BGSQuestObjective*> m_listObjectives;
-    TESCondition objConditions;
-    ScriptLocals *pScriptLocals;
-    std::uint8_t cCurrentStage;
-    BSStringT<char> cFormEditorID;
-};
+  class TESQuest : public TESForm, public TESScriptableForm, public TESIcon, public TESFullName
+  {
+    public:
+      TESQuest();
+      virtual ~TESQuest();
 
-static_assert(sizeof(TESQuest) == 0x6C, "TESQuest has wrong size");
+      QUEST_DATA data;
+      BSSimpleList<TESQuestStage*> m_listStages;
+      BSSimpleList<BGSQuestObjective*> m_listObjectives;
+      TESCondition objConditions;
+      ScriptLocals *pScriptLocals;
+      std::uint8_t cCurrentStage;
+      BSStringT<char> cFormEditorID;
+  };
+
+  static_assert(sizeof(TESQuest) == 0x6C, "TESQuest has wrong size");
+  
+} // namespace CommonLib

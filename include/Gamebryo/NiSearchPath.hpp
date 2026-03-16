@@ -1,15 +1,19 @@
 #pragma once
 #include <cstdint>
 
-class NiSearchPath
-{
-  public:
-    NiSearchPath();
-    virtual ~NiSearchPath();
+namespace CommonLib {
 
-    std::uint32_t m_uiNextPath;
-    char m_acFilePath[260];
-    char m_acReferencePath[260];
-};
+  class NiSearchPath
+  {
+    public:
+      NiSearchPath();
+      virtual ~NiSearchPath();
 
-static_assert(sizeof(NiSearchPath) == 0x210, "NiSearchPath has wrong size");
+      std::uint32_t m_uiNextPath;
+      char m_acFilePath[260];
+      char m_acReferencePath[260];
+  };
+
+  static_assert(sizeof(NiSearchPath) == 0x210, "NiSearchPath has wrong size");
+  
+} // namespace CommonLib

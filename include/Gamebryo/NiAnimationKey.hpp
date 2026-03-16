@@ -1,35 +1,39 @@
 #pragma once
 #include <cstdint>
 
-class NiAnimationKey
-{
-  public:
-    NiAnimationKey();
-    ~NiAnimationKey();
+namespace CommonLib {
 
-    enum KeyContent
-    {
-      FLOATKEY = 0x0,
-      POSKEY = 0x1,
-      ROTKEY = 0x2,
-      COLORKEY = 0x3,
-      TEXTKEY = 0x4,
-      BOOLKEY = 0x5,
-      NUMKEYCONTENTS = 0x6,
-    };
+  class NiAnimationKey
+  {
+    public:
+      NiAnimationKey();
+      ~NiAnimationKey();
 
-    enum KeyType
-    {
-      NOINTERP = 0x0,
-      LINKEY = 0x1,
-      BEZKEY = 0x2,
-      TCBKEY = 0x3,
-      EULERKEY = 0x4,
-      STEPKEY = 0x5,
-      NUMKEYTYPES = 0x6,
-    };
+      enum KeyContent
+      {
+        FLOATKEY = 0x0,
+        POSKEY = 0x1,
+        ROTKEY = 0x2,
+        COLORKEY = 0x3,
+        TEXTKEY = 0x4,
+        BOOLKEY = 0x5,
+        NUMKEYCONTENTS = 0x6,
+      };
 
-    float m_fTime;
-};
+      enum KeyType
+      {
+        NOINTERP = 0x0,
+        LINKEY = 0x1,
+        BEZKEY = 0x2,
+        TCBKEY = 0x3,
+        EULERKEY = 0x4,
+        STEPKEY = 0x5,
+        NUMKEYTYPES = 0x6,
+      };
 
-static_assert(sizeof(NiAnimationKey) == 0x4, "NiAnimationKey has wrong size");
+      float m_fTime;
+  };
+
+  static_assert(sizeof(NiAnimationKey) == 0x4, "NiAnimationKey has wrong size");
+  
+} // namespace CommonLib

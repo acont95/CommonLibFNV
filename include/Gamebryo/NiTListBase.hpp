@@ -3,25 +3,29 @@
 #include "Gamebryo/NiMemObject.hpp"
 #include "Gamebryo/NiTDefaultAllocator.hpp"
 
-template <typename T>
-class NiTListItem;
+namespace CommonLib {
 
-template <class TAllocator, typename T>
-class NiTListBase : public NiMemObject
-{
-  public:
-    NiTListBase();
-    ~NiTListBase();
+  template <typename T>
+  class NiTListItem;
 
-    class AntiBloatAllocator : public TAllocator
-    {
-      public:
-        std::uint32_t m_uiCount;
-    };
+  template <class TAllocator, typename T>
+  class NiTListBase : public NiMemObject
+  {
+    public:
+      NiTListBase();
+      ~NiTListBase();
 
-    NiTListItem<T>* m_pkHead;
-    NiTListItem<T>* m_pkTail;
-    AntiBloatAllocator m_kAllocator;
-};
+      class AntiBloatAllocator : public TAllocator
+      {
+        public:
+          std::uint32_t m_uiCount;
+      };
 
-static_assert(sizeof(NiTListBase<NiTDefaultAllocator<void*>, void*>) == 0xC, "NiTListBase has wrong size");
+      NiTListItem<T>* m_pkHead;
+      NiTListItem<T>* m_pkTail;
+      AntiBloatAllocator m_kAllocator;
+  };
+
+  static_assert(sizeof(NiTListBase<NiTDefaultAllocator<void*>, void*>) == 0xC, "NiTListBase has wrong size");
+  
+} // namespace CommonLib

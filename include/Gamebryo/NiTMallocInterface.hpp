@@ -1,11 +1,15 @@
 #pragma once
 
-template <typename T>
-class NiTMallocInterface
-{
-  public:
-    NiTMallocInterface();
-    ~NiTMallocInterface();
-};
+namespace CommonLib {
 
-static_assert(sizeof(NiTMallocInterface<void *>) == 0x1, "NiTMallocInterface has wrong size");
+  template <typename T>
+  class NiTMallocInterface
+  {
+    public:
+      NiTMallocInterface();
+      ~NiTMallocInterface();
+  };
+
+  static_assert(sizeof(NiTMallocInterface<void *>) == 0x1, "NiTMallocInterface has wrong size");
+  
+} // namespace CommonLib

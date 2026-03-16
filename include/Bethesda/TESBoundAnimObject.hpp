@@ -1,11 +1,15 @@
 #pragma once
 #include "Bethesda/TESBoundObject.hpp"
 
-class TESBoundAnimObject : public TESBoundObject
-{
-  public:
-    TESBoundAnimObject();
-    ~TESBoundAnimObject();
-};
+namespace CommonLib {
 
-static_assert(sizeof(TESBoundAnimObject) == 0x30, "TESBoundAnimObject has wrong size");
+  class TESBoundAnimObject : public TESBoundObject
+  {
+    public:
+      TESBoundAnimObject();
+      ~TESBoundAnimObject();
+  };
+
+  static_assert(sizeof(TESBoundAnimObject) == 0x30, "TESBoundAnimObject has wrong size");
+  
+} // namespace CommonLib

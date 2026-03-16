@@ -4,14 +4,18 @@
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/TESTextureList.hpp"
 
-class TESModel : public BaseFormComponent {
-  public:
-    TESModel();
-    ~TESModel();
+namespace CommonLib {
 
-    BSStringT<char> cModel;
-    TESTextureList TextureList;
-    std::uint8_t cFlags;
-};
+  class TESModel : public BaseFormComponent {
+    public:
+      TESModel();
+      ~TESModel();
 
-static_assert(sizeof(TESModel) == 0x18, "TESModel has wrong size");
+      BSStringT<char> cModel;
+      TESTextureList TextureList;
+      std::uint8_t cFlags;
+  };
+
+  static_assert(sizeof(TESModel) == 0x18, "TESModel has wrong size");
+
+} // namespace CommonLib

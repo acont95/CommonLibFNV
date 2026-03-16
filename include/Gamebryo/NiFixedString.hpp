@@ -1,11 +1,15 @@
 #pragma once
 
-class NiFixedString {
-  public:
-    NiFixedString();
-    ~NiFixedString();
+namespace CommonLib {
 
-    char *m_kHandle;
-};
+  class NiFixedString {
+    public:
+      NiFixedString();
+      ~NiFixedString();
 
-static_assert(sizeof(NiFixedString) == 0x4, "NiFixedString has wrong size");
+      char *m_kHandle;
+  };
+
+  static_assert(sizeof(NiFixedString) == 0x4, "NiFixedString has wrong size");
+  
+} // namespace CommonLib

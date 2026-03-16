@@ -1,19 +1,23 @@
 #pragma once
 #include "Bethesda/BSTempEffect.hpp"
 
-class ActiveEffect;
-class TESObjectREFR;
+namespace CommonLib {
 
-class MagicHitEffect : public BSTempEffect
-{
-  public:
-    MagicHitEffect();
-    ~MagicHitEffect();
+  class ActiveEffect;
+  class TESObjectREFR;
 
-    ActiveEffect *pEffect;
-    TESObjectREFR *pTarget;
-    float fAge;
-    bool bFinished;
-};
+  class MagicHitEffect : public BSTempEffect
+  {
+    public:
+      MagicHitEffect();
+      ~MagicHitEffect();
 
-static_assert(sizeof(MagicHitEffect) == 0x28, "MagicHitEffect has wrong size");
+      ActiveEffect *pEffect;
+      TESObjectREFR *pTarget;
+      float fAge;
+      bool bFinished;
+  };
+
+  static_assert(sizeof(MagicHitEffect) == 0x28, "MagicHitEffect has wrong size");
+  
+} // namespace CommonLib

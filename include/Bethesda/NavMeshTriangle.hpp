@@ -1,15 +1,19 @@
 #pragma once
 #include <cstdint>
 
-class NavMeshTriangle
-{
-  public:
-    NavMeshTriangle();
-    ~NavMeshTriangle();
+namespace CommonLib {
 
-    std::uint16_t Vertices[3];
-    std::uint16_t Triangles[3];
-    std::uint32_t TriangleFlags;
-};
+  class NavMeshTriangle
+  {
+    public:
+      NavMeshTriangle();
+      ~NavMeshTriangle();
 
-static_assert(sizeof(NavMeshTriangle) == 0x10, "NavMeshTriangle has wrong size");
+      std::uint16_t Vertices[3];
+      std::uint16_t Triangles[3];
+      std::uint32_t TriangleFlags;
+  };
+
+  static_assert(sizeof(NavMeshTriangle) == 0x10, "NavMeshTriangle has wrong size");
+  
+} // namespace CommonLib

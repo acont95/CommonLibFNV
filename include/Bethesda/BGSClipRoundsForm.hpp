@@ -2,13 +2,17 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 
-class BGSClipRoundsForm : public BaseFormComponent 
-{
-  public:
-    BGSClipRoundsForm();
-    virtual ~BGSClipRoundsForm();
+namespace CommonLib {
 
-    std::uint8_t cClipRounds;
-};
+  class BGSClipRoundsForm : public BaseFormComponent 
+  {
+    public:
+      BGSClipRoundsForm();
+      virtual ~BGSClipRoundsForm();
 
-static_assert(sizeof(BGSClipRoundsForm) == 0x8, "BGSClipRoundsForm has wrong size");
+      std::uint8_t cClipRounds;
+  };
+
+  static_assert(sizeof(BGSClipRoundsForm) == 0x8, "BGSClipRoundsForm has wrong size");
+  
+} // namespace CommonLib

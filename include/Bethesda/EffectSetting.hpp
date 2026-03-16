@@ -7,49 +7,53 @@
 #include "Bethesda/TESDescription.hpp"
 #include "Bethesda/EffectArchetypes.hpp"
 
-class TESObjectLIGH;
-class TESEffectShader;
-class TESSound;
+namespace CommonLib {
 
-class EffectSetting : 
-  public TESForm, 
-  public TESModel, 
-  public TESDescription, 
-  public TESFullName, 
-  public TESIcon
-{
-  public:
-    EffectSetting();
-    ~EffectSetting();
+  class TESObjectLIGH;
+  class TESEffectShader;
+  class TESSound;
 
-    struct EffectSettingData
-    {
-      std::uint32_t iFlags;
-      float fBaseCost;
-      TESForm* pAssociatedItem;
-      ActorValue::Index iAssociatedSkill;
-      ActorValue::Index iResistVariable;
-      std::int16_t iNumCounterEffects;
-      TESObjectLIGH *pLight;
-      float fSpeed;
-      TESEffectShader* pEffectShader;
-      TESEffectShader* pEnchantEffect;
-      TESSound* pCastSound;
-      TESSound* pBoltSound;
-      TESSound* pHitSound;
-      TESSound* pAreaSound;
-      float fCEEnchantFactor;
-      float fCEBarterFactor;
-      EffectArchetypes::ArchetypeID eArchetype;
-      ActorValue::Index eAssociatedActorValue;
-    };
+  class EffectSetting : 
+    public TESForm, 
+    public TESModel, 
+    public TESDescription, 
+    public TESFullName, 
+    public TESIcon
+  {
+    public:
+      EffectSetting();
+      ~EffectSetting();
 
-    bool (__cdecl *pFilterValidationFunction)(EffectSetting*, void*);
-    void *pFilterValidationItem;
-    EffectSetting::EffectSettingData data;
-    BSSimpleList<EffectSetting*> counterEffects;
-    std::int32_t iEffectLoadedCount;
-    std::int32_t iAssociatedItemLoadedCount;
-};
+      struct EffectSettingData
+      {
+        std::uint32_t iFlags;
+        float fBaseCost;
+        TESForm* pAssociatedItem;
+        ActorValue::Index iAssociatedSkill;
+        ActorValue::Index iResistVariable;
+        std::int16_t iNumCounterEffects;
+        TESObjectLIGH *pLight;
+        float fSpeed;
+        TESEffectShader* pEffectShader;
+        TESEffectShader* pEnchantEffect;
+        TESSound* pCastSound;
+        TESSound* pBoltSound;
+        TESSound* pHitSound;
+        TESSound* pAreaSound;
+        float fCEEnchantFactor;
+        float fCEBarterFactor;
+        EffectArchetypes::ArchetypeID eArchetype;
+        ActorValue::Index eAssociatedActorValue;
+      };
 
-static_assert(sizeof(EffectSetting) == 0xB0, "EffectSetting has wrong size");
+      bool (__cdecl *pFilterValidationFunction)(EffectSetting*, void*);
+      void *pFilterValidationItem;
+      EffectSetting::EffectSettingData data;
+      BSSimpleList<EffectSetting*> counterEffects;
+      std::int32_t iEffectLoadedCount;
+      std::int32_t iAssociatedItemLoadedCount;
+  };
+
+  static_assert(sizeof(EffectSetting) == 0xB0, "EffectSetting has wrong size");
+  
+} // namespace CommonLib

@@ -1,16 +1,20 @@
 #pragma once
 #include "Bethesda/QueuedFile.hpp"
 
-class BSFileEntry;
+namespace CommonLib {
 
-class QueuedFileEntry : public QueuedFile
-{
-  public:
-    QueuedFileEntry();
-    ~QueuedFileEntry();
+  class BSFileEntry;
 
-    char* pFileName;
-    BSFileEntry* pFileEntry;
-};
+  class QueuedFileEntry : public QueuedFile
+  {
+    public:
+      QueuedFileEntry();
+      ~QueuedFileEntry();
 
-static_assert(sizeof(QueuedFileEntry) == 0x30, "QueuedFileEntry has wrong size");
+      char* pFileName;
+      BSFileEntry* pFileEntry;
+  };
+
+  static_assert(sizeof(QueuedFileEntry) == 0x30, "QueuedFileEntry has wrong size");
+  
+} // namespace CommonLib

@@ -4,22 +4,26 @@
 #include "Havok/hkVector4.hpp"
 #include "Havok/hkContainerHeapAllocator.hpp"
 
-class hkGeometry
-{
-  public:
-    hkGeometry();
-    ~hkGeometry();
+namespace CommonLib {
 
-    struct Triangle
-    {
-      std::int32_t m_a;
-      std::int32_t m_b;
-      std::int32_t m_c;
-      std::int32_t m_material;
-    };
+  class hkGeometry
+  {
+    public:
+      hkGeometry();
+      ~hkGeometry();
 
-    hkArray<hkVector4, hkContainerHeapAllocator> m_vertices;
-    hkArray<Triangle, hkContainerHeapAllocator> m_triangles;
-};
+      struct Triangle
+      {
+        std::int32_t m_a;
+        std::int32_t m_b;
+        std::int32_t m_c;
+        std::int32_t m_material;
+      };
 
-static_assert(sizeof(hkGeometry) == 0x18, "hkGeometry has wrong size");
+      hkArray<hkVector4, hkContainerHeapAllocator> m_vertices;
+      hkArray<Triangle, hkContainerHeapAllocator> m_triangles;
+  };
+
+  static_assert(sizeof(hkGeometry) == 0x18, "hkGeometry has wrong size");
+  
+} // namespace CommonLib

@@ -2,19 +2,23 @@
 #include "Bethesda/BSSimpleArray.hpp"
 #include "Gamebryo/NiNode.hpp"
 
-class BSCompoundFrustum;
-class BSPortal;
-class ShadowSceneLight;
+namespace CommonLib {
 
-class BSPortalSharedNode : public NiNode
-{
-  public:
-    BSPortalSharedNode();
-    virtual ~BSPortalSharedNode();
+  class BSCompoundFrustum;
+  class BSPortal;
+  class ShadowSceneLight;
 
-    BSCompoundFrustum *pCompoundFrustum;
-    BSSimpleArray<ShadowSceneLight*, 1024> kLights;
-    BSPortal *pPortal;
-};
+  class BSPortalSharedNode : public NiNode
+  {
+    public:
+      BSPortalSharedNode();
+      virtual ~BSPortalSharedNode();
 
-static_assert(sizeof(BSPortalSharedNode) == 0xC4, "BSPortalSharedNode has wrong size");
+      BSCompoundFrustum *pCompoundFrustum;
+      BSSimpleArray<ShadowSceneLight*, 1024> kLights;
+      BSPortal *pPortal;
+  };
+
+  static_assert(sizeof(BSPortalSharedNode) == 0xC4, "BSPortalSharedNode has wrong size");
+  
+} // namespace CommonLib

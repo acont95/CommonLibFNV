@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class D3DQuery;
+namespace CommonLib {
 
-class BSOcclusionQuery
-{
-  public:
-    BSOcclusionQuery();
-    ~BSOcclusionQuery();
+  class D3DQuery;
 
-    std::uint32_t uiNumTiles;
-    D3DQuery* pQuery;
-};
+  class BSOcclusionQuery
+  {
+    public:
+      BSOcclusionQuery();
+      ~BSOcclusionQuery();
 
-static_assert(sizeof(BSOcclusionQuery) == 0x8, "BSOcclusionQuery has wrong size");
+      std::uint32_t uiNumTiles;
+      D3DQuery* pQuery;
+  };
+
+  static_assert(sizeof(BSOcclusionQuery) == 0x8, "BSOcclusionQuery has wrong size");
+  
+} // namespace CommonLib

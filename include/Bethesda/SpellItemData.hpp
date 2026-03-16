@@ -3,16 +3,20 @@
 #include "Bethesda/MagicSystem.hpp"
 #include "Bethesda/SkillLevel.hpp"
 
-class SpellItemData
-{
-  public:
-    SpellItemData();
-    ~SpellItemData();
+namespace CommonLib {
 
-    MagicSystem::SpellType iSpellType;
-    std::int32_t iCostOverride;
-    SkillLevel::Value eLevelOverride;
-    std::uint8_t iFlags;
-};
+  class SpellItemData
+  {
+    public:
+      SpellItemData();
+      ~SpellItemData();
 
-static_assert(sizeof(SpellItemData) == 0x10, "SpellItemData has wrong size");
+      MagicSystem::SpellType iSpellType;
+      std::int32_t iCostOverride;
+      SkillLevel::Value eLevelOverride;
+      std::uint8_t iFlags;
+  };
+
+  static_assert(sizeof(SpellItemData) == 0x10, "SpellItemData has wrong size");
+  
+} // namespace CommonLib

@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/bhkRefObject.hpp"
 
-class hkSerializableCinfo;
+namespace CommonLib {
 
-class bhkSerializable : public bhkRefObject
-{
-  public:
-    bhkSerializable();
-    ~bhkSerializable();
+  class hkSerializableCinfo;
 
-    hkSerializableCinfo* pInfo;
-};
+  class bhkSerializable : public bhkRefObject
+  {
+    public:
+      bhkSerializable();
+      ~bhkSerializable();
 
-static_assert(sizeof(bhkSerializable) == 0x10, "bhkSerializable has wrong size");
+      hkSerializableCinfo* pInfo;
+  };
+
+  static_assert(sizeof(bhkSerializable) == 0x10, "bhkSerializable has wrong size");
+  
+} // namespace CommonLib

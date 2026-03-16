@@ -1,17 +1,21 @@
 #pragma once
 #include "Bethesda/BSSimpleList.hpp"
 
-class SpellDispelData;
+namespace CommonLib {
 
-class MagicTarget
-{
-  public:
-    MagicTarget();
-    virtual ~MagicTarget();
+  class SpellDispelData;
 
-    bool bShowTargetStats;
-    bool bUpdating;
-    BSSimpleList<SpellDispelData*> PostUpdateDispelList;
-};
+  class MagicTarget
+  {
+    public:
+      MagicTarget();
+      virtual ~MagicTarget();
 
-static_assert(sizeof(MagicTarget) == 0x10, "MagicTarget has wrong size");
+      bool bShowTargetStats;
+      bool bUpdating;
+      BSSimpleList<SpellDispelData*> PostUpdateDispelList;
+  };
+
+  static_assert(sizeof(MagicTarget) == 0x10, "MagicTarget has wrong size");
+
+} // namespace CommonLib

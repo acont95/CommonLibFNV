@@ -3,16 +3,20 @@
 #include "Bethesda/EffectShaderData.hpp"
 #include "Bethesda/TESTexture.hpp"
 
-class TESEffectShader : public TESForm
-{
-  public:
-    TESEffectShader();
-    ~TESEffectShader();
+namespace CommonLib {
 
-    EffectShaderData Data;
-    TESTexture TextureShaderTexture;
-    TESTexture ParticleShaderTexture;
-    TESTexture BlockOutTexture;
-};
+  class TESEffectShader : public TESForm
+  {
+    public:
+      TESEffectShader();
+      ~TESEffectShader();
 
-static_assert(sizeof(TESEffectShader) == 0x170, "TESEffectShader has wrong size");
+      EffectShaderData Data;
+      TESTexture TextureShaderTexture;
+      TESTexture ParticleShaderTexture;
+      TESTexture BlockOutTexture;
+  };
+
+  static_assert(sizeof(TESEffectShader) == 0x170, "TESEffectShader has wrong size");
+  
+} // namespace CommonLib

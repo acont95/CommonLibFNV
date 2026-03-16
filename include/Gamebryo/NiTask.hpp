@@ -2,20 +2,24 @@
 #include <cstdint>
 #include "Gamebryo/NiObject.hpp"
 
-class NiTask : public NiObject
-{
-  public:
-    NiTask();
-    virtual ~NiTask();
+namespace CommonLib {
 
-    enum TaskStatus
-    {
-      RUNNING = 0x2,
-      COMPLETED = 0x3,
-      ABORTED = 0x4,
-    };
+  class NiTask : public NiObject
+  {
+    public:
+      NiTask();
+      virtual ~NiTask();
 
-    NiTask::TaskStatus m_eStatus;
-};
+      enum TaskStatus
+      {
+        RUNNING = 0x2,
+        COMPLETED = 0x3,
+        ABORTED = 0x4,
+      };
 
-static_assert(sizeof(NiTask) == 0xC, "NiTask has wrong size");
+      NiTask::TaskStatus m_eStatus;
+  };
+
+  static_assert(sizeof(NiTask) == 0xC, "NiTask has wrong size");
+  
+} // namespace CommonLib

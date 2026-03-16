@@ -1,15 +1,19 @@
 #pragma once
 #include "Bethesda/BaseFormComponent.hpp"
 
-class TESImageSpaceModifier;
+namespace CommonLib {
 
-class TESImageSpaceModifiableForm : public BaseFormComponent
-{
-  public:
-    TESImageSpaceModifiableForm();
-    ~TESImageSpaceModifiableForm();
+  class TESImageSpaceModifier;
 
-    TESImageSpaceModifier* pFormImageSpaceModifying;
-};
+  class TESImageSpaceModifiableForm : public BaseFormComponent
+  {
+    public:
+      TESImageSpaceModifiableForm();
+      ~TESImageSpaceModifiableForm();
 
-static_assert(sizeof(TESImageSpaceModifiableForm) == 0x8, "TESImageSpaceModifiableForm has wrong size");
+      TESImageSpaceModifier* pFormImageSpaceModifying;
+  };
+
+  static_assert(sizeof(TESImageSpaceModifiableForm) == 0x8, "TESImageSpaceModifiableForm has wrong size");
+  
+} // namespace CommonLib

@@ -1,16 +1,20 @@
 #pragma once
 #include <cstdint>
 
-class BSFileEntry;
+namespace CommonLib {
 
-class TESTextureList 
-{
-  public:
-    TESTextureList();
-    ~TESTextureList();
+  class BSFileEntry;
 
-    std::uint8_t cTextureCount;
-    BSFileEntry** pTextureOffsetArray;
-};
+  class TESTextureList 
+  {
+    public:
+      TESTextureList();
+      ~TESTextureList();
 
-static_assert(sizeof(TESTextureList) == 0x8, "TESTextureList has wrong size");
+      std::uint8_t cTextureCount;
+      BSFileEntry** pTextureOffsetArray;
+  };
+
+  static_assert(sizeof(TESTextureList) == 0x8, "TESTextureList has wrong size");
+
+} // namespace CommonLib

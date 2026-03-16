@@ -2,24 +2,28 @@
 #include <cstdint>
 #include "Gamebryo/NiPoint3.hpp"
 
-class PathingAvoidNode
-{
-  public:
-    PathingAvoidNode();
-    ~PathingAvoidNode();
+namespace CommonLib {
 
-    enum AVOID_NODE_TYPE
-    {
-      AVOID_NODE_SPHERE = 0x0,
-      AVOID_NODE_CYLINDER = 0x1,
-      AVOID_NODE_SPHERE_ACTOR = 0x2,
-    };
+  class PathingAvoidNode
+  {
+    public:
+      PathingAvoidNode();
+      ~PathingAvoidNode();
 
-    NiPoint3 Point1;
-    NiPoint3 Point2;
-    float fRadius;
-    float fCost;
-    PathingAvoidNode::AVOID_NODE_TYPE eType;
-};
+      enum AVOID_NODE_TYPE
+      {
+        AVOID_NODE_SPHERE = 0x0,
+        AVOID_NODE_CYLINDER = 0x1,
+        AVOID_NODE_SPHERE_ACTOR = 0x2,
+      };
 
-static_assert(sizeof(PathingAvoidNode) == 0x24, "PathingAvoidNode has wrong size");
+      NiPoint3 Point1;
+      NiPoint3 Point2;
+      float fRadius;
+      float fCost;
+      PathingAvoidNode::AVOID_NODE_TYPE eType;
+  };
+
+  static_assert(sizeof(PathingAvoidNode) == 0x24, "PathingAvoidNode has wrong size");
+  
+} // namespace CommonLib

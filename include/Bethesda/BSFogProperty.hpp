@@ -2,21 +2,25 @@
 #include "Gamebryo/NiFogProperty.hpp"
 #include "Gamebryo/NiPlane.hpp"
 
-class BSFogProperty : public NiFogProperty
-{
-  public:
-    BSFogProperty();
-    virtual ~BSFogProperty();
+namespace CommonLib {
 
-    float fStartDistance;
-    float fEndDistance;
-    float fStartWaterDistance;
-    float fEndWaterDistance;
-    NiPlane kPlane;
-    float fFalloff;
-    float fHeight;
-    NiColor kWaterColor;
-    float fPower;
-};
+  class BSFogProperty : public NiFogProperty
+  {
+    public:
+      BSFogProperty();
+      virtual ~BSFogProperty();
 
-static_assert(sizeof(BSFogProperty) == 0x64, "BSFogProperty has wrong size");
+      float fStartDistance;
+      float fEndDistance;
+      float fStartWaterDistance;
+      float fEndWaterDistance;
+      NiPlane kPlane;
+      float fFalloff;
+      float fHeight;
+      NiColor kWaterColor;
+      float fPower;
+  };
+
+  static_assert(sizeof(BSFogProperty) == 0x64, "BSFogProperty has wrong size");
+
+} // namespace CommonLib
