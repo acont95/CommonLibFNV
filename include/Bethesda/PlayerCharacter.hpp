@@ -93,7 +93,7 @@ namespace CommonLib {
     TESObjectREFR *pRef;
   };
 
-  class PlayerCharacter : Character
+  class PlayerCharacter : public Character
   {
     public:
       PlayerCharacter();

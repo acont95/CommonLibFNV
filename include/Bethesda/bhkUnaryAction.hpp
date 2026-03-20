@@ -3,7 +3,7 @@
 
 namespace CommonLib {
 
-  class bhkUnaryAction : bhkAction
+  class bhkUnaryAction : public bhkAction
   {
     public:
       bhkUnaryAction();

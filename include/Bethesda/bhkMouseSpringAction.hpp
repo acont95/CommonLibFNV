@@ -3,7 +3,7 @@
 
 namespace CommonLib {
 
-  class bhkMouseSpringAction : bhkUnaryAction
+  class bhkMouseSpringAction : public bhkUnaryAction
   {
     public:
       bhkMouseSpringAction();

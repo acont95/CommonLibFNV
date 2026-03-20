@@ -3,7 +3,7 @@
 
 namespace CommonLib {
 
-  class bhkAction : bhkSerializable
+  class bhkAction : public bhkSerializable
   {
     public:
       bhkAction();

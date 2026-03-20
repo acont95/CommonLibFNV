@@ -6,7 +6,7 @@ namespace CommonLib {
   class TESRegionData;
   class TESRegion;
 
-  class TESRegionList : BSSimpleList<TESRegion *>
+  class TESRegionList : public BSSimpleList<TESRegion *>
   {
     public:
       TESRegionList();
