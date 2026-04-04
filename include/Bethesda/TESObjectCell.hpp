@@ -68,6 +68,7 @@ namespace CommonLib {
       bool bAutoWaterLoaded;
       TESTexture WaterNoiseTexture;
       NavMeshArray *pNavMeshes;
+      std::uint32_t unk68[6];
       BSSpinLock kSpinLock;
       std::int32_t iCriticalQueuedRefCount;
       std::int32_t iQueuedRefCount;
@@ -92,6 +93,6 @@ namespace CommonLib {
       std::uint32_t iLightingTemplateInheritanceFlags;
   };
 
-  static_assert(sizeof(TESObjectCELL) == 0xB0, "TESObjectCELL has wrong size");
+  static_assert(sizeof(TESObjectCELL) == 0xE0, "TESObjectCELL has wrong size");
   
 } // namespace CommonLib
