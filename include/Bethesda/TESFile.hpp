@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include <windows.h>
+#include <Windows.h>
 #include "Types.hpp"
 #include "Bethesda/BSStringT.hpp"
 #include "Bethesda/BSSimpleList.hpp"

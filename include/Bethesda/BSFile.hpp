@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include <windows.h>
 #include <Gamebryo/NiFile.hpp>
 
 namespace CommonLib {
