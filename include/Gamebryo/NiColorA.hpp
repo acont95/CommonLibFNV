@@ -5,9 +5,6 @@ namespace CommonLib {
   class NiColorA
   {
     public:
-      NiColorA();
-      ~NiColorA();
-
       float r;
       float g;
       float b;
