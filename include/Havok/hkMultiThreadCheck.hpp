@@ -22,7 +22,7 @@ namespace CommonLib {
         RECURSIVE = 0x1,
       };
 
-      enum MarkedStatus : std::int32_t
+      enum MarkedStatus : std::uint32_t
       {
         MARKED_RO = 0xFFFFFFE1,
         MARKED_RO_SELF_ONLY = 0xFFFFFFC1,
