@@ -6,9 +6,6 @@ namespace CommonLib {
   class hkVector4
   {
     public:
-      hkVector4();
-      ~hkVector4();
-
       __m128 m_quad; 
   };
 

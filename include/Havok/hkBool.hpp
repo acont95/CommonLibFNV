@@ -5,9 +5,6 @@ namespace CommonLib {
   class hkBool
   {
     public:
-      hkBool();
-      ~hkBool();
-
       char m_bool;
   };
 
