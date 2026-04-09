@@ -8,7 +8,7 @@ namespace CommonLib {
   class hkContainerHeapAllocator;
   class hkpAgentNnEntry;
 
-  class hkpLinkedCollidable : hkpCollidable
+  class hkpLinkedCollidable : public hkpCollidable
   {
     public:
       hkpLinkedCollidable();

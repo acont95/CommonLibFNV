@@ -12,7 +12,7 @@ namespace CommonLib {
   class hkpWorld;
   class hkContainerHeapAllocator;
 
-  class hkpWorldObject : hkReferencedObject
+  class hkpWorldObject : public hkReferencedObject
   {
     public:
       hkpWorldObject();
