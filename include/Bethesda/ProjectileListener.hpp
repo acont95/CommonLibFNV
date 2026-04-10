@@ -4,7 +4,7 @@
 
 namespace CommonLib {
 
-  class ProjectileListener  : bhkCharacterController
+  class ProjectileListener : public bhkCharacterController
   {
     public:
       ProjectileListener ();
