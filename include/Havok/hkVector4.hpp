@@ -1,12 +1,30 @@
 #pragma once
 #include <xmmintrin.h>
+#include "Gamebryo/NiPoint3.hpp"
+#include "Havok/hkBool.hpp"
 
 namespace CommonLib {
 
+  class hkRotation;
+
   class hkVector4
   {
-    public:
-      __m128 m_quad; 
+    public: 
+      hkVector4();
+      hkVector4(const hkVector4& aOther);
+      hkVector4(const NiPoint3& aPoint);
+      hkVector4(float afX, float afY, float afZ, float afW);
+
+      hkBool isOk3() const;
+      hkBool isOk4() const;
+      hkBool isNormalized3(float eps) const;
+      hkBool isNormalized4(float eps) const;
+      hkVector4& setAbs3(const hkVector4& aOther);
+      hkVector4& setAbs4(const hkVector4& aOther);
+      hkVector4& setNeg3(const hkVector4& aOther);
+      hkVector4& setNeg4(const hkVector4& aOther);
+
+      __m128 m_quad;
   };
 
   static_assert(sizeof(hkVector4) == 0x10, "hkVector4 has wrong size");
