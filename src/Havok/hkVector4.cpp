@@ -67,7 +67,7 @@ namespace CommonLib
 
   hkVector4& hkVector4::setAbs3(const hkVector4& aOther)
   {
-    const __m128 mask = _mm_castsi128_ps(_mm_set_epi32(0x00000000, 0x7FFFFFFF, 0x7FFFFFFF, 0x7FFFFFFF));
+    const __m128 mask = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x7FFFFFFF, 0x7FFFFFFF, 0x7FFFFFFF));
     m_quad = _mm_and_ps(aOther.m_quad, mask);
 
     return *this;
@@ -76,6 +76,20 @@ namespace CommonLib
   hkVector4& hkVector4::setAbs4(const hkVector4& aOther)
   {
     m_quad = _mm_and_ps(aOther.m_quad, _mm_castsi128_ps(_mm_set1_epi32(0x7FFFFFFF)));
+    return *this;
+  }
+
+  hkVector4& hkVector4::setNeg3(const hkVector4& aOther)
+  {
+    const __m128 mask = _mm_castsi128_ps(_mm_set_epi32(0x00000000, 0x80000000, 0x80000000, 0x80000000));
+    m_quad = _mm_xor_ps(aOther.m_quad, mask);
+
+    return *this;
+  }
+
+  hkVector4& hkVector4::setNeg4(const hkVector4& aOther)
+  {
+    m_quad = _mm_xor_ps(aOther.m_quad, _mm_castsi128_ps(_mm_set1_epi32(0x80000000)));
     return *this;
   }
 }
