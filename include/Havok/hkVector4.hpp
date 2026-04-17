@@ -23,6 +23,29 @@ namespace CommonLib {
       hkVector4& setAbs4(const hkVector4& aOther);
       hkVector4& setNeg3(const hkVector4& aOther);
       hkVector4& setNeg4(const hkVector4& aOther);
+      float length3();
+      float length4();
+      void normalize3();
+      void normalize4();
+
+      hkVector4 operator+ (const hkVector4& aOther) const;
+      hkVector4& operator+= (const hkVector4& aOther);
+      hkVector4 operator+ (float afVal) const;
+      hkVector4& operator+= (float afVal);
+      hkVector4 operator- (const hkVector4& aOther) const;
+      hkVector4& operator-= (const hkVector4& aOther);
+      hkVector4 operator- (float afVal) const;
+      hkVector4& operator-= (float afVal);
+      hkVector4 operator* (const hkVector4& aOther) const;
+      hkVector4& operator*= (const hkVector4& aOther);
+      hkVector4 operator* (float afVal) const;
+      hkVector4& operator*= (float afVal);
+      hkVector4 operator/ (const hkVector4& aOther) const;
+      hkVector4& operator/= (const hkVector4& aOther);
+      hkVector4 operator/ (float afVal) const;
+      hkVector4& operator/= (float afVal);
+
+      hkVector4 cross (const hkVector4& aOther) const;
 
       __m128 m_quad;
   };
