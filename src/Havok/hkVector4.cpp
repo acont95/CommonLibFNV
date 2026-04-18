@@ -115,22 +115,28 @@ namespace CommonLib
 
   void hkVector4::normalize3() {
     float length = this->length3();
+    if (length > 0.000001f) {
+      __m128 inv = _mm_set1_ps(1.0f / length);
+      __m128 scaled = _mm_mul_ps(m_quad, inv);
 
-    __m128 inv = _mm_set1_ps(1.0f / length);
-
-    __m128 scaled = _mm_mul_ps(m_quad, inv);
-
-    m_quad = _mm_or_ps(
-        _mm_and_ps(scaled, _mm_castsi128_ps(_mm_set_epi32(0, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF))),
-        _mm_and_ps(m_quad, _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0, 0, 0)))
-    );
+      m_quad = _mm_or_ps(
+          _mm_and_ps(scaled, _mm_castsi128_ps(_mm_set_epi32(0, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF))),
+          _mm_and_ps(m_quad, _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0, 0, 0)))
+      );
+    } else {
+      m_quad = _mm_and_ps(m_quad, _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0, 0, 0)));
+    }
   }
 
   void hkVector4::normalize4() {
     __m128 thisVec = this->m_quad;
     float length = this->length4();
-    __m128 inv = _mm_set1_ps(1.0f / length);
-    m_quad = _mm_mul_ps(thisVec, inv);
+    if (length > 0.000001f) {
+      __m128 inv = _mm_set1_ps(1.0f / length);
+      m_quad = _mm_mul_ps(thisVec, inv);
+    } else {
+      m_quad = _mm_setzero_ps();
+    }
   }
 
   hkVector4 hkVector4::cross3(const hkVector4& aOther) const {
@@ -155,10 +161,8 @@ namespace CommonLib
     return result;
   }
 
-  hkVector4 hkVector4::fromPoint(const NiPoint3& aPoint) const {
-    hkVector4 result{};
-    result.m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
-    return result;
+  void hkVector4::fromPoint(const NiPoint3& aPoint) {
+    m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
   }
 
   void hkVector4::setTransformedPos(const hkTransform& t, const hkVector4& v) {
