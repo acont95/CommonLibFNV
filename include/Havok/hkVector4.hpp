@@ -5,7 +5,7 @@
 
 namespace CommonLib {
 
-  class hkRotation;
+  class hkTransform;
 
   class hkVector4
   {
@@ -27,6 +27,10 @@ namespace CommonLib {
       float length4();
       void normalize3();
       void normalize4();
+      hkVector4 cross3 (const hkVector4& aOther) const;
+      hkVector4 fromPoint (const NiPoint3& aPoint) const;
+      void setTransformedPos(const hkTransform& t, const hkVector4& v);
+      void setTransformedInversePos(const hkTransform& t, const hkVector4& v);
 
       hkVector4 operator+ (const hkVector4& aOther) const;
       hkVector4& operator+= (const hkVector4& aOther);
@@ -44,8 +48,6 @@ namespace CommonLib {
       hkVector4& operator/= (const hkVector4& aOther);
       hkVector4 operator/ (float afVal) const;
       hkVector4& operator/= (float afVal);
-
-      hkVector4 cross (const hkVector4& aOther) const;
 
       __m128 m_quad;
   };

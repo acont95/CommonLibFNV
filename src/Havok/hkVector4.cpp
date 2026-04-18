@@ -1,4 +1,6 @@
 #include "Havok/hkVector4.hpp"
+#include "Havok/constants.hpp"
+#include "Havok/hkTransform.hpp"
 #include <xmmintrin.h>
 #include <pmmintrin.h>
 #include <cmath>
@@ -131,6 +133,65 @@ namespace CommonLib
     m_quad = _mm_mul_ps(thisVec, inv);
   }
 
+  hkVector4 hkVector4::cross3(const hkVector4& aOther) const {
+    __m128 a = m_quad;
+    __m128 b = aOther.m_quad;
+
+    __m128 a_yzx = _mm_shuffle_ps(a, a, _MM_SHUFFLE(3,0,2,1));
+    __m128 b_yzx = _mm_shuffle_ps(b, b, _MM_SHUFFLE(3,0,2,1));
+
+    __m128 c = _mm_sub_ps(
+        _mm_mul_ps(a, b_yzx),
+        _mm_mul_ps(b, a_yzx)
+    );
+
+    __m128 result_xyz = _mm_shuffle_ps(c, c, _MM_SHUFFLE(3,0,2,1));
+    __m128 maskW = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000));
+
+    __m128 w = _mm_and_ps(a, maskW);
+
+    hkVector4 result;
+    result.m_quad = _mm_or_ps(result_xyz, w);
+    return result;
+  }
+
+  hkVector4 hkVector4::fromPoint(const NiPoint3& aPoint) const {
+    hkVector4 result{};
+    result.m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
+    return result;
+  }
+
+  void hkVector4::setTransformedPos(const hkTransform& t, const hkVector4& v) {
+    m_quad = _mm_add_ps(
+              _mm_add_ps(
+                _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 85), t.m_rotation.m_col1.m_quad),
+                _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 0), t.m_rotation.m_col0.m_quad)),
+              _mm_add_ps(
+                _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 170), t.m_rotation.m_col2.m_quad),
+                t.m_translation.m_quad));
+  }
+
+  void hkVector4::setTransformedInversePos(const hkTransform& t, const hkVector4& v) {
+    __m128 m_col1 = t.m_rotation.m_col1.m_quad;
+    __m128 m_col2 = t.m_rotation.m_col2.m_quad;
+
+    __m128 t1 = _mm_sub_ps(v.m_quad, t.m_translation.m_quad);
+    __m128 t2 = _mm_unpacklo_ps(t.m_rotation.m_col0.m_quad, m_col1);
+    __m128 t3 = _mm_movelh_ps(t2, m_col2);
+    m_quad = _mm_add_ps(
+                _mm_add_ps(
+                  _mm_mul_ps(
+                    _mm_shuffle_ps(t1, t1, 85),
+                    _mm_shuffle_ps(_mm_movehl_ps(t3, t2), m_col2, 212)),
+                  _mm_mul_ps(_mm_shuffle_ps(t1, t1, 0), t3)),
+                _mm_mul_ps(
+                  _mm_shuffle_ps(
+                    _mm_unpackhi_ps(t.m_rotation.m_col0.m_quad, m_col1),
+                    m_col2,
+                    228),
+                  _mm_shuffle_ps(t1, t1, 170)));
+  }
+
   hkVector4 hkVector4::operator+ (const hkVector4& aOther) const {
     hkVector4 result{};
     result.m_quad = _mm_add_ps(m_quad, aOther.m_quad);
@@ -229,27 +290,5 @@ namespace CommonLib
     __m128 inv = _mm_set1_ps(1.0f / afVal);
     m_quad = _mm_mul_ps(m_quad, inv);
     return *this;
-  }
-
-  hkVector4 hkVector4::cross(const hkVector4& aOther) const {
-    __m128 a = m_quad;
-    __m128 b = aOther.m_quad;
-
-    __m128 a_yzx = _mm_shuffle_ps(a, a, _MM_SHUFFLE(3,0,2,1));
-    __m128 b_yzx = _mm_shuffle_ps(b, b, _MM_SHUFFLE(3,0,2,1));
-
-    __m128 c = _mm_sub_ps(
-        _mm_mul_ps(a, b_yzx),
-        _mm_mul_ps(b, a_yzx)
-    );
-
-    __m128 result_xyz = _mm_shuffle_ps(c, c, _MM_SHUFFLE(3,0,2,1));
-    __m128 maskW = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000));
-
-    __m128 w = _mm_and_ps(a, maskW);
-
-    hkVector4 result;
-    result.m_quad = _mm_or_ps(result_xyz, w);
-    return result;
   }
 }
