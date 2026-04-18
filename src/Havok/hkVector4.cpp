@@ -161,8 +161,9 @@ namespace CommonLib
     return result;
   }
 
-  void hkVector4::fromPoint(const NiPoint3& aPoint) {
-    m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
+  hkVector4& hkVector4::fromPoint(hkVector4 &aVector, const NiPoint3& aPoint) {
+    aVector.m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
+    return aVector;
   }
 
   void hkVector4::setTransformedPos(const hkTransform& t, const hkVector4& v) {

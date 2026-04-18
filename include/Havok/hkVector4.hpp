@@ -28,7 +28,7 @@ namespace CommonLib {
       void normalize3();
       void normalize4();
       hkVector4 cross3 (const hkVector4& aOther) const;
-      void fromPoint (const NiPoint3& aPoint);
+      static hkVector4& fromPoint (hkVector4 &aVector, const NiPoint3& aPoint);
       void setTransformedPos(const hkTransform& t, const hkVector4& v);
       void setTransformedInversePos(const hkTransform& t, const hkVector4& v);
 
