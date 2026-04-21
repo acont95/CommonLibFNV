@@ -16,17 +16,17 @@ namespace CommonLib {
       float Length() const;
       void Unitize();
       float UnitizeGetLength(); 
-      void NiPoint3::Add(NiPoint3& aPoint);
-      NiPoint3& NiPoint3::AddInto(NiPoint3& result, NiPoint3& aPoint) const;
-      void NiPoint3::Subtract(NiPoint3& aPoint);
-      NiPoint3& NiPoint3::SubtractInto(NiPoint3& result, NiPoint3& aPoint) const;
-      void NiPoint3::Mult(NiPoint3& aPoint);
-      NiPoint3& NiPoint3::MultInto(NiPoint3& result, NiPoint3& aPoint) const;
-      NiPoint3& NiPoint3::MultInverseInto(NiPoint3& result, float afValue) const;
-      void NiPoint3::Divide(NiPoint3& aPoint);
-      NiPoint3& NiPoint3::DivideInto(NiPoint3& result, NiPoint3& aPoint) const;
-      NiPoint3& NiPoint3::UnitCross(NiPoint3& result, const NiPoint3& pt);
-      NiPoint3& NiPoint3::Perpendicular(NiPoint3& result);
+      void Add(NiPoint3& aPoint);
+      NiPoint3& AddInto(NiPoint3& result, NiPoint3& aPoint) const;
+      void Subtract(NiPoint3& aPoint);
+      NiPoint3& SubtractInto(NiPoint3& result, NiPoint3& aPoint) const;
+      void Mult(NiPoint3& aPoint);
+      NiPoint3& MultInto(NiPoint3& result, NiPoint3& aPoint) const;
+      NiPoint3& MultInverseInto(NiPoint3& result, float afValue) const;
+      void Divide(NiPoint3& aPoint);
+      NiPoint3& DivideInto(NiPoint3& result, NiPoint3& aPoint) const;
+      NiPoint3& UnitCross(NiPoint3& result, const NiPoint3& pt);
+      NiPoint3& Perpendicular(NiPoint3& result);
 
       static const NiPoint3 ZERO;
       static const NiPoint3 UNIT_X;
