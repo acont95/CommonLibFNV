@@ -6,10 +6,17 @@ namespace CommonLib {
   class NiMatrix3
   {
     public:
+      NiPoint3 m_pEntry[3];
+
       NiMatrix3();
       ~NiMatrix3();
+      NiMatrix3(const NiPoint3& row1, const NiPoint3& row2, const NiPoint3& row3);
+      void ToEulerAnglesZXY(float &rfZAngle, float &rfXAngle, float &rfYAngle) const;
+      void FromEulerAnglesZXY(float fZAngle, float fXAngle, float fYAngle);
+      NiMatrix3& Multiply(NiMatrix3 &result, const NiMatrix3 &mat) const;
 
-      NiPoint3 m_pEntry[3];
+      static const NiMatrix3 ZERO;
+      static const NiMatrix3 IDENTITY;
   };
 
   static_assert(sizeof(NiMatrix3) == 0x24, "NiMatrix3 has wrong size");
