@@ -12,7 +12,7 @@ namespace CommonLib {
     : m_pEntry{row1, row2, row3} {};
 
   void NiMatrix3::ToEulerAnglesZXY(float &rfZAngle, float &rfXAngle, float &rfYAngle) const {
-    float fM11 = m_pEntry[1].y;
+    float fM11 = m_pEntry[2].y;
     float fTemp1;
     float fTemp2;
 
