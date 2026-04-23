@@ -197,12 +197,12 @@ namespace CommonLib
                   _mm_shuffle_ps(t1, t1, 170)));
   }
 
-  void hkVector4::setMul3(const hkMatrix3 *a, const hkVector4 *b) {
+  void hkVector4::setMul3(const hkMatrix3& a, const hkVector4& b) {
     m_quad = _mm_add_ps(
                 _mm_add_ps(
-                  _mm_mul_ps(_mm_shuffle_ps(b->m_quad, b->m_quad, 85), a->m_col1.m_quad),
-                  _mm_mul_ps(_mm_shuffle_ps(b->m_quad, b->m_quad, 0), a->m_col0.m_quad)),
-                _mm_mul_ps(_mm_shuffle_ps(b->m_quad, b->m_quad, 170), a->m_col2.m_quad));
+                  _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 85), a.m_col1.m_quad),
+                  _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 0), a.m_col0.m_quad)),
+                _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 170), a.m_col2.m_quad));
   }
 
   hkVector4 hkVector4::operator+ (const hkVector4& aOther) const {

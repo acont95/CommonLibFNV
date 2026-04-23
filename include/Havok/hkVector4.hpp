@@ -6,6 +6,7 @@
 namespace CommonLib {
 
   class hkTransform;
+  class hkMatrix3;
 
   class hkVector4
   {
@@ -31,7 +32,7 @@ namespace CommonLib {
       static hkVector4& fromPoint (hkVector4 &aVector, const NiPoint3& aPoint);
       void setTransformedPos(const hkTransform& t, const hkVector4& v);
       void setTransformedInversePos(const hkTransform& t, const hkVector4& v);
-      void setMul3(const hkMatrix3 *a, const hkVector4 *b);
+      void setMul3(const hkMatrix3& a, const hkVector4& b);
 
       hkVector4 operator+ (const hkVector4& aOther) const;
       hkVector4& operator+= (const hkVector4& aOther);
