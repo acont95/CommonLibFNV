@@ -7,11 +7,13 @@ namespace CommonLib {
 
   class hkTransform;
   class hkMatrix3;
+  class hkRotation;
 
   class hkVector4
   {
     public: 
       hkVector4();
+      ~hkVector4();
       hkVector4(const hkVector4& aOther);
       hkVector4(const NiPoint3& aPoint);
       hkVector4(float afX, float afY, float afZ, float afW);
@@ -33,6 +35,7 @@ namespace CommonLib {
       void setTransformedPos(const hkTransform& t, const hkVector4& v);
       void setTransformedInversePos(const hkTransform& t, const hkVector4& v);
       void setMul3(const hkMatrix3& a, const hkVector4& b);
+      void setRotatedDir(const hkRotation& t, const hkVector4& v);
 
       hkVector4 operator+ (const hkVector4& aOther) const;
       hkVector4& operator+= (const hkVector4& aOther);

@@ -10,6 +10,8 @@ namespace CommonLib
   hkVector4::hkVector4()
       : m_quad(_mm_setzero_ps()) {}
 
+  hkVector4::~hkVector4() = default;
+
   hkVector4::hkVector4(const hkVector4& aOther)
       : m_quad(aOther.m_quad) {}
 
@@ -195,6 +197,14 @@ namespace CommonLib
                   _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 85), a.m_col1.m_quad),
                   _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 0), a.m_col0.m_quad)),
                 _mm_mul_ps(_mm_shuffle_ps(b.m_quad, b.m_quad, 170), a.m_col2.m_quad));
+  }
+
+  void hkVector4::setRotatedDir(const hkRotation& t, const hkVector4& v) {
+    m_quad = _mm_add_ps(
+                        _mm_add_ps(
+                          _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 85), t.m_col1.m_quad),
+                          _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 0), t.m_col0.m_quad)),
+                        _mm_mul_ps(_mm_shuffle_ps(v.m_quad, v.m_quad, 170), t.m_col2.m_quad));
   }
 
   hkVector4 hkVector4::operator+ (const hkVector4& aOther) const {
