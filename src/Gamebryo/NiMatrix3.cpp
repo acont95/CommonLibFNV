@@ -109,6 +109,59 @@ namespace CommonLib {
     return result;
   }
 
+  bool NiMatrix3::Inverse(NiMatrix3& inv) const {
+    inv.m_pEntry[0].x = this->m_pEntry[1].y * this->m_pEntry[2].z - this->m_pEntry[1].z * this->m_pEntry[2].y;
+    inv.m_pEntry[0].y = this->m_pEntry[0].z * this->m_pEntry[2].y - this->m_pEntry[0].y * this->m_pEntry[2].z;
+    inv.m_pEntry[0].z = this->m_pEntry[0].y * this->m_pEntry[1].z - this->m_pEntry[0].z * this->m_pEntry[1].y;
+    inv.m_pEntry[1].x = this->m_pEntry[1].z * this->m_pEntry[2].x - this->m_pEntry[1].x * this->m_pEntry[2].z;
+    inv.m_pEntry[1].y = this->m_pEntry[0].x * this->m_pEntry[2].z - this->m_pEntry[0].z * this->m_pEntry[2].x;
+    inv.m_pEntry[1].z = this->m_pEntry[0].z * this->m_pEntry[1].x - this->m_pEntry[0].x * this->m_pEntry[1].z;
+    inv.m_pEntry[2].x = this->m_pEntry[1].x * this->m_pEntry[2].y - this->m_pEntry[1].y * this->m_pEntry[2].x;
+    inv.m_pEntry[2].y = this->m_pEntry[0].y * this->m_pEntry[2].x - this->m_pEntry[0].x * this->m_pEntry[2].y;
+    inv.m_pEntry[2].z = this->m_pEntry[0].x * this->m_pEntry[1].y - this->m_pEntry[0].y * this->m_pEntry[1].x;
+
+    float determinant = this->m_pEntry[0].x * inv.m_pEntry[0].x
+      + this->m_pEntry[0].y * inv.m_pEntry[1].x
+      + this->m_pEntry[0].z * inv.m_pEntry[2].x;
+
+    if ( log(determinant) <= 0.000001f )
+      return false;
+
+    float invDeterminant = 1.0f / determinant;
+    for ( int i = 0; i < 3; ++i )
+    {
+      inv.m_pEntry[i].x *= invDeterminant;
+      inv.m_pEntry[i].y *= invDeterminant;
+      inv.m_pEntry[i].z *= invDeterminant;
+    }
+    return true;
+  }
+
+  NiMatrix3 NiMatrix3::Inverse() const {
+    NiMatrix3 inv{};
+    if (!Inverse(inv)) {
+      return NiMatrix3::ZERO;
+    }
+    return inv;
+  }
+
+  NiMatrix3 NiMatrix3::Transpose() const {
+    NiMatrix3 transpose{};
+    transpose.m_pEntry[0].x = this->m_pEntry[0].x;
+    transpose.m_pEntry[0].y = this->m_pEntry[1].x;
+    transpose.m_pEntry[0].z = this->m_pEntry[2].x;
+
+    transpose.m_pEntry[1].x = this->m_pEntry[0].y;
+    transpose.m_pEntry[1].y = this->m_pEntry[1].y;
+    transpose.m_pEntry[1].z = this->m_pEntry[2].y;
+
+    transpose.m_pEntry[2].x = this->m_pEntry[0].z;
+    transpose.m_pEntry[2].y = this->m_pEntry[1].z;
+    transpose.m_pEntry[2].z = this->m_pEntry[2].z;
+
+    return transpose;
+  }
+
   const NiMatrix3 NiMatrix3::ZERO = NiMatrix3(NiPoint3::ZERO, NiPoint3::ZERO, NiPoint3::ZERO);
   const NiMatrix3 NiMatrix3::IDENTITY = NiMatrix3(NiPoint3::UNIT_X, NiPoint3::UNIT_Y, NiPoint3::UNIT_Z);
 

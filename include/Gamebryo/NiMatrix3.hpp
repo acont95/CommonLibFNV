@@ -14,6 +14,9 @@ namespace CommonLib {
       void ToEulerAnglesZXY(float &rfZAngle, float &rfXAngle, float &rfYAngle) const;
       void FromEulerAnglesZXY(float fZAngle, float fXAngle, float fYAngle);
       NiMatrix3& Multiply(NiMatrix3 &result, const NiMatrix3 &mat) const;
+      bool Inverse(NiMatrix3& inv) const;
+      NiMatrix3 Inverse() const;
+      NiMatrix3 Transpose() const;
 
       static const NiMatrix3 ZERO;
       static const NiMatrix3 IDENTITY;
