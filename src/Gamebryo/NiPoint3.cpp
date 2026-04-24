@@ -54,14 +54,13 @@ namespace CommonLib {
     z += aPoint.z;
   }
 
-  NiPoint3& NiPoint3::AddInto(NiPoint3& result, NiPoint3& aPoint) const {
+  NiPoint3 NiPoint3::AddInto(NiPoint3& aPoint) const {
     float fX = x + aPoint.x;
     float fY = y + aPoint.y;
     float fZ = z + aPoint.z;
 
     NiPoint3 pointOut {fX, fY, fZ};
-    result = pointOut;
-    return result;
+    return pointOut;
   }
 
   void NiPoint3::Subtract(NiPoint3& aPoint) {
@@ -70,14 +69,13 @@ namespace CommonLib {
     z -= aPoint.z;
   }
 
-  NiPoint3& NiPoint3::SubtractInto(NiPoint3& result, NiPoint3& aPoint) const {
+  NiPoint3 NiPoint3::SubtractInto(NiPoint3& aPoint) const {
     float fX = x - aPoint.x;
     float fY = y - aPoint.y;
     float fZ = z - aPoint.z;
 
     NiPoint3 pointOut {fX, fY, fZ};
-    result = pointOut;
-    return result;
+    return pointOut;
   }
 
   void NiPoint3::Mult(NiPoint3& aPoint) {
@@ -86,25 +84,23 @@ namespace CommonLib {
     z *= aPoint.z;
   }
 
-  NiPoint3& NiPoint3::MultInto(NiPoint3& result, NiPoint3& aPoint) const {
+  NiPoint3 NiPoint3::MultInto(NiPoint3& aPoint) const {
     float fX = x * aPoint.x;
     float fY = y * aPoint.y;
     float fZ = z * aPoint.z;
 
     NiPoint3 pointOut {fX, fY, fZ};
-    result = pointOut;
-    return result;
+    return pointOut;
   }
 
-  NiPoint3& NiPoint3::MultInverseInto(NiPoint3& result, float afValue) const {
+  NiPoint3 NiPoint3::MultInverseInto(float afValue) const {
     float fInverseValue = 1.0f / afValue;
     float fX = x * fInverseValue;
     float fY = y * fInverseValue;
     float fZ = z * fInverseValue;
 
     NiPoint3 pointOut {fX, fY, fZ};
-    result = pointOut;
-    return result;
+    return pointOut;
   }
 
   void NiPoint3::Divide(NiPoint3& aPoint) {
@@ -113,17 +109,16 @@ namespace CommonLib {
     z /= aPoint.z;
   }
 
-  NiPoint3& NiPoint3::DivideInto(NiPoint3& result, NiPoint3& aPoint) const {
+  NiPoint3 NiPoint3::DivideInto(NiPoint3& aPoint) const {
     float fX = x / aPoint.x;
     float fY = y / aPoint.y;
     float fZ = z / aPoint.z;
 
     NiPoint3 pointOut {fX, fY, fZ};
-    result = pointOut;
-    return result;
+    return pointOut;
   }
 
-  NiPoint3& NiPoint3::UnitCross(NiPoint3& result, const NiPoint3& pt) {
+  NiPoint3 NiPoint3::UnitCross(const NiPoint3& pt) const {
     float fYZ = (this->y * pt.z) - (this->z * pt.y);
     float fXZ = (this->z * pt.x) - (this->x * pt.z);
     float fXY = (this->x * pt.y) - (this->y * pt.x);
@@ -131,30 +126,31 @@ namespace CommonLib {
     NiPoint3 newPoint {fYZ, fXZ, fXY};
     float length = newPoint.Length();
     if (length <= 0.000001f) {
-      result.x = 0.0f;
-      result.y = 0.0f;
-      result.z = 0.0f;
+      newPoint.x = 0.0f;
+      newPoint.y = 0.0f;
+      newPoint.z = 0.0f;
     } else {
-      newPoint.MultInverseInto(result, length);
+      newPoint = newPoint.MultInverseInto(length);
     }
-    return result;
+    return newPoint;
   }
 
-  NiPoint3& NiPoint3::Perpendicular(NiPoint3& result) {
+  NiPoint3 NiPoint3::Perpendicular() const {
     float fAbsX = std::abs(x);
     float fAbsY = std::abs(y);
     float fAbsZ = std::abs(z);
+    NiPoint3 result{};
     if (fAbsY <= fAbsX) {
       if (fAbsY <= fAbsZ) {
-        UnitCross(result, UNIT_Y);
+        result = UnitCross(NiPoint3::UNIT_Y);
       } else {
-        UnitCross(result, UNIT_Z);
+        result = UnitCross(NiPoint3::UNIT_Z);
       }
     } else {
       if (fAbsX <= fAbsZ) {
-        UnitCross(result, UNIT_X);
+        result = UnitCross(NiPoint3::UNIT_X);
       } else {
-        UnitCross(result, UNIT_Z);
+        result = UnitCross(NiPoint3::UNIT_Z);
       }
     }
     return result;

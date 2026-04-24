@@ -66,46 +66,45 @@ namespace CommonLib {
     };
   }
 
-  NiMatrix3& NiMatrix3::Multiply(NiMatrix3 &result, const NiMatrix3 &mat) const {
-    NiMatrix3 temp{};
+  NiMatrix3 NiMatrix3::Multiply(const NiMatrix3 &mat) const {
+    NiMatrix3 result{};
 
-    temp.m_pEntry[0].x = m_pEntry[0].x * mat.m_pEntry[0].x
+    result.m_pEntry[0].x = m_pEntry[0].x * mat.m_pEntry[0].x
                         + m_pEntry[0].y * mat.m_pEntry[1].x
                         + m_pEntry[0].z * mat.m_pEntry[2].x;
 
-    temp.m_pEntry[1].x = m_pEntry[1].x * mat.m_pEntry[0].x
+    result.m_pEntry[1].x = m_pEntry[1].x * mat.m_pEntry[0].x
                         + m_pEntry[1].y * mat.m_pEntry[1].x
                         + m_pEntry[1].z * mat.m_pEntry[2].x;
 
-    temp.m_pEntry[2].x = m_pEntry[2].x * mat.m_pEntry[0].x
+    result.m_pEntry[2].x = m_pEntry[2].x * mat.m_pEntry[0].x
                         + m_pEntry[2].y * mat.m_pEntry[1].x
                         + m_pEntry[2].z * mat.m_pEntry[2].x;
 
-    temp.m_pEntry[0].y = m_pEntry[0].x * mat.m_pEntry[0].y
+    result.m_pEntry[0].y = m_pEntry[0].x * mat.m_pEntry[0].y
                         + m_pEntry[0].y * mat.m_pEntry[1].y
                         + m_pEntry[0].z * mat.m_pEntry[2].y;
 
-    temp.m_pEntry[1].y = m_pEntry[1].x * mat.m_pEntry[0].y
+    result.m_pEntry[1].y = m_pEntry[1].x * mat.m_pEntry[0].y
                         + m_pEntry[1].y * mat.m_pEntry[1].y
                         + m_pEntry[1].z * mat.m_pEntry[2].y;
 
-    temp.m_pEntry[2].y = m_pEntry[2].x * mat.m_pEntry[0].y
+    result.m_pEntry[2].y = m_pEntry[2].x * mat.m_pEntry[0].y
                         + m_pEntry[2].y * mat.m_pEntry[1].y
                         + m_pEntry[2].z * mat.m_pEntry[2].y;
 
-    temp.m_pEntry[0].z = m_pEntry[0].x * mat.m_pEntry[0].z
+    result.m_pEntry[0].z = m_pEntry[0].x * mat.m_pEntry[0].z
                         + m_pEntry[0].y * mat.m_pEntry[1].z
                         + m_pEntry[0].z * mat.m_pEntry[2].z;
 
-    temp.m_pEntry[1].z = m_pEntry[1].x * mat.m_pEntry[0].z
+    result.m_pEntry[1].z = m_pEntry[1].x * mat.m_pEntry[0].z
                         + m_pEntry[1].y * mat.m_pEntry[1].z
                         + m_pEntry[1].z * mat.m_pEntry[2].z;
 
-    temp.m_pEntry[2].z = m_pEntry[2].x * mat.m_pEntry[0].z
+    result.m_pEntry[2].z = m_pEntry[2].x * mat.m_pEntry[0].z
                         + m_pEntry[2].y * mat.m_pEntry[1].z
                         + m_pEntry[2].z * mat.m_pEntry[2].z;
 
-    result = temp;
     return result;
   }
 

@@ -17,16 +17,17 @@ namespace CommonLib {
       void Unitize();
       float UnitizeGetLength(); 
       void Add(NiPoint3& aPoint);
-      NiPoint3& AddInto(NiPoint3& result, NiPoint3& aPoint) const;
+      NiPoint3 AddInto(NiPoint3& aPoint) const;
       void Subtract(NiPoint3& aPoint);
-      NiPoint3& SubtractInto(NiPoint3& result, NiPoint3& aPoint) const;
+      NiPoint3 SubtractInto(NiPoint3& aPoint) const;
       void Mult(NiPoint3& aPoint);
-      NiPoint3& MultInto(NiPoint3& result, NiPoint3& aPoint) const;
-      NiPoint3& MultInverseInto(NiPoint3& result, float afValue) const;
+      NiPoint3 MultInto(NiPoint3& aPoint) const;
+      void MultInverse(NiPoint3& aPoint);
+      NiPoint3 MultInverseInto(float afValue) const;
       void Divide(NiPoint3& aPoint);
-      NiPoint3& DivideInto(NiPoint3& result, NiPoint3& aPoint) const;
-      NiPoint3& UnitCross(NiPoint3& result, const NiPoint3& pt);
-      NiPoint3& Perpendicular(NiPoint3& result);
+      NiPoint3 DivideInto(NiPoint3& aPoint) const;
+      NiPoint3 UnitCross(const NiPoint3& pt) const;
+      NiPoint3 Perpendicular() const;
 
       static const NiPoint3 ZERO;
       static const NiPoint3 UNIT_X;

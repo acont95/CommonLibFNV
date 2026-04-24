@@ -13,7 +13,7 @@ namespace CommonLib {
       NiMatrix3(const NiPoint3& row1, const NiPoint3& row2, const NiPoint3& row3);
       void ToEulerAnglesZXY(float &rfZAngle, float &rfXAngle, float &rfYAngle) const;
       void FromEulerAnglesZXY(float fZAngle, float fXAngle, float fYAngle);
-      NiMatrix3& Multiply(NiMatrix3 &result, const NiMatrix3 &mat) const;
+      NiMatrix3 Multiply(const NiMatrix3 &mat) const;
       bool Inverse(NiMatrix3& inv) const;
       NiMatrix3 Inverse() const;
       NiMatrix3 Transpose() const;

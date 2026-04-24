@@ -67,32 +67,26 @@ namespace CommonLib
     return result;
   }
 
-  hkVector4& hkVector4::setAbs3(const hkVector4& aOther)
+  void hkVector4::setAbs3(const hkVector4& aOther)
   {
     const __m128 mask = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x7FFFFFFF, 0x7FFFFFFF, 0x7FFFFFFF));
     m_quad = _mm_and_ps(aOther.m_quad, mask);
-
-    return *this;
   }
 
-  hkVector4& hkVector4::setAbs4(const hkVector4& aOther)
+  void hkVector4::setAbs4(const hkVector4& aOther)
   {
     m_quad = _mm_and_ps(aOther.m_quad, _mm_castsi128_ps(_mm_set1_epi32(0x7FFFFFFF)));
-    return *this;
   }
 
-  hkVector4& hkVector4::setNeg3(const hkVector4& aOther)
+  void hkVector4::setNeg3(const hkVector4& aOther)
   {
     const __m128 mask = _mm_castsi128_ps(_mm_set_epi32(0x00000000, 0x80000000, 0x80000000, 0x80000000));
     m_quad = _mm_xor_ps(aOther.m_quad, mask);
-
-    return *this;
   }
 
-  hkVector4& hkVector4::setNeg4(const hkVector4& aOther)
+  void hkVector4::setNeg4(const hkVector4& aOther)
   {
     m_quad = _mm_xor_ps(aOther.m_quad, _mm_castsi128_ps(_mm_set1_epi32(0x80000000)));
-    return *this;
   }
 
   float hkVector4::length3() {
@@ -139,9 +133,9 @@ namespace CommonLib
     }
   }
 
-  hkVector4 hkVector4::cross3(const hkVector4& aOther) const {
-    __m128 a = m_quad;
-    __m128 b = aOther.m_quad;
+  void hkVector4::setCross3(const hkVector4& aOther, const hkVector4& bOther) {
+    __m128 a = aOther.m_quad;
+    __m128 b = bOther.m_quad;
 
     __m128 a_yzx = _mm_shuffle_ps(a, a, _MM_SHUFFLE(3,0,2,1));
     __m128 b_yzx = _mm_shuffle_ps(b, b, _MM_SHUFFLE(3,0,2,1));
@@ -155,15 +149,13 @@ namespace CommonLib
     __m128 maskW = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000));
 
     __m128 w = _mm_and_ps(a, maskW);
-
-    hkVector4 result;
-    result.m_quad = _mm_or_ps(result_xyz, w);
-    return result;
+    m_quad = (result_xyz, w);
   }
 
-  hkVector4& hkVector4::fromPoint(hkVector4 &aVector, const NiPoint3& aPoint) {
-    aVector.m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
-    return aVector;
+  hkVector4 hkVector4::fromPoint(const NiPoint3& aPoint) {
+    hkVector4 result{};
+    result.m_quad = _mm_set_ps(0.0f, aPoint.z*fBS2HkScaleSC_639, aPoint.y*fBS2HkScaleSC_639, aPoint.x*fBS2HkScaleSC_639);
+    return result;
   }
 
   void hkVector4::setTransformedPos(const hkTransform& t, const hkVector4& v) {
