@@ -149,7 +149,7 @@ namespace CommonLib
     __m128 maskW = _mm_castsi128_ps(_mm_set_epi32(0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000));
 
     __m128 w = _mm_and_ps(a, maskW);
-    m_quad = (result_xyz, w);
+    m_quad = _mm_or_ps(result_xyz, w);
   }
 
   hkVector4 hkVector4::fromPoint(const NiPoint3& aPoint) {
