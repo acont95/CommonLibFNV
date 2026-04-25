@@ -6,7 +6,7 @@ namespace CommonLib {
 
   class hkpCollidable;
 
-  class hkpWorldRayCastOutput : public hkpShapeRayCastOutput
+  class alignas(16) hkpWorldRayCastOutput : public hkpShapeRayCastOutput
   {
     public:
       hkpWorldRayCastOutput();

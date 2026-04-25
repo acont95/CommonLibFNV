@@ -256,7 +256,7 @@ namespace CommonLib
   }
 
   hkVector4 hkVector4::operator* (const hkVector4& aOther) const {
-    hkVector4 result;
+    hkVector4 result{};
     result.m_quad = _mm_mul_ps(m_quad, aOther.m_quad);
     return result;
   }

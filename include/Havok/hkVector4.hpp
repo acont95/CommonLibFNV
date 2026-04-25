@@ -9,7 +9,7 @@ namespace CommonLib {
   class hkMatrix3;
   class hkRotation;
 
-  class hkVector4
+  class alignas(16) hkVector4
   {
     public: 
       hkVector4();

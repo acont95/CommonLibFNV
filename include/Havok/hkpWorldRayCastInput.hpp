@@ -5,7 +5,7 @@
 
 namespace CommonLib {
 
-  class hkpWorldRayCastInput
+  class alignas(16) hkpWorldRayCastInput
   {
     public:
       hkpWorldRayCastInput();

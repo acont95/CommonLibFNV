@@ -9,7 +9,7 @@ namespace CommonLib {
   class hkContainerHeapAllocator;
   class hkpRootCdPoint;
 
-  class bhkCharacterPointCollector : public hkpAllCdPointCollector
+  class alignas(16) bhkCharacterPointCollector : public hkpAllCdPointCollector
   {
     public:
       bhkCharacterPointCollector();

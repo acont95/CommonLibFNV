@@ -4,7 +4,7 @@
 
 namespace CommonLib {
 
-  class hkpShapeRayCastOutput : public hkpShapeRayCastCollectorOutput
+  class alignas(16) hkpShapeRayCastOutput : public hkpShapeRayCastCollectorOutput
   {
     public:
       hkpShapeRayCastOutput();
