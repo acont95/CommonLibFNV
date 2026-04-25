@@ -32,7 +32,7 @@ namespace CommonLib {
     ST_NUMTYPES = 0x2,
   };
 
-  class bhkCharacterController : 
+  class alignas(16) bhkCharacterController : 
     public bhkCharacterProxy, 
     public hkpCharacterContext, 
     public bhkCharacterListener, 

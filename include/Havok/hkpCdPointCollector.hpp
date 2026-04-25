@@ -4,7 +4,7 @@ namespace CommonLib {
 
   class hkContainerHeapAllocator;
 
-  class hkpCdPointCollector
+  class alignas(16) hkpCdPointCollector
   {
     public:
       hkpCdPointCollector();

@@ -3,7 +3,7 @@
 
 namespace CommonLib {
 
-  class hkQuaternion  
+  class alignas(16) hkQuaternion  
   {
     public:
       hkVector4 m_vec;

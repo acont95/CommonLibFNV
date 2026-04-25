@@ -21,7 +21,7 @@ namespace CommonLib {
   class hkpConstraintInstance;
   class bhkAction;
 
-  class bhkWorld : public bhkSerializable
+  class alignas(16) bhkWorld : public bhkSerializable
   {
     public:
       bhkWorld();

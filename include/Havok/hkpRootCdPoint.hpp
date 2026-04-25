@@ -5,7 +5,7 @@ namespace CommonLib {
 
   class hkpCollidable;
 
-  class hkpRootCdPoint
+  class alignas(16) hkpRootCdPoint
   {
     public:
       hkpRootCdPoint();

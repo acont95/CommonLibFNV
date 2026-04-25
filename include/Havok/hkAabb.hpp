@@ -5,7 +5,7 @@
 
 namespace CommonLib {
 
-  class hkAabb
+  class alignas(16) hkAabb
   {
     public:
       hkAabb();
