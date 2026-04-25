@@ -13,6 +13,6 @@ namespace CommonLib {
       float m_earlyOutDistance;
   };
 
-  static_assert(sizeof(hkpCdPointCollector) == 0x8, "hkpCdPointCollector has wrong size");
+  static_assert(sizeof(hkpCdPointCollector) == 0x10, "hkpCdPointCollector has wrong size");
   
 } // namespace CommonLib
