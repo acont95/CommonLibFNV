@@ -49,6 +49,39 @@ namespace CommonLib {
         CS_SIZING = 0x2,
       };
 
+      enum CHARACTER_FLAGS : std::int32_t
+      {
+        HITSTEPS = 0x40,
+        HITDAMAGE = 0x80,
+        HITFLAGS = 0xC0,
+        SUPPORT = 0x100,
+        SUPPORT2 = 0x200,
+        CANJUMP = 0x400,
+        CHASEBIP = 0x800,
+        FOLLOWRAGDOLL = 0x1000,
+        JUMPING = 0x2000,
+        NOTPUSHABLE = 0x4000,
+        DEBUGDISP = 0x8000,
+        CHECKSUPPORT = 0x10000,
+        ON_ELEVATOR = 0x20000,
+        FAR_AWAY = 0x40000,
+        QUICK_SIMULATE = 0x100000,
+        RECORD_HITS = 0x200000,
+        WAIT_FOR_BATCH_ADD = 0x400000,
+        ON_PLATFORM = 0x800000,
+        ON_STAIRS = 0x1000000,
+        CAN_PITCH = 0x2000000,
+        CAN_ROLL = 0x4000000,
+        NO_CHARACTER_COLLISIONS = 0x8000000,
+        NOTPUSHABLE_PERMANENT = 0x10000000,
+      };
+
+      enum REFERENCE_SLOTS : std::int32_t
+      {
+        MOBOBJECT = 0x3E8,
+        NiOBJECT = 0x3E9,
+      };
+
       hkVector4 UpVec;
       hkVector4 ForwardVec;
       hkStepInfo StepInfo;
