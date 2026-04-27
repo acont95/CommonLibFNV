@@ -11,23 +11,23 @@ namespace CommonLib {
       NiSkinData();
       ~NiSkinData();
 
-      struct NiSkinData::BoneVertData
+      struct BoneVertData
       {
         std::uint16_t m_usVert;
         float m_fWeight;
       };
 
-      struct NiSkinData::BoneData
+      struct BoneData
       {
         NiTransform m_kSkinToBone;
         NiBound m_kBound;
-        NiSkinData::BoneVertData *m_pkBoneVertData;
+        BoneVertData *m_pkBoneVertData;
         std::uint16_t m_usVerts;
       };
 
       NiPointer<NiSkinPartition> m_spSkinPartition;
       NiTransform m_kRootParentToSkin;
-      NiSkinData::BoneData* m_pkBoneData;
+      BoneData* m_pkBoneData;
       std::uint32_t m_uiBones;
   };
 
