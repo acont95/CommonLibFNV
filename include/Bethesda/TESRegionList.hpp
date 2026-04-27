@@ -9,7 +9,6 @@ namespace CommonLib {
   class TESRegionList : public BSSimpleList<TESRegion *>
   {
     public:
-      TESRegionList();
       virtual ~TESRegionList();
 
       struct CachedData

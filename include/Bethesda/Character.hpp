@@ -8,7 +8,6 @@ namespace CommonLib {
   class Character : public Actor
   {
     public:
-      Character();
       virtual ~Character();
 
       BipedAnim *pBiped;

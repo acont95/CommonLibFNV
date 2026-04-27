@@ -7,7 +7,6 @@ namespace CommonLib {
   class BSSimpleArray
   {
     public:
-      BSSimpleArray();
       virtual ~BSSimpleArray();
 
       T* pBuffer;

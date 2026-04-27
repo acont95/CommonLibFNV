@@ -1,4 +1,3 @@
-#include <cmath>
 #include "Bethesda/PlayerCharacter.hpp"
 
 namespace CommonLib {

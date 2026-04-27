@@ -1,4 +1,3 @@
-#include <cmath>
 #include "Bethesda/TESForm.hpp"
 
 namespace CommonLib {

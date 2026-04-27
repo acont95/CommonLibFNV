@@ -1,4 +1,3 @@
-#include <cmath>
 #include "Bethesda/VATS.hpp"
 
 namespace CommonLib {
