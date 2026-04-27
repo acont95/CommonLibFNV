@@ -9,12 +9,13 @@ namespace CommonLib {
 
   class TESForm : public BaseFormComponent {
     public:
-      TESForm();
-      ~TESForm();
       std::uint8_t cFormType;
       std::uint32_t iFormFlags;
       std::uint32_t iFormID;
       BSSimpleList<TESFile *> pSourceFiles;
+
+      static TESForm* GetFormByNumericId(int aiSearchID);
+      static TESForm* GetFormByEditorID(const char *apSearchID);
   };
 
   static_assert(sizeof(TESForm) == 0x18, "TESForm has wrong size");
