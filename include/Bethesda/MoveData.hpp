@@ -9,8 +9,6 @@ namespace CommonLib {
   class MoveData
   {
     public:
-      MoveData();
-      ~MoveData();
 
       float fTime;
       NiPoint3 Angle;

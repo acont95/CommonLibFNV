@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSOcclusionQuery
   {
     public:
-      BSOcclusionQuery();
-      ~BSOcclusionQuery();
 
       std::uint32_t uiNumTiles;
       D3DQuery* pQuery;

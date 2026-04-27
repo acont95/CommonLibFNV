@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESCondition
   {
     public:
-      TESCondition();
-      ~TESCondition();
 
       BSSimpleList<TESConditionItem*> listConditions;
   };

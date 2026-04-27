@@ -7,8 +7,6 @@ namespace CommonLib {
   class TESDescription : public BaseFormComponent
   {
     public:
-      TESDescription();
-      ~TESDescription();
 
       std::uint32_t lFileOffset;
   };

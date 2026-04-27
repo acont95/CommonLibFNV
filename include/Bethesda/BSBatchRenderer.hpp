@@ -62,8 +62,6 @@ namespace CommonLib {
       class PassGroup
       {
         public:
-          PassGroup();
-          ~PassGroup();
 
           BSTPersistentList<NiTPointerAllocator<std::uint32_t>,BSShaderProperty::RenderPass *> pListA[5];
           std::int32_t iSize;
@@ -72,8 +70,6 @@ namespace CommonLib {
       class GeometryGroup
       {
         public:
-          GeometryGroup();
-          ~GeometryGroup();
 
           enum etFlags
           {

@@ -8,8 +8,6 @@ namespace CommonLib {
   class MagicLight
   {
     public:
-      MagicLight();
-      ~MagicLight();
 
       struct REFR_LIGHT
       {

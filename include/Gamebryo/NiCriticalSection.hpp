@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiCriticalSection
   {
     public:
-      NiCriticalSection();
-      ~NiCriticalSection();
 
       CRITICAL_SECTION m_kCriticalSection;
       std::uint8_t pad01[104];

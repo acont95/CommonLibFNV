@@ -6,8 +6,6 @@ namespace CommonLib {
 
   class BSFileEntry : public BSHash {
     public:
-      BSFileEntry();
-      ~BSFileEntry();
 
       std::uint32_t iSize;
       std::uint32_t iOffset;

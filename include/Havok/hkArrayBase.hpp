@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkArrayBase
   {
     public:
-      hkArrayBase();
-      ~hkArrayBase();
 
       T* m_data;
       std::int32_t m_size;

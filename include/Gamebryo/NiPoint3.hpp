@@ -9,8 +9,6 @@ namespace CommonLib {
       float y;
       float z;
 
-      NiPoint3();
-      ~NiPoint3();
       NiPoint3(float afX, float afY, float afZ);
       float SumSquares() const;
       float Length() const;

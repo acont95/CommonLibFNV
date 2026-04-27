@@ -8,8 +8,6 @@ namespace CommonLib {
   class NavMeshGrid
   {
     public:
-      NavMeshGrid();
-      ~NavMeshGrid();
 
       std::uint32_t iGridSize;
       float fColumnSectionLen;

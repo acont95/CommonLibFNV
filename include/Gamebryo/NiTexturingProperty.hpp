@@ -11,8 +11,6 @@ namespace CommonLib {
   class NiTexturingProperty : public NiProperty
   {
     public:
-      NiTexturingProperty();
-      ~NiTexturingProperty();
 
       enum ClampMode
       {

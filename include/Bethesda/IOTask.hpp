@@ -7,8 +7,7 @@ namespace CommonLib {
   class IOTask : public BSTask<std::int64_t>
   {
     public:
-      IOTask();
-      ~IOTask();
+
   };
 
   static_assert(sizeof(IOTask) == 0x18);

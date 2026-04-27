@@ -8,8 +8,6 @@ namespace CommonLib {
   class NavMeshBounds
   {
     public:
-      NavMeshBounds();
-      ~NavMeshBounds();
 
       struct NavMeshBoundsTriangle
       {

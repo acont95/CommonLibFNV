@@ -7,8 +7,6 @@ namespace CommonLib {
   class BSShaderManager
   {
     public:
-      BSShaderManager();
-      ~BSShaderManager();
 
       enum eBSSMPassEnum
       {

@@ -9,8 +9,6 @@ namespace CommonLib {
   class hkpCdBody
   {
     public:
-      hkpCdBody();
-      ~hkpCdBody();
 
       const hkpShape *m_shape;
       std::uint32_t m_shapeKey;

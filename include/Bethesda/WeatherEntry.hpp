@@ -9,8 +9,6 @@ namespace CommonLib {
   class WeatherEntry
   {
     public:
-      WeatherEntry();
-      ~WeatherEntry();
 
       TESWeather *pWeather;
       std::uint32_t uiChance;

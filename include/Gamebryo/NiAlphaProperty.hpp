@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiAlphaProperty
   {
     public:
-      NiAlphaProperty();
-      ~NiAlphaProperty();
 
       enum AlphaFunction
       {

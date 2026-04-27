@@ -12,8 +12,6 @@ namespace CommonLib {
   class EffectArchetypes
   {
     public:
-      EffectArchetypes();
-      ~EffectArchetypes();
 
       enum ArchetypeID
       {

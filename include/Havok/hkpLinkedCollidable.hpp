@@ -11,8 +11,6 @@ namespace CommonLib {
   class hkpLinkedCollidable : public hkpCollidable
   {
     public:
-      hkpLinkedCollidable();
-      ~hkpLinkedCollidable();
 
       struct CollisionEntry
       {

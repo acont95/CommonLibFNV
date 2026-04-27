@@ -13,8 +13,6 @@ namespace CommonLib {
   class BGSImpactData : public TESForm, public TESModel
   {
     public:
-      BGSImpactData();
-      ~BGSImpactData();
 
       enum ORIENTATION
       {

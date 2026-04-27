@@ -5,8 +5,6 @@ namespace CommonLib {
   class GamePlayFormulas
   {
     public:
-      GamePlayFormulas();
-      ~GamePlayFormulas();
 
       enum DifficultyLevel
       {

@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiTSet
   {
     public:
-      NiTSet();
-      ~NiTSet();
 
       std::uint32_t* m_pBase;
       std::uint32_t m_uiAlloced;

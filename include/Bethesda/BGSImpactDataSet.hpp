@@ -9,8 +9,6 @@ namespace CommonLib {
   class BGSImpactDataSet : public TESForm, public BGSPreloadable
   {
     public:
-      BGSImpactDataSet();
-      ~BGSImpactDataSet();
 
       BGSImpactData *ppImpactData[12];
   };

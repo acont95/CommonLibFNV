@@ -6,8 +6,6 @@ namespace CommonLib {
   class NavMeshVertex
   {
     public:
-      NavMeshVertex();
-      ~NavMeshVertex();
 
       NiPoint3 Location;
   };

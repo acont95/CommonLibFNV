@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiDynamicEffect : public NiAVObject
   {
     public:
-      NiDynamicEffect();
-      ~NiDynamicEffect();
 
       bool m_bOn;
       std::uint8_t m_ucEffectType;

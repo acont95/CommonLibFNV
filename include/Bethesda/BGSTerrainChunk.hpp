@@ -13,9 +13,7 @@ namespace CommonLib {
   class BGSTerrainChunk
   {
     public:
-      BGSTerrainChunk();
-      ~BGSTerrainChunk();
-      
+
       enum ChunkTextureType
       {
         CHUNK_TEXTURE_DIFFUSE = 0x0,

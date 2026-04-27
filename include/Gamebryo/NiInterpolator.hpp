@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiInterpolator : public NiObject
   {
     public:
-      NiInterpolator();
-      ~NiInterpolator();
 
       float m_fLastTime;
   };

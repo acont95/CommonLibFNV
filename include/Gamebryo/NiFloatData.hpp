@@ -10,8 +10,6 @@ namespace CommonLib {
   class NiFloatData : public NiObject
   {
     public:
-      NiFloatData();
-      ~NiFloatData();
 
       std::uint32_t m_uiNumKeys;
       NiFloatKey *m_pkKeys;

@@ -6,8 +6,6 @@ namespace CommonLib {
   template <typename T>
   class BSStringT {
     public:
-      BSStringT();
-      ~BSStringT();
 
       T* pString;
       std::uint16_t sLen;

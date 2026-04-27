@@ -5,8 +5,6 @@ namespace CommonLib {
   class NiPoint4 
   {
     public:
-      NiPoint4();
-      ~NiPoint4();
 
       float x;
       float y;

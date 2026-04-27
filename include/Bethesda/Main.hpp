@@ -15,8 +15,6 @@ namespace CommonLib {
   class Main
   {
     public:
-      Main();
-      ~Main();
 
       bool bResumeLoadingThread;
       bool bQuitGame;

@@ -6,8 +6,6 @@ namespace CommonLib {
   class TESGrassAreaParam
   {
     public:
-      TESGrassAreaParam();
-      ~TESGrassAreaParam();
 
       TallGrassShaderProperty::GrassParam kGrassParam;
       float pfDensity[9];

@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiColorKey : public NiAnimationKey
   {
     public:
-      NiColorKey();
-      ~NiColorKey();
 
       NiColorA m_Color;
   };

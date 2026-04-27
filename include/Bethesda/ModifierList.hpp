@@ -10,8 +10,6 @@ namespace CommonLib {
   class ModifierList : public BSSimpleList<Modifier *>
   {
     public:
-      ModifierList();
-      ~ModifierList();
 
       bool bZeroValuesAllowed;
       FastModifierCollection *pFastModifiers;

@@ -7,8 +7,6 @@ namespace CommonLib {
   class alignas(16) hkpShapeRayCastCollectorOutput
   {
     public:
-      hkpShapeRayCastCollectorOutput();
-      ~hkpShapeRayCastCollectorOutput();
 
       hkVector4 m_normal;
       float m_hitFraction;

@@ -8,8 +8,6 @@ namespace CommonLib {
   class ParentSpaceNode
   {
     public:
-      ParentSpaceNode();
-      ~ParentSpaceNode();
 
       bool bWorldSpace;
       TESWorldSpace *pWorldSpace;

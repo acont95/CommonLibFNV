@@ -6,8 +6,6 @@ namespace CommonLib {
 
   class TESFullName : public BaseFormComponent {
     public:
-      TESFullName();
-      ~TESFullName();
 
       BSStringT<char> cFullName;
   };

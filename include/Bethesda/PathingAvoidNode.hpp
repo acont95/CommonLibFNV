@@ -7,8 +7,6 @@ namespace CommonLib {
   class PathingAvoidNode
   {
     public:
-      PathingAvoidNode();
-      ~PathingAvoidNode();
 
       enum AVOID_NODE_TYPE
       {

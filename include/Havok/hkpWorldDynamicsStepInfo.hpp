@@ -8,8 +8,6 @@ namespace CommonLib {
   class hkpWorldDynamicsStepInfo
   {
     public:
-      hkpWorldDynamicsStepInfo();
-      ~hkpWorldDynamicsStepInfo();
 
       hkStepInfo m_stepInfo;
       hkpSolverInfo m_solverInfo;

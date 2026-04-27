@@ -8,8 +8,6 @@ namespace CommonLib {
   class NavMeshTriHandle
   {
     public:
-      NavMeshTriHandle();
-      ~NavMeshTriHandle();
 
       NavMeshInfo *pNavMeshInfo;
       std::uint16_t usTriangle;

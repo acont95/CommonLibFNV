@@ -21,8 +21,6 @@ namespace CommonLib {
     public TESIcon
   {
     public:
-      EffectSetting();
-      ~EffectSetting();
 
       struct EffectSettingData
       {

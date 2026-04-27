@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkpProperty 
   {
     public:
-      hkpProperty();
-      ~hkpProperty();
 
       unsigned int m_key;
       unsigned int m_alignmentPadding;

@@ -6,8 +6,6 @@ namespace CommonLib {
   class hkStepInfo
   {
     public:
-      hkStepInfo();
-      ~hkStepInfo();
 
       hkPadSpu<float> m_startTime;
       hkPadSpu<float> m_endTime;

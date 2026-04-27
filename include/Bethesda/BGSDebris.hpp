@@ -11,8 +11,6 @@ namespace CommonLib {
   class BGSDebris : public TESForm, public BGSPreloadable
   {
     public:
-      BGSDebris();
-      ~BGSDebris();
 
       BSSimpleList<BGSDebrisData*> DataList;
   };

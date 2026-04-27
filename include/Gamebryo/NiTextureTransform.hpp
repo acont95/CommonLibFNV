@@ -9,8 +9,6 @@ namespace CommonLib {
   class NiTextureTransform : public NiMemObject
   {
     public:
-      NiTextureTransform();
-      ~NiTextureTransform();
 
       enum TransformMethod
       {

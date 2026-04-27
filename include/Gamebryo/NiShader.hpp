@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiShader : public NiRefObject
   {
     public:
-      NiShader();
-      ~NiShader();
 
       NiFixedString m_kName;
       std::uint32_t m_uiImplementation;

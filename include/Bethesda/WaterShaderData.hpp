@@ -6,8 +6,6 @@ namespace CommonLib {
   class WaterShaderData
   {
     public:
-      WaterShaderData();
-      ~WaterShaderData();
 
       float fWindVelocity;
       float fWindDirection;

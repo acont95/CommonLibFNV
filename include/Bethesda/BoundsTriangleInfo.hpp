@@ -6,8 +6,6 @@ namespace CommonLib {
   class BoundsTriangleInfo
   {
     public:
-      BoundsTriangleInfo();
-      ~BoundsTriangleInfo();
 
       std::uint16_t usTriangleIndex;
       bool bPortals[3];

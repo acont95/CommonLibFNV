@@ -10,8 +10,6 @@ namespace CommonLib {
   class InventoryChanges
   {
     public:
-      InventoryChanges();
-      ~InventoryChanges();
 
       BSSimpleList<ItemChange *> *pListofChanges;
       TESObjectREFR *pRef;

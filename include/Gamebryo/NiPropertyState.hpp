@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiPropertyState
   {
     public:
-      NiPropertyState();
-      ~NiPropertyState();
 
       NiPointer<NiProperty> m_aspProps[7];
   };

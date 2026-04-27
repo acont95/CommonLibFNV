@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiBound
   {
     public:
-      NiBound();
-      ~NiBound();
 
       union NiBoundRadius
       {

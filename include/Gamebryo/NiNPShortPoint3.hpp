@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiNPShortPoint3
   {
     public:
-      NiNPShortPoint3();
-      ~NiNPShortPoint3();
 
       std::int16_t x;
       std::int16_t y;

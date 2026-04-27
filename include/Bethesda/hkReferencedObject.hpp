@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkReferencedObject : public hkBaseObject
   {
     public:
-      hkReferencedObject();
-      ~hkReferencedObject();
 
       std::uint16_t m_memSizeAndFlags;
       std::int16_t m_referenceCount;

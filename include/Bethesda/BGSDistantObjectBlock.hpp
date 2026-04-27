@@ -9,8 +9,6 @@ namespace CommonLib {
   class BGSDistantObjectBlock
   {
     public:
-      BGSDistantObjectBlock();
-      ~BGSDistantObjectBlock();
 
       BGSTerrainNode *pNode;
       NiPointer<NiGeometry> spMesh;

@@ -8,8 +8,6 @@ namespace CommonLib {
 
   class TESModel : public BaseFormComponent {
     public:
-      TESModel();
-      ~TESModel();
 
       BSStringT<char> cModel;
       TESTextureList TextureList;

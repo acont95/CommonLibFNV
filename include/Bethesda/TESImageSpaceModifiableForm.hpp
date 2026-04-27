@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESImageSpaceModifiableForm : public BaseFormComponent
   {
     public:
-      TESImageSpaceModifiableForm();
-      ~TESImageSpaceModifiableForm();
 
       TESImageSpaceModifier* pFormImageSpaceModifying;
   };

@@ -4,8 +4,6 @@ namespace CommonLib {
 
   class BaseFormComponent {
     public:
-      BaseFormComponent();
-      ~BaseFormComponent();
 
       virtual void InitializeDataComponent();
       virtual void ClearDataComponent();

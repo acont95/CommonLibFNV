@@ -11,8 +11,6 @@ namespace CommonLib {
   class QueuedFile : public IOTask
   {
     public:
-      QueuedFile();
-      ~QueuedFile();
 
       MEM_CONTEXT eContext;
       NiPointer<QueuedFile> spParent;

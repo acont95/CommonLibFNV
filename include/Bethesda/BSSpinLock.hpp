@@ -6,8 +6,6 @@ namespace CommonLib {
   class BSSpinLock
   {
     public:
-      BSSpinLock();
-      ~BSSpinLock();
 
       volatile std::uint32_t uiOwningThread;
       std::uint32_t uiLockCount;

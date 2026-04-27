@@ -16,8 +16,6 @@ namespace CommonLib {
   class TESQuestStage
   {
     public:
-      TESQuestStage();
-      ~TESQuestStage();
 
       QUEST_STAGE_DATA m_Data;
       BSSimpleList<TESQuestStageItem*> listStageItems;

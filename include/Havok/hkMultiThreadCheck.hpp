@@ -6,8 +6,6 @@ namespace CommonLib {
   class hkMultiThreadCheck
   {
     public:
-      hkMultiThreadCheck();
-      ~hkMultiThreadCheck();
 
       enum AccessType : std::int32_t
       {

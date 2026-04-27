@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiLight : public NiDynamicEffect
   {
     public:
-      NiLight();
-      ~NiLight();
 
       float m_fDimmer;
       NiColor m_kAmb;

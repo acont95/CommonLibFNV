@@ -7,8 +7,6 @@ namespace CommonLib {
   class bhkPhantom : public bhkWorldObject
   {
     public:
-      bhkPhantom();
-      ~bhkPhantom();
 
       std::uint8_t cFlags;
   };

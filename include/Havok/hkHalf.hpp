@@ -6,8 +6,6 @@ namespace CommonLib {
   class hkHalf
   {
     public:
-      hkHalf();
-      ~hkHalf();
 
       std::int16_t m_value;
   };

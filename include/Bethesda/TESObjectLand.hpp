@@ -18,8 +18,6 @@ namespace CommonLib {
   class TESObjectLAND : public TESForm, public TESChildCell
   {
     public:
-      TESObjectLAND();
-      ~TESObjectLAND();
 
       struct LoadedLandData
       {

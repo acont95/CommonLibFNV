@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSMultiBound : public NiObject
   {
     public:
-      BSMultiBound();
-      ~BSMultiBound();
 
       std::uint32_t uiBoundFrameCount;
       NiPointer<BSMultiBoundShape> spShape;

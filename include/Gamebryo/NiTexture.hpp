@@ -9,14 +9,10 @@ namespace CommonLib {
   class NiTexture : public NiObjectNET
   {
     public:
-      NiTexture();
-      ~NiTexture();
 
       class FormatPrefs
       {
         public:
-          FormatPrefs();
-          ~FormatPrefs();
 
           enum PixelLayout
           {
@@ -59,8 +55,7 @@ namespace CommonLib {
       class RendererData : public NiObject
       {
         public:
-          RendererData();
-          ~RendererData();
+
           NiTexture *m_pkTexture;
           std::uint32_t m_uiWidth;
           std::uint32_t m_uiHeight;

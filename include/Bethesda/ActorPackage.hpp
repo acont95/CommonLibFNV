@@ -10,8 +10,6 @@ namespace CommonLib {
   class ActorPackage
   {
     public:
-      ActorPackage();
-      ~ActorPackage();
 
       TESPackage *pPackage;
       ActorPackageData *pData;

@@ -7,8 +7,6 @@ namespace CommonLib {
   class NavMeshArray
   {
     public:
-      NavMeshArray();
-      ~NavMeshArray();
 
       BSSimpleArray<NavMeshPtr, 1024> NavMeshes;
   };

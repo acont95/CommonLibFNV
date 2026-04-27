@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkpPropertyValue 
   {
     public:
-      hkpPropertyValue();
-      ~hkpPropertyValue();
 
       std::uint64_t m_data;
   };

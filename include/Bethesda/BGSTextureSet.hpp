@@ -12,8 +12,6 @@ namespace CommonLib {
   class BGSTextureSet : public TESBoundObject, public BSTextureSet
   {
     public:
-      BGSTextureSet();
-      ~BGSTextureSet();
 
       TESTexture pTextures[7];
       DecalData* pDecalData;

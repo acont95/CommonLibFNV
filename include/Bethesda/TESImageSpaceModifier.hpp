@@ -14,8 +14,6 @@ namespace CommonLib {
   class TESImageSpaceModifier : public TESForm
   {
     public:
-      TESImageSpaceModifier();
-      ~TESImageSpaceModifier();
 
       enum ImageSpaceModifierOperations
       {

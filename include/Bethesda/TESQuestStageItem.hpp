@@ -16,8 +16,6 @@ namespace CommonLib {
   class TESQuestStageItem
   {
     public:
-      TESQuestStageItem();
-      ~TESQuestStageItem();
 
       QUEST_STAGE_ITEM_DATA m_Data;
       TESCondition objConditions;

@@ -8,8 +8,6 @@ namespace CommonLib {
     public:
       NiPoint3 m_pEntry[3];
 
-      NiMatrix3();
-      ~NiMatrix3();
       NiMatrix3(const NiPoint3& row1, const NiPoint3& row2, const NiPoint3& row3);
       void ToEulerAnglesZXY(float &rfZAngle, float &rfXAngle, float &rfYAngle) const;
       void FromEulerAnglesZXY(float fZAngle, float fXAngle, float fYAngle);

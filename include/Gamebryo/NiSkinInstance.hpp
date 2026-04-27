@@ -9,8 +9,6 @@ namespace CommonLib {
   class NiSkinInstance : public NiObject
   {
     public:
-      NiSkinInstance();
-      ~NiSkinInstance();
 
       NiPointer<NiSkinData> m_spSkinData;
       NiPointer<NiSkinPartition> m_spSkinPartition;

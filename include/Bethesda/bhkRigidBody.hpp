@@ -8,8 +8,6 @@ namespace CommonLib {
   class bhkRigidBody : public bhkEntity
   {
     public:
-      bhkRigidBody();
-      ~bhkRigidBody();
 
       BSSimpleList<NiPointer<bhkSerializable>> ActionConstraint;
   };

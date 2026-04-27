@@ -10,8 +10,6 @@ namespace CommonLib {
 
   class BGSProjectileData {
     public:
-      BGSProjectileData();
-      ~BGSProjectileData();
 
       std::uint32_t iFlags;
       float fGravity;

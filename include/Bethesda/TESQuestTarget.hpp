@@ -10,8 +10,6 @@ namespace CommonLib {
   class TESQuestTarget
   {
     public:
-      TESQuestTarget();
-      ~TESQuestTarget();
 
       std::uint8_t cFlags;
       TESCondition objConditions;

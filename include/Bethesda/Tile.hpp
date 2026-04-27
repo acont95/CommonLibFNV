@@ -312,8 +312,6 @@ namespace CommonLib {
       class Value
       {
         public:
-          Value();
-          ~Value();
 
           enumTrait eIndex;
           Tile *pParent;
@@ -343,8 +341,6 @@ namespace CommonLib {
       class TileTemplateItem
       {
         public:
-          TileTemplateItem();
-          ~TileTemplateItem();
 
           int iCmd;
           float fVal;
@@ -356,8 +352,6 @@ namespace CommonLib {
       class TileTemplate
       {
         public:
-          TileTemplate();
-          ~TileTemplate();
 
           NiFixedString xName;
           BuildStorage *pParent;
@@ -367,8 +361,6 @@ namespace CommonLib {
       class BuildStorage
       {
         public:
-          BuildStorage();
-          ~BuildStorage();
 
           TileTemplate *pTemplate;
           BSSimpleList<TileTemplate *> xSubTemplates;
@@ -397,8 +389,6 @@ namespace CommonLib {
       class Reaction
       {
         public:
-          Reaction();
-          ~Reaction();
 
           Value *preactionValue;
           Reaction *pnext;
@@ -417,8 +407,6 @@ namespace CommonLib {
       class TextureAtlasEntry
       {
         public:
-          TextureAtlasEntry();
-          ~TextureAtlasEntry();
 
           BSStringT<char> strAtlasFilename;
           BSStringT<char> strSubtexture;

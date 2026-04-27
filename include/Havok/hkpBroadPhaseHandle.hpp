@@ -8,8 +8,6 @@ namespace CommonLib {
   class hkpBroadPhaseHandle
   {
     public:
-      hkpBroadPhaseHandle();
-      ~hkpBroadPhaseHandle();
 
       std::uint32_t m_id;
   };

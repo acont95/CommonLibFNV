@@ -106,8 +106,6 @@ namespace CommonLib {
       class RenderPass
       {
         public:
-          RenderPass();
-          ~RenderPass();
 
           NiGeometry *pGeometry;
           std::uint16_t usPassEnum;
@@ -123,8 +121,6 @@ namespace CommonLib {
       class RenderPassArray
       {
         public:
-          RenderPassArray();
-          ~RenderPassArray();
 
           NiTObjectArray<RenderPass*> pPassA;
           std::uint32_t iSize;

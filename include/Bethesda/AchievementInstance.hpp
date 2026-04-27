@@ -6,8 +6,6 @@ namespace CommonLib {
   class AchievementInstance
   {
     public:
-      AchievementInstance();
-      ~AchievementInstance();
 
       bool bUnlocked;
       std::int32_t iCurrentValue;

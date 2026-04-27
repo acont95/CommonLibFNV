@@ -6,8 +6,6 @@ namespace CommonLib {
   class PortalEdgeSwap
   {
     public:
-      PortalEdgeSwap();
-      ~PortalEdgeSwap();
 
       NavMeshEdgeHandle hOldEdge;
       NavMeshEdgeHandle hNewEdge;

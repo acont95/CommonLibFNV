@@ -8,8 +8,6 @@ namespace CommonLib {
   class hkpTypedBroadPhaseHandle : public hkpBroadPhaseHandle
   {
     public:
-      hkpTypedBroadPhaseHandle();
-      ~hkpTypedBroadPhaseHandle();
 
       char m_type;
       char m_ownerOffset;

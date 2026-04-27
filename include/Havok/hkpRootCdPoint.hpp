@@ -8,8 +8,6 @@ namespace CommonLib {
   class alignas(16) hkpRootCdPoint
   {
     public:
-      hkpRootCdPoint();
-      ~hkpRootCdPoint();
 
       hkContactPoint m_contact;
       const hkpCollidable *m_rootCollidableA;

@@ -7,8 +7,6 @@ namespace CommonLib {
   class ScriptVariable
   {
     public:
-      ScriptVariable();
-      ~ScriptVariable();
 
       SCRIPT_LOCAL data;
       BSStringT<char> cName;

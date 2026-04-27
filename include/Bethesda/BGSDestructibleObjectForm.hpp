@@ -8,8 +8,6 @@ namespace CommonLib {
   class BGSDestructibleObjectForm : public BaseFormComponent
   {
     public:
-      BGSDestructibleObjectForm();
-      ~BGSDestructibleObjectForm();
 
       DestructibleObjectData *pData;
   };

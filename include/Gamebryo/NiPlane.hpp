@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiPlane
   {
     public:
-      NiPlane();
-      ~NiPlane();
 
       NiPoint3 m_kNormal;
       float m_fConstant;

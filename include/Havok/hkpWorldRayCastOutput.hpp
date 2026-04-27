@@ -9,8 +9,6 @@ namespace CommonLib {
   class alignas(16) hkpWorldRayCastOutput : public hkpShapeRayCastOutput
   {
     public:
-      hkpWorldRayCastOutput();
-      ~hkpWorldRayCastOutput();
 
       const hkpCollidable *m_rootCollidable;
   };

@@ -8,8 +8,6 @@ namespace CommonLib {
   class NavMeshTriangleDoorPortal
   {
     public:
-      NavMeshTriangleDoorPortal();
-      ~NavMeshTriangleDoorPortal();
 
       TESObjectREFR *pDoorForm;
       std::uint16_t iOwningTriangleIndex;

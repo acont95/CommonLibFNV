@@ -9,8 +9,6 @@ namespace CommonLib {
   class hkGeometry
   {
     public:
-      hkGeometry();
-      ~hkGeometry();
 
       struct Triangle
       {

@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiTMapItem : public NiMemObject
   {
     public:
-      NiTMapItem();
-      ~NiTMapItem();
 
       NiTMapItem<Key ,Value> *m_pkNext;
       Key m_key;

@@ -10,8 +10,6 @@ namespace CommonLib {
   class NiGeometry : public NiAVObject
   {
     public:
-      NiGeometry();
-      ~NiGeometry();
 
       NiPropertyState m_PropertyState;
       NiPointer<NiGeometryData> m_spModelData;

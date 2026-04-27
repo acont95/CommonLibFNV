@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiTransform
   {
     public:
-      NiTransform();
-      ~NiTransform();
 
       NiMatrix3 m_Rotate;
       NiPoint3 m_Translate;

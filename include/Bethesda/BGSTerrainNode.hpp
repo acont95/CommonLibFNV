@@ -13,8 +13,6 @@ namespace CommonLib {
   class BGSTerrainNode
   {
     public:
-      BGSTerrainNode();
-      ~BGSTerrainNode();
 
       enum PARENT_POSITION
       {

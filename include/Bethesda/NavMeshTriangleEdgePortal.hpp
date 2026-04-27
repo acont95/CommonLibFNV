@@ -8,8 +8,6 @@ namespace CommonLib {
   class NavMeshTriangleEdgePortal
   {
     public:
-      NavMeshTriangleEdgePortal();
-      ~NavMeshTriangleEdgePortal();
 
       NavMeshInfo *pOtherMesh;
       std::uint16_t sTriangle;

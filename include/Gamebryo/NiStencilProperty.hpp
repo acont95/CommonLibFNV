@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiStencilProperty : public NiProperty
   {
     public:
-      NiStencilProperty();
-      ~NiStencilProperty();
 
       std::uint16_t m_uFlags;
       std::uint32_t m_uiRef;

@@ -9,8 +9,6 @@ namespace CommonLib {
   class NiFloatInterpolator : public NiKeyBasedInterpolator
   {
     public:
-      NiFloatInterpolator();
-      ~NiFloatInterpolator();
 
       float m_fFloatValue;
       NiPointer<NiFloatData> m_spFloatData;

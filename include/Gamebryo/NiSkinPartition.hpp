@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiSkinPartition : public NiObject
   {
     public:
-      NiSkinPartition();
-      ~NiSkinPartition();
 
       class Partition
       {

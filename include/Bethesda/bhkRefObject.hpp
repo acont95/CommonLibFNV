@@ -8,8 +8,6 @@ namespace CommonLib {
   class bhkRefObject : public NiObject
   {
     public:
-      bhkRefObject();
-      ~bhkRefObject();
 
       hkReferencedObject *phkObject;
   };

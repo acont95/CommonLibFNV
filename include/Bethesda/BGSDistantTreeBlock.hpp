@@ -13,8 +13,6 @@ namespace CommonLib {
   class BGSDistantTreeBlock
   {
     public:
-      BGSDistantTreeBlock();
-      ~BGSDistantTreeBlock();
 
       class TreeType
       {

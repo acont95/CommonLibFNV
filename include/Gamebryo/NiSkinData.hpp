@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiSkinData : public NiObject
   {
     public:
-      NiSkinData();
-      ~NiSkinData();
 
       struct BoneVertData
       {

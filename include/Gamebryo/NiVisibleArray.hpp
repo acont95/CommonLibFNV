@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiVisibleArray
   {
     public:
-      NiVisibleArray();
-      ~NiVisibleArray();
 
       NiGeometry** m_ppkArray;
       std::uint32_t m_uiCurrentSize;

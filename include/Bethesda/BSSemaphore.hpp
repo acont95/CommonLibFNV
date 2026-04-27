@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSSemaphore
   {
     public:
-      BSSemaphore();
-      ~BSSemaphore();
 
       volatile std::int32_t iCount;
       void *hSemaphore;

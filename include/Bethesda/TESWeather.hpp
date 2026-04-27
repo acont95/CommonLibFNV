@@ -11,8 +11,6 @@ namespace CommonLib {
   class TESWeather : public TESForm, public TESImageSpaceModifiableCountForm<6>
   {
     public:
-      TESWeather();
-      ~TESWeather();
 
       enum SoundType
       {

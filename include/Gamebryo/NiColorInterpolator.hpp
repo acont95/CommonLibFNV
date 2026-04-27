@@ -10,8 +10,6 @@ namespace CommonLib {
   class NiColorInterpolator : public NiKeyBasedInterpolator
   {
     public:
-      NiColorInterpolator();
-      ~NiColorInterpolator();
 
       NiColorA m_kColorValue;
       NiPointer<NiColorData> m_spColorData;

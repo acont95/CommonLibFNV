@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiFloatKey : public NiAnimationKey
   {
     public:
-      NiFloatKey();
-      ~NiFloatKey();
 
       float m_fValue;
   };

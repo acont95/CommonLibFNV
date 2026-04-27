@@ -6,8 +6,6 @@ namespace CommonLib {
   class ImageSpaceParameterData
   {
     public:
-      ImageSpaceParameterData();
-      ~ImageSpaceParameterData();
 
       float pfHDRData[15];
       float pfBloomData[3];

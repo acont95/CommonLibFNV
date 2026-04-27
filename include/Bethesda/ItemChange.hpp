@@ -9,8 +9,6 @@ namespace CommonLib {
 
   class ItemChange {
     public:
-      ItemChange();
-      ~ItemChange();
 
       enum StatusFlags
       {

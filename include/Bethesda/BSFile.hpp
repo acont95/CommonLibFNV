@@ -7,8 +7,6 @@ namespace CommonLib {
   class BSFile : public NiFile
   {  
     public:
-      BSFile();
-      ~BSFile();
 
       bool m_bUseNoBuffering;
       bool bUseAuxBuffer;

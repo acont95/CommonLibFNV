@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESGrass : public TESBoundObject, public TESModel
   {
     public:
-      TESGrass();
-      ~TESGrass();
 
       enum GRASS_WATER_STATE
       {

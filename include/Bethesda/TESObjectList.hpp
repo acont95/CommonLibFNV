@@ -8,8 +8,6 @@ namespace CommonLib {
 
   class TESObjectList {
     public:
-      TESObjectList();
-      ~TESObjectList();
 
       std::uint32_t lnk_dwCount;
       TESObject *lnk_lpRoot;

@@ -9,8 +9,6 @@ namespace CommonLib {
   class NiTObjectArray : public NiTArray<T, NiTNewInterface<T>>
   {
     public:
-      NiTObjectArray();
-      ~NiTObjectArray();
 
   };
 

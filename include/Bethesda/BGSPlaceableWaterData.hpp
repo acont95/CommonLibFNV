@@ -8,8 +8,6 @@ namespace CommonLib {
   class BGSPlaceableWaterData
   {
     public:
-      BGSPlaceableWaterData();
-      ~BGSPlaceableWaterData();
 
       std::uint32_t ulFlags;
       TESWaterForm *pWaterType;

@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiTListItem : public NiMemObject
   {
     public:
-      NiTListItem();
-      ~NiTListItem();
 
       NiTListItem<T>* m_pkNext;
       NiTListItem<T>* m_pkPrev;

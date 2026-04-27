@@ -7,8 +7,6 @@ namespace CommonLib {
   class TESTexture : public BaseFormComponent
   {
     public:
-      TESTexture();
-      ~TESTexture();
 
       BSStringT<char> TextureName;
   };

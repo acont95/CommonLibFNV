@@ -9,8 +9,7 @@ namespace CommonLib {
   class NiTPointerMap : public NiTMapBase<NiTPointerAllocator<std::uint32_t>, Key, Value>
   {
     public:
-      NiTPointerMap();
-      ~NiTPointerMap();
+
   };
 
   static_assert(sizeof(NiTPointerMap<void*, void*>) == 0x10, "NiTPointerMap has wrong size");

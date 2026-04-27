@@ -8,8 +8,6 @@ namespace CommonLib {
   class EnchantmentItem : public MagicItemForm 
   {
     public:
-      EnchantmentItem();
-      ~EnchantmentItem();
 
       struct EnchantmentItemData
       {

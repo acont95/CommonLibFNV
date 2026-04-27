@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESEffectShader : public TESForm
   {
     public:
-      TESEffectShader();
-      ~TESEffectShader();
 
       EffectShaderData Data;
       TESTexture TextureShaderTexture;

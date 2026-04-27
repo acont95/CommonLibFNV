@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESSound : public TESBoundAnimObject, public TESSoundFile
   {
     public:
-      TESSound();
-      ~TESSound();
 
       struct SOUND_DATA
       {

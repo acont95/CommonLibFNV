@@ -10,8 +10,6 @@ namespace CommonLib {
   class hkpCollidable : public hkpCdBody
   {
     public:
-      hkpCollidable();
-      ~hkpCollidable();
 
       class BoundingVolumeData
       {

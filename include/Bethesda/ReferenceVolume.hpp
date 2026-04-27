@@ -9,8 +9,6 @@ namespace CommonLib {
   class ReferenceVolume
   {
     public:
-      ReferenceVolume();
-      ~ReferenceVolume();
 
       NiPoint3 Center;
       float fRadius;

@@ -8,8 +8,6 @@ namespace CommonLib {
   class EffectItemData
   {
     public:
-      EffectItemData();
-      ~EffectItemData();
 
       std::int32_t iMagnitude;
       std::int32_t iArea;

@@ -7,8 +7,6 @@ namespace CommonLib {
 
   class NiAccumulator : public NiObject {
     public:
-      NiAccumulator();
-      ~NiAccumulator();
 
       const NiCamera *m_pkCamera;
   };

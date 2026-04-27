@@ -9,8 +9,6 @@ namespace CommonLib {
 
   class TESEnchantableForm : public BaseFormComponent {
     public:
-      TESEnchantableForm();
-      ~TESEnchantableForm();
 
       EnchantmentItem* pFormEnchanting;
       std::uint16_t iAmountofEnchantment;

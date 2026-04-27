@@ -15,8 +15,6 @@ namespace CommonLib {
   class HitData
   {
     public:
-      HitData();
-      ~HitData();
 
       Actor *pAggressor;
       Actor *pTarget;

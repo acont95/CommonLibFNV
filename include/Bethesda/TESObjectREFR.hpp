@@ -15,8 +15,6 @@ namespace CommonLib {
   class TESObjectREFR : public TESForm, public TESChildCell
   {
     public:
-      TESObjectREFR();
-      ~TESObjectREFR();
 
       struct OBJ_REFR
       {

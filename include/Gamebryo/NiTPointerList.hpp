@@ -8,8 +8,7 @@ namespace CommonLib {
   class NiTPointerList : public NiTPointerListBase<NiTPointerAllocator<std::uint32_t>, T>
   {
     public:
-      NiTPointerList();
-      ~NiTPointerList();
+
   };
 
   static_assert(sizeof(NiTPointerList<void*>) == 0xC, "NiTPointerList has wrong size");

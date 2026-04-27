@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkInplaceArray : public hkArray<T, TAllocator>
   {
     public:
-      hkInplaceArray();
-      ~hkInplaceArray();
 
       T m_storage[TSize];
   };

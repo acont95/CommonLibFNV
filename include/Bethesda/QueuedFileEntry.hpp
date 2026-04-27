@@ -8,8 +8,6 @@ namespace CommonLib {
   class QueuedFileEntry : public QueuedFile
   {
     public:
-      QueuedFileEntry();
-      ~QueuedFileEntry();
 
       char* pFileName;
       BSFileEntry* pFileEntry;

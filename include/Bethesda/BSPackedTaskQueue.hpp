@@ -9,8 +9,6 @@ namespace CommonLib {
   class BSPackedTaskQueue
   {
     public:
-      BSPackedTaskQueue();
-      ~BSPackedTaskQueue();
 
       BSTCommonScrapHeapMessageQueue<BSPackedTask> Queue;
       BSSemaphore InputSources;

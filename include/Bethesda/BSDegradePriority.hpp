@@ -6,8 +6,6 @@ namespace CommonLib {
   class BSDegradePriority
   {
     public:
-      BSDegradePriority();
-      ~BSDegradePriority();
 
       std::uint8_t cPriorityL;
       std::uint8_t cPriorityH;

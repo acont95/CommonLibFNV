@@ -6,8 +6,6 @@ namespace CommonLib {
   class ScrapHeap
   {
     public:
-      ScrapHeap();
-      ~ScrapHeap();
 
       struct Header
       {

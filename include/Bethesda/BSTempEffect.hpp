@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSTempEffect : public NiObject
   {
     public:
-      BSTempEffect();
-      ~BSTempEffect();
 
       float fLifetime;
       TESObjectCELL* pCell;

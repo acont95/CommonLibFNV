@@ -8,8 +8,6 @@ namespace CommonLib {
   class TeleportPath
   {
     public:
-      TeleportPath();
-      ~TeleportPath();
 
       BSSimpleArray<ParentSpaceNode,1024> Spaces;
       BSSimpleArray<TeleportLink,1024> Doors;

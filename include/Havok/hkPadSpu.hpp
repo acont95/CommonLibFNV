@@ -6,8 +6,6 @@ namespace CommonLib {
   class hkPadSpu
   {
     public:
-      hkPadSpu();
-      ~hkPadSpu();
 
       float m_storage;
   };

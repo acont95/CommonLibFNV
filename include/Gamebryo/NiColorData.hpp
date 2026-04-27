@@ -10,8 +10,6 @@ namespace CommonLib {
   class NiColorData : public NiObject
   {
     public:
-      NiColorData();
-      ~NiColorData();
 
       std::uint32_t m_uiNumKeys;
       NiColorKey* m_pkKeys;

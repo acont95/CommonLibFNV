@@ -8,8 +8,6 @@ namespace CommonLib {
   class SpellItemData
   {
     public:
-      SpellItemData();
-      ~SpellItemData();
 
       MagicSystem::SpellType iSpellType;
       std::int32_t iCostOverride;

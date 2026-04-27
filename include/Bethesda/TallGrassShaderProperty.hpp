@@ -15,8 +15,6 @@ namespace CommonLib {
   class TallGrassShaderProperty : public BSShaderLightingProperty
   {
     public:
-      TallGrassShaderProperty();
-      ~TallGrassShaderProperty();
 
       enum TerrainGeometrySection
       {

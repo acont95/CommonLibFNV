@@ -6,8 +6,6 @@ namespace CommonLib {
 
   class TESSoundFile : public BaseFormComponent {
     public:
-      TESSoundFile();
-      ~TESSoundFile();
 
       BSStringT<char> cSoundFile;
   };

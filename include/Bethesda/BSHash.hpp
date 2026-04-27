@@ -6,8 +6,6 @@ namespace CommonLib {
   class BSHash 
   {
     public:
-      BSHash();
-      ~BSHash();
 
       std::uint8_t cLast;
       std::uint8_t cLast2;

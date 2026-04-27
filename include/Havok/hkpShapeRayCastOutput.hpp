@@ -7,8 +7,6 @@ namespace CommonLib {
   class alignas(16) hkpShapeRayCastOutput : public hkpShapeRayCastCollectorOutput
   {
     public:
-      hkpShapeRayCastOutput();
-      ~hkpShapeRayCastOutput();
 
       std::uint32_t m_shapeKeys[8];
       std::int32_t m_shapeKeyIndex;

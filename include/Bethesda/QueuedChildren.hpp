@@ -8,8 +8,6 @@ namespace CommonLib {
   class QueuedChildren : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
   {
     public:
-      QueuedChildren();
-      ~QueuedChildren();
 
       volatile std::uint32_t iNumChildrenFinished;
   };

@@ -6,8 +6,6 @@ namespace CommonLib {
   class BSSoundHandle
   {
     public:
-      BSSoundHandle();
-      ~BSSoundHandle();
 
       enum ASSUMED_STATE
       {

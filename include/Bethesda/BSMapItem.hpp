@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSMapItem
   {
     public:
-      BSMapItem();
-      ~BSMapItem();
 
       BSMapItem<Key, Value> *m_pkNext;
       std::uint32_t m_key;

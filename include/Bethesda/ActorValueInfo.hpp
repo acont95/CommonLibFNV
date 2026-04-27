@@ -18,8 +18,6 @@ namespace CommonLib {
     public TESIcon
   {
     public:
-      ActorValueInfo();
-      ~ActorValueInfo();
 
       char* sScriptName;
       BSStringT<char> sAbbreviation;

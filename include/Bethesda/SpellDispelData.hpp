@@ -9,8 +9,6 @@ namespace CommonLib {
   class SpellDispelData
   {
     public:
-      SpellDispelData();
-      ~SpellDispelData();
 
       MagicItem* pSpell;
       MagicCaster* pCaster;

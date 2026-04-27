@@ -10,8 +10,6 @@ namespace CommonLib {
   class TESModelTextureSwap : public TESModel
   {
     public:
-      TESModelTextureSwap();
-      ~TESModelTextureSwap();
 
       struct TEX_SWAP
       {

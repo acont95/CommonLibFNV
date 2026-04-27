@@ -10,8 +10,6 @@ namespace CommonLib {
 
   class BSCompoundFrustum {
     public:
-      BSCompoundFrustum();
-      ~BSCompoundFrustum();
 
       struct FunctionOp
       {

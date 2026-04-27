@@ -8,8 +8,6 @@ namespace CommonLib {
   class TallGrassGroup
   {
     public:
-      TallGrassGroup();
-      ~TallGrassGroup();
 
       struct GrassInstanceData
       {

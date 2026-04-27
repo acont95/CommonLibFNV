@@ -7,8 +7,6 @@ namespace CommonLib {
   class CharacterProgression
   {
     public:
-      CharacterProgression();
-      ~CharacterProgression();
 
       CharacterProgressionData *pData;
   };

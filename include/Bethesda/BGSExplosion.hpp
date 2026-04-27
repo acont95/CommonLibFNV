@@ -23,8 +23,6 @@ namespace CommonLib {
     public TESImageSpaceModifiableForm 
   {
     public:
-      BGSExplosion();
-      ~BGSExplosion();
 
       struct BGSExplosionData
       {

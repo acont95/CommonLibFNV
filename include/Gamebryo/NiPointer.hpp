@@ -5,8 +5,6 @@ namespace CommonLib {
   template <typename T>
   class NiPointer {
     public:
-      NiPointer();
-      ~NiPointer();
 
       T* m_pObject;
 

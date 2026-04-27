@@ -13,8 +13,6 @@ namespace CommonLib {
   class BGSTerrainManager
   {
     public:
-      BGSTerrainManager();
-      ~BGSTerrainManager();
 
       TESWorldSpace* pWorld;
       BGSTerrainNode* pRootNode;

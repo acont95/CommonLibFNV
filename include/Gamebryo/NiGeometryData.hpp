@@ -13,8 +13,6 @@ namespace CommonLib {
   class NiGeometryData : public NiObject
   {
     public:
-      NiGeometryData();
-      ~NiGeometryData();
 
       class RendererData
       {

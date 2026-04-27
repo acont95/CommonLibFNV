@@ -4,8 +4,6 @@ namespace CommonLib {
 
   class NiFixedString {
     public:
-      NiFixedString();
-      ~NiFixedString();
 
       char *m_kHandle;
   };

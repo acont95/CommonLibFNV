@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiTriBasedGeomData : public NiGeometryData
   {
     public:
-      NiTriBasedGeomData();
-      ~NiTriBasedGeomData();
 
       std::uint16_t m_usTriangles;
   };

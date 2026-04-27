@@ -8,8 +8,6 @@ namespace CommonLib {
   class bhkSerializable : public bhkRefObject
   {
     public:
-      bhkSerializable();
-      ~bhkSerializable();
 
       hkSerializableCinfo* pInfo;
   };

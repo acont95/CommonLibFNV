@@ -6,8 +6,6 @@ namespace CommonLib {
   class SkillLevel
   {
     public:
-      SkillLevel();
-      ~SkillLevel();
 
       enum Value
       {

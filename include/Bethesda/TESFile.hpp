@@ -14,8 +14,6 @@ namespace CommonLib {
 
   class TESFile {
     public:
-      TESFile();
-      ~TESFile();
 
       struct FORM
       {

@@ -8,8 +8,6 @@ namespace CommonLib {
   class BSMultiBoundNode : public BSNiNode
   {
     public:
-      BSMultiBoundNode();
-      ~BSMultiBoundNode();
 
       NiPointer<BSMultiBound> spMultiBound;
       BSCullingProcess::BSCPCullingType CullingMode;

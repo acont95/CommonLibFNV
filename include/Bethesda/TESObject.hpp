@@ -7,8 +7,6 @@ namespace CommonLib {
 
   class TESObject : public TESForm {
     public:
-      TESObject();
-      ~TESObject();
 
       TESObjectList *m_pParentList;
       TESObject *nod_lpPrev;

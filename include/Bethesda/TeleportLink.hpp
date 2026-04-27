@@ -8,8 +8,6 @@ namespace CommonLib {
   class TeleportLink
   {
     public:
-      TeleportLink();
-      ~TeleportLink();
 
       TESObjectREFR *pDoor;
       NiPoint3 DoorTeleportLocation;

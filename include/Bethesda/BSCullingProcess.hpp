@@ -11,8 +11,6 @@ namespace CommonLib {
   class BSCullingProcess : public NiCullingProcess
   {
     public:
-      BSCullingProcess();
-      ~BSCullingProcess();
 
       enum BSCPCullingType
       {

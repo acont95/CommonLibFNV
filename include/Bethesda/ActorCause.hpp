@@ -13,8 +13,6 @@ namespace CommonLib {
   class ActorCause
   {
     public:
-      ActorCause();
-      ~ActorCause();
 
       Actor *pActor;
       BSSimpleList<DetectionState *> *pWitnesses;

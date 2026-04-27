@@ -8,8 +8,6 @@ namespace CommonLib {
   class TESTextureList 
   {
     public:
-      TESTextureList();
-      ~TESTextureList();
 
       std::uint8_t cTextureCount;
       BSFileEntry** pTextureOffsetArray;

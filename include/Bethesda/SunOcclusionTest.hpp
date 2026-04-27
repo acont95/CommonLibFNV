@@ -8,8 +8,6 @@ namespace CommonLib {
   class SunOcclusionTest
   {
     public:
-      SunOcclusionTest();
-      ~SunOcclusionTest();
 
       BSOcclusionQuery* pOcclusionQuery;
       bool bWaiting;

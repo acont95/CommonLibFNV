@@ -5,8 +5,6 @@ namespace CommonLib {
 
   class MagicSystem {
     public:
-      MagicSystem();
-      ~MagicSystem();
 
       enum School
       {

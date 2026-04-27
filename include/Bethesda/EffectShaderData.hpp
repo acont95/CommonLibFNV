@@ -10,9 +10,7 @@ namespace CommonLib {
   class EffectShaderData
   {
     public:
-      EffectShaderData();
-      ~EffectShaderData();
-    
+
       std::uint8_t cFlags;
       D3DBLEND eTextureBlendModeSource;
       D3DBLENDOP eTextureBlendOperation;

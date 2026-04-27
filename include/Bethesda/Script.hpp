@@ -30,8 +30,6 @@ namespace CommonLib {
   class Script : public TESForm
   {
     public:
-      Script();
-      ~Script();
 
       SCRIPT_HEADER m_header;
       char *m_text;

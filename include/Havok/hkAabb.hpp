@@ -8,8 +8,6 @@ namespace CommonLib {
   class alignas(16) hkAabb
   {
     public:
-      hkAabb();
-      ~hkAabb();
 
       hkVector4 m_min;
       hkVector4 m_max;

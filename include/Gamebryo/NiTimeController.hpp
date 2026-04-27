@@ -10,8 +10,6 @@ namespace CommonLib {
   class NiTimeController : public NiObject
   {
     public:
-      NiTimeController();
-      ~NiTimeController();
 
       std::uint16_t m_uFlags;
       float m_fFrequency;

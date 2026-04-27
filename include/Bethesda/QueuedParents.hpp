@@ -8,8 +8,7 @@ namespace CommonLib {
   class QueuedParents : public BSSimpleArray<NiPointer<QueuedFile>, 1024>
   {
     public:
-      QueuedParents();
-      ~QueuedParents();
+
   };
 
   static_assert(sizeof(QueuedParents) == 0x10);

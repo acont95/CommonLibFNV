@@ -7,8 +7,6 @@ namespace CommonLib {
   class bhkWorldObject : public bhkSerializable
   {
     public:
-      bhkWorldObject();
-      ~bhkWorldObject();
 
       std::uint32_t iFlags;
   };

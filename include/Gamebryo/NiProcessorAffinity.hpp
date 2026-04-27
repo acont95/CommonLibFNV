@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiProcessorAffinity
   {
     public:
-      NiProcessorAffinity();
-      ~NiProcessorAffinity();
 
       enum Processor
       {

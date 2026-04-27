@@ -6,8 +6,6 @@ namespace CommonLib {
   class NavMeshTriangle
   {
     public:
-      NavMeshTriangle();
-      ~NavMeshTriangle();
 
       std::uint16_t Vertices[3];
       std::uint16_t Triangles[3];

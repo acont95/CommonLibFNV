@@ -13,8 +13,6 @@ namespace CommonLib {
   class NavMeshInfo
   {
     public:
-      NavMeshInfo();
-      ~NavMeshInfo();
 
       std::uint32_t NavMeshID;
       std::uint32_t ParentSpaceID;

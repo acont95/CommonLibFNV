@@ -6,8 +6,6 @@ namespace CommonLib {
   class BGSDebrisData
   {
     public:
-      BGSDebrisData();
-      ~BGSDebrisData();
 
       char cPercentage;
       char cFlags;

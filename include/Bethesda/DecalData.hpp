@@ -6,8 +6,6 @@ namespace CommonLib {
   class DecalData
   {
     public:
-      DecalData();
-      ~DecalData();
 
       struct DECAL_DATA_DATA
       {

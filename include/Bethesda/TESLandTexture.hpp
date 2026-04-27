@@ -10,8 +10,6 @@ namespace CommonLib {
   class TESLandTexture : public TESForm 
   {
     public:
-      TESLandTexture();
-      ~TESLandTexture();
 
       struct TEXTURE_HAVOK_DATA
       {

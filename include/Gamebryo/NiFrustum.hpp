@@ -5,8 +5,6 @@ namespace CommonLib {
   class NiFrustum
   {
     public:
-      NiFrustum();
-      ~NiFrustum();
 
       float m_fLeft;
       float m_fRight;

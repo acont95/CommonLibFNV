@@ -7,8 +7,6 @@ namespace CommonLib {
   class hkEnum
   {
     public:
-      hkEnum();
-      ~hkEnum();
 
       STORAGE m_storage;
   };

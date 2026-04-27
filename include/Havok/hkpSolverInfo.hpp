@@ -9,8 +9,6 @@ namespace CommonLib {
   class hkpSolverInfo
   {
     public:
-      hkpSolverInfo();
-      ~hkpSolverInfo();
 
       enum DeactivationClass : std::int32_t
       {

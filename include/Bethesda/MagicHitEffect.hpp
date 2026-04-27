@@ -9,8 +9,6 @@ namespace CommonLib {
   class MagicHitEffect : public BSTempEffect
   {
     public:
-      MagicHitEffect();
-      ~MagicHitEffect();
 
       ActiveEffect *pEffect;
       TESObjectREFR *pTarget;

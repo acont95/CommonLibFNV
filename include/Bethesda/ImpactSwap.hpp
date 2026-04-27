@@ -10,8 +10,6 @@ namespace CommonLib {
   class ImpactSwap
   {
     public:
-      ImpactSwap();
-      ~ImpactSwap();
 
       BSMap<BGSImpactData *,BGSImpactData *> *pRemappedData[12];
       char pAltFootstepMaterialNames[10][30];

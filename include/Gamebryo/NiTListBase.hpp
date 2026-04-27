@@ -12,8 +12,6 @@ namespace CommonLib {
   class NiTListBase : public NiMemObject
   {
     public:
-      NiTListBase();
-      ~NiTListBase();
 
       class AntiBloatAllocator : public TAllocator
       {

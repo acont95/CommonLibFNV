@@ -7,8 +7,6 @@ namespace CommonLib {
   class NiFrustumPlanes
   {
     public:
-      NiFrustumPlanes();
-      ~NiFrustumPlanes();
 
       NiPlane m_akCullingPlanes[6];
       std::uint32_t m_uiActivePlanes;

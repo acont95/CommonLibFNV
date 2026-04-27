@@ -11,8 +11,6 @@ namespace CommonLib {
   class bhkPickData : public hkpWorldRayCastInput, public hkpWorldRayCastOutput
   {
     public:
-      bhkPickData();
-      ~bhkPickData();
 
       hkVector4 hkLength;
       char *pCache;

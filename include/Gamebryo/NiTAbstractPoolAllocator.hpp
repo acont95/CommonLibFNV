@@ -6,8 +6,7 @@ namespace CommonLib {
   class NiTAbstractPoolAllocator
   {
     public:
-      NiTAbstractPoolAllocator();
-      ~NiTAbstractPoolAllocator();
+
   };
 
   static_assert(sizeof(NiTAbstractPoolAllocator<void*>) == 0x1, "NiTAbstractPoolAllocator has wrong size");

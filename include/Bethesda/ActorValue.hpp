@@ -8,8 +8,6 @@ namespace CommonLib {
   class ActorValue
   {
     public:
-      ActorValue();
-      ~ActorValue();
 
       enum Index 
       {

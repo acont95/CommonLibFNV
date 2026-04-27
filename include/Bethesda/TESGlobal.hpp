@@ -7,8 +7,6 @@ namespace CommonLib {
   class TESGlobal : public TESForm
   {
     public:
-      TESGlobal();
-      ~TESGlobal();
 
       BSStringT<char> cFormEditorID;
       char cType;

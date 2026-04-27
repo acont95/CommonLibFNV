@@ -17,8 +17,6 @@ namespace CommonLib {
     public BGSDestructibleObjectForm
   {
     public:
-      BGSProjectile();
-      ~BGSProjectile();
 
       BGSProjectileData Data;
       TESModel MuzzleFlashModel;

@@ -6,8 +6,6 @@ namespace CommonLib {
 
   class NiExtraData : public NiObject {
     public:
-      NiExtraData();
-      ~NiExtraData();
 
       NiFixedString m_kName;
   };

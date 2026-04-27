@@ -10,8 +10,6 @@ namespace CommonLib {
   class DestructibleObjectStage
   {
     public:
-      DestructibleObjectStage();
-      ~DestructibleObjectStage();
 
       uint8_t cModelDamageStage;
       uint8_t cHealthPercentage;

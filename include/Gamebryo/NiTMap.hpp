@@ -7,8 +7,7 @@ namespace CommonLib {
   class NiTMap : public NiTMapBase<DFALL<NiTMapItem<Key, Value>>, Key, Value>
   {
     public:
-      NiTMap();
-      ~NiTMap();
+
   };
 
   static_assert(sizeof(NiTMap<void*, void*>) == 0x10, "NiTMap has wrong size");

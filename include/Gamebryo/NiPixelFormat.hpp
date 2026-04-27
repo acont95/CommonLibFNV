@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiPixelFormat
   {
     public:
-      NiPixelFormat();
-      ~NiPixelFormat();
 
       enum Format
       {

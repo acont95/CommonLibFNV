@@ -6,8 +6,7 @@ namespace CommonLib {
   class NiTDefaultAllocator
   {
     public:
-      NiTDefaultAllocator();
-      ~NiTDefaultAllocator();
+
   };
 
   template <typename T>

@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiRect
   {
     public:
-      NiRect();
-      ~NiRect();
 
       T m_left;
       T m_right;

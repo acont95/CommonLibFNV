@@ -33,8 +33,6 @@ namespace CommonLib {
   class ScriptLocals
   {
     public:
-      ScriptLocals();
-      ~ScriptLocals();
 
       Script *m_pMasterScript;
       char m_cFlags;

@@ -8,8 +8,6 @@ namespace CommonLib {
 
   class NiFile : public NiBinaryStream {
     public:
-      NiFile();
-      ~NiFile();
 
       virtual void Seek(std::int32_t iOffset, std::int32_t iWhence);
       virtual const char*	GetFilename() const;

@@ -9,8 +9,6 @@ namespace CommonLib {
   class TESConditionItem
   {
     public:
-      TESConditionItem();
-      ~TESConditionItem();
 
       union GlobalData
       {

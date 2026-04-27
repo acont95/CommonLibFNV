@@ -5,8 +5,6 @@ namespace CommonLib {
   template <typename T>
   class BSSimpleList {
     public:
-      BSSimpleList();
-      ~BSSimpleList();
 
       T m_item;
       BSSimpleList<T>* m_pkNext;

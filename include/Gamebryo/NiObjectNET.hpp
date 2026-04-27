@@ -11,8 +11,6 @@ namespace CommonLib {
 
   class NiObjectNET : public NiObject {
     public:
-      NiObjectNET();
-      ~NiObjectNET();
 
       NiFixedString m_kName;
       NiPointer<NiTimeController> m_spControllers;

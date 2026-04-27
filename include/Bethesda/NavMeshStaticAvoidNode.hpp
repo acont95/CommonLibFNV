@@ -7,8 +7,6 @@ namespace CommonLib {
   class NavMeshStaticAvoidNode : public PathingAvoidNode
   {
     public:
-      NavMeshStaticAvoidNode();
-      ~NavMeshStaticAvoidNode();
 
       std::uint16_t usTriangle;
   };

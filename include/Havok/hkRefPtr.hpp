@@ -6,8 +6,6 @@ namespace CommonLib {
   class hkRefPtr
   {
     public:
-      hkRefPtr();
-      ~hkRefPtr();
 
       T *m_pntr;
   };

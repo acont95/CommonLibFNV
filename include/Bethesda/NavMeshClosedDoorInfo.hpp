@@ -6,8 +6,6 @@ namespace CommonLib {
   class NavMeshClosedDoorInfo
   {
     public:
-      NavMeshClosedDoorInfo();
-      ~NavMeshClosedDoorInfo();
 
       std::uint32_t DoorFormID;
       std::uint16_t iTriangleIndex;

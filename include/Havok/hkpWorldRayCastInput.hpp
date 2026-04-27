@@ -8,8 +8,6 @@ namespace CommonLib {
   class alignas(16) hkpWorldRayCastInput
   {
     public:
-      hkpWorldRayCastInput();
-      ~hkpWorldRayCastInput();
 
       hkVector4 m_from;
       hkVector4 m_to;

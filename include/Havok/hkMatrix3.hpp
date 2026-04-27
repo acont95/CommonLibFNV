@@ -6,8 +6,7 @@ namespace CommonLib {
   class hkMatrix3
   {
     public:
-      hkMatrix3();
-      ~hkMatrix3();
+
       hkMatrix3(hkVector4& col0, hkVector4& col1, hkVector4& col2);
       void transpose();
       void setTranspose(const hkMatrix3& s);

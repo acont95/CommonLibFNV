@@ -10,8 +10,6 @@ namespace CommonLib {
   class BSCubeMapCamera : public NiCamera
   {
     public:
-      BSCubeMapCamera();
-      ~BSCubeMapCamera();
 
       enum etCubeMapType
       {

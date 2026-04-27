@@ -8,8 +8,6 @@ namespace CommonLib {
   class hkpSurfaceInfo
   {
     public:
-      hkpSurfaceInfo();
-      ~hkpSurfaceInfo();
 
       enum SupportedState : std::int32_t
       {

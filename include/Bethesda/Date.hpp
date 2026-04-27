@@ -6,8 +6,6 @@ namespace CommonLib {
   class Date
   {
     public:
-      Date();
-      ~Date();
 
       std::uint16_t sDate;
       std::uint16_t sYear;

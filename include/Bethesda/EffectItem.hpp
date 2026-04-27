@@ -9,8 +9,6 @@ namespace CommonLib {
   class EffectItem 
   {
     public:
-      EffectItem();
-      ~EffectItem();
 
       EffectItemData data;
       EffectSetting *pEffectSetting;

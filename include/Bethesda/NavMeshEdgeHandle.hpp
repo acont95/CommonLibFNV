@@ -7,8 +7,6 @@ namespace CommonLib {
   class NavMeshEdgeHandle : public NavMeshTriHandle
   {
     public:
-      NavMeshEdgeHandle();
-      ~NavMeshEdgeHandle();
 
       std::int32_t iEdgeIndex;
   };

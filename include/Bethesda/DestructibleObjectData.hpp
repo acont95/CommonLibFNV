@@ -10,8 +10,6 @@ namespace CommonLib {
   class DestructibleObjectData
   {
     public:
-      DestructibleObjectData();
-      ~DestructibleObjectData();
 
       uint32_t iHealth;
       uint8_t cNumStages;

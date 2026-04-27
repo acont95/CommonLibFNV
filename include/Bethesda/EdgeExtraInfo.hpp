@@ -16,8 +16,6 @@ namespace CommonLib {
   class EdgeExtraInfo
   {
     public:
-      EdgeExtraInfo();
-      ~EdgeExtraInfo();
 
       EDGE_EXTRA_INFO_TYPE eType;
       NavMeshTriangleEdgePortal Portal;

@@ -22,8 +22,6 @@ namespace CommonLib {
   class TESObjectCELL : public TESForm, public TESFullName
   {
     public:
-      TESObjectCELL();
-      ~TESObjectCELL();
 
       struct EXTERIOR_DATA
       {

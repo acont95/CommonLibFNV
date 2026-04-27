@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiAdditionalGeometryData : public NiObject
   {
     public:
-      NiAdditionalGeometryData();
-      ~NiAdditionalGeometryData();
 
       struct NiAGDDataStream
       {

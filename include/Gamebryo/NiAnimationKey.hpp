@@ -6,8 +6,6 @@ namespace CommonLib {
   class NiAnimationKey
   {
     public:
-      NiAnimationKey();
-      ~NiAnimationKey();
 
       enum KeyContent
       {

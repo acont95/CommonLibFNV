@@ -6,8 +6,6 @@ namespace CommonLib {
 
   class NiObjectGroup : public NiMemObject {
     public:
-      NiObjectGroup();
-      ~NiObjectGroup();
 
       std::uint32_t m_uiSize;
       void* m_pvBuffer;

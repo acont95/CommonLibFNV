@@ -6,9 +6,7 @@ namespace CommonLib {
   class BSStreamHeader
   {
     public:
-      BSStreamHeader();
-      ~BSStreamHeader();
-      
+
       std::uint32_t uiVersion;
       char pAuthor[64];
       char pProcessScript[64];

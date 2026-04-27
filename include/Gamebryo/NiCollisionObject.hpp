@@ -8,8 +8,6 @@ namespace CommonLib {
   class NiCollisionObject : public NiObject
   {
     public:
-      NiCollisionObject();
-      ~NiCollisionObject();
 
       NiAVObject* m_pkSceneObject;
   };
