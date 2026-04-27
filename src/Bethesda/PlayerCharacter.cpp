@@ -5,7 +5,7 @@ namespace CommonLib {
 
   PlayerCharacter::~PlayerCharacter() = default;
 
-  PlayerCharacter* PlayerCharacter::GetPlayerSingelton() {
+  PlayerCharacter* PlayerCharacter::GetPlayerSingleton() {
     return *reinterpret_cast<PlayerCharacter**>(0x011DEA3C);
   }
 
