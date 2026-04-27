@@ -96,8 +96,8 @@ namespace CommonLib {
   class PlayerCharacter : public Character
   {
     public:
-      PlayerCharacter();
       virtual ~PlayerCharacter();
+      static PlayerCharacter* GetPlayerSingelton();
 
       enum ModifierGroup
       {

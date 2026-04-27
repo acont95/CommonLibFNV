@@ -18,8 +18,7 @@ namespace CommonLib {
   class VATS
   {
     public:
-      VATS();
-      ~VATS();
+      static VATS* GetVATSSingleton();
 
       enum VATS_MODE_ENUM : std::int32_t
       {
