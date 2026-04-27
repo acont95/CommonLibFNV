@@ -13,6 +13,7 @@ namespace CommonLib {
   {
     public: 
 
+      hkVector4();
       hkVector4(const hkVector4& aOther);
       hkVector4(const NiPoint3& aPoint);
       hkVector4(float afX, float afY, float afZ, float afW);

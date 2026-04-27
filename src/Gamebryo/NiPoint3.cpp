@@ -6,8 +6,6 @@ namespace CommonLib {
 
   NiPoint3::NiPoint3() : x(0.0f), y(0.0f), z(0.0f) {}
 
-  NiPoint3::~NiPoint3() = default;
-
   NiPoint3::NiPoint3(float afX, float afY, float afZ) : x(afX), y(afY), z(afZ){}
 
   float NiPoint3::SumSquares() const {

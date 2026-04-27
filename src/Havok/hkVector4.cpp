@@ -10,8 +10,6 @@ namespace CommonLib
   hkVector4::hkVector4()
       : m_quad(_mm_setzero_ps()) {}
 
-  hkVector4::~hkVector4() = default;
-
   hkVector4::hkVector4(const hkVector4& aOther)
       : m_quad(aOther.m_quad) {}
 

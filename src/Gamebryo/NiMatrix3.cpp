@@ -6,8 +6,6 @@ namespace CommonLib {
 
   NiMatrix3::NiMatrix3() : m_pEntry{NiPoint3::ZERO, NiPoint3::ZERO, NiPoint3::ZERO} {};
 
-  NiMatrix3::~NiMatrix3() = default;
-
   NiMatrix3::NiMatrix3(const NiPoint3& row1, const NiPoint3& row2, const NiPoint3& row3) 
     : m_pEntry{row1, row2, row3} {};
 

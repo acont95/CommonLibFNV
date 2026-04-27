@@ -5,8 +5,6 @@ namespace CommonLib
   hkMatrix3::hkMatrix3()
       : m_col0{}, m_col1{}, m_col2{} {};
 
-  hkMatrix3::~hkMatrix3() = default;
-
   hkMatrix3::hkMatrix3(hkVector4& col0, hkVector4& col1, hkVector4& col2)
       : m_col0(col0), m_col1(col1), m_col2(col2) {};
 
