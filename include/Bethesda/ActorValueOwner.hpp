@@ -5,7 +5,6 @@ namespace CommonLib {
   class ActorValueOwner
   {
     public:
-      ActorValueOwner();
       virtual ~ActorValueOwner();
   };
 

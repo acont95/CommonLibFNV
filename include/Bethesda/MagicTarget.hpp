@@ -8,7 +8,6 @@ namespace CommonLib {
   class MagicTarget
   {
     public:
-      MagicTarget();
       virtual ~MagicTarget();
 
       bool bShowTargetStats;

@@ -9,7 +9,6 @@ namespace CommonLib {
   class MobileObject : public TESObjectREFR
   {
     public:
-      MobileObject();
       virtual ~MobileObject();
 
       BaseProcess *pCurrentProcess;

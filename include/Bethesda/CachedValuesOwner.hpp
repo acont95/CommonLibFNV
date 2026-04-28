@@ -5,7 +5,6 @@ namespace CommonLib {
   class CachedValuesOwner
   {
     public:
-      CachedValuesOwner();
       virtual ~CachedValuesOwner();
   };
 

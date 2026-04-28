@@ -8,7 +8,6 @@ namespace CommonLib {
   class MagicCaster
   {
     public:
-      MagicCaster();
       virtual ~MagicCaster();
 
       enum State
