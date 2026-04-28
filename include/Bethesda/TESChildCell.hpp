@@ -5,7 +5,6 @@ namespace CommonLib {
   class TESChildCell
   {
     public:
-      TESChildCell();
       virtual ~TESChildCell();
   };
 

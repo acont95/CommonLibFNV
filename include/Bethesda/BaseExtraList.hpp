@@ -7,7 +7,6 @@ namespace CommonLib {
 
   class BaseExtraList {
     public:
-      BaseExtraList();
       virtual ~BaseExtraList();
 
       BSExtraData* pHead;
