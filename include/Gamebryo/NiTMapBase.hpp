@@ -13,7 +13,7 @@ namespace CommonLib {
   class NiTMapBase : public NiMemObject
   {
     public:
-      virtual ~NiTMapBase();
+      virtual ~NiTMapBase() = default;
 
       class AntiBloatAllocator : public TAllocator
       {

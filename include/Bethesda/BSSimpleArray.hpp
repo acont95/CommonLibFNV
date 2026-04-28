@@ -7,7 +7,7 @@ namespace CommonLib {
   class BSSimpleArray
   {
     public:
-      virtual ~BSSimpleArray();
+      virtual ~BSSimpleArray() = default;
 
       T* pBuffer;
       std::uint32_t iSize;

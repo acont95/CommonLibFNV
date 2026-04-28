@@ -66,7 +66,6 @@ namespace CommonLib {
     public CachedValuesOwner
   {
     public:
-      Actor();
       virtual ~Actor();
 
       bhkRagdollController *pRagdollController;
