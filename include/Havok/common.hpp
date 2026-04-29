@@ -1,0 +1,53 @@
+#pragma once
+
+namespace CommonLib {
+
+  enum COL_LAYER
+  {
+    L_UNIDENTIFIED = 0x0,
+    L_STATIC = 0x1,
+    L_ANIMSTATIC = 0x2,
+    L_TRANSPARENT = 0x3,
+    L_CLUTTER = 0x4,
+    L_WEAPON = 0x5,
+    L_PROJECTILE = 0x6,
+    L_SPELL = 0x7,
+    L_BIPED = 0x8,
+    L_TREES = 0x9,
+    L_PROPS = 0xA,
+    L_WATER = 0xB,
+    L_TRIGGER = 0xC,
+    L_TERRAIN = 0xD,
+    L_TRAP = 0xE,
+    L_NONCOLLIDABLE = 0xF,
+    L_CLOUDTRAP = 0x10,
+    L_GROUND = 0x11,
+    L_PORTAL = 0x12,
+    L_DEBRIS_SMALL = 0x13,
+    L_DEBRIS_LARGE = 0x14,
+    L_ACOUSTIC_SPACE = 0x15,
+    L_ACTORZONE = 0x16,
+    L_PROJECTILEZONE = 0x17,
+    L_GASTRAP = 0x18,
+    L_SHELLCASING = 0x19,
+    L_TRANSPARENT_SMALL = 0x1A,
+    L_INVISIBLE_WALL = 0x1B,
+    L_TRANSPARENT_SMALL_ANIM = 0x1C,
+    L_DEADBIP = 0x1D,
+    L_CHARCONTROLLER = 0x1E,
+    L_AVOIDBOX = 0x1F,
+    L_COLLISIONBOX = 0x20,
+    L_CAMERASPHERE = 0x21,
+    L_DOORDETECTION = 0x22,
+    L_CAMERA = 0x23,
+    L_ITEMPICKER = 0x24,
+    L_LOS = 0x25,
+    L_PATHINGPICK = 0x26,
+    L_CUSTOMPICK1 = 0x27,
+    L_CUSTOMPICK2 = 0x28,
+    L_SPELLEXPLOSION = 0x29,
+    L_DROPPINGPICK = 0x2A,
+    NUMFILTERLAYERS = 0x2B,
+  };
+
+} // namespace CommonLib
