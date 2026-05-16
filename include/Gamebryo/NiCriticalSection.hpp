@@ -9,9 +9,10 @@ namespace CommonLib {
     public:
 
       CRITICAL_SECTION m_kCriticalSection;
-      std::uint8_t pad01[104];
+      std::uint32_t m_ulThreadOwner;
+      std::uint32_t m_uiLockCount;
   };
 
-  static_assert(sizeof(NiCriticalSection) == 0x80, "NiCriticalSection has wrong size");
+  static_assert(sizeof(NiCriticalSection) == 0x20, "NiCriticalSection has wrong size");
   
 } // namespace CommonLib
