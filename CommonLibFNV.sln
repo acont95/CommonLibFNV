@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibFNV", "CommonLibFNV.vcxproj", "{0899E9C1-C1AF-427A-BCB5-F95A34D46013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0899E9C1-C1AF-427A-BCB5-F95A34D46013}.Debug|x86.ActiveCfg = Debug|Win32
+		{0899E9C1-C1AF-427A-BCB5-F95A34D46013}.Debug|x86.Build.0 = Debug|Win32
+		{0899E9C1-C1AF-427A-BCB5-F95A34D46013}.Release|x86.ActiveCfg = Release|Win32
+		{0899E9C1-C1AF-427A-BCB5-F95A34D46013}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89BB8F4D-C58F-4746-A841-CECF4A230901}
+	EndGlobalSection
+EndGlobal
