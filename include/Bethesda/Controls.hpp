@@ -1,4 +1,5 @@
 #pragma once
+#include <Windows.h>
 #include <dinput.h>
 #include <cstdint>
 
@@ -53,24 +54,38 @@ namespace CommonLib {
       std::uint32_t dwStartTime;
   };
 
-  class XInputManager 
-  {
-    public:
-      
-
+  struct MouseData {
+    std::int32_t xDelta;
+    std::int32_t yDelta;
+    std::int32_t iMouseWheelScroll;
+    bool   bCurrButtonStates[8];
   };
 
-  class Controls : public XInputManager
+  struct JoystickData {
+    std::uint32_t knownDeviceMask;
+    std::uint32_t deviceClassMask;
+  };
+
+  struct JoystickState
+  {
+    DIJOYSTATE curr;
+    DIJOYSTATE prev;
+  };
+
+  class Controls
   {
     public:
-      int unk1;
+      int iEnable;
       std::uint32_t controlFlags;
       LPDIRECTINPUT8A pDirectInput;
+      LPDIRECTINPUTDEVICE8A pJoysticks[8];
       LPDIRECTINPUTDEVICE8A pKeyboard;
       LPDIRECTINPUTDEVICE8A pMouse;
-      std::uint32_t unk0034[8][40];
-      std::uint32_t unk534[1264];
-      std::uint32_t unk18F4;
+      JoystickState joystickStates[8];
+      DIDEVICEINSTANCEA deviceInstances[8];
+      DIDEVCAPS joystickCaps[8];
+      JoystickData joystickData[8];
+      std::uint32_t iNumJoysticks;
       std::uint8_t currKeyStates[256];
       std::uint8_t lastKeyStates[256];
       DIDEVCAPS mouseCaps;
@@ -78,21 +93,16 @@ namespace CommonLib {
       MouseData kLastMouseData;
       BOOL bSwapLeftRightMouseButtons;
       std::uint8_t cMouseSensitivity;
-      std::uint8_t byte1B51;
-      std::uint8_t byte1B52;
-      std::uint8_t byte1B53;
+      char gap1B51[3];
       std::uint32_t uiDoubleClickTime;
-      std::uint8_t buttonStates1B58[8];
+      std::uint8_t mouseButtonStates[8];
       std::uint32_t unk1B60[8];
       XRumbleControl *sRumble;
       _RUMBLE_EFFECT *pRumbleEffect;
       bool isControllerEnabled;
-      char byte1B89;
-      char byte1B8A;
-      char byte1B8B;
+      char gap1B89[3];
       std::uint32_t unk1B8C;
-      char byte1B90;
-      char byte1B91;
+      char gap1B90[2];
       std::uint16_t usOverrideFlags;
       char ucKeyBinds[28];
       char ucMouseBinds[28];

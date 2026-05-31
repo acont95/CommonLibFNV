@@ -91,6 +91,7 @@ namespace CommonLib {
       NiTPointerMap<NiAVObject*, bool> kRoomSharedMap;
       std::uint8_t pad01[60];
       NiCriticalSection BSCPSharedCrit;
+      std::uint8_t pad02[96];
   };
 
   static_assert(sizeof(BSShaderAccumulator) == 0x280);
