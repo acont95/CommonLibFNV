@@ -11,6 +11,20 @@ namespace CommonLib {
   {
     public:
 
+      enum AnimType
+      {
+        APP_TIME = 0x0,
+        APP_INIT = 0x1,
+      };
+
+      enum CycleType 
+      {
+        LOOP = 0x0,
+        REVERSE = 0x1,
+        CLAMP = 0x2,
+        MAX_CYCLE_TYPES = 0x3,
+      };
+
       std::uint16_t m_uFlags;
       float m_fFrequency;
       float m_fPhase;
