@@ -967,6 +967,12 @@ namespace CommonLib {
     ANIMATION_STATE_FINISHING_PLAYING = 0x3,
   };
 
+  enum ACTION_FLAGS
+  {
+    ACTION_NORMAL = 0x0,
+    ACTION_START = 0x1,
+  };
+
   enum MATERIAL_TYPE
   {
     MT_STONE = 0x0,
