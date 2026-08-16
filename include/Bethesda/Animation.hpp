@@ -16,6 +16,15 @@ namespace CommonLib {
   class BSAnimGroupSequence;
   class IDLE_REPLAY_DELAY;
 
+  struct ANIM_GROUP_INFO
+  {
+    char *pName;
+    bool bMultipleSequences;
+    ANIM_GROUP_SECTION eSectionLayer;
+    ANIM_GROUP_ACTION_TYPE eAction;
+    ANIM_GROUP_ACTION eActions[5];
+  };
+
   class Animation
   {
     public:
@@ -54,6 +63,7 @@ namespace CommonLib {
       BSSimpleList<IDLE_REPLAY_DELAY *> replayDelayList;
   };
 
+  static_assert(sizeof(ANIM_GROUP_INFO) == 0x24, "ANIM_GROUP_INFO has wrong size");
   static_assert(sizeof(Animation) == 0x13C, "Animation has wrong size");
   
 } // namespace CommonLib
