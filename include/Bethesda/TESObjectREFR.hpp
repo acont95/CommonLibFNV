@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include "Types.hpp"
 #include "Bethesda/ExtraDataList.hpp"
 #include "Bethesda/TESChildCell.hpp"
 #include "Bethesda/TESForm.hpp"
@@ -21,6 +22,11 @@ namespace CommonLib {
   class Animation;
   class BipedAnim;
   class BSAnimNoteReceiver;
+  class Actor;
+  class MagicCaster;
+  class MagicTarget;
+  class TESActorBase;
+  class NiNode;
 
   class TESObjectREFR : public TESForm, public TESChildCell
   {

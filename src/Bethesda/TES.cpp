@@ -2,8 +2,6 @@
 
 namespace CommonLib {
 
-  TES::~TES() = default;
-
   TES* TES::GetTESSingleton() {
     return *reinterpret_cast<TES**>(0x011DEA10);
   }

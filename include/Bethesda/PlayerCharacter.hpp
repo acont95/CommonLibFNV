@@ -96,8 +96,7 @@ namespace CommonLib {
   class PlayerCharacter : public Character
   {
     public:
-      virtual ~PlayerCharacter();
-      static PlayerCharacter* GetPlayerSingleton();
+      static PlayerCharacter* GetPlayerSingleton() {return *reinterpret_cast<PlayerCharacter**>(0x011DEA3C);};
 
       enum ModifierGroup
       {
