@@ -2,10 +2,19 @@
 #include <cstdint>
 #include "Bethesda/BaseFormComponent.hpp"
 #include "Bethesda/BSSimpleList.hpp"
+#include "Bethesda/BSStringT.hpp"
+#include "Gamebryo/NiTPointerMap.hpp"
 
 namespace CommonLib {
 
   class TESFile;
+  struct FORM;
+  struct FORM_GROUP;
+  class BGSSaveFormBuffer;
+  class BGSLoadFormBuffer;
+  class NiColor;
+  class TESObjectREFR;
+  class TESBoundObject;
 
   enum ENUM_FORM_ID
   {
@@ -139,6 +148,81 @@ namespace CommonLib {
       std::uint32_t iFormFlags;
       std::uint32_t iFormID;
       BSSimpleList<TESFile *> pSourceFiles;
+
+      virtual ~TESForm();
+      virtual void InitializeData();
+      virtual void ClearData();
+      virtual bool ProcessBeforeSave();
+      virtual bool Load(TESFile*);
+      virtual bool LoadPartial(TESFile*);
+      virtual bool Save(TESFile*);
+      virtual void Save_2();
+      virtual bool LoadEdit(TESFile*);
+      virtual bool SaveEdit(TESFile*);
+      virtual bool SavesBefore(FORM*);
+      virtual bool SavesBefore_2(TESForm*);
+      virtual TESForm* CreateDuplicateForm(bool, NiTPointerMap<TESForm*, TESForm*>*);
+      virtual void PostDuplicateProcess(NiTPointerMap<TESForm*, TESForm*>*);
+      virtual void AddChange(int);
+      virtual void RemoveChange(int);
+      virtual std::uint16_t GetSaveSize(unsigned int);
+      virtual void SaveGame(BGSSaveFormBuffer*);
+      virtual void SaveGame_2(unsigned int);
+      virtual void LoadGame(BGSLoadFormBuffer*);
+      virtual void LoadGame_2(unsigned int, unsigned int);
+      virtual void InitLoadGame(BGSLoadFormBuffer*);
+      virtual void InitLoadGame_2(unsigned int, unsigned int);
+      virtual void FinishInitLoadGame(unsigned int, unsigned int);
+      virtual void Revert(BGSLoadFormBuffer*);
+      virtual void Revert_2(unsigned int);
+      virtual void LoadQueuedFormData(std::uint16_t);
+      virtual bool FindInFileFast(TESFile*);
+      virtual void CheckSaveGame(BGSSaveFormBuffer*);
+      virtual void FinishLoadGame(BGSLoadFormBuffer*);
+      virtual void InitItem();
+      virtual ENUM_FORM_ID GetSavedFormType();
+      virtual void GetFormDetailedString(BSStringT<char>*);
+      virtual bool GetQuestObject();
+      virtual bool GetHasSpokenFlag();
+      virtual bool GetHavokDeath();
+      virtual bool GetRandomAnim();
+      virtual bool GetNeedtoChangeProcess();
+      virtual bool GetDangerous();
+      virtual bool GetHasPLSpecTex();
+      virtual bool GetObstacle();
+      virtual bool GetContinuousBroadcast();
+      virtual bool GetOnLocalMap();
+      virtual void SetOnLocalMap(bool);
+      virtual NiColor* GetEmittanceColor();
+      virtual void SetDelete(bool);
+      virtual void SetAltered(bool);
+      virtual void SetQuestObject(bool);
+      virtual void SetHasSpokenFlag(bool);
+      virtual void SetHavokDeath(bool);
+      virtual void SetNeedToChangeProcess(bool);
+      virtual void SaveObjectBound();
+      virtual void LoadObjectBound(TESFile*);
+      virtual bool IsBoundObject();
+      virtual bool IsObject();
+      virtual bool IsMagicItem();
+      virtual bool IsReference();
+      virtual bool IsArmorAddon();
+      virtual bool IsActorBase();
+      virtual bool IsMobileObject();
+      virtual bool IsActor();
+      virtual unsigned int GetRefCount();
+      virtual void Copy(TESForm*);
+      virtual bool Compare(TESForm*);
+      virtual bool BelongsInGroup(FORM*, bool, bool);
+      virtual void CreateGroupData(FORM*, FORM_GROUP*);
+      virtual bool IsParentForm();
+      virtual bool IsParentFormTree();
+      virtual bool IsFormTypeChild(std::uint8_t);
+      virtual bool Activate(TESObjectREFR*, TESObjectREFR*, bool, TESBoundObject*, int);
+      virtual void SetFormID(unsigned int, bool);
+      virtual char* GetObjectTypeName();
+      virtual const char* GetFormEditorID();
+      virtual bool SetFormEditorID(const char*);
 
       static TESForm* GetFormByNumericId(int aiSearchID);
       static TESForm* GetFormByEditorID(const char *apSearchID);

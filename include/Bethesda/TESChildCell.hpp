@@ -2,10 +2,12 @@
 
 namespace CommonLib {
 
+  class TESObjectCELL;
+
   class TESChildCell
   {
     public:
-      virtual ~TESChildCell();
+      virtual TESObjectCELL* GetSaveParentCell(TESChildCell *);
   };
 
   static_assert(sizeof(TESChildCell) == 0x4, "TESChildCell has wrong size");
