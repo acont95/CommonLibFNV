@@ -8,7 +8,8 @@ namespace CommonLib {
   class Character : public Actor
   {
     public:
-      virtual ~Character();
+      virtual void InitiateCannibal(Actor *);
+      virtual void InitiateDisMountHorsePackage();
 
       BipedAnim *pBiped;
       float fArmorRating;

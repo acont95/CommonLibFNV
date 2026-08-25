@@ -9,6 +9,7 @@
 #include "Bethesda/bhkMouseSpringAction.hpp"
 #include "Bethesda/GamePlayFormulas.hpp"
 #include "Bethesda/CharacterProgression.hpp"
+#include "Bethesda/BSSimpleList.hpp"
 #include "Gamebryo/NiTMap.hpp"
 #include "Gamebryo/NiLight.hpp"
 
@@ -58,6 +59,8 @@ namespace CommonLib {
   class PerkRankData;
   class BGSPerkEntry;
   class MapMarkerData;
+  class PackageLocation;
+  class MobileObject;
 
   class PLAYER_TARGET_LOC
   {
@@ -97,6 +100,8 @@ namespace CommonLib {
   {
     public:
       static PlayerCharacter* GetPlayerSingleton();
+      bool InitiateDialogue_3(MobileObject *, PackageLocation *, PackageLocation *, bool, bool, bool, TESTopic *);
+      BSSimpleList<PerkRankData *>* GetPerkList(bool);
 
       enum ModifierGroup
       {
