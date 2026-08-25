@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSSimpleList.hpp"
 #include "Bethesda/KFModel.hpp"
 #include "Bethesda/AnimIdle.hpp"
@@ -28,7 +29,7 @@ namespace CommonLib {
   class Animation
   {
     public:
-      unsigned __int8 m_uFlags;
+      std::uint8_t m_uFlags;
       TESObjectREFR *pActorRef;
       NiPointer<NiNode> pAnimRoot;
       NiNode *pAccumRoot;
@@ -36,10 +37,10 @@ namespace CommonLib {
       NiPoint3 AccumRootTranslate;
       NiAVObject *pSoundPriorityBone[8];
       float m_fLooking;
-      unsigned __int16 group[8];
+      std::uint16_t group[8];
       ANIM_GROUP_ACTION action[8];
       int loopCount[8];
-      unsigned __int16 nextGroup[8];
+      std::uint16_t nextGroup[8];
       int nextLoops[8];
       char cSkipUpdate;
       bool bShutDown;
@@ -56,7 +57,7 @@ namespace CommonLib {
       float m_fReloadModifier;
       float m_fEquipModifier;
       char cSkipNextBlend;
-      unsigned __int16 sQueuedReloadGroup;
+      std::uint16_t sQueuedReloadGroup;
       NiPointer<AnimIdle> spAnimIdle;
       NiPointer<AnimIdle> spAnimIdleQueued;
       NiPointer<AnimIdle> spAnimIdleFreeWhenInactiveA[2];

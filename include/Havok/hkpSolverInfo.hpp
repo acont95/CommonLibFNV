@@ -53,8 +53,8 @@ namespace CommonLib {
       float m_invNumMicroSteps;
       float m_invNumSteps;
       hkBool m_forceCoherentConstraintOrderingInSolver;
-      unsigned __int8 m_deactivationNumInactiveFramesSelectFlag[2];
-      unsigned __int8 m_deactivationIntegrateCounter;
+      std::uint8_t m_deactivationNumInactiveFramesSelectFlag[2];
+      std::uint8_t m_deactivationIntegrateCounter;
       float m_maxConstraintViolationSqrd;
   };
 

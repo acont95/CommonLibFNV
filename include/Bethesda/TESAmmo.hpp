@@ -37,12 +37,12 @@ namespace CommonLib {
       struct AMMO_DATA
       {
         float fSpeed;
-        unsigned __int8 cFlags;
+        std::uint8_t cFlags;
       };
 
       struct AMMO_DATA_NV
       {
-        unsigned __int8 cProjectilePerAmmo;
+        std::uint8_t cProjectilePerAmmo;
         BGSProjectile *pProjectileOverride;
         float fWeightOverride;
         TESForm *pAmmoConsumedObject;

@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Types.hpp"
 #include "Bethesda/MobileObject.hpp"
 #include "Bethesda/BSSimpleList.hpp"
@@ -69,8 +70,8 @@ namespace CommonLib {
         BGSBodyPart::LIMB_ENUM eDamageLimb;
         bool bProcessed;
         bool bDoDamage;
-        __int16 sTargetWorldObjectCount;
-        __int16 sTargetWorldObjectIndex;
+        std::int16_t sTargetWorldObjectCount;
+        std::int16_t sTargetWorldObjectIndex;
       };
 
       BSSimpleList<Projectile::ImpactData *> ImpactList;

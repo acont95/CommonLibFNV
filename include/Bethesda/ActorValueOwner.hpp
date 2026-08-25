@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/ActorValue.hpp"
 
 namespace CommonLib {
@@ -18,7 +19,7 @@ namespace CommonLib {
       virtual int GetPermanentActorValue(ActorValue::Index);
       virtual float GetPermanentActorFloatValue(ActorValue::Index);
       virtual TESForm* GetAsForm();
-      virtual unsigned __int16 GetActorLevel();
+      virtual std::uint16_t GetActorLevel();
   };
 
   static_assert(sizeof(ActorValueOwner) == 0x4, "ActorValueOwner has wrong size");

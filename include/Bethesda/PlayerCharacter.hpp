@@ -335,7 +335,7 @@ namespace CommonLib {
       float fRockItLauncherAmmoWeight;
       bool bNightVisionOn;
       TESReputation *pReputationUpdate;
-      unsigned __int8 cSloMoCameraHits;
+      std::uint8_t cSloMoCameraHits;
       float fTimeSinceLastAttack;
       float fTimeInSlowMoCam;
       float fKillCamCooldown;

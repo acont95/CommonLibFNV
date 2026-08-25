@@ -14,18 +14,18 @@ namespace CommonLib {
   class PART_DATA
   {
     float fDamageMult;
-    unsigned __int8 cFlags;
-    unsigned __int8 cType;
-    unsigned __int8 cHealthPercent;
+    std::uint8_t cFlags;
+    std::uint8_t cType;
+    std::uint8_t cHealthPercent;
     char cActorValue;
-    unsigned __int8 cToHitChance;
-    unsigned __int8 cExplosionChance;
-    unsigned __int8 cExplosionGenericDebrisCount;
+    std::uint8_t cToHitChance;
+    std::uint8_t cExplosionChance;
+    std::uint8_t cExplosionGenericDebrisCount;
     BGSDebris *pExplosionGenericDebris;
     BGSExplosion *pExplosion;
     float fTrackingMaxAngle;
     float fExplosionGenericDebrisScale;
-    unsigned __int8 cDismemberGenericDebrisCount;
+    std::uint8_t cDismemberGenericDebrisCount;
     BGSDebris *pDismemberGenericDebris;
     BGSExplosion *pDismemberExplosion;
     float fDismemberGenericDebrisScale;
@@ -33,8 +33,8 @@ namespace CommonLib {
     NiPoint3 kGoreRotate;
     BGSImpactDataSet *pDismemberImpactDataSet;
     BGSImpactDataSet *pExplosionImpactDataSet;
-    unsigned __int8 cDismemberDecalCount;
-    unsigned __int8 cExplosionDecalCount;
+    std::uint8_t cDismemberDecalCount;
+    std::uint8_t cExplosionDecalCount;
     float fExplosionSpecialDebrisScale;
   };
 

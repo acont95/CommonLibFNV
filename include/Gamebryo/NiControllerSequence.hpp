@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include "Bethesda/BSAnimNote.hpp"
 #include "Gamebryo/NiFixedString.hpp"
 #include "Gamebryo/NiTextKeyExtraData.hpp"
@@ -25,8 +26,8 @@ namespace CommonLib {
         NiPointer<NiInterpolator> m_spInterpolator;
         NiPointer<NiInterpController> m_spInterpCtlr;
         NiBlendInterpolator *m_pkBlendInterp;
-        unsigned __int8 m_ucBlendIdx;
-        unsigned __int8 m_ucPriority;
+        std::uint8_t m_ucBlendIdx;
+        std::uint8_t m_ucPriority;
       };
 
       class IDTag
@@ -73,9 +74,9 @@ namespace CommonLib {
       NiFixedString m_kAccumRootName;
       NiAVObject *m_pkAccumRoot;
       NiPointer<NiStringPalette> m_spDeprecatedStringPalette;
-      __int16 ssCurAnimNIdx;
+      std::int16_t ssCurAnimNIdx;
       NiPointer<BSAnimNote> *spAnimNotesA;
-      unsigned __int16 usNumNotes;
+      std::uint16_t usNumNotes;
       bool bRemovableObjects;
   };
 

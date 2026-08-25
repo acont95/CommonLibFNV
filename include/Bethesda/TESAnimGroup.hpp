@@ -14,16 +14,16 @@ namespace CommonLib {
       TESAnimGroup();
       virtual ~TESAnimGroup();
 
-      unsigned __int8 cSectionPriority[8];
-      unsigned __int16 sType;
+      std::uint8_t cSectionPriority[8];
+      std::uint16_t sType;
       unsigned int frameCount;
       float *times;
       NiPoint3 speed;
       char cMorphKey;
-      unsigned __int8 cBlendFrames;
-      unsigned __int8 cBlendInFrames;
-      unsigned __int8 cBlendOutFrames;
-      unsigned __int8 cDecal;
+      std::uint8_t cBlendFrames;
+      std::uint8_t cBlendInFrames;
+      std::uint8_t cBlendOutFrames;
+      std::uint8_t cDecal;
       const char *pParentName;
       unsigned int soundCount;
       GROUP_SOUND *sounds;
