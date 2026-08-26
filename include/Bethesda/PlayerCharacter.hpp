@@ -100,8 +100,9 @@ namespace CommonLib {
   {
     public:
       static PlayerCharacter* GetPlayerSingleton();
-      bool InitiateDialogue_3(MobileObject *, PackageLocation *, PackageLocation *, bool, bool, bool, TESTopic *);
-      BSSimpleList<PerkRankData *>* GetPerkList(bool);
+      
+      virtual bool InitiateDialogue_3(MobileObject *, PackageLocation *, PackageLocation *, bool, bool, bool, TESTopic *);
+      virtual BSSimpleList<PerkRankData *>* GetPerkList(bool);
 
       enum ModifierGroup
       {
