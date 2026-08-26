@@ -119,18 +119,6 @@ namespace CommonLib {
         HEAD_TRACK_TYPE_COUNT = 0x6,
       };
 
-      enum FADE_STATE
-      {
-        FADE_NORMAL = 0x0,
-        FADE_IN = 0x1,
-        FADE_OUT = 0x2,
-        FADE_TELEPORT_IN = 0x3,
-        FADE_TELEPORT_OUT = 0x4,
-        FADE_OUT_DISABLE = 0x5,
-        FADE_OUT_DELETE = 0x6,
-        FADE_OUT_MOVE = 0x7,
-      };
-
       virtual void dtr_BaseProcess();
       virtual void Copy(BaseProcess*);
       virtual void HandleDeletedReference(TESObjectREFR*);
