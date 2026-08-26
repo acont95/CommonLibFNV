@@ -16,6 +16,7 @@ namespace CommonLib {
   class AnimSequenceBase;
   class BSAnimGroupSequence;
   class IDLE_REPLAY_DELAY;
+  class AnimIdle;
 
   struct ANIM_GROUP_INFO
   {
