@@ -39,6 +39,7 @@ namespace CommonLib {
       T& Get(unsigned int aiIndex) const;
       bool Contains(const T& aValue) const;
       unsigned int GetIdealSize() const;
+      bool IsFull() const;
 
       T* pBuffer;
       std::uint32_t iSize;
