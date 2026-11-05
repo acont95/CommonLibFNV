@@ -9,6 +9,9 @@ namespace CommonLib {
 
   class ItemChange {
     public:
+      ~ItemChange();
+      ItemChange();
+      ItemChange(TESBoundObject *apObject, int aiNumber);
 
       enum StatusFlags
       {
