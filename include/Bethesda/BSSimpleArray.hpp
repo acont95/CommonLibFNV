@@ -40,6 +40,7 @@ namespace CommonLib {
       bool Contains(const T& aValue) const;
       unsigned int GetIdealSize() const;
       bool IsFull() const;
+      void DeallocateBuffer();
 
       T* pBuffer;
       std::uint32_t iSize;
