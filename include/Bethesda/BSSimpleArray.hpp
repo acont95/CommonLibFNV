@@ -30,7 +30,9 @@ namespace CommonLib {
       void SetReservedSize(unsigned int aiReserveSize);
       void Reverse();
       void SortedInsert(const T& aValue, int (*apFunc)(const void* apVal1, const void* apVal2));
-      unsigned int Find<K>(const T& aValue, unsigned int aiStartIndex, bool (*apFunc)(const T& aOne, const T& aTwo)) const;
+      
+      template <typename K>
+      unsigned int Find(const T& aValue, unsigned int aiStartIndex, bool (*apFunc)(const T& aOne, const T& aTwo)) const;
       bool CompareBuffer(BSSimpleArray<T, N>* aDestArray) const;
       void CopyTo(BSSimpleArray<T, N>* aDestArray) const;
       static bool DefaultEqualFunction(const T& aOne, const T& aTwo);
