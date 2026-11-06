@@ -8,6 +8,7 @@ namespace CommonLib {
   {
     public:
       BSSimpleArray(unsigned int aiInitialSize);
+      BSSimpleArray(unsigned int aiReserveSize, unsigned int aiInitialSize);
       virtual ~BSSimpleArray();
       virtual T* _Allocate(unsigned int aiSizeInItem);
       virtual void _Deallocate(T* apBuffer);
