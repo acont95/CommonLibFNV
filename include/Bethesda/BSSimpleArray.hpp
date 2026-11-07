@@ -44,6 +44,7 @@ namespace CommonLib {
       unsigned int GetIdealSize() const;
       bool IsFull() const;
       void DeallocateBuffer();
+      bool HasExcessCapacity() const;
 
       T* pBuffer;
       std::uint32_t iSize;
