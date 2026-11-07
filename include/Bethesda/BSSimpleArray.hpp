@@ -41,7 +41,8 @@ namespace CommonLib {
 
       T& Get(unsigned int aiIndex) const;
       bool Contains(const T& aValue) const;
-      unsigned int GetIdealSize() const;
+      unsigned int GetGrowthSize() const;
+      unsigned int GetShrinkSize() const;
       bool IsFull() const;
       void DeallocateBuffer();
       bool HasExcessCapacity() const;
