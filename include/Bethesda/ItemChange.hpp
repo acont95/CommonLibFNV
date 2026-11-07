@@ -14,7 +14,7 @@ namespace CommonLib {
       ItemChange();
       ItemChange(TESBoundObject *apObject, int aiNumber);
       bool operator==(const ItemChange& apOther) const;
-      auto operator<=>(const ItemChange&) const;
+      auto operator<=>(const ItemChange& apOther) const;
 
       enum StatusFlags
       {

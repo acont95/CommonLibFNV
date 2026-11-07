@@ -8,7 +8,7 @@ namespace CommonLib {
   {
     public:
       bool operator==(const WeaponData& apOther) const;
-      auto operator<=>(const WeaponData&) const;
+      auto operator<=>(const WeaponData& apOther) const;
 
       TESObjectWEAP *pWeapon;
       float fCondition;

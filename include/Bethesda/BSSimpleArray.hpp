@@ -33,10 +33,11 @@ namespace CommonLib {
       void SortedInsert(const T& aValue, int (*apFunc)(const void* apVal1, const void* apVal2));
       
       template <typename K>
-      unsigned int Find(const T& aValue, unsigned int aiStartIndex, bool (*apFunc)(const T& aOne, const T& aTwo)) const;
+      unsigned int Find(const T& aValue, unsigned int aiStartIndex, bool (*apFunc)(const T& aOne, const K& aTwo)) const;
       bool CompareBuffer(BSSimpleArray<T, N>* aDestArray) const;
       void CopyTo(BSSimpleArray<T, N>* aDestArray) const;
-      static bool DefaultEqualFunction(const T& aOne, const T& aTwo);
+      template <typename K>
+      static bool DefaultEqualFunction(const T& aOne, const K& aTwo);
       static int QuickSortFunction(const void* apPtr1, const void* apPtr2);
 
       T& Get(unsigned int aiIndex) const;
