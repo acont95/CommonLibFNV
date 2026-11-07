@@ -1,4 +1,5 @@
 #pragma once
+#include <compare>
 
 namespace CommonLib {
 
@@ -13,6 +14,7 @@ namespace CommonLib {
       ItemChange();
       ItemChange(TESBoundObject *apObject, int aiNumber);
       bool operator==(const ItemChange& apOther) const;
+      auto operator<=>(const ItemChange&) const;
 
       enum StatusFlags
       {
